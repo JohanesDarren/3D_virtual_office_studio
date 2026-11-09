@@ -57,8 +57,8 @@ def body(p, c):
     elif style == "cardigan":
         for sx in (-1, 1):                                                                 # shirt collar underneath
             t.box((sx * .055, -.13, .78), (.09, .04, .06), "white", bevel=.01, rot=(20, 0, sx * -20))
-        t.box((0, -.168, .63), (.06, .02, .32), c["top2"], bevel=.008, outline=False)   # placket
-        for z in (.72, .64, .56):
+        t.box((0, -.17, .66), (.05, .02, .22), c["top2"], bevel=.008, outline=False)    # placket (stays on torso)
+        for z in (.73, .66, .59):
             t.ball((0, -.18, z), (.02, .012, .02), "wood_dark", seg=6, outline=False)
     elif style == "tee":
         t.ball((0, -.16, .66), (.1, .02, .1), c["top2"], seg=10, outline=False)          # chest print
@@ -77,8 +77,8 @@ def body(p, c):
         for sx in (-1, 1):                                                                 # shirt collar peeking out
             t.box((sx * .05, -.12, .8), (.08, .04, .05), "white", bevel=.01, rot=(20, 0, sx * -20))
     elif style == "vest":
-        t.ball((0, .0, .59), (.43, .35, .34), c["top2"], seg=16)                          # knit vest over shirt
-        t.box((0, -.17, .72), (.07, .02, .1), "white", bevel=.008, outline=False)
+        t.ball((0, 0, .615), (.432, .352, .425), c["top2"], seg=16)                       # knit vest over shirt
+        t.cyl((0, -.168, .73), (.1, .02), .12, "white", seg=3, rot=(-90, 0, 180), outline=False)   # V-neck
         for sx in (-1, 1):
             t.box((sx * .055, -.13, .78), (.09, .04, .06), "white", bevel=.01, rot=(20, 0, sx * -20))
     elif style == "polo":
@@ -101,19 +101,24 @@ def body(p, c):
     elif style in ("tunic", "gamis"):   # long loose top; gamis continues into the long skirt (see HIPS)
         t.cyl((0, 0, .79), (.2, .18), .035, c["top2"], seg=12)
         t.box((0, -.168, .66), (.05, .02, .2), c["top2"], bevel=.008, outline=False)
-        t.cyl((0, 0, .44), (.46, .38), .14, c["top"], seg=16, top=1.1, bevel=.02)       # flared hem past the hips
+        if style == "tunic":
+            t.ball((0, 0, .5), (.4, .32, .16), c["top"], seg=16)                         # hem past the hips
     if c.get("tie"):
         t.box((0, -.17, .66), (.05, .02, .16), c["acc"], bevel=.008)
         t.box((0, -.165, .75), (.06, .02, .04), c["acc"], bevel=.008)
     t.done_bone()
 
     h = p("HIPS", "hips")
-    if long_skirt(c):   # modest ankle-length bell skirt; the legs underneath share its color
+    if long_skirt(c):
+        h.ball((0, 0, .5), (.38, .31, .14), c["pants"], seg=14)                          # soft waistband   # modest ankle-length bell skirt; the legs underneath share its color
         h.cyl((0, 0, .3), (.5, .44), .42, c["pants"], seg=18, top=.76, bevel=.03)
         h.cyl((0, 0, .1), (.5, .44), .025, c["top2"] if c["outfit"] == "gamis" else c["pants"], seg=18,
               outline=False)                                                             # hem band
     else:
         h.ball((0, 0, .45), (.38, .3, .18), c["pants"], seg=14)
+        if c["outfit"] != "tunic":                                                       # neat belt + buckle
+            h.cyl((0, 0, .485), (.37, .295), .035, "wood_dark", seg=16, outline=False)
+            h.box((0, -.148, .485), (.05, .012, .035), "butter", bevel=.004, outline=False)
     h.done_bone()
 
     for side, sx in (("L", 1), ("R", -1)):
@@ -453,8 +458,6 @@ def hair(p, c):
             x, z = math.sin(a) * .25, .99 + math.cos(a) * .25
             h.ball((x, surf(x * .9, max(.82, min(z, 1.2))) + .04, z), (.11, .11, .11), c["hair"], seg=6)
         h.ball((0, .1, 1.3), (.3, .26, .1), c["hair"], seg=12)                               # soft top fold
-        if style == "hijab_pashmina":                                                        # pleat band
-            h.cyl((0, .03, 1.2), (.64, .56), .04, c["hijab2"], seg=20, outline=False, rot=(-12, 0, 0))
     elif style == "tuft":
         _cap(h, c, size=(.58, .54, .38))
         h.cyl((.02, -.02, 1.33), (.06, .04), .12, c["hair"], seg=6, top=.1, rot=(-25, 20, 0))   # antenna tuft
@@ -523,13 +526,11 @@ def accessories(p, c):
         b = p("ACC_drape", "spine")
         st = c["hair_style"]
         b.ball((0, .0, .77), (.46, .38, .2), c["hair"], seg=16)
-        if st == "hijab_khimar":       # long khimar: falls over chest and back to the waist
-            b.cyl((0, 0, .66), (.48, .4), .26, c["hair"], seg=18, top=.82, bevel=.03)
-            b.ball((0, -.12, .6), (.34, .14, .2), c["hair"], seg=12)
+        if st == "hijab_khimar":       # long khimar: soft cape over chest and back
+            b.ball((0, 0, .66), (.47, .39, .34), c["hair"], seg=16)
         elif st == "hijab_pashmina":   # wrap with one tail over the shoulder
             b.ball((0, -.1, .69), (.3, .12, .22), c["hair"], seg=10)
-            b.box((.13, -.13, .62), (.09, .04, .26), c["hair"], bevel=.03, rot=(0, -10, 0))
-            b.box((.13, -.15, .62), (.092, .02, .02), c["hijab2"], bevel=0, outline=False, rot=(0, -10, 0))
+            b.ball((.1, -.12, .64), (.12, .07, .26), c["hair"], seg=10, rot=(0, -12, 0))      # tail over the shoulder
         else:                          # square hijab, covers the chest
             b.ball((0, -.1, .68), (.32, .12, .26), c["hair"], seg=10)
         b.done_bone()
