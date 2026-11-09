@@ -1,0 +1,4076 @@
+{
+ "version": 2,
+ "units": "meters",
+ "up": "+Z blender / +Y glTF",
+ "front": "-Y blender / +Z glTF",
+ "pivot": {
+  "floor": "bottom center at floor",
+  "table": "bottom center, set on a table top",
+  "wall": "back face on the wall plane, bottom edge at z=0; hang at mount_z"
+ },
+ "outline": {
+  "object_suffix": "_outline",
+  "hex": "#4B4E63",
+  "thickness_m": 0.009,
+  "three_js": "MeshBasicMaterial, side BackSide"
+ },
+ "items": [
+  {
+   "id": "desk",
+   "label": "Work desk",
+   "category": "work",
+   "node": "SM_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.701,
+    "z": 0.753
+   },
+   "bbox_min": [
+    -0.7,
+    -0.351,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    0.753
+   ],
+   "tris": 1564,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "standing_desk",
+   "label": "Standing desk",
+   "category": "work",
+   "node": "SM_standing_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.703,
+    "z": 1.05
+   },
+   "bbox_min": [
+    -0.7,
+    -0.353,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    1.05
+   ],
+   "tris": 984,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_black",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "office_chair",
+   "label": "Office chair",
+   "category": "work",
+   "node": "SM_office_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.632,
+    "y": 0.62,
+    "z": 1.092
+   },
+   "bbox_min": [
+    -0.316,
+    -0.275,
+    0.005
+   ],
+   "bbox_max": [
+    0.316,
+    0.345,
+    1.097
+   ],
+   "tris": 1324,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_metal",
+    "MAT_mint",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "partition_panel",
+   "label": "Acoustic partition",
+   "category": "work",
+   "node": "SM_partition_panel",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.24,
+    "y": 0.36,
+    "z": 1.305
+   },
+   "bbox_min": [
+    -0.62,
+    -0.18,
+    0.0
+   ],
+   "bbox_max": [
+    0.62,
+    0.18,
+    1.305
+   ],
+   "tris": 900,
+   "materials": [
+    "MAT_sky",
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_butter",
+    "MAT_blush",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "bookshelf",
+   "label": "Bookshelf",
+   "category": "work",
+   "node": "SM_bookshelf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.32,
+    "z": 1.8
+   },
+   "bbox_min": [
+    -0.45,
+    -0.16,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.16,
+    1.8
+   ],
+   "tris": 1572,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_pot",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "filing_cabinet",
+   "label": "Filing cabinet",
+   "category": "work",
+   "node": "SM_filing_cabinet",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.59,
+    "z": 1.0
+   },
+   "bbox_min": [
+    -0.225,
+    -0.315,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.275,
+    1.0
+   ],
+   "tris": 740,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_charcoal",
+    "MAT_sky",
+    "MAT_white",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "monitor",
+   "label": "Monitor",
+   "category": "tech",
+   "node": "SM_monitor",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.62,
+    "y": 0.17,
+    "z": 0.517
+   },
+   "bbox_min": [
+    -0.31,
+    -0.085,
+    0.0
+   ],
+   "bbox_max": [
+    0.31,
+    0.085,
+    0.517
+   ],
+   "tris": 592,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_blue",
+    "MAT_black",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "laptop",
+   "label": "Laptop",
+   "category": "tech",
+   "node": "SM_laptop",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.34,
+    "y": 0.272,
+    "z": 0.232
+   },
+   "bbox_min": [
+    -0.17,
+    -0.12,
+    0.0
+   ],
+   "bbox_max": [
+    0.17,
+    0.152,
+    0.232
+   ],
+   "tris": 300,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_grey",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "desk_lamp",
+   "label": "Desk lamp",
+   "category": "tech",
+   "node": "SM_desk_lamp",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.17,
+    "y": 0.431,
+    "z": 0.377
+   },
+   "bbox_min": [
+    -0.085,
+    -0.311,
+    0.0
+   ],
+   "bbox_max": [
+    0.085,
+    0.12,
+    0.377
+   ],
+   "tris": 396,
+   "materials": [
+    "MAT_butter",
+    "MAT_white",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "plant_small",
+   "label": "Desk plant",
+   "category": "tech",
+   "node": "SM_plant_small",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.144,
+    "y": 0.142,
+    "z": 0.24
+   },
+   "bbox_min": [
+    -0.071,
+    -0.066,
+    0.0
+   ],
+   "bbox_max": [
+    0.073,
+    0.076,
+    0.24
+   ],
+   "tris": 584,
+   "materials": [
+    "MAT_white",
+    "MAT_soil",
+    "MAT_leaf_dark",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "meeting_table",
+   "label": "Meeting table",
+   "category": "meeting",
+   "node": "SM_meeting_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.4,
+    "y": 1.1,
+    "z": 0.757
+   },
+   "bbox_min": [
+    -1.2,
+    -0.55,
+    0.0
+   ],
+   "bbox_max": [
+    1.2,
+    0.55,
+    0.757
+   ],
+   "tris": 624,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_grey",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "meeting_chair",
+   "label": "Meeting chair",
+   "category": "meeting",
+   "node": "SM_meeting_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.46,
+    "y": 0.534,
+    "z": 0.858
+   },
+   "bbox_min": [
+    -0.23,
+    -0.237,
+    0.01
+   ],
+   "bbox_max": [
+    0.23,
+    0.297,
+    0.869
+   ],
+   "tris": 664,
+   "materials": [
+    "MAT_metal",
+    "MAT_lavender",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "tv_stand",
+   "label": "Presentation TV",
+   "category": "meeting",
+   "node": "SM_tv_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.3,
+    "y": 0.55,
+    "z": 1.625
+   },
+   "bbox_min": [
+    -0.65,
+    -0.275,
+    0.005
+   ],
+   "bbox_max": [
+    0.65,
+    0.275,
+    1.63
+   ],
+   "tris": 824,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_grey",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "whiteboard",
+   "label": "Whiteboard",
+   "category": "meeting",
+   "node": "SM_whiteboard",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.46,
+    "y": 0.5,
+    "z": 1.805
+   },
+   "bbox_min": [
+    -0.73,
+    -0.25,
+    0.005
+   ],
+   "bbox_max": [
+    0.73,
+    0.25,
+    1.81
+   ],
+   "tris": 1020,
+   "materials": [
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_white",
+    "MAT_paper",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_black",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "sofa",
+   "label": "Sofa 2-seat",
+   "category": "lounge",
+   "node": "SM_sofa",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.74,
+    "y": 0.85,
+    "z": 0.77
+   },
+   "bbox_min": [
+    -0.87,
+    -0.425,
+    0.0
+   ],
+   "bbox_max": [
+    0.87,
+    0.425,
+    0.77
+   ],
+   "tris": 2148,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_sage",
+    "MAT_mint",
+    "MAT_butter",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "armchair",
+   "label": "Armchair",
+   "category": "lounge",
+   "node": "SM_armchair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.86,
+    "y": 0.821,
+    "z": 0.813
+   },
+   "bbox_min": [
+    -0.43,
+    -0.4,
+    0.006
+   ],
+   "bbox_max": [
+    0.43,
+    0.421,
+    0.818
+   ],
+   "tris": 1492,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_peach",
+    "MAT_blush",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "beanbag",
+   "label": "Beanbag",
+   "category": "lounge",
+   "node": "SM_beanbag",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.85,
+    "z": 0.715
+   },
+   "bbox_min": [
+    -0.45,
+    -0.425,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.425,
+    0.715
+   ],
+   "tris": 472,
+   "materials": [
+    "MAT_lavender",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "coffee_table",
+   "label": "Coffee table",
+   "category": "lounge",
+   "node": "SM_coffee_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.8,
+    "z": 0.5
+   },
+   "bbox_min": [
+    -0.4,
+    -0.4,
+    0.01
+   ],
+   "bbox_max": [
+    0.4,
+    0.4,
+    0.51
+   ],
+   "tris": 544,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "rug",
+   "label": "Rug",
+   "category": "lounge",
+   "node": "SM_rug",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.1,
+    "y": 1.4,
+    "z": 0.017
+   },
+   "bbox_min": [
+    -1.05,
+    -0.7,
+    0.0
+   ],
+   "bbox_max": [
+    1.05,
+    0.7,
+    0.017
+   ],
+   "tris": 884,
+   "materials": [
+    "MAT_blush",
+    "MAT_offwhite",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "floor_lamp",
+   "label": "Floor lamp",
+   "category": "lounge",
+   "node": "SM_floor_lamp",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.42,
+    "y": 0.42,
+    "z": 1.58
+   },
+   "bbox_min": [
+    -0.21,
+    -0.21,
+    0.0
+   ],
+   "bbox_max": [
+    0.21,
+    0.21,
+    1.58
+   ],
+   "tris": 260,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_butter",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "stool",
+   "label": "Round stool",
+   "category": "lounge",
+   "node": "SM_stool",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.38,
+    "y": 0.38,
+    "z": 0.476
+   },
+   "bbox_min": [
+    -0.19,
+    -0.19,
+    0.009
+   ],
+   "bbox_max": [
+    0.19,
+    0.19,
+    0.485
+   ],
+   "tris": 296,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "plant_tall",
+   "label": "Floor plant",
+   "category": "lounge",
+   "node": "SM_plant_tall",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.679,
+    "y": 0.721,
+    "z": 1.336
+   },
+   "bbox_min": [
+    -0.318,
+    -0.36,
+    0.0
+   ],
+   "bbox_max": [
+    0.36,
+    0.361,
+    1.336
+   ],
+   "tris": 1228,
+   "materials": [
+    "MAT_pot",
+    "MAT_white",
+    "MAT_soil",
+    "MAT_leaf_dark",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "fridge",
+   "label": "Fridge",
+   "category": "pantry",
+   "node": "SM_fridge",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.73,
+    "z": 1.8
+   },
+   "bbox_min": [
+    -0.35,
+    -0.39,
+    0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.34,
+    1.8
+   ],
+   "tris": 756,
+   "materials": [
+    "MAT_mint",
+    "MAT_charcoal",
+    "MAT_white",
+    "MAT_butter",
+    "MAT_blush",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "kitchen_counter",
+   "label": "Kitchen counter + sink",
+   "category": "pantry",
+   "node": "SM_kitchen_counter",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.84,
+    "y": 0.655,
+    "z": 1.213
+   },
+   "bbox_min": [
+    -0.92,
+    -0.335,
+    0.0
+   ],
+   "bbox_max": [
+    0.92,
+    0.32,
+    1.213
+   ],
+   "tris": 1724,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_grey_light",
+    "MAT_grey",
+    "MAT_metal",
+    "MAT_coral",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "microwave",
+   "label": "Microwave",
+   "category": "pantry",
+   "node": "SM_microwave",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.393,
+    "z": 0.3
+   },
+   "bbox_min": [
+    -0.25,
+    -0.213,
+    0.0
+   ],
+   "bbox_max": [
+    0.25,
+    0.18,
+    0.3
+   ],
+   "tris": 604,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_glass",
+    "MAT_grey_light",
+    "MAT_mint",
+    "MAT_coral",
+    "MAT_peach"
+   ]
+  },
+  {
+   "id": "coffee_machine",
+   "label": "Coffee machine",
+   "category": "pantry",
+   "node": "SM_coffee_machine",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.28,
+    "y": 0.32,
+    "z": 0.55
+   },
+   "bbox_min": [
+    -0.14,
+    -0.16,
+    0.0
+   ],
+   "bbox_max": [
+    0.14,
+    0.16,
+    0.55
+   ],
+   "tris": 1072,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_peach",
+    "MAT_glass",
+    "MAT_white",
+    "MAT_mint",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "water_dispenser",
+   "label": "Water dispenser",
+   "category": "pantry",
+   "node": "SM_water_dispenser",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.34,
+    "y": 0.377,
+    "z": 1.45
+   },
+   "bbox_min": [
+    -0.17,
+    -0.207,
+    0.0
+   ],
+   "bbox_max": [
+    0.17,
+    0.17,
+    1.45
+   ],
+   "tris": 1000,
+   "materials": [
+    "MAT_white",
+    "MAT_grey_light",
+    "MAT_blue",
+    "MAT_coral",
+    "MAT_grey",
+    "MAT_water",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "trash_bin",
+   "label": "Trash bin",
+   "category": "pantry",
+   "node": "SM_trash_bin",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.4,
+    "z": 0.46
+   },
+   "bbox_min": [
+    -0.18,
+    -0.22,
+    0.0
+   ],
+   "bbox_max": [
+    0.18,
+    0.18,
+    0.46
+   ],
+   "tris": 420,
+   "materials": [
+    "MAT_sage",
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "wall_clock",
+   "label": "Wall clock",
+   "category": "wall",
+   "node": "SM_wall_clock",
+   "mount": "wall",
+   "mount_z": 2.0,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.063,
+    "z": 0.36
+   },
+   "bbox_min": [
+    -0.18,
+    -0.063,
+    0.0
+   ],
+   "bbox_max": [
+    0.18,
+    0.0,
+    0.36
+   ],
+   "tris": 380,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "picture_frame",
+   "label": "Picture frame",
+   "category": "wall",
+   "node": "SM_picture_frame",
+   "mount": "wall",
+   "mount_z": 1.4,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.036,
+    "z": 0.4
+   },
+   "bbox_min": [
+    -0.25,
+    -0.036,
+    0.0
+   ],
+   "bbox_max": [
+    0.25,
+    0.0,
+    0.4
+   ],
+   "tris": 576,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_sky",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "poster",
+   "label": "Poster",
+   "category": "wall",
+   "node": "SM_poster",
+   "mount": "wall",
+   "mount_z": 1.3,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.014,
+    "z": 0.7
+   },
+   "bbox_min": [
+    -0.25,
+    -0.014,
+    0.0
+   ],
+   "bbox_max": [
+    0.25,
+    0.0,
+    0.7
+   ],
+   "tris": 528,
+   "materials": [
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "wall_shelf",
+   "label": "Wall shelf",
+   "category": "wall",
+   "node": "SM_wall_shelf",
+   "mount": "wall",
+   "mount_z": 1.5,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.22,
+    "z": 0.41
+   },
+   "bbox_min": [
+    -0.4,
+    -0.22,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.0,
+    0.41
+   ],
+   "tris": 744,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_wood_light",
+    "MAT_blue",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_pot",
+    "MAT_leaf",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "notice_board",
+   "label": "Notice board",
+   "category": "wall",
+   "node": "SM_notice_board",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.043,
+    "z": 0.6
+   },
+   "bbox_min": [
+    -0.45,
+    -0.043,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.0,
+    0.6
+   ],
+   "tris": 624,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_cork",
+    "MAT_butter",
+    "MAT_coral",
+    "MAT_sky",
+    "MAT_blush",
+    "MAT_paper",
+    "MAT_mint",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "gaming_chair",
+   "label": "Gaming chair",
+   "category": "seating",
+   "node": "SM_gaming_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.66,
+    "y": 0.646,
+    "z": 1.322
+   },
+   "bbox_min": [
+    -0.33,
+    -0.275,
+    0.005
+   ],
+   "bbox_max": [
+    0.33,
+    0.37,
+    1.327
+   ],
+   "tris": 1988,
+   "materials": [
+    "MAT_black",
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_coral",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "mesh_chair",
+   "label": "Ergonomic mesh chair",
+   "category": "seating",
+   "node": "SM_mesh_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.632,
+    "y": 0.628,
+    "z": 1.285
+   },
+   "bbox_min": [
+    -0.316,
+    -0.275,
+    0.005
+   ],
+   "bbox_max": [
+    0.316,
+    0.352,
+    1.29
+   ],
+   "tris": 1552,
+   "materials": [
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_black",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "wooden_chair",
+   "label": "Wooden chair",
+   "category": "seating",
+   "node": "SM_wooden_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.44,
+    "y": 0.462,
+    "z": 0.874
+   },
+   "bbox_min": [
+    -0.22,
+    -0.21,
+    0.011
+   ],
+   "bbox_max": [
+    0.22,
+    0.252,
+    0.885
+   ],
+   "tris": 816,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_light",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "shell_chair",
+   "label": "Shell chair",
+   "category": "seating",
+   "node": "SM_shell_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.508,
+    "y": 0.511,
+    "z": 0.84
+   },
+   "bbox_min": [
+    -0.254,
+    -0.243,
+    0.006
+   ],
+   "bbox_max": [
+    0.254,
+    0.267,
+    0.846
+   ],
+   "tris": 820,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_metal",
+    "MAT_black",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "cantilever_chair",
+   "label": "Visitor chair",
+   "category": "seating",
+   "node": "SM_cantilever_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.46,
+    "y": 0.5,
+    "z": 0.862
+   },
+   "bbox_min": [
+    -0.23,
+    -0.235,
+    -0.0
+   ],
+   "bbox_max": [
+    0.23,
+    0.265,
+    0.862
+   ],
+   "tris": 600,
+   "materials": [
+    "MAT_metal",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "bar_stool",
+   "label": "Bar stool",
+   "category": "seating",
+   "node": "SM_bar_stool",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.42,
+    "y": 0.42,
+    "z": 0.979
+   },
+   "bbox_min": [
+    -0.21,
+    -0.21,
+    0.0
+   ],
+   "bbox_max": [
+    0.21,
+    0.21,
+    0.979
+   ],
+   "tris": 784,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_peach"
+   ]
+  },
+  {
+   "id": "bench",
+   "label": "Padded bench",
+   "category": "seating",
+   "node": "SM_bench",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.38,
+    "z": 0.493
+   },
+   "bbox_min": [
+    -0.6,
+    -0.19,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.19,
+    0.493
+   ],
+   "tris": 860,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_light",
+    "MAT_sage",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "pouf",
+   "label": "Pouf",
+   "category": "seating",
+   "node": "SM_pouf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.51,
+    "y": 0.51,
+    "z": 0.43
+   },
+   "bbox_min": [
+    -0.255,
+    -0.255,
+    0.0
+   ],
+   "bbox_max": [
+    0.255,
+    0.255,
+    0.43
+   ],
+   "tris": 552,
+   "materials": [
+    "MAT_butter",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "saddle_stool",
+   "label": "Saddle stool",
+   "category": "seating",
+   "node": "SM_saddle_stool",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.556,
+    "y": 0.529,
+    "z": 0.625
+   },
+   "bbox_min": [
+    -0.278,
+    -0.243,
+    0.005
+   ],
+   "bbox_max": [
+    0.278,
+    0.286,
+    0.63
+   ],
+   "tris": 616,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_metal",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "monitor_dual",
+   "label": "Dual monitor arm",
+   "category": "tech",
+   "node": "SM_monitor_dual",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.152,
+    "y": 0.205,
+    "z": 0.57
+   },
+   "bbox_min": [
+    -0.576,
+    -0.035,
+    0.0
+   ],
+   "bbox_max": [
+    0.576,
+    0.17,
+    0.57
+   ],
+   "tris": 592,
+   "materials": [
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "monitor_ultrawide",
+   "label": "Curved ultrawide",
+   "category": "tech",
+   "node": "SM_monitor_ultrawide",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.894,
+    "y": 0.18,
+    "z": 0.451
+   },
+   "bbox_min": [
+    -0.447,
+    -0.05,
+    -0.001
+   ],
+   "bbox_max": [
+    0.447,
+    0.13,
+    0.45
+   ],
+   "tris": 1000,
+   "materials": [
+    "MAT_black",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_blue"
+   ]
+  },
+  {
+   "id": "monitor_vertical",
+   "label": "Portrait monitor",
+   "category": "tech",
+   "node": "SM_monitor_vertical",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.32,
+    "y": 0.2,
+    "z": 0.69
+   },
+   "bbox_min": [
+    -0.16,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.16,
+    0.1,
+    0.69
+   ],
+   "tris": 380,
+   "materials": [
+    "MAT_white",
+    "MAT_screen",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "all_in_one",
+   "label": "All-in-one PC",
+   "category": "tech",
+   "node": "SM_all_in_one",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.18,
+    "z": 0.53
+   },
+   "bbox_min": [
+    -0.3,
+    -0.03,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.15,
+    0.53
+   ],
+   "tris": 568,
+   "materials": [
+    "MAT_metal",
+    "MAT_white",
+    "MAT_screen",
+    "MAT_peach",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "crt_monitor",
+   "label": "Retro monitor",
+   "category": "tech",
+   "node": "SM_crt_monitor",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.405,
+    "z": 0.43
+   },
+   "bbox_min": [
+    -0.18,
+    -0.145,
+    0.0
+   ],
+   "bbox_max": [
+    0.18,
+    0.26,
+    0.43
+   ],
+   "tris": 788,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_charcoal",
+    "MAT_mint",
+    "MAT_white",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "keyboard_mouse",
+   "label": "Keyboard + mouse",
+   "category": "desk_gear",
+   "node": "SM_keyboard_mouse",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.2,
+    "z": 0.045
+   },
+   "bbox_min": [
+    -0.22,
+    -0.1,
+    -0.001
+   ],
+   "bbox_max": [
+    0.48,
+    0.1,
+    0.045
+   ],
+   "tris": 756,
+   "materials": [
+    "MAT_white",
+    "MAT_grey_light",
+    "MAT_lavender",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "pc_tower",
+   "label": "Desktop PC",
+   "category": "desk_gear",
+   "node": "SM_pc_tower",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.206,
+    "y": 0.446,
+    "z": 0.44
+   },
+   "bbox_min": [
+    -0.1,
+    -0.226,
+    0.0
+   ],
+   "bbox_max": [
+    0.106,
+    0.22,
+    0.44
+   ],
+   "tris": 416,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_glass",
+    "MAT_coral",
+    "MAT_mint",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "printer",
+   "label": "Printer",
+   "category": "desk_gear",
+   "node": "SM_printer",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.44,
+    "y": 0.43,
+    "z": 0.321
+   },
+   "bbox_min": [
+    -0.22,
+    -0.25,
+    0.0
+   ],
+   "bbox_max": [
+    0.22,
+    0.18,
+    0.321
+   ],
+   "tris": 436,
+   "materials": [
+    "MAT_white",
+    "MAT_grey_light",
+    "MAT_paper",
+    "MAT_grey",
+    "MAT_screen",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "desk_phone",
+   "label": "Desk phone",
+   "category": "desk_gear",
+   "node": "SM_desk_phone",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.2,
+    "y": 0.179,
+    "z": 0.103
+   },
+   "bbox_min": [
+    -0.1,
+    -0.09,
+    0.007
+   ],
+   "bbox_max": [
+    0.1,
+    0.09,
+    0.11
+   ],
+   "tris": 452,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_grey_light",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "tablet_stand",
+   "label": "Tablet on stand",
+   "category": "desk_gear",
+   "node": "SM_tablet_stand",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.26,
+    "y": 0.1,
+    "z": 0.235
+   },
+   "bbox_min": [
+    -0.13,
+    -0.02,
+    0.0
+   ],
+   "bbox_max": [
+    0.13,
+    0.08,
+    0.235
+   ],
+   "tris": 208,
+   "materials": [
+    "MAT_metal",
+    "MAT_black",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "speakers",
+   "label": "Desk speakers",
+   "category": "desk_gear",
+   "node": "SM_speakers",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.55,
+    "y": 0.124,
+    "z": 0.2
+   },
+   "bbox_min": [
+    -0.275,
+    -0.064,
+    0.0
+   ],
+   "bbox_max": [
+    0.275,
+    0.06,
+    0.2
+   ],
+   "tris": 536,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "mug_set",
+   "label": "Mug + notes",
+   "category": "desk_gear",
+   "node": "SM_mug_set",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.355,
+    "y": 0.1,
+    "z": 0.161
+   },
+   "bbox_min": [
+    -0.165,
+    -0.04,
+    0.0
+   ],
+   "bbox_max": [
+    0.19,
+    0.06,
+    0.161
+   ],
+   "tris": 248,
+   "materials": [
+    "MAT_coral",
+    "MAT_wood_dark",
+    "MAT_butter",
+    "MAT_sky",
+    "MAT_blue",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "l_desk",
+   "label": "Corner L desk",
+   "category": "work",
+   "node": "SM_l_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.6,
+    "y": 1.225,
+    "z": 0.75
+   },
+   "bbox_min": [
+    -0.8,
+    -0.875,
+    0.0
+   ],
+   "bbox_max": [
+    0.8,
+    0.35,
+    0.75
+   ],
+   "tris": 1320,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_charcoal",
+    "MAT_offwhite",
+    "MAT_peach"
+   ]
+  },
+  {
+   "id": "bench_desk",
+   "label": "4-seat bench desk",
+   "category": "work",
+   "node": "SM_bench_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.4,
+    "y": 1.4,
+    "z": 1.173
+   },
+   "bbox_min": [
+    -1.2,
+    -0.7,
+    0.0
+   ],
+   "bbox_max": [
+    1.2,
+    0.7,
+    1.173
+   ],
+   "tris": 1404,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_sage",
+    "MAT_white",
+    "MAT_grey",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "reception_desk",
+   "label": "Reception desk",
+   "category": "work",
+   "node": "SM_reception_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.84,
+    "y": 0.611,
+    "z": 1.32
+   },
+   "bbox_min": [
+    -0.92,
+    -0.311,
+    0.0
+   ],
+   "bbox_max": [
+    0.92,
+    0.3,
+    1.32
+   ],
+   "tris": 572,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_mid",
+    "MAT_wood_light",
+    "MAT_sky",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "side_table",
+   "label": "Round side table",
+   "category": "lounge",
+   "node": "SM_side_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 0.62
+   },
+   "bbox_min": [
+    -0.25,
+    -0.25,
+    0.0
+   ],
+   "bbox_max": [
+    0.25,
+    0.25,
+    0.62
+   ],
+   "tris": 612,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_light",
+    "MAT_white",
+    "MAT_blue"
+   ]
+  },
+  {
+   "id": "locker",
+   "label": "Locker (3 doors)",
+   "category": "storage",
+   "node": "SM_locker",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.48,
+    "z": 1.8
+   },
+   "bbox_min": [
+    -0.45,
+    -0.255,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.225,
+    1.8
+   ],
+   "tris": 1088,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_charcoal",
+    "MAT_sky",
+    "MAT_white",
+    "MAT_paper",
+    "MAT_mint",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "drawer_cart",
+   "label": "Drawer cart",
+   "category": "storage",
+   "node": "SM_drawer_cart",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.4,
+    "y": 0.522,
+    "z": 0.637
+   },
+   "bbox_min": [
+    -0.2,
+    -0.272,
+    0.003
+   ],
+   "bbox_max": [
+    0.2,
+    0.25,
+    0.64
+   ],
+   "tris": 724,
+   "materials": [
+    "MAT_black",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "cubby_shelf",
+   "label": "Cubby shelf",
+   "category": "storage",
+   "node": "SM_cubby_shelf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.35,
+    "z": 0.8
+   },
+   "bbox_min": [
+    -0.6,
+    -0.175,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.175,
+    0.8
+   ],
+   "tris": 1572,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_white",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_lavender",
+    "MAT_pot",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "coat_rack",
+   "label": "Coat rack",
+   "category": "storage",
+   "node": "SM_coat_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.435,
+    "y": 0.4,
+    "z": 1.82
+   },
+   "bbox_min": [
+    -0.2,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.235,
+    0.2,
+    1.82
+   ],
+   "tris": 1060,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_butter",
+    "MAT_coral",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "umbrella_stand",
+   "label": "Umbrella stand",
+   "category": "storage",
+   "node": "SM_umbrella_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.259,
+    "y": 0.259,
+    "z": 1.005
+   },
+   "bbox_min": [
+    -0.13,
+    -0.13,
+    0.0
+   ],
+   "bbox_max": [
+    0.13,
+    0.13,
+    1.005
+   ],
+   "tris": 368,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_coral",
+    "MAT_wood_dark",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "cactus",
+   "label": "Cactus pot",
+   "category": "decor",
+   "node": "SM_cactus",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.147,
+    "y": 0.141,
+    "z": 0.325
+   },
+   "bbox_min": [
+    -0.069,
+    -0.071,
+    0.0
+   ],
+   "bbox_max": [
+    0.078,
+    0.071,
+    0.325
+   ],
+   "tris": 476,
+   "materials": [
+    "MAT_pot",
+    "MAT_soil",
+    "MAT_leaf",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "flower_vase",
+   "label": "Flower vase",
+   "category": "decor",
+   "node": "SM_flower_vase",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.202,
+    "y": 0.202,
+    "z": 0.405
+   },
+   "bbox_min": [
+    -0.101,
+    -0.101,
+    0.0
+   ],
+   "bbox_max": [
+    0.101,
+    0.101,
+    0.405
+   ],
+   "tris": 676,
+   "materials": [
+    "MAT_sky",
+    "MAT_leaf_dark",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_white",
+    "MAT_blush",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "plant_snake",
+   "label": "Snake plant",
+   "category": "decor",
+   "node": "SM_plant_snake",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.296,
+    "y": 0.296,
+    "z": 1.027
+   },
+   "bbox_min": [
+    -0.148,
+    -0.148,
+    0.0
+   ],
+   "bbox_max": [
+    0.148,
+    0.148,
+    1.027
+   ],
+   "tris": 452,
+   "materials": [
+    "MAT_white",
+    "MAT_soil",
+    "MAT_leaf",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "plant_hanging",
+   "label": "Hanging planter",
+   "category": "decor",
+   "node": "SM_plant_hanging",
+   "mount": "wall",
+   "mount_z": 1.6,
+   "size_m": {
+    "x": 0.283,
+    "y": 0.289,
+    "z": 0.495
+   },
+   "bbox_min": [
+    -0.142,
+    -0.289,
+    0.025
+   ],
+   "bbox_max": [
+    0.142,
+    0.0,
+    0.52
+   ],
+   "tris": 1120,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_light",
+    "MAT_white",
+    "MAT_leaf",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "hex_panels",
+   "label": "Acoustic hex panels",
+   "category": "decor",
+   "node": "SM_hex_panels",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 0.94,
+    "y": 0.181,
+    "z": 0.94
+   },
+   "bbox_min": [
+    -0.47,
+    -0.11,
+    0.01
+   ],
+   "bbox_max": [
+    0.47,
+    0.07,
+    0.95
+   ],
+   "tris": 792,
+   "materials": [
+    "MAT_sage",
+    "MAT_mint",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "calendar",
+   "label": "Wall calendar",
+   "category": "decor",
+   "node": "SM_calendar",
+   "mount": "wall",
+   "mount_z": 1.3,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.017,
+    "z": 0.41
+   },
+   "bbox_min": [
+    -0.15,
+    -0.017,
+    0.0
+   ],
+   "bbox_max": [
+    0.15,
+    0.0,
+    0.41
+   ],
+   "tris": 324,
+   "materials": [
+    "MAT_paper",
+    "MAT_coral",
+    "MAT_grey_light",
+    "MAT_blush",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "mirror_round",
+   "label": "Round mirror",
+   "category": "decor",
+   "node": "SM_mirror_round",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.048,
+    "z": 0.6
+   },
+   "bbox_min": [
+    -0.3,
+    -0.048,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.0,
+    0.6
+   ],
+   "tris": 516,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_glass",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "server_rack",
+   "label": "Server rack",
+   "category": "dept_it",
+   "node": "SM_server_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.85,
+    "z": 1.796
+   },
+   "bbox_min": [
+    -0.3,
+    -0.45,
+    0.004
+   ],
+   "bbox_max": [
+    0.3,
+    0.4,
+    1.8
+   ],
+   "tris": 1456,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_mint",
+    "MAT_sky",
+    "MAT_butter",
+    "MAT_grey",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "mech_keyboard",
+   "label": "Mechanical keyboard",
+   "category": "dept_it",
+   "node": "SM_mech_keyboard",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.479,
+    "y": 0.205,
+    "z": 0.044
+   },
+   "bbox_min": [
+    -0.18,
+    -0.14,
+    0.0
+   ],
+   "bbox_max": [
+    0.299,
+    0.065,
+    0.044
+   ],
+   "tris": 1912,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "laptop_stickers",
+   "label": "Laptop with stickers",
+   "category": "dept_it",
+   "node": "SM_laptop_stickers",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.34,
+    "y": 0.272,
+    "z": 0.232
+   },
+   "bbox_min": [
+    -0.17,
+    -0.12,
+    0.0
+   ],
+   "bbox_max": [
+    0.17,
+    0.152,
+    0.232
+   ],
+   "tris": 424,
+   "materials": [
+    "MAT_grey",
+    "MAT_grey_light",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_mint",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_sky",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "rubber_duck",
+   "label": "Debug duck",
+   "category": "dept_it",
+   "node": "SM_rubber_duck",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.1,
+    "y": 0.145,
+    "z": 0.135
+   },
+   "bbox_min": [
+    -0.05,
+    -0.085,
+    0.0
+   ],
+   "bbox_max": [
+    0.05,
+    0.06,
+    0.135
+   ],
+   "tris": 384,
+   "materials": [
+    "MAT_butter",
+    "MAT_coral",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "dev_board_kit",
+   "label": "Dev board kit",
+   "category": "dept_it",
+   "node": "SM_dev_board_kit",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.2,
+    "z": 0.063
+   },
+   "bbox_min": [
+    -0.15,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.15,
+    0.1,
+    0.063
+   ],
+   "tris": 264,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_leaf_dark",
+    "MAT_black",
+    "MAT_butter",
+    "MAT_coral",
+    "MAT_sky",
+    "MAT_mint",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "nas_box",
+   "label": "NAS storage",
+   "category": "dept_it",
+   "node": "SM_nas_box",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.18,
+    "y": 0.226,
+    "z": 0.2
+   },
+   "bbox_min": [
+    -0.09,
+    -0.116,
+    0.0
+   ],
+   "bbox_max": [
+    0.09,
+    0.11,
+    0.2
+   ],
+   "tris": 284,
+   "materials": [
+    "MAT_black",
+    "MAT_charcoal",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "drawing_tablet",
+   "label": "Drawing tablet",
+   "category": "dept_creative",
+   "node": "SM_drawing_tablet",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.397,
+    "y": 0.254,
+    "z": 0.016
+   },
+   "bbox_min": [
+    -0.18,
+    -0.134,
+    0.0
+   ],
+   "bbox_max": [
+    0.217,
+    0.12,
+    0.016
+   ],
+   "tris": 128,
+   "materials": [
+    "MAT_black",
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_grey_light"
+   ]
+  },
+  {
+   "id": "pen_display",
+   "label": "Pen display",
+   "category": "dept_creative",
+   "node": "SM_pen_display",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.555,
+    "y": 0.302,
+    "z": 0.195
+   },
+   "bbox_min": [
+    -0.26,
+    -0.151,
+    0.0
+   ],
+   "bbox_max": [
+    0.295,
+    0.151,
+    0.195
+   ],
+   "tris": 448,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_screen",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "art_supplies",
+   "label": "Art supplies",
+   "category": "dept_creative",
+   "node": "SM_art_supplies",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.41,
+    "y": 0.19,
+    "z": 0.245
+   },
+   "bbox_min": [
+    -0.16,
+    -0.123,
+    0.0
+   ],
+   "bbox_max": [
+    0.25,
+    0.067,
+    0.245
+   ],
+   "tris": 704,
+   "materials": [
+    "MAT_glass",
+    "MAT_sky",
+    "MAT_wood_mid",
+    "MAT_coral",
+    "MAT_wood_dark",
+    "MAT_butter",
+    "MAT_white",
+    "MAT_peach",
+    "MAT_sage",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "sketchbook",
+   "label": "Sketchbook + pencils",
+   "category": "dept_creative",
+   "node": "SM_sketchbook",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.56,
+    "y": 0.27,
+    "z": 0.027
+   },
+   "bbox_min": [
+    -0.21,
+    -0.135,
+    -0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.135,
+    0.027
+   ],
+   "tris": 456,
+   "materials": [
+    "MAT_paper",
+    "MAT_charcoal",
+    "MAT_grey_light",
+    "MAT_grey",
+    "MAT_coral",
+    "MAT_sky",
+    "MAT_sage",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "easel",
+   "label": "Painting easel",
+   "category": "dept_creative",
+   "node": "SM_easel",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.62,
+    "y": 0.632,
+    "z": 1.646
+   },
+   "bbox_min": [
+    -0.31,
+    -0.165,
+    0.007
+   ],
+   "bbox_max": [
+    0.31,
+    0.467,
+    1.653
+   ],
+   "tris": 636,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_white",
+    "MAT_sky",
+    "MAT_butter",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "mood_board",
+   "label": "Mood board",
+   "category": "dept_creative",
+   "node": "SM_mood_board",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 1.04,
+    "y": 0.047,
+    "z": 0.84
+   },
+   "bbox_min": [
+    -0.52,
+    -0.047,
+    0.02
+   ],
+   "bbox_max": [
+    0.52,
+    0.0,
+    0.86
+   ],
+   "tris": 708,
+   "materials": [
+    "MAT_cork",
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "art_figure",
+   "label": "Art mannequin",
+   "category": "dept_creative",
+   "node": "SM_art_figure",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.126,
+    "y": 0.1,
+    "z": 0.25
+   },
+   "bbox_min": [
+    -0.05,
+    -0.05,
+    0.0
+   ],
+   "bbox_max": [
+    0.076,
+    0.05,
+    0.25
+   ],
+   "tris": 380,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_metal",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "ring_light",
+   "label": "Ring light",
+   "category": "dept_content",
+   "node": "SM_ring_light",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.506,
+    "y": 0.444,
+    "z": 1.829
+   },
+   "bbox_min": [
+    -0.253,
+    -0.152,
+    0.007
+   ],
+   "bbox_max": [
+    0.253,
+    0.291,
+    1.836
+   ],
+   "tris": 624,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_lamp_glow",
+    "MAT_white",
+    "MAT_black",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "camera_tripod",
+   "label": "Camera on tripod",
+   "category": "dept_content",
+   "node": "SM_camera_tripod",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.506,
+    "y": 0.444,
+    "z": 1.548
+   },
+   "bbox_min": [
+    -0.253,
+    -0.152,
+    0.007
+   ],
+   "bbox_max": [
+    0.253,
+    0.291,
+    1.555
+   ],
+   "tris": 684,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_black",
+    "MAT_glass",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "podcast_mic",
+   "label": "Podcast mic arm",
+   "category": "dept_content",
+   "node": "SM_podcast_mic",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.153,
+    "y": 0.436,
+    "z": 0.316
+   },
+   "bbox_min": [
+    -0.076,
+    -0.296,
+    0.0
+   ],
+   "bbox_max": [
+    0.076,
+    0.14,
+    0.316
+   ],
+   "tris": 560,
+   "materials": [
+    "MAT_black",
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_grey_light"
+   ]
+  },
+  {
+   "id": "softbox_light",
+   "label": "Softbox light",
+   "category": "dept_content",
+   "node": "SM_softbox_light",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.506,
+    "y": 0.444,
+    "z": 1.808
+   },
+   "bbox_min": [
+    -0.253,
+    -0.153,
+    0.007
+   ],
+   "bbox_max": [
+    0.253,
+    0.291,
+    1.814
+   ],
+   "tris": 412,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_black",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "green_screen",
+   "label": "Green screen",
+   "category": "dept_content",
+   "node": "SM_green_screen",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.9,
+    "y": 0.688,
+    "z": 1.815
+   },
+   "bbox_min": [
+    -0.95,
+    -0.427,
+    0.005
+   ],
+   "bbox_max": [
+    0.95,
+    0.261,
+    1.82
+   ],
+   "tris": 380,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "clapperboard",
+   "label": "Clapperboard",
+   "category": "dept_content",
+   "node": "SM_clapperboard",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.24,
+    "y": 0.228,
+    "z": 0.049
+   },
+   "bbox_min": [
+    -0.12,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.12,
+    0.128,
+    0.049
+   ],
+   "tris": 184,
+   "materials": [
+    "MAT_black",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "desk_camera",
+   "label": "Camera + lenses",
+   "category": "dept_content",
+   "node": "SM_desk_camera",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.433,
+    "y": 0.183,
+    "z": 0.2
+   },
+   "bbox_min": [
+    -0.18,
+    -0.108,
+    0.0
+   ],
+   "bbox_max": [
+    0.252,
+    0.075,
+    0.2
+   ],
+   "tris": 608,
+   "materials": [
+    "MAT_black",
+    "MAT_charcoal",
+    "MAT_glass",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "headphone_stand",
+   "label": "Headphone stand",
+   "category": "dept_content",
+   "node": "SM_headphone_stand",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.218,
+    "y": 0.12,
+    "z": 0.3
+   },
+   "bbox_min": [
+    -0.109,
+    -0.06,
+    0.0
+   ],
+   "bbox_max": [
+    0.109,
+    0.06,
+    0.3
+   ],
+   "tris": 1420,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_charcoal",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "rollup_banner",
+   "label": "Roll-up banner",
+   "category": "dept_marketing",
+   "node": "SM_rollup_banner",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.85,
+    "y": 0.2,
+    "z": 2.0
+   },
+   "bbox_min": [
+    -0.425,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.425,
+    0.1,
+    2.0
+   ],
+   "tris": 512,
+   "materials": [
+    "MAT_grey",
+    "MAT_metal",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_blue"
+   ]
+  },
+  {
+   "id": "brochure_stand",
+   "label": "Brochure stand",
+   "category": "dept_marketing",
+   "node": "SM_brochure_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.3,
+    "z": 1.559
+   },
+   "bbox_min": [
+    -0.18,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.18,
+    0.2,
+    1.559
+   ],
+   "tris": 312,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_glass",
+    "MAT_sky",
+    "MAT_coral",
+    "MAT_sage",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "product_boxes",
+   "label": "Product samples",
+   "category": "dept_marketing",
+   "node": "SM_product_boxes",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.41,
+    "y": 0.144,
+    "z": 0.26
+   },
+   "bbox_min": [
+    -0.18,
+    -0.068,
+    0.0
+   ],
+   "bbox_max": [
+    0.23,
+    0.076,
+    0.26
+   ],
+   "tris": 552,
+   "materials": [
+    "MAT_coral",
+    "MAT_white",
+    "MAT_sky",
+    "MAT_butter",
+    "MAT_mint",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "chart_standee",
+   "label": "Growth chart",
+   "category": "dept_marketing",
+   "node": "SM_chart_standee",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.126,
+    "z": 0.224
+   },
+   "bbox_min": [
+    -0.15,
+    -0.034,
+    0.005
+   ],
+   "bbox_max": [
+    0.15,
+    0.092,
+    0.228
+   ],
+   "tris": 148,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "megaphone",
+   "label": "Megaphone",
+   "category": "dept_marketing",
+   "node": "SM_megaphone",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.148,
+    "y": 0.227,
+    "z": 0.149
+   },
+   "bbox_min": [
+    -0.068,
+    -0.142,
+    0.0
+   ],
+   "bbox_max": [
+    0.08,
+    0.085,
+    0.149
+   ],
+   "tris": 292,
+   "materials": [
+    "MAT_coral",
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "sticky_wall",
+   "label": "Sticky-note wall",
+   "category": "dept_marketing",
+   "node": "SM_sticky_wall",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.026,
+    "z": 0.7
+   },
+   "bbox_min": [
+    -0.6,
+    -0.026,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.0,
+    0.7
+   ],
+   "tris": 300,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_butter",
+    "MAT_mint",
+    "MAT_sky",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "calculator",
+   "label": "Printing calculator",
+   "category": "dept_finance",
+   "node": "SM_calculator",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.18,
+    "y": 0.29,
+    "z": 0.111
+   },
+   "bbox_min": [
+    -0.09,
+    -0.12,
+    -0.001
+   ],
+   "bbox_max": [
+    0.09,
+    0.17,
+    0.11
+   ],
+   "tris": 872,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "doc_tray",
+   "label": "Document tray",
+   "category": "dept_finance",
+   "node": "SM_doc_tray",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.26,
+    "y": 0.34,
+    "z": 0.203
+   },
+   "bbox_min": [
+    -0.13,
+    -0.17,
+    0.012
+   ],
+   "bbox_max": [
+    0.13,
+    0.17,
+    0.215
+   ],
+   "tris": 504,
+   "materials": [
+    "MAT_sky",
+    "MAT_paper",
+    "MAT_blush",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "binders",
+   "label": "Binder row",
+   "category": "dept_finance",
+   "node": "SM_binders",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.49,
+    "y": 0.263,
+    "z": 0.32
+   },
+   "bbox_min": [
+    -0.21,
+    -0.133,
+    0.0
+   ],
+   "bbox_max": [
+    0.28,
+    0.13,
+    0.32
+   ],
+   "tris": 976,
+   "materials": [
+    "MAT_blue",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_sage",
+    "MAT_butter",
+    "MAT_lavender",
+    "MAT_charcoal",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "piggy_bank",
+   "label": "Piggy bank",
+   "category": "dept_finance",
+   "node": "SM_piggy_bank",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.235,
+    "y": 0.156,
+    "z": 0.17
+   },
+   "bbox_min": [
+    -0.076,
+    -0.098,
+    0.0
+   ],
+   "bbox_max": [
+    0.159,
+    0.058,
+    0.17
+   ],
+   "tris": 716,
+   "materials": [
+    "MAT_blush",
+    "MAT_coral",
+    "MAT_black",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "safe_box",
+   "label": "Office safe",
+   "category": "dept_finance",
+   "node": "SM_safe_box",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.56,
+    "z": 0.59
+   },
+   "bbox_min": [
+    -0.25,
+    -0.31,
+    0.0
+   ],
+   "bbox_max": [
+    0.25,
+    0.25,
+    0.59
+   ],
+   "tris": 456,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_metal",
+    "MAT_coral",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "shredder",
+   "label": "Paper shredder",
+   "category": "dept_finance",
+   "node": "SM_shredder",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.38,
+    "y": 0.28,
+    "z": 0.535
+   },
+   "bbox_min": [
+    -0.19,
+    -0.14,
+    0.0
+   ],
+   "bbox_max": [
+    0.19,
+    0.14,
+    0.535
+   ],
+   "tris": 428,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_glass",
+    "MAT_paper",
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "candy_jar",
+   "label": "Candy jar",
+   "category": "dept_hr",
+   "node": "SM_candy_jar",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.162,
+    "y": 0.161,
+    "z": 0.235
+   },
+   "bbox_min": [
+    -0.082,
+    -0.081,
+    0.0
+   ],
+   "bbox_max": [
+    0.08,
+    0.08,
+    0.235
+   ],
+   "tris": 1296,
+   "materials": [
+    "MAT_glass",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "name_plate",
+   "label": "Desk name plate",
+   "category": "dept_hr",
+   "node": "SM_name_plate",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.26,
+    "y": 0.06,
+    "z": 0.075
+   },
+   "bbox_min": [
+    -0.13,
+    -0.02,
+    0.0
+   ],
+   "bbox_max": [
+    0.13,
+    0.04,
+    0.075
+   ],
+   "tris": 164,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_light",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "archive_boxes",
+   "label": "Archive boxes",
+   "category": "dept_hr",
+   "node": "SM_archive_boxes",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.79,
+    "y": 0.31,
+    "z": 0.585
+   },
+   "bbox_min": [
+    -0.395,
+    -0.155,
+    0.0
+   ],
+   "bbox_max": [
+    0.395,
+    0.155,
+    0.585
+   ],
+   "tris": 720,
+   "materials": [
+    "MAT_cork",
+    "MAT_wood_mid",
+    "MAT_white",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "welcome_kit",
+   "label": "Welcome kit",
+   "category": "dept_hr",
+   "node": "SM_welcome_kit",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.39,
+    "y": 0.15,
+    "z": 0.336
+   },
+   "bbox_min": [
+    -0.2,
+    -0.11,
+    0.0
+   ],
+   "bbox_max": [
+    0.19,
+    0.04,
+    0.336
+   ],
+   "tris": 504,
+   "materials": [
+    "MAT_sage",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "team_photo",
+   "label": "Team photo frame",
+   "category": "dept_hr",
+   "node": "SM_team_photo",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.22,
+    "y": 0.085,
+    "z": 0.172
+   },
+   "bbox_min": [
+    -0.11,
+    -0.025,
+    0.002
+   ],
+   "bbox_max": [
+    0.11,
+    0.059,
+    0.174
+   ],
+   "tris": 804,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_light",
+    "MAT_sky",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_peach",
+    "MAT_sage",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "suggestion_box",
+   "label": "Suggestion box",
+   "category": "dept_hr",
+   "node": "SM_suggestion_box",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.32,
+    "y": 0.3,
+    "z": 1.103
+   },
+   "bbox_min": [
+    -0.16,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.16,
+    0.15,
+    1.103
+   ],
+   "tris": 612,
+   "materials": [
+    "MAT_metal",
+    "MAT_charcoal",
+    "MAT_butter",
+    "MAT_black",
+    "MAT_coral",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "headset_stand",
+   "label": "Headset on stand",
+   "category": "dept_sales",
+   "node": "SM_headset_stand",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.218,
+    "y": 0.172,
+    "z": 0.3
+   },
+   "bbox_min": [
+    -0.109,
+    -0.112,
+    0.0
+   ],
+   "bbox_max": [
+    0.109,
+    0.06,
+    0.3
+   ],
+   "tris": 1516,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_wood_dark",
+    "MAT_coral",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "call_bell",
+   "label": "Service bell",
+   "category": "dept_sales",
+   "node": "SM_call_bell",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.117,
+    "y": 0.12,
+    "z": 0.104
+   },
+   "bbox_min": [
+    -0.058,
+    -0.06,
+    0.0
+   ],
+   "bbox_max": [
+    0.058,
+    0.06,
+    0.104
+   ],
+   "tris": 320,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_butter",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "trophy",
+   "label": "Sales trophy",
+   "category": "dept_sales",
+   "node": "SM_trophy",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.272,
+    "y": 0.196,
+    "z": 0.23
+   },
+   "bbox_min": [
+    -0.136,
+    -0.098,
+    0.0
+   ],
+   "bbox_max": [
+    0.136,
+    0.098,
+    0.23
+   ],
+   "tris": 480,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_butter",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "sales_board",
+   "label": "Sales target board",
+   "category": "dept_sales",
+   "node": "SM_sales_board",
+   "mount": "wall",
+   "mount_z": 1.3,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.03,
+    "z": 0.6
+   },
+   "bbox_min": [
+    -0.45,
+    -0.03,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.0,
+    0.6
+   ],
+   "tris": 824,
+   "materials": [
+    "MAT_white",
+    "MAT_coral",
+    "MAT_grey_light",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "exec_desk",
+   "label": "Executive desk",
+   "category": "dept_exec",
+   "node": "SM_exec_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.8,
+    "y": 0.855,
+    "z": 0.765
+   },
+   "bbox_min": [
+    -0.9,
+    -0.43,
+    0.0
+   ],
+   "bbox_max": [
+    0.9,
+    0.425,
+    0.765
+   ],
+   "tris": 1608,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_mid",
+    "MAT_butter",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "exec_chair",
+   "label": "Executive chair",
+   "category": "dept_exec",
+   "node": "SM_exec_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.69,
+    "y": 0.659,
+    "z": 1.175
+   },
+   "bbox_min": [
+    -0.345,
+    -0.292,
+    0.005
+   ],
+   "bbox_max": [
+    0.345,
+    0.368,
+    1.18
+   ],
+   "tris": 1880,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_black",
+    "MAT_metal",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "globe_stand",
+   "label": "Floor globe",
+   "category": "dept_exec",
+   "node": "SM_globe_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.615,
+    "y": 0.537,
+    "z": 1.015
+   },
+   "bbox_min": [
+    -0.294,
+    -0.291,
+    0.002
+   ],
+   "bbox_max": [
+    0.321,
+    0.246,
+    1.018
+   ],
+   "tris": 948,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_sky",
+    "MAT_leaf",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "pen_stand",
+   "label": "Fountain pen stand",
+   "category": "dept_exec",
+   "node": "SM_pen_stand",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.22,
+    "y": 0.122,
+    "z": 0.18
+   },
+   "bbox_min": [
+    -0.11,
+    -0.072,
+    0.0
+   ],
+   "bbox_max": [
+    0.11,
+    0.05,
+    0.18
+   ],
+   "tris": 256,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_butter",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "bonsai",
+   "label": "Bonsai",
+   "category": "dept_exec",
+   "node": "SM_bonsai",
+   "mount": "table",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.24,
+    "y": 0.16,
+    "z": 0.287
+   },
+   "bbox_min": [
+    -0.12,
+    -0.08,
+    0.0
+   ],
+   "bbox_max": [
+    0.12,
+    0.08,
+    0.287
+   ],
+   "tris": 460,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_soil",
+    "MAT_wood_dark",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "station_it",
+   "label": "IT / engineering desk",
+   "category": "station",
+   "node": "SM_station_it",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.701,
+    "z": 1.32
+   },
+   "bbox_min": [
+    -0.7,
+    -0.351,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    1.32
+   ],
+   "tris": 5132,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_wood_dark",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_screen",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush",
+    "MAT_mint",
+    "MAT_black",
+    "MAT_grey_light",
+    "MAT_leaf_dark",
+    "MAT_metal",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "station_creative",
+   "label": "Creative / design desk",
+   "category": "station",
+   "node": "SM_station_creative",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.415,
+    "y": 0.701,
+    "z": 1.267
+   },
+   "bbox_min": [
+    -0.7,
+    -0.351,
+    0.0
+   ],
+   "bbox_max": [
+    0.715,
+    0.35,
+    1.267
+   ],
+   "tris": 4728,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_wood_dark",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_screen",
+    "MAT_blue",
+    "MAT_black",
+    "MAT_mint",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_wood_mid",
+    "MAT_glass",
+    "MAT_sky",
+    "MAT_peach",
+    "MAT_lavender",
+    "MAT_grey_light",
+    "MAT_paper",
+    "MAT_metal",
+    "MAT_leaf_dark",
+    "MAT_soil",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "station_content",
+   "label": "Content / media desk",
+   "category": "station",
+   "node": "SM_station_content",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.701,
+    "z": 1.2
+   },
+   "bbox_min": [
+    -0.7,
+    -0.351,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    1.2
+   ],
+   "tris": 6092,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_wood_dark",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_black",
+    "MAT_screen",
+    "MAT_blue",
+    "MAT_grey_light",
+    "MAT_lavender",
+    "MAT_coral",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "station_marketing",
+   "label": "Marketing desk",
+   "category": "station",
+   "node": "SM_station_marketing",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.6,
+    "y": 1.225,
+    "z": 1.267
+   },
+   "bbox_min": [
+    -0.8,
+    -0.875,
+    0.0
+   ],
+   "bbox_max": [
+    0.8,
+    0.35,
+    1.267
+   ],
+   "tris": 3660,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_charcoal",
+    "MAT_offwhite",
+    "MAT_peach",
+    "MAT_white",
+    "MAT_screen",
+    "MAT_blue",
+    "MAT_black",
+    "MAT_mint",
+    "MAT_grey_light",
+    "MAT_lavender",
+    "MAT_grey",
+    "MAT_coral",
+    "MAT_wood_mid",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "station_finance",
+   "label": "Finance desk",
+   "category": "station",
+   "node": "SM_station_finance",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.421,
+    "y": 0.701,
+    "z": 1.44
+   },
+   "bbox_min": [
+    -0.7,
+    -0.351,
+    0.0
+   ],
+   "bbox_max": [
+    0.721,
+    0.35,
+    1.44
+   ],
+   "tris": 5384,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_wood_dark",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_screen",
+    "MAT_blue",
+    "MAT_black",
+    "MAT_mint",
+    "MAT_lavender",
+    "MAT_grey_light",
+    "MAT_paper",
+    "MAT_coral",
+    "MAT_sky",
+    "MAT_blush",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "station_hr",
+   "label": "HR / people desk",
+   "category": "station",
+   "node": "SM_station_hr",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.701,
+    "z": 1.28
+   },
+   "bbox_min": [
+    -0.7,
+    -0.351,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    1.28
+   ],
+   "tris": 5656,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_wood_dark",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_metal",
+    "MAT_screen",
+    "MAT_black",
+    "MAT_peach",
+    "MAT_grey_light",
+    "MAT_lavender",
+    "MAT_glass",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_sky",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "station_sales",
+   "label": "Sales / support desk",
+   "category": "station",
+   "node": "SM_station_sales",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.701,
+    "z": 1.267
+   },
+   "bbox_min": [
+    -0.7,
+    -0.351,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    1.267
+   ],
+   "tris": 5680,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_wood_dark",
+    "MAT_offwhite",
+    "MAT_sage",
+    "MAT_screen",
+    "MAT_blue",
+    "MAT_black",
+    "MAT_mint",
+    "MAT_grey_light",
+    "MAT_lavender",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "station_exec",
+   "label": "Executive desk set",
+   "category": "station",
+   "node": "SM_station_exec",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.8,
+    "y": 0.855,
+    "z": 1.29
+   },
+   "bbox_min": [
+    -0.9,
+    -0.43,
+    0.0
+   ],
+   "bbox_max": [
+    0.9,
+    0.425,
+    1.29
+   ],
+   "tris": 4788,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark",
+    "MAT_charcoal",
+    "MAT_butter",
+    "MAT_white",
+    "MAT_metal",
+    "MAT_screen",
+    "MAT_black",
+    "MAT_peach",
+    "MAT_grey_light",
+    "MAT_lavender",
+    "MAT_grey",
+    "MAT_soil",
+    "MAT_leaf_dark",
+    "MAT_wood_light",
+    "MAT_blue",
+    "MAT_coral",
+    "MAT_sage"
+   ]
+  }
+ ],
+ "palette": {
+  "MAT_black": "#4A4F5C",
+  "MAT_blue": "#8FB3E8",
+  "MAT_blush": "#F2C4C0",
+  "MAT_butter": "#F6DFA1",
+  "MAT_charcoal": "#6B7180",
+  "MAT_coral": "#EE9A8F",
+  "MAT_cork": "#E2C49C",
+  "MAT_glass": "#D6EEF7",
+  "MAT_grey": "#AEB4BE",
+  "MAT_grey_light": "#DADDE3",
+  "MAT_lamp_glow": "#FFF0C2",
+  "MAT_lavender": "#CFC6E8",
+  "MAT_leaf": "#8CC49A",
+  "MAT_leaf_dark": "#6FAF84",
+  "MAT_metal": "#C9CED6",
+  "MAT_mint": "#BFE6D8",
+  "MAT_offwhite": "#F1ECE3",
+  "MAT_outline": "#4B4E63",
+  "MAT_paper": "#FFFDF8",
+  "MAT_peach": "#F7CDB0",
+  "MAT_pot": "#E9B79A",
+  "MAT_sage": "#B9D3B8",
+  "MAT_screen": "#A9D8F5",
+  "MAT_sky": "#BFDDF0",
+  "MAT_soil": "#8C6E5A",
+  "MAT_water": "#BFE4F7",
+  "MAT_white": "#FBF8F3",
+  "MAT_wood_dark": "#A98466",
+  "MAT_wood_light": "#EAD7BF",
+  "MAT_wood_mid": "#D4B48C"
+ }
+}

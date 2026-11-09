@@ -1,0 +1,773 @@
+{
+ "version": 1,
+ "units": "meters",
+ "up": "+Z blender / +Y glTF",
+ "front": "-Y blender / +Z glTF",
+ "rig": {
+  "bones": [
+   "root",
+   "hips",
+   "spine",
+   "head",
+   "arm_L",
+   "arm_R",
+   "leg_L",
+   "leg_R"
+  ],
+  "skinning": "none (rigid parts bone-parented)",
+  "toggles": "face_<expr> / prop_<name> bones switch meshes via scale; scale keys are STEP"
+ },
+ "expressions": [
+  "neutral",
+  "blink",
+  "happy",
+  "talk",
+  "sad",
+  "surprised",
+  "focus",
+  "think",
+  "sleep",
+  "yawn"
+ ],
+ "clips": {
+  "idle": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "walk": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "run": {
+   "frames": 16,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "jump": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "dance": {
+   "frames": 32,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "wave": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "talk": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "nod": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "shake": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "think": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "phone": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "drink": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "stretch": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "cheer": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "clap": {
+   "frames": 16,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "point": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "present": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "shrug": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "bow": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "sad": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "facepalm": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "sit": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "type": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "sit_talk": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "sit_relax": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "sit_sleep": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "sit_drink": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "sit_wave": {
+   "frames": 24,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_code": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_debug": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_paint": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "work_draw": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_photo": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "work_podcast": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_brainstorm": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "work_pitch": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": false
+  },
+  "work_calc": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_interview": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_call": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  },
+  "work_sign": {
+   "frames": 48,
+   "fps": 24,
+   "loop": true,
+   "seated": true
+  }
+ },
+ "roles": {
+  "it": [
+   "work_code",
+   "work_debug"
+  ],
+  "creative": [
+   "work_paint",
+   "work_draw"
+  ],
+  "content": [
+   "work_photo",
+   "work_podcast"
+  ],
+  "marketing": [
+   "work_brainstorm",
+   "work_pitch"
+  ],
+  "finance": [
+   "work_calc"
+  ],
+  "hr": [
+   "work_interview"
+  ],
+  "sales": [
+   "work_call"
+  ],
+  "exec": [
+   "work_sign"
+  ]
+ },
+ "sit": {
+  "seat_top_z": 0.47,
+  "root_lift": 0.12,
+  "note": "place root on the chair pivot, facing chair front"
+ },
+ "outline": {
+  "object_suffix": "_outline",
+  "hex": "#4B4E63",
+  "thickness_m": 0.009
+ },
+ "avatars": [
+  {
+   "id": "pip",
+   "name": "Pip",
+   "file": "av_pip.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 9996,
+   "parts": 21
+  },
+  {
+   "id": "mochi",
+   "name": "Mochi",
+   "file": "av_mochi.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 10720,
+   "parts": 24
+  },
+  {
+   "id": "juno",
+   "name": "Juno",
+   "file": "av_juno.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.43,
+   "min_z": -0.0,
+   "tris": 9664,
+   "parts": 22
+  },
+  {
+   "id": "bento",
+   "name": "Bento",
+   "file": "av_bento.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 10936,
+   "parts": 22
+  },
+  {
+   "id": "kiko",
+   "name": "Kiko",
+   "file": "av_kiko.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.42,
+   "min_z": -0.0,
+   "tris": 10464,
+   "parts": 24
+  },
+  {
+   "id": "sol",
+   "name": "Sol",
+   "file": "av_sol.glb",
+   "role": "sales",
+   "work_clips": [
+    "work_call"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "headset"
+   ],
+   "height_m": 1.382,
+   "min_z": -0.0,
+   "tris": 10868,
+   "parts": 22
+  },
+  {
+   "id": "tavi",
+   "name": "Tavi",
+   "file": "av_tavi.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.28,
+   "min_z": -0.0,
+   "tris": 9656,
+   "parts": 21
+  },
+  {
+   "id": "nara",
+   "name": "Nara",
+   "file": "av_nara.glb",
+   "role": "hr",
+   "work_clips": [
+    "work_interview"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen",
+    "clipboard"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 9908,
+   "parts": 23
+  },
+  {
+   "id": "ozzy",
+   "name": "Ozzy",
+   "file": "av_ozzy.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.36,
+   "min_z": -0.0,
+   "tris": 10052,
+   "parts": 22
+  },
+  {
+   "id": "rumi",
+   "name": "Rumi",
+   "file": "av_rumi.glb",
+   "role": "exec",
+   "work_clips": [
+    "work_sign"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.45,
+   "min_z": -0.0,
+   "tris": 9804,
+   "parts": 22
+  },
+  {
+   "id": "lumi",
+   "name": "Lumi",
+   "file": "av_lumi.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 10484,
+   "parts": 24
+  },
+  {
+   "id": "dodo",
+   "name": "Dodo",
+   "file": "av_dodo.glb",
+   "role": "finance",
+   "work_clips": [
+    "work_calc"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.28,
+   "min_z": -0.0,
+   "tris": 9908,
+   "parts": 23
+  },
+  {
+   "id": "wren",
+   "name": "Wren",
+   "file": "av_wren.glb",
+   "role": "marketing",
+   "work_clips": [
+    "work_brainstorm",
+    "work_pitch"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "note",
+    "notepad"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 9556,
+   "parts": 23
+  },
+  {
+   "id": "zara",
+   "name": "Zara",
+   "file": "av_zara.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 9376,
+   "parts": 23
+  },
+  {
+   "id": "budi",
+   "name": "Budi",
+   "file": "av_budi.glb",
+   "role": "sales",
+   "work_clips": [
+    "work_call"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "headset"
+   ],
+   "height_m": 1.361,
+   "min_z": -0.0,
+   "tris": 11124,
+   "parts": 21
+  },
+  {
+   "id": "sari",
+   "name": "Sari",
+   "file": "av_sari.glb",
+   "role": "hr",
+   "work_clips": [
+    "work_interview"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen",
+    "clipboard"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 9940,
+   "parts": 24
+  },
+  {
+   "id": "hana",
+   "name": "Hana",
+   "file": "av_hana.glb",
+   "role": "finance",
+   "work_clips": [
+    "work_calc"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 10148,
+   "parts": 22
+  },
+  {
+   "id": "kai",
+   "name": "Kai",
+   "file": "av_kai.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.365,
+   "min_z": -0.0,
+   "tris": 9700,
+   "parts": 22
+  },
+  {
+   "id": "bima",
+   "name": "Bima",
+   "file": "av_bima.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 10764,
+   "parts": 22
+  },
+  {
+   "id": "ayu",
+   "name": "Ayu",
+   "file": "av_ayu.glb",
+   "role": "marketing",
+   "work_clips": [
+    "work_brainstorm",
+    "work_pitch"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "note",
+    "notepad"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 10332,
+   "parts": 23
+  },
+  {
+   "id": "theo",
+   "name": "Theo",
+   "file": "av_theo.glb",
+   "role": "exec",
+   "work_clips": [
+    "work_sign"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.361,
+   "min_z": -0.0,
+   "tris": 9868,
+   "parts": 21
+  },
+  {
+   "id": "fifi",
+   "name": "Fifi",
+   "file": "av_fifi.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11364,
+   "parts": 25
+  },
+  {
+   "id": "raka",
+   "name": "Raka",
+   "file": "av_raka.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.36,
+   "min_z": -0.0,
+   "tris": 10692,
+   "parts": 21
+  },
+  {
+   "id": "gigi",
+   "name": "Gigi",
+   "file": "av_gigi.glb",
+   "role": "finance",
+   "work_clips": [
+    "work_calc"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 10604,
+   "parts": 24
+  }
+ ]
+}
