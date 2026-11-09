@@ -79,7 +79,7 @@
   <div class="view on" id="avatars">
     <div class="side">
       <h3>Tampilan</h3>
-      <div class="chips" id="avMode"><button data-m="all" class="on">Semua (24)</button><button data-m="one">Satu</button></div>
+      <div class="chips" id="avMode"><button data-m="all" class="on">Semua</button><button data-m="one">Satu</button></div>
       <h3>Klip</h3>
       <div class="chips" id="clipChips"></div>
       <div class="info" id="clipInfo"></div>
@@ -217,8 +217,10 @@ function layoutAvatars() {
       a.root.position.set(((i % cols) - (cols - 1) / 2) * sx, 0, -Math.floor(i / cols) * sz);
     } else a.root.position.set(0, 0, 0);
   });
+  // bounds from layout, not geometry: folded toggle meshes and stale world matrices make Box3 unreliable here
   const box = new THREE.Box3();
-  avatars.forEach((a) => a.root.visible && box.expandByObject(a.root.children[0]));
+  avatars.forEach((a) => a.root.visible && box.union(new THREE.Box3(
+    a.root.position.clone().add(new THREE.Vector3(-.4, 0, -.3)), a.root.position.clone().add(new THREE.Vector3(.4, 1.45, .3)))));
   frame(av, box, avMode === "all" ? new THREE.Vector3(0, .55, 1) : new THREE.Vector3(.3, .25, 1));
 }
 function clipChips() {
@@ -252,6 +254,7 @@ function setMode(m) {
   layoutAvatars(); setClip(curClip);
 }
 document.querySelectorAll("#avMode button").forEach((b) => b.onclick = () => setMode(b.dataset.m));
+document.querySelector('#avMode [data-m="all"]').textContent = `Semua (${avatars.length})`;
 setMode("all");
 const totalTris = avSpec.avatars.reduce((s, a) => s + a.tris, 0);
 $("#stat").textContent = `${avSpec.avatars.length} avatar · ${Object.keys(avSpec.clips).length} klip · ${avSpec.expressions.length} ekspresi`;
@@ -281,21 +284,25 @@ async function initFurniture() {
     document.querySelectorAll("#catChips button").forEach((b) => b.classList.toggle("on", b.dataset.c === cat));
     const row = spec.items.filter((i) => i.category === cat);
     const gap = .45; let x = -(row.reduce((s, i) => s + i.size_m.x, 0) + gap * (row.length - 1)) / 2;
-    Object.values(nodes).forEach((n) => n.holder.visible = false);
+    Object.values(nodes).forEach((n) => { n.holder.visible = false; n.holder.children[1].visible = false; });
     row.forEach((i) => {
       const n = nodes[i.id]; if (!n) return;
-      n.holder.visible = true;
-      n.holder.position.set(x + i.size_m.x / 2, i.mount === "wall" ? .6 : 0, 0);
+      n.holder.visible = true; n.holder.children[1].visible = true;
+      n.holder.position.set(x + i.size_m.x / 2, i.mount === "wall" ? .6 : i.mount === "ceiling" ? -i.bbox_min[2] + .3 : 0, 0);
       x += i.size_m.x + gap;
     });
     $("#itemList").innerHTML = row.map((i) =>
       `<button data-id="${i.id}" class="${i.id === focus ? "on" : ""}">${i.label} <small>· ${i.tris} tris · ${i.mount}</small></button>`).join("");
     $("#itemList").querySelectorAll("button").forEach((b) => b.onclick = () => {
       $("#itemList").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
-      frame(fu, new THREE.Box3().setFromObject(nodes[b.dataset.id].holder.children[0]));
+      const n = nodes[b.dataset.id]; frame(fu, specBox(n.it, n.holder.position));
     });
+    // bounds from the spec (Blender z-up -> three y-up), not Box3.setFromObject: world matrices lag one frame
     const box = new THREE.Box3();
-    row.forEach((i) => nodes[i.id] && box.expandByObject(nodes[i.id].holder.children[0]));
+    const specBox = (i, p) => new THREE.Box3(
+      new THREE.Vector3(p.x + i.bbox_min[0], p.y + i.bbox_min[2], -i.bbox_max[1]),
+      new THREE.Vector3(p.x + i.bbox_max[0], p.y + i.bbox_max[2], -i.bbox_min[1]));
+    row.forEach((i) => nodes[i.id] && box.union(specBox(i, nodes[i.id].holder.position)));
     frame(fu, box, new THREE.Vector3(.25, .5, 1));
   };
   $("#catChips").innerHTML = cats.map((c) => `<button data-c="${c}">${c.replace("dept_", "dept · ")} <small>${spec.items.filter((i) => i.category === c).length}</small></button>`).join("");
@@ -340,6 +347,7 @@ function loop() {
   }
   requestAnimationFrame(loop);
 }
+window.__vo = { av, avatars, get fu() { return fu; } };   // debug handle
 loop();
 </script>
 </body>

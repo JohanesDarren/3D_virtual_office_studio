@@ -32,6 +32,12 @@ BONES = [
 
 
 # --------------------------------------------------------------------------- body
+# Modest dress code for every character: sleeves always reach the wrist (the whole arm stick uses the
+# top color), no bare legs, women wear ankle-length skirts / gamis or loose trousers.
+def long_skirt(c):
+    return c["bottom"] == "skirt" or c["outfit"] in ("dress", "gamis")
+
+
 def body(p, c):
     """p(name, bone) -> Item. c = dict of material names for this character."""
     t = p("TORSO", "spine")
@@ -81,14 +87,27 @@ def body(p, c):
         t.box((0, -.155, .76), (.14, .02, .03), "white", bevel=.008, outline=False)       # round collar
         t.cyl((0, 0, .5), (.4, .32), .03, c["top2"], seg=16, outline=False)                # waist ribbon
         t.ball((.1, -.155, .5), (.06, .03, .04), c["top2"], seg=8)
+    elif style == "koko":          # baju koko: band collar + embroidered placket
+        t.cyl((0, 0, .79), (.2, .18), .045, c["top2"], seg=12)
+        t.box((0, -.168, .64), (.07, .02, .28), c["top2"], bevel=.008, outline=False)
+        for z in (.72, .64, .56):
+            t.ball((0, -.182, z), (.02, .012, .02), "white", seg=6, outline=False)
+        for sx in (-1, 1):
+            t.box((sx * .07, -.16, .62), (.035, .015, .2), c["top2"], bevel=.006, outline=False, rot=(0, 0, 0))
+    elif style in ("tunic", "gamis"):   # long loose top; gamis continues into the long skirt (see HIPS)
+        t.cyl((0, 0, .79), (.2, .18), .035, c["top2"], seg=12)
+        t.box((0, -.168, .66), (.05, .02, .2), c["top2"], bevel=.008, outline=False)
+        t.cyl((0, 0, .44), (.46, .38), .14, c["top"], seg=16, top=1.1, bevel=.02)       # flared hem past the hips
     if c.get("tie"):
         t.box((0, -.17, .66), (.05, .02, .16), c["acc"], bevel=.008)
         t.box((0, -.165, .75), (.06, .02, .04), c["acc"], bevel=.008)
     t.done_bone()
 
     h = p("HIPS", "hips")
-    if c["bottom"] == "skirt" or c["outfit"] == "dress":
-        h.cyl((0, 0, .43), (.42, .36), .16, c["pants"], seg=16, top=.8, bevel=.02)
+    if long_skirt(c):   # modest ankle-length bell skirt; the legs underneath share its color
+        h.cyl((0, 0, .3), (.5, .44), .42, c["pants"], seg=18, top=.76, bevel=.03)
+        h.cyl((0, 0, .1), (.5, .44), .025, c["top2"] if c["outfit"] == "gamis" else c["pants"], seg=18,
+              outline=False)                                                             # hem band
     else:
         h.ball((0, 0, .45), (.38, .3, .18), c["pants"], seg=14)
     h.done_bone()
@@ -101,9 +120,9 @@ def body(p, c):
         a.ball((sx * .245, -.05, .5), (.045, .04, .05), c["skin"], seg=8)      # thumb
         a.done_bone()
 
-        leg_col = c["skin"] if (c["bottom"] == "skirt" or c["outfit"] == "dress") else c["pants"]
         g = p("LEG_" + side, "leg_" + side)
-        g.stick((sx * .1, 0, .4), (sx * .1, 0, .08), .12, leg_col, seg=10)
+        wide = c.get("gender") == "f"     # loose trousers / covered legs, never bare skin
+        g.stick((sx * .1, 0, .4), (sx * .1, 0, .08), .15 if wide else .12, c["pants"], seg=10)
         g.box((sx * .1, -.035, .045), (.14, .21, .09), c["shoes"], bevel=.035)
         g.box((sx * .1, -.035, .006), (.142, .212, .012), "white", bevel=.004, outline=False)   # sole
         g.done_bone()
@@ -126,6 +145,7 @@ def head(p, c):
 # head center). Only "neutral" is unfolded in rest pose; every other face (and every prop) is stored
 # folded to HIDE size around its bone head, so the rest pose stays clean. Clips switch with bone scale:
 # neutral 1 (shown) / HIDE (hidden); others 1 (hidden) / 1/HIDE (shown). Exported scale keys are STEP.
+HIJAB_STYLES = ("hijab", "hijab_khimar", "hijab_pashmina")
 EXPRESSIONS = ["neutral", "blink", "happy", "talk", "sad", "surprised", "focus", "think", "sleep", "yawn"]
 HIDE = .001
 
@@ -422,9 +442,15 @@ def hair(p, c):
         _cap(h, c, size=(.6, .56, .4))
         h.ball((.06, -.12, 1.25), (.44, .3, .2), c["hair"], seg=14, rot=(-15, -12, 0))      # big quiff
         h.ball((-.24, -.08, 1.08), (.1, .2, .2), c["hair"], seg=8)
-    elif style == "hijab":
-        h.ball((0, .05, 1.03), (.66, .56, .62), c["hair"], seg=20)                          # wrap around face
+    elif style in HIJAB_STYLES:
+        h.ball((0, .1, 1.03), (.66, .5, .62), c["hair"], seg=20)                            # wrap: open face, front edge
+        for k in range(18):                                                                  # soft rim framing the face
+            a = math.radians(k * 20)
+            x, z = math.sin(a) * .25, .99 + math.cos(a) * .25
+            h.ball((x, surf(x * .9, max(.82, min(z, 1.2))) + .04, z), (.11, .11, .11), c["hair"], seg=6)
         h.ball((0, .1, 1.3), (.3, .26, .1), c["hair"], seg=12)                               # soft top fold
+        if style == "hijab_pashmina":                                                        # pleat band
+            h.cyl((0, .03, 1.2), (.64, .56), .04, c["hijab2"], seg=20, outline=False, rot=(-12, 0, 0))
     elif style == "tuft":
         _cap(h, c, size=(.58, .54, .38))
         h.cyl((.02, -.02, 1.33), (.06, .04), .12, c["hair"], seg=6, top=.1, rot=(-25, 20, 0))   # antenna tuft
@@ -439,7 +465,6 @@ def accessories(p, c):
         if acc == "glasses":
             for sx in (-1, 1):
                 a.cyl((sx * .1, FACE_Y - .012, 1.0), (.12, .12), .014, c["acc"], seg=16, rot=(90, 0, 0))
-                a.cyl((sx * .1, FACE_Y - .02, 1.0), (.1, .1), .004, "glass", seg=16, rot=(90, 0, 0), outline=False)
             a.box((0, FACE_Y - .012, 1.01), (.08, .012, .012), c["acc"], bevel=0)
         elif acc == "headphones":
             for i in range(9):
@@ -456,6 +481,8 @@ def accessories(p, c):
             a.ball((0, .02, 1.12), (.61, .57, .46), c["acc"], seg=18)
             a.box((0, -.3, 1.11), (.34, .2, .025), c["acc"], bevel=.012, rot=(-6, 0, 0))     # brim
             a.ball((0, .02, 1.35), (.05, .05, .03), "white", seg=8)
+        elif acc == "peci":            # songkok: flat-topped oval cap
+            a.cyl((0, .03, 1.2), (.56, .5), .14, "black", seg=20, top=.96, bevel=.015, rot=(-8, 0, 0))
         elif acc == "bow":
             for sx in (-1, 1):
                 a.ball((.18 + sx * .055, -.08, 1.24), (.1, .05, .08), c["acc"], seg=8, rot=(0, sx * 20, 0))
@@ -488,10 +515,19 @@ def accessories(p, c):
         b.cyl((0, 0, .8), (.34, .3), .08, c["scarf"], seg=16, bevel=.02)
         b.box((.08, -.16, .68), (.08, .03, .18), c["scarf"], bevel=.015, rot=(0, -8, 0))
         b.done_bone()
-    if c.get("hijab"):   # drape over shoulders, matching the head wrap
+    if c.get("hijab"):   # drape over shoulders and chest, matching the head wrap
         b = p("ACC_drape", "spine")
+        st = c["hair_style"]
         b.ball((0, .0, .77), (.46, .38, .2), c["hair"], seg=16)
-        b.ball((0, -.1, .7), (.26, .1, .2), c["hair"], seg=10)
+        if st == "hijab_khimar":       # long khimar: falls over chest and back to the waist
+            b.cyl((0, 0, .66), (.48, .4), .26, c["hair"], seg=18, top=.82, bevel=.03)
+            b.ball((0, -.12, .6), (.34, .14, .2), c["hair"], seg=12)
+        elif st == "hijab_pashmina":   # wrap with one tail over the shoulder
+            b.ball((0, -.1, .69), (.3, .12, .22), c["hair"], seg=10)
+            b.box((.13, -.13, .62), (.09, .04, .26), c["hair"], bevel=.03, rot=(0, -10, 0))
+            b.box((.13, -.15, .62), (.092, .02, .02), c["hijab2"], bevel=0, outline=False, rot=(0, -10, 0))
+        else:                          # square hijab, covers the chest
+            b.ball((0, -.1, .68), (.32, .12, .26), c["hair"], seg=10)
         b.done_bone()
     if c.get("badge"):   # lanyard badge on the torso
         b = p("ACC_badge", "spine")

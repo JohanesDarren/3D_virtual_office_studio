@@ -31,67 +31,160 @@ import lib    # noqa: E402
 import parts  # noqa: E402
 
 FPS = 24
-TRI_BUDGET = 12000   # body ~4-5k + 10 expression faces + hand props (folded, never all shown)
+TRI_BUDGET = 12500   # body ~4-5k + 10 expression faces + hand props (folded, never all shown)
 args = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 
 # ---------------------------------------------------------------- characters (original designs)
 BASE = dict(eyes="normal", mouth="smile", brows="normal", bottom="pants", tie=False, badge=False, accs=[],
             top2="white", acc="charcoal")
 CHARS = [
-    dict(id="pip", role="it", name="Pip", skin="skin_1", hair="hair_brown", hair_style="short", outfit="shirt",
+    # ---- v1-v4 cast (outfits revised to the modest dress code: long sleeves, long skirts / loose trousers)
+    dict(id="pip", g="m", role="it", name="Pip", skin="skin_1", hair="hair_brown", hair_style="short", outfit="shirt",
          top="sky", pants="charcoal", shoes="black", tie=True, acc="blue", accs=["glasses"]),
-    dict(id="mochi", role="creative", name="Mochi", skin="skin_2", hair="hair_dark", hair_style="bob", outfit="cardigan",
-         top="lavender", bottom="skirt", pants="sage", shoes="coral", eyes="big", mouth="open", accs=["flower"]),
-    dict(id="juno", role="content", name="Juno", skin="skin_3", hair="hair_ginger", hair_style="bun", outfit="tee", top="mint",
-         pants="blue", shoes="peach", acc="coral", badge=True, brows="up"),
-    dict(id="bento", role="content", name="Bento", skin="skin_4", hair="hair_dark", hair_style="curly", outfit="hoodie",
-         top="butter", top2="peach", pants="charcoal", shoes="blue", eyes="happy", accs=["headphones"]),
-    dict(id="kiko", role="creative", name="Kiko", skin="skin_1", hair="hair_pink", hair_style="short", outfit="tee", top="blush",
-         pants="lavender", shoes="black", acc="sky", accs=["beanie"], mouth="open"),
-    dict(id="sol", role="sales", name="Sol", skin="skin_2", hair="hair_blonde", hair_style="tuft", outfit="shirt", top="sage",
-         pants="wood_dark", shoes="charcoal", acc="blue", badge=True, eyes="big"),
-    dict(id="tavi", role="it", name="Tavi", skin="skin_3", hair="hair_dark", hair_style="buzz", outfit="polo", top="coral",
-         pants="grey", shoes="blue", accs=["beard"]),
-    dict(id="nara", role="hr", name="Nara", skin="skin_2", hair="lavender", brow="hair_dark", hair_style="hijab",
-         outfit="dress", top="blush", pants="blush", shoes="coral", eyes="big", mouth="open"),
-    dict(id="ozzy", role="content", name="Ozzy", skin="skin_1", hair="hair_ginger", hair_style="spiky", outfit="hoodie", top="sky",
-         pants="charcoal", shoes="coral", accs=["freckles"], mouth="open"),
-    dict(id="rumi", role="exec", name="Rumi", skin="skin_4", hair="hair_dark", hair_style="afro", outfit="blazer", top="coral",
-         pants="black", shoes="black", eyes="big", accs=["earrings"]),
-    dict(id="lumi", role="creative", name="Lumi", skin="skin_1", hair="hair_blonde", hair_style="long", outfit="sweater",
-         top="peach", bottom="skirt", pants="blue", shoes="charcoal", acc="coral", accs=["bow"], eyes="big"),
-    dict(id="dodo", role="finance", name="Dodo", skin="skin_2", hair="hair_brown", hair_style="buzz", outfit="vest", top="sky",
-         top2="wood_mid", pants="charcoal", shoes="wood_dark", acc="black", accs=["glasses", "mustache"]),
-    dict(id="wren", role="marketing", name="Wren", skin="skin_3", hair="hair_brown", hair_style="ponytail", outfit="tee",
-         top="lavender", pants="charcoal", shoes="mint", acc="butter", badge=True),
-    dict(id="zara", role="creative", name="Zara", skin="skin_4", hair="hair_pink", hair_style="twintails", outfit="hoodie",
-         top="lavender", top2="blush", bottom="skirt", pants="charcoal", shoes="black", acc="white", eyes="happy"),
-    dict(id="budi", role="sales", name="Budi", skin="skin_3", hair="hair_dark", hair_style="swoop", outfit="shirt", top="blue",
-         pants="charcoal", shoes="black", tie=True, acc="charcoal"),
-    dict(id="sari", role="hr", name="Sari", skin="skin_2", hair="sky", brow="hair_dark", hair_style="hijab",
-         outfit="cardigan", top="butter", pants="blue", shoes="peach", acc="coral", badge=True),
-    dict(id="hana", role="finance", name="Hana", skin="skin_1", hair="hair_dark", hair_style="bob", outfit="blazer", top="lavender",
-         bottom="skirt", pants="charcoal", shoes="black", acc="coral", accs=["glasses"]),
-    dict(id="kai", role="content", name="Kai", skin="skin_2", hair="hair_dark", hair_style="short", outfit="tee", top="sage",
-         pants="blue", shoes="black", acc="coral", accs=["cap"], mouth="open"),
-    dict(id="bima", role="it", name="Bima", skin="skin_4", hair="hair_dark", hair_style="buzz", outfit="sweater", top="sage",
-         pants="wood_dark", shoes="charcoal", accs=["beard", "headphones"]),
-    dict(id="ayu", role="marketing", name="Ayu", skin="skin_3", hair="hair_dark", hair_style="long", outfit="dress", top="coral",
-         pants="coral", shoes="peach", accs=["flower"], eyes="big"),
-    dict(id="theo", role="exec", name="Theo", skin="skin_1", hair="hair_blonde", hair_style="swoop", outfit="blazer",
+    dict(id="mochi", g="f", role="creative", name="Mochi", skin="skin_2", hair="hair_dark", hair_style="bob",
+         outfit="cardigan", top="lavender", bottom="skirt", pants="sage", shoes="coral", eyes="big", mouth="open",
+         accs=["flower"]),
+    dict(id="juno", g="f", role="content", name="Juno", skin="skin_3", hair="mint", brow="hair_ginger",
+         hair_style="hijab_khimar", outfit="tunic", top="sky", top2="white", pants="blue", shoes="peach", acc="coral",
+         badge=True, brows="up"),
+    dict(id="bento", g="m", role="content", name="Bento", skin="skin_4", hair="hair_dark", hair_style="curly",
+         outfit="hoodie", top="butter", top2="peach", pants="charcoal", shoes="blue", eyes="happy", accs=["headphones"]),
+    dict(id="kiko", g="m", role="creative", name="Kiko", skin="skin_1", hair="hair_pink", hair_style="short", outfit="tee",
+         top="blush", pants="lavender", shoes="black", acc="sky", accs=["beanie"], mouth="open"),
+    dict(id="sol", g="m", role="sales", name="Sol", skin="skin_2", hair="hair_blonde", hair_style="tuft", outfit="shirt",
+         top="sage", pants="wood_dark", shoes="charcoal", acc="blue", badge=True, eyes="big"),
+    dict(id="tavi", g="m", role="it", name="Tavi", skin="skin_3", hair="hair_dark", hair_style="buzz", outfit="polo",
+         top="coral", pants="grey", shoes="blue", accs=["beard"]),
+    dict(id="nara", g="f", role="hr", name="Nara", skin="skin_2", hair="lavender", brow="hair_dark",
+         hair_style="hijab_pashmina", hijab2="white", outfit="gamis", top="blush", top2="lavender", pants="blush",
+         shoes="coral", eyes="big", mouth="open"),
+    dict(id="ozzy", g="m", role="content", name="Ozzy", skin="skin_1", hair="hair_ginger", hair_style="spiky",
+         outfit="hoodie", top="sky", pants="charcoal", shoes="coral", accs=["freckles"], mouth="open"),
+    dict(id="rumi", g="m", role="exec", name="Rumi", skin="skin_4", hair="hair_dark", hair_style="afro", outfit="blazer",
+         top="coral", pants="black", shoes="black", eyes="big"),
+    dict(id="lumi", g="f", role="creative", name="Lumi", skin="skin_1", hair="hair_blonde", hair_style="long",
+         outfit="sweater", top="peach", bottom="skirt", pants="blue", shoes="charcoal", acc="coral", accs=["bow"],
+         eyes="big"),
+    dict(id="dodo", g="m", role="finance", name="Dodo", skin="skin_2", hair="hair_brown", hair_style="buzz", outfit="vest",
+         top="sky", top2="wood_mid", pants="charcoal", shoes="wood_dark", acc="black", accs=["glasses", "mustache"]),
+    dict(id="wren", g="f", role="marketing", name="Wren", skin="skin_3", hair="hair_brown", hair_style="ponytail",
+         outfit="tunic", top="lavender", top2="butter", pants="charcoal", shoes="mint", acc="butter", badge=True),
+    dict(id="zara", g="f", role="creative", name="Zara", skin="skin_4", hair="hair_pink", hair_style="twintails",
+         outfit="hoodie", top="lavender", top2="blush", bottom="skirt", pants="charcoal", shoes="black", acc="white",
+         eyes="happy"),
+    dict(id="budi", g="m", role="sales", name="Budi", skin="skin_3", hair="hair_dark", hair_style="swoop", outfit="shirt",
+         top="blue", pants="charcoal", shoes="black", tie=True, acc="charcoal"),
+    dict(id="sari", g="f", role="hr", name="Sari", skin="skin_2", hair="sky", brow="hair_dark", hair_style="hijab",
+         outfit="cardigan", top="butter", bottom="skirt", pants="blue", shoes="peach", acc="coral", badge=True),
+    dict(id="hana", g="f", role="finance", name="Hana", skin="skin_1", hair="lavender", brow="hair_dark",
+         hair_style="hijab_khimar", outfit="blazer", top="grey_light", top2="white", bottom="skirt", pants="charcoal",
+         shoes="black", acc="coral", accs=["glasses"]),
+    dict(id="kai", g="m", role="content", name="Kai", skin="skin_2", hair="hair_dark", hair_style="short", outfit="tee",
+         top="sage", pants="blue", shoes="black", acc="coral", accs=["cap"], mouth="open"),
+    dict(id="bima", g="m", role="it", name="Bima", skin="skin_4", hair="hair_dark", hair_style="buzz", outfit="sweater",
+         top="sage", pants="wood_dark", shoes="charcoal", accs=["beard", "headphones"]),
+    dict(id="ayu", g="f", role="marketing", name="Ayu", skin="skin_3", hair="peach", brow="hair_dark",
+         hair_style="hijab_pashmina", hijab2="coral", outfit="gamis", top="coral", top2="peach", pants="coral",
+         shoes="peach", eyes="big"),
+    dict(id="theo", g="m", role="exec", name="Theo", skin="skin_1", hair="hair_blonde", hair_style="swoop", outfit="blazer",
          top="charcoal", pants="charcoal", shoes="black", tie=True, acc="coral", brows="up"),
-    dict(id="fifi", role="creative", name="Fifi", skin="skin_2", hair="hair_ginger", hair_style="curly", outfit="tee", top="butter",
-         top2="coral", bottom="skirt", pants="sky", shoes="coral", acc="sky", accs=["freckles", "bow"],
-         mouth="open"),
-    dict(id="raka", role="it", name="Raka", skin="skin_3", hair="hair_dark", hair_style="spiky", outfit="hoodie",
+    dict(id="fifi", g="f", role="creative", name="Fifi", skin="skin_2", hair="hair_ginger", hair_style="curly",
+         outfit="tee", top="butter", top2="coral", bottom="skirt", pants="sky", shoes="coral", acc="sky",
+         accs=["freckles", "bow"], mouth="open"),
+    dict(id="raka", g="m", role="it", name="Raka", skin="skin_3", hair="hair_dark", hair_style="spiky", outfit="hoodie",
          top="charcoal", top2="mint", pants="black", shoes="mint", acc="mint", accs=["headphones"]),
-    dict(id="gigi", role="finance", name="Gigi", skin="skin_4", hair="hair_brown", hair_style="ponytail", outfit="vest",
-         top="blush", top2="lavender", pants="charcoal", shoes="black", acc="black", accs=["glasses", "earrings"],
-         scarf="mint"),
+    dict(id="gigi", g="f", role="finance", name="Gigi", skin="skin_4", hair="hair_brown", hair_style="ponytail",
+         outfit="vest", top="blush", top2="lavender", pants="charcoal", shoes="black", acc="black",
+         accs=["glasses", "earrings"], scarf="mint"),
+    # ---- v8 cast: 31 new office mates
+    dict(id="laila", g="f", role="it", name="Laila", skin="skin_2", hair="sage", brow="hair_dark",
+         hair_style="hijab_khimar", outfit="cardigan", top="mint", top2="white", pants="charcoal", shoes="black",
+         acc="blue", accs=["glasses"]),
+    dict(id="nisa", g="f", role="creative", name="Nisa", skin="skin_1", hair="blush", brow="hair_brown",
+         hair_style="hijab", outfit="tunic", top="lavender", top2="blush", pants="sky", shoes="coral", eyes="big",
+         mouth="open"),
+    dict(id="rara", g="f", role="content", name="Rara", skin="skin_3", hair="butter", brow="hair_dark",
+         hair_style="hijab_pashmina", hijab2="peach", outfit="hoodie", top="peach", top2="butter", bottom="skirt",
+         pants="charcoal", shoes="mint", accs=["headphones"], acc="lavender", eyes="happy"),
+    dict(id="dewi", g="f", role="marketing", name="Dewi", skin="skin_2", hair="coral", brow="hair_dark",
+         hair_style="hijab", outfit="blazer", top="coral", top2="white", bottom="skirt", pants="black", shoes="black",
+         badge=True, acc="coral"),
+    dict(id="intan", g="f", role="finance", name="Intan", skin="skin_1", hair="charcoal", brow="hair_dark",
+         hair_style="hijab_khimar", outfit="gamis", top="grey_light", top2="charcoal", pants="grey_light",
+         shoes="charcoal", accs=["glasses"], acc="charcoal"),
+    dict(id="salma", g="f", role="hr", name="Salma", skin="skin_3", hair="mint", brow="hair_dark",
+         hair_style="hijab_pashmina", hijab2="white", outfit="cardigan", top="sage", top2="mint", bottom="skirt",
+         pants="wood_mid", shoes="wood_dark", badge=True, acc="sage", eyes="big"),
+    dict(id="putri", g="f", role="sales", name="Putri", skin="skin_4", hair="lavender", brow="hair_dark",
+         hair_style="hijab", outfit="polo", top="sky", top2="blue", pants="charcoal", shoes="blue", badge=True,
+         acc="blue", mouth="open"),
+    dict(id="aisyah", g="f", role="exec", name="Aisyah", skin="skin_2", hair="wood_mid", brow="hair_dark",
+         hair_style="hijab_khimar", outfit="gamis", top="wood_light", top2="wood_mid", pants="wood_light",
+         shoes="wood_dark", brows="up"),
+    dict(id="mira", g="f", role="content", name="Mira", skin="skin_1", hair="sky", brow="hair_brown",
+         hair_style="hijab_pashmina", hijab2="blue", outfit="sweater", top="white", top2="sky", pants="blue",
+         shoes="sky", accs=["freckles"], eyes="happy"),
+    dict(id="tari", g="f", role="creative", name="Tari", skin="skin_3", hair="hair_dark", hair_style="ponytail",
+         outfit="cardigan", top="butter", top2="coral", bottom="skirt", pants="lavender", shoes="coral", acc="coral",
+         accs=["bow"]),
+    dict(id="kirana", g="f", role="marketing", name="Kirana", skin="skin_2", hair="hair_brown", hair_style="long",
+         outfit="tunic", top="mint", top2="white", pants="sage", shoes="charcoal", accs=["earrings"], eyes="big"),
+    dict(id="lala", g="f", role="hr", name="Lala", skin="skin_1", hair="hair_ginger", hair_style="bun", outfit="sweater",
+         top="blush", top2="white", bottom="skirt", pants="peach", shoes="peach", badge=True, acc="peach",
+         mouth="open"),
+    dict(id="vivi", g="f", role="it", name="Vivi", skin="skin_4", hair="hair_dark", hair_style="bob", outfit="hoodie",
+         top="lavender", top2="sky", pants="charcoal", shoes="sky", accs=["glasses"], acc="sky"),
+    dict(id="yuki", g="f", role="content", name="Yuki", skin="skin_1", hair="hair_dark", hair_style="twintails",
+         outfit="tee", top="sky", top2="butter", bottom="skirt", pants="blue", shoes="butter", accs=["cap"],
+         acc="butter", eyes="happy"),
+    dict(id="cici", g="f", role="finance", name="Cici", skin="skin_2", hair="hair_blonde", hair_style="bun",
+         outfit="blazer", top="sage", top2="white", bottom="skirt", pants="charcoal", shoes="black", acc="sage"),
+    dict(id="adit", g="m", role="it", name="Adit", skin="skin_3", hair="hair_dark", hair_style="short", outfit="hoodie",
+         top="blue", top2="sky", pants="charcoal", shoes="black", accs=["glasses"], acc="black"),
+    dict(id="fajar", g="m", role="it", name="Fajar", skin="skin_2", hair="hair_dark", hair_style="buzz", outfit="koko",
+         top="white", top2="sage", pants="charcoal", shoes="black", accs=["peci", "beard"]),
+    dict(id="gilang", g="m", role="creative", name="Gilang", skin="skin_4", hair="hair_dark", hair_style="curly",
+         outfit="tee", top="coral", top2="butter", pants="wood_dark", shoes="coral", accs=["beanie"], acc="mint",
+         mouth="open"),
+    dict(id="hadi", g="m", role="finance", name="Hadi", skin="skin_2", hair="hair_dark", hair_style="buzz",
+         outfit="koko", top="sky", top2="white", pants="black", shoes="black", accs=["peci", "glasses"], acc="charcoal"),
+    dict(id="ilham", g="m", role="content", name="Ilham", skin="skin_3", hair="hair_brown", hair_style="swoop",
+         outfit="hoodie", top="sage", top2="mint", pants="charcoal", shoes="sage", accs=["headphones"], acc="mint",
+         eyes="happy"),
+    dict(id="joko", g="m", role="sales", name="Joko", skin="skin_4", hair="hair_dark", hair_style="short", outfit="polo",
+         top="butter", top2="coral", pants="charcoal", shoes="wood_dark", badge=True, acc="coral", accs=["mustache"]),
+    dict(id="reza", g="m", role="marketing", name="Reza", skin="skin_1", hair="hair_brown", hair_style="spiky",
+         outfit="blazer", top="sky", top2="white", pants="blue", shoes="charcoal", acc="blue"),
+    dict(id="yusuf", g="m", role="exec", name="Yusuf", skin="skin_3", hair="hair_dark", hair_style="buzz", outfit="koko",
+         top="wood_light", top2="wood_dark", pants="black", shoes="black", accs=["peci", "beard"], brows="up"),
+    dict(id="dimas", g="m", role="creative", name="Dimas", skin="skin_2", hair="hair_ginger", hair_style="tuft",
+         outfit="cardigan", top="mint", top2="white", pants="charcoal", shoes="mint", accs=["freckles"], eyes="big"),
+    dict(id="eko", g="m", role="hr", name="Eko", skin="skin_3", hair="hair_dark", hair_style="swoop", outfit="shirt",
+         top="lavender", pants="charcoal", shoes="black", badge=True, acc="lavender", mouth="open"),
+    dict(id="bayu", g="m", role="sales", name="Bayu", skin="skin_4", hair="hair_dark", hair_style="afro", outfit="shirt",
+         top="coral", pants="wood_dark", shoes="wood_dark", tie=True, acc="butter", eyes="happy"),
+    dict(id="nando", g="m", role="content", name="Nando", skin="skin_1", hair="hair_blonde", hair_style="short",
+         outfit="tee", top="charcoal", top2="coral", pants="black", shoes="coral", accs=["cap"], acc="coral"),
+    dict(id="oki", g="m", role="it", name="Oki", skin="skin_2", hair="hair_brown", hair_style="curly", outfit="sweater",
+         top="sky", top2="white", pants="grey", shoes="blue", accs=["glasses", "headphones"], acc="blue"),
+    dict(id="taufik", g="m", role="finance", name="Taufik", skin="skin_3", hair="hair_dark", hair_style="buzz",
+         outfit="vest", top="white", top2="charcoal", pants="charcoal", shoes="black", accs=["peci", "mustache"],
+         acc="charcoal"),
+    dict(id="umar", g="m", role="marketing", name="Umar", skin="skin_4", hair="hair_dark", hair_style="buzz",
+         outfit="koko", top="mint", top2="sage", pants="wood_dark", shoes="wood_dark", accs=["beard"], badge=True,
+         acc="sage"),
+    dict(id="wawan", g="m", role="exec", name="Wawan", skin="skin_2", hair="hair_dark", hair_style="swoop",
+         outfit="blazer", top="blue", top2="white", pants="black", shoes="black", tie=True, acc="coral",
+         accs=["glasses"]),
 ]
 for _c in CHARS:
-    if _c["hair_style"] == "hijab":
+    _c["gender"] = _c.pop("g")
+    if _c["hair_style"] in parts.HIJAB_STYLES:
         _c["hijab"] = True
+        _c.setdefault("hijab2", "white")
+    if _c["gender"] == "f" and _c.get("outfit") == "dress":
+        _c["outfit"] = "gamis"
+assert len({c["id"] for c in CHARS}) == len(CHARS) == 55
 
 
 # ---------------------------------------------------------------- rig + parts
@@ -240,7 +333,7 @@ def _base_clip(name):
     """Return (length_frames, fn(t in 0..1) -> (pose, root_z, root_y)). Every clip loops (t=0 == t=1)."""
     # ---------------------------------------------------------------- locomotion / base
     if name == "idle":
-        return 48, lambda t: ({"spine": (wave(t, 2), 0, 0), "head": (wave(t, -2, .15), 0, wave(t, 3, .3)),
+        return 96, lambda t: ({"spine": (wave(t, 2), 0, 0), "head": (wave(t, -2, .15), 0, wave(t, 3, .3)),
                                "arm_L": (0, 0, 4 + wave(t, 2)), "arm_R": (0, 0, -4 - wave(t, 2))},
                               wave(t, .006, .25) - .006, 0)
     if name == "walk":
@@ -338,7 +431,7 @@ def _base_clip(name):
                                "spine": (6 * hold(t, .25, .75), 0, 0), "arm_L": (0, 0, 4)}, 0, 0)
     # ---------------------------------------------------------------- seated (root lifted onto a 0.47 seat)
     if name == "sit":
-        return 48, lambda t: (_sit({"spine": (wave(t, 2) - 3, 0, 0), "arm_L": (-25, 0, 10), "arm_R": (-25, 0, -10),
+        return 96, lambda t: (_sit({"spine": (wave(t, 2) - 3, 0, 0), "arm_L": (-25, 0, 10), "arm_R": (-25, 0, -10),
                                     "head": (wave(t, -2, .2), 0, wave(t, 4, .4))}), SIT_Z, 0)
     if name == "type":
         return 24, lambda t: (_sit({"spine": (8, 0, 0), "head": (6 + wave(t, 1.5), 0, 0),
@@ -366,11 +459,12 @@ def _base_clip(name):
 
 
 # ---------------------------------------------------------------- facial expression per clip
-def blinks(base, at=(.35, .8)):
-    return lambda t, n: "blink" if any(abs(t - a) * n < 1.6 for a in at) else base
+def blinks(base, at=(.6,)):
+    """One short blink per loop, and only in clips >= 3 s, so faces never flicker (natural rate ~ every 3-4 s)."""
+    return lambda t, n: "blink" if n >= 72 and abs(t - at[0]) * n < 1.6 else base
 
 
-def chatter(base="neutral", alt="talk", every=4):
+def chatter(base="neutral", alt="talk", every=6):
     return lambda t, n: alt if int(round(t * n) // every) % 2 else base
 
 
@@ -396,7 +490,7 @@ FACES = {
     "bow": seq((.25, "neutral"), (.75, "blink"), (1, "happy")), "sad": blinks("sad", (.5,)),
     "facepalm": seq((.22, "surprised"), (.75, "blink"), (1, "sad")),
     "sit": blinks("neutral"), "type": blinks("focus", (.5,)), "sit_talk": chatter(),
-    "sit_relax": blinks("happy", ()), "sit_sleep": lambda t, n: "sleep",
+    "sit_relax": lambda t, n: "happy", "sit_sleep": lambda t, n: "sleep",
     "sit_drink": seq((.3, "neutral"), (.62, "blink"), (.85, "happy"), (1, "neutral")),
     "sit_wave": lambda t, n: "happy",
 }
@@ -421,8 +515,6 @@ def _work(name):
             if think > 0:
                 p["arm_R"] = aim("arm_R", mix((-.12, -.32, .72), (-.06, -.22, .86), think))
             p["face"] = seq((.45, "focus"), (.7, "think"), (.8, "surprised"), (1, "happy"))(t, 48)
-            if p["face"] == "focus" and abs(t - .2) * 48 < 1.6:
-                p["face"] = "blink"
             return p, SIT_Z, 0
         return 48, f
     if name == "work_debug":        # IT: stuck -> scratch head -> fix -> tiny celebration
@@ -685,7 +777,7 @@ if "--glb" in args:
             tr.mute = True
 
 # ---------------------------------------------------------------- lineup layout + context props
-SPACING, PER_SHEET = .9, 6
+SPACING, PER_SHEET = .9, 8
 for i, ch in enumerate(chars):
     ch["arm"].location.x = (i % PER_SHEET - (PER_SHEET - 1) / 2) * SPACING
     ch["arm"].rotation_euler.z = math.radians(-20)  # 3/4 turn for preview sheets (GLBs export earlier, unrotated)

@@ -31,7 +31,7 @@
  ],
  "clips": {
   "idle": {
-   "frames": 48,
+   "frames": 96,
    "fps": 24,
    "loop": true,
    "seated": false
@@ -157,7 +157,7 @@
    "seated": false
   },
   "sit": {
-   "frames": 48,
+   "frames": 96,
    "fps": 24,
    "loop": true,
    "seated": true
@@ -328,7 +328,7 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9996,
+   "tris": 9876,
    "parts": 21
   },
   {
@@ -349,7 +349,7 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10720,
+   "tris": 10820,
    "parts": 24
   },
   {
@@ -366,10 +366,10 @@
     "phone",
     "camera"
    ],
-   "height_m": 1.43,
+   "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 9664,
-   "parts": 22
+   "tris": 11592,
+   "parts": 23
   },
   {
    "id": "bento",
@@ -463,7 +463,7 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 9908,
+   "tris": 11440,
    "parts": 23
   },
   {
@@ -500,8 +500,8 @@
    ],
    "height_m": 1.45,
    "min_z": -0.0,
-   "tris": 9804,
-   "parts": 22
+   "tris": 9644,
+   "parts": 21
   },
   {
    "id": "lumi",
@@ -521,7 +521,7 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10484,
+   "tris": 10584,
    "parts": 24
   },
   {
@@ -539,7 +539,7 @@
    ],
    "height_m": 1.28,
    "min_z": -0.0,
-   "tris": 9908,
+   "tris": 9788,
    "parts": 23
   },
   {
@@ -559,7 +559,7 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9556,
+   "tris": 9860,
    "parts": 23
   },
   {
@@ -580,7 +580,7 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9376,
+   "tris": 9476,
    "parts": 23
   },
   {
@@ -617,7 +617,7 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 9940,
+   "tris": 11204,
    "parts": 24
   },
   {
@@ -633,10 +633,10 @@
     "phone",
     "pen"
    ],
-   "height_m": 1.33,
+   "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 10148,
-   "parts": 22
+   "tris": 11620,
+   "parts": 23
   },
   {
    "id": "kai",
@@ -690,9 +690,9 @@
     "note",
     "notepad"
    ],
-   "height_m": 1.33,
+   "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 10332,
+   "tris": 11412,
    "parts": 23
   },
   {
@@ -731,7 +731,7 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11364,
+   "tris": 11464,
    "parts": 25
   },
   {
@@ -767,8 +767,594 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10604,
+   "tris": 10484,
    "parts": 24
+  },
+  {
+   "id": "laila",
+   "name": "Laila",
+   "file": "av_laila.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11232,
+   "parts": 22
+  },
+  {
+   "id": "nisa",
+   "name": "Nisa",
+   "file": "av_nisa.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11460,
+   "parts": 24
+  },
+  {
+   "id": "rara",
+   "name": "Rara",
+   "file": "av_rara.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11792,
+   "parts": 23
+  },
+  {
+   "id": "dewi",
+   "name": "Dewi",
+   "file": "av_dewi.glb",
+   "role": "marketing",
+   "work_clips": [
+    "work_brainstorm",
+    "work_pitch"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "note",
+    "notepad"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11356,
+   "parts": 24
+  },
+  {
+   "id": "intan",
+   "name": "Intan",
+   "file": "av_intan.glb",
+   "role": "finance",
+   "work_clips": [
+    "work_calc"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11568,
+   "parts": 23
+  },
+  {
+   "id": "salma",
+   "name": "Salma",
+   "file": "av_salma.glb",
+   "role": "hr",
+   "work_clips": [
+    "work_interview"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen",
+    "clipboard"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11400,
+   "parts": 24
+  },
+  {
+   "id": "putri",
+   "name": "Putri",
+   "file": "av_putri.glb",
+   "role": "sales",
+   "work_clips": [
+    "work_call"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "headset"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 12376,
+   "parts": 23
+  },
+  {
+   "id": "aisyah",
+   "name": "Aisyah",
+   "file": "av_aisyah.glb",
+   "role": "exec",
+   "work_clips": [
+    "work_sign"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11436,
+   "parts": 22
+  },
+  {
+   "id": "mira",
+   "name": "Mira",
+   "file": "av_mira.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 10632,
+   "parts": 23
+  },
+  {
+   "id": "tari",
+   "name": "Tari",
+   "file": "av_tari.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 10496,
+   "parts": 24
+  },
+  {
+   "id": "kirana",
+   "name": "Kirana",
+   "file": "av_kirana.glb",
+   "role": "marketing",
+   "work_clips": [
+    "work_brainstorm",
+    "work_pitch"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "note",
+    "notepad"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 10084,
+   "parts": 23
+  },
+  {
+   "id": "lala",
+   "name": "Lala",
+   "file": "av_lala.glb",
+   "role": "hr",
+   "work_clips": [
+    "work_interview"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen",
+    "clipboard"
+   ],
+   "height_m": 1.43,
+   "min_z": -0.0,
+   "tris": 9832,
+   "parts": 23
+  },
+  {
+   "id": "vivi",
+   "name": "Vivi",
+   "file": "av_vivi.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 9712,
+   "parts": 21
+  },
+  {
+   "id": "yuki",
+   "name": "Yuki",
+   "file": "av_yuki.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.365,
+   "min_z": -0.0,
+   "tris": 8928,
+   "parts": 22
+  },
+  {
+   "id": "cici",
+   "name": "Cici",
+   "file": "av_cici.glb",
+   "role": "finance",
+   "work_clips": [
+    "work_calc"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.43,
+   "min_z": -0.0,
+   "tris": 9864,
+   "parts": 21
+  },
+  {
+   "id": "adit",
+   "name": "Adit",
+   "file": "av_adit.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 9524,
+   "parts": 21
+  },
+  {
+   "id": "fajar",
+   "name": "Fajar",
+   "file": "av_fajar.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.3,
+   "min_z": -0.0,
+   "tris": 9896,
+   "parts": 22
+  },
+  {
+   "id": "gilang",
+   "name": "Gilang",
+   "file": "av_gilang.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.42,
+   "min_z": -0.0,
+   "tris": 10464,
+   "parts": 24
+  },
+  {
+   "id": "hadi",
+   "name": "Hadi",
+   "file": "av_hadi.glb",
+   "role": "finance",
+   "work_clips": [
+    "work_calc"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.3,
+   "min_z": -0.0,
+   "tris": 9736,
+   "parts": 23
+  },
+  {
+   "id": "ilham",
+   "name": "Ilham",
+   "file": "av_ilham.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.361,
+   "min_z": -0.0,
+   "tris": 10064,
+   "parts": 22
+  },
+  {
+   "id": "joko",
+   "name": "Joko",
+   "file": "av_joko.glb",
+   "role": "sales",
+   "work_clips": [
+    "work_call"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "headset"
+   ],
+   "height_m": 1.33,
+   "min_z": -0.0,
+   "tris": 11148,
+   "parts": 23
+  },
+  {
+   "id": "reza",
+   "name": "Reza",
+   "file": "av_reza.glb",
+   "role": "marketing",
+   "work_clips": [
+    "work_brainstorm",
+    "work_pitch"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "note",
+    "notepad"
+   ],
+   "height_m": 1.36,
+   "min_z": -0.0,
+   "tris": 9708,
+   "parts": 22
+  },
+  {
+   "id": "yusuf",
+   "name": "Yusuf",
+   "file": "av_yusuf.glb",
+   "role": "exec",
+   "work_clips": [
+    "work_sign"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.3,
+   "min_z": -0.0,
+   "tris": 9932,
+   "parts": 23
+  },
+  {
+   "id": "dimas",
+   "name": "Dimas",
+   "file": "av_dimas.glb",
+   "role": "creative",
+   "work_clips": [
+    "work_paint",
+    "work_draw"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "brush",
+    "palette",
+    "stylus"
+   ],
+   "height_m": 1.382,
+   "min_z": -0.0,
+   "tris": 10216,
+   "parts": 24
+  },
+  {
+   "id": "eko",
+   "name": "Eko",
+   "file": "av_eko.glb",
+   "role": "hr",
+   "work_clips": [
+    "work_interview"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen",
+    "clipboard"
+   ],
+   "height_m": 1.361,
+   "min_z": -0.0,
+   "tris": 9792,
+   "parts": 23
+  },
+  {
+   "id": "bayu",
+   "name": "Bayu",
+   "file": "av_bayu.glb",
+   "role": "sales",
+   "work_clips": [
+    "work_call"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "headset"
+   ],
+   "height_m": 1.45,
+   "min_z": -0.0,
+   "tris": 10172,
+   "parts": 21
+  },
+  {
+   "id": "nando",
+   "name": "Nando",
+   "file": "av_nando.glb",
+   "role": "content",
+   "work_clips": [
+    "work_photo",
+    "work_podcast"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "camera"
+   ],
+   "height_m": 1.365,
+   "min_z": -0.0,
+   "tris": 9688,
+   "parts": 22
+  },
+  {
+   "id": "oki",
+   "name": "Oki",
+   "file": "av_oki.glb",
+   "role": "it",
+   "work_clips": [
+    "work_code",
+    "work_debug"
+   ],
+   "props": [
+    "mug",
+    "phone"
+   ],
+   "height_m": 1.35,
+   "min_z": -0.0,
+   "tris": 11688,
+   "parts": 22
+  },
+  {
+   "id": "taufik",
+   "name": "Taufik",
+   "file": "av_taufik.glb",
+   "role": "finance",
+   "work_clips": [
+    "work_calc"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.3,
+   "min_z": -0.0,
+   "tris": 9892,
+   "parts": 23
+  },
+  {
+   "id": "umar",
+   "name": "Umar",
+   "file": "av_umar.glb",
+   "role": "marketing",
+   "work_clips": [
+    "work_brainstorm",
+    "work_pitch"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "note",
+    "notepad"
+   ],
+   "height_m": 1.28,
+   "min_z": -0.0,
+   "tris": 9868,
+   "parts": 24
+  },
+  {
+   "id": "wawan",
+   "name": "Wawan",
+   "file": "av_wawan.glb",
+   "role": "exec",
+   "work_clips": [
+    "work_sign"
+   ],
+   "props": [
+    "mug",
+    "phone",
+    "pen"
+   ],
+   "height_m": 1.361,
+   "min_z": -0.0,
+   "tris": 10000,
+   "parts": 22
   }
  ]
 }

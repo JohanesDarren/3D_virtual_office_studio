@@ -24,9 +24,13 @@ import lib    # noqa: E402
 import items  # noqa: E402
 import items_more  # noqa: E402,F401  (registers v4 items)
 import items_dept  # noqa: E402,F401  (registers v5 department items + workstations)
+import items_xl_furn  # noqa: E402,F401  (v8: tables, seating, desks, storage, meeting)
+import items_xl_room  # noqa: E402,F401  (v8: architecture, lighting, facility, mushola, lobby, outdoor)
+import items_xl_obj  # noqa: E402,F401  (v8: tech, desk gear, pantry, recreation, decor, wall)
 
 TRI_BUDGET = 2200   # v3: softer bevels; still light for web (~1.4k avg)
-CATEGORY_ORDER = ["work", "seating", "tech", "desk_gear", "meeting", "lounge", "storage", "pantry", "decor", "wall",
+CATEGORY_ORDER = ["architecture", "work", "seating", "tables", "tech", "desk_gear", "meeting", "lounge", "storage",
+                  "lighting", "pantry", "decor", "wall", "facility", "mushola", "lobby", "outdoor", "recreation",
                   "dept_it", "dept_creative", "dept_content", "dept_marketing", "dept_finance", "dept_hr",
                   "dept_sales", "dept_exec", "station"]
 BUDGETS = {"station": 9000}   # composed workstations: desk + screens + props in one mesh
@@ -40,7 +44,8 @@ scene.collection.children.link(kit)
 # ---------------------------------------------------------------- build items at origin
 spec = {"version": 2, "units": "meters", "up": "+Z blender / +Y glTF", "front": "-Y blender / +Z glTF",
         "pivot": {"floor": "bottom center at floor", "table": "bottom center, set on a table top",
-                  "wall": "back face on the wall plane, bottom edge at z=0; hang at mount_z"},
+                  "wall": "back face on the wall plane, bottom edge at z=0; hang at mount_z",
+                  "ceiling": "top center at z=0, geometry hangs down (z<0); place at mount_z (ceiling height)"},
         "outline": {"object_suffix": "_outline", "hex": lib.OUTLINE_HEX, "thickness_m": lib.OUTLINE_T,
                     "three_js": "MeshBasicMaterial, side FrontSide (hull winding is already flipped)"},
         "items": []}
@@ -49,6 +54,19 @@ over = []
 for item_id, r in items.REGISTRY.items():
     it = lib.Item(item_id)
     r["fn"](it)
+    # snap to the pivot contract: splayed legs / tilted parts may poke a few mm past it
+    zs = [v.co.z for v in it.bm.verts]
+    ys = [v.co.y for v in it.bm.verts]
+    shift = Vector((0, 0, 0))
+    if r["mount"] == "floor" and min(zs) < 0:
+        shift.z = -min(zs)
+    elif r["mount"] == "wall" and max(ys) > 0:
+        shift.y = -max(ys)
+    elif r["mount"] == "ceiling" and max(zs) > 0:
+        shift.z = -max(zs)
+    if shift.length:
+        for v in it.bm.verts:
+            v.co += shift
     ob = it.done(kit)
     objs[item_id] = ob
     bb = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
@@ -85,18 +103,30 @@ cats += [c for c in dict.fromkeys(i["category"] for i in spec["items"]) if c not
 GAP, ROW_GAP = .45, 1.8
 rows = {}
 row_y = 0.0
+PER_ROW = 12     # long categories are split into several sheets so items stay readable
+
+
+def lift_of(i):
+    return .6 if i["mount"] == "wall" else (-i["bbox_min"][2] + .3 if i["mount"] == "ceiling" else 0.0)
+
+
+chunks = []
 for cat in cats:
-    col = bpy.data.collections.new("COL_Preview_" + cat)
+    row_all = [i for i in spec["items"] if i["category"] == cat]
+    parts = [row_all[k:k + PER_ROW] for k in range(0, len(row_all), PER_ROW)]
+    for n, part in enumerate(parts, 1):
+        chunks.append((cat if len(parts) == 1 else f"{cat}_{n}", cat, part))
+for name, cat, row in chunks:
+    col = bpy.data.collections.new("COL_Preview_" + name)
     scene.collection.children.link(col)
-    row = [i for i in spec["items"] if i["category"] == cat]
     total = sum(i["size_m"]["x"] for i in row) + GAP * (len(row) - 1)
     depth = max(i["size_m"]["y"] for i in row)
-    height = max(i["size_m"]["z"] + (.6 if i["mount"] == "wall" else 0) for i in row)
+    height = max(i["size_m"]["z"] + lift_of(i) for i in row)
     x = -total / 2
     for i in row:
         src = objs[i["id"]]
         cx = x + i["size_m"]["x"] / 2
-        lift = .6 if i["mount"] == "wall" else 0.0          # wall items float above floor on a preview wall
+        lift = lift_of(i)          # wall items float above floor on a preview wall, ceiling items hang
         root = src.copy()
         col.objects.link(root)
         root.location = (cx, row_y, lift)
@@ -122,7 +152,7 @@ for cat in cats:
         for c in wall.users_collection:
             c.objects.unlink(wall)
         col.objects.link(wall)
-    rows[cat] = dict(col=col, y=row_y, width=total, depth=depth, height=height)
+    rows[name] = dict(col=col, y=row_y, width=total, depth=depth, height=height)
     row_y += depth + ROW_GAP
 kit.hide_viewport = True
 kit.hide_render = True
@@ -162,10 +192,10 @@ if "--render" in args:
             r2["col"].hide_render = c2 != cat
         # frame tight: width sets ortho scale, visible height (+ label strip) sets the aspect
         scale = r["width"] + .8
-        vis_h = r["height"] + (r["depth"] + .5) * math.cos(math.radians(70)) + 1.0
+        vis_h = r["height"] + (r["depth"] + .5) * math.cos(math.radians(70)) + 1.6
         res_x = max(1600, min(3200, int(scale * 170)))   # long rows (stations) get more pixels
         res_y = max(400, int(res_x * vis_h / scale))
-        shoot(os.path.join(ROOT, "renders", f"sheet_{cat}.png"), (0, r["y"] - .15, r["height"] * .45),
+        shoot(os.path.join(ROOT, "renders", f"sheet_{cat}.png"), (0, r["y"] - .15, r["height"] * .5),
               scale, (res_x, res_y))
         print("SHEET", cat)
     for r in rows.values():

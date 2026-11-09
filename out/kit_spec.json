@@ -6,7 +6,8 @@
  "pivot": {
   "floor": "bottom center at floor",
   "table": "bottom center, set on a table top",
-  "wall": "back face on the wall plane, bottom edge at z=0; hang at mount_z"
+  "wall": "back face on the wall plane, bottom edge at z=0; hang at mount_z",
+  "ceiling": "top center at z=0, geometry hangs down (z<0); place at mount_z (ceiling height)"
  },
  "outline": {
   "object_suffix": "_outline",
@@ -1191,7 +1192,7 @@
    "bbox_min": [
     -0.23,
     -0.235,
-    -0.0
+    0.0
    ],
    "bbox_max": [
     0.23,
@@ -2108,12 +2109,12 @@
    },
    "bbox_min": [
     -0.47,
-    -0.11,
+    -0.181,
     0.01
    ],
    "bbox_max": [
     0.47,
-    0.07,
+    0.0,
     0.95
    ],
    "tris": 792,
@@ -4038,6 +4039,9080 @@
     "MAT_blue",
     "MAT_coral",
     "MAT_sage"
+   ]
+  },
+  {
+   "id": "table_round_cafe",
+   "label": "Cafe table (round)",
+   "category": "tables",
+   "node": "SM_table_round_cafe",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.7,
+    "z": 0.74
+   },
+   "bbox_min": [
+    -0.35,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.35,
+    0.74
+   ],
+   "tris": 508,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "table_bistro_marble",
+   "label": "Bistro table",
+   "category": "tables",
+   "node": "SM_table_bistro_marble",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.6,
+    "z": 0.74
+   },
+   "bbox_min": [
+    -0.3,
+    -0.3,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.3,
+    0.74
+   ],
+   "tris": 544,
+   "materials": [
+    "MAT_black",
+    "MAT_offwhite"
+   ]
+  },
+  {
+   "id": "table_dining_long",
+   "label": "Long dining table",
+   "category": "tables",
+   "node": "SM_table_dining_long",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.9,
+    "z": 0.75
+   },
+   "bbox_min": [
+    -1.0,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.45,
+    0.75
+   ],
+   "tris": 648,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "table_dining_round",
+   "label": "Round dining table",
+   "category": "tables",
+   "node": "SM_table_dining_round",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.1,
+    "y": 1.1,
+    "z": 0.758
+   },
+   "bbox_min": [
+    -0.55,
+    -0.55,
+    0.0
+   ],
+   "bbox_max": [
+    0.55,
+    0.55,
+    0.758
+   ],
+   "tris": 364,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "table_high_bar",
+   "label": "High bar table",
+   "category": "tables",
+   "node": "SM_table_high_bar",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.55,
+    "z": 1.05
+   },
+   "bbox_min": [
+    -0.7,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.275,
+    1.05
+   ],
+   "tris": 168,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_black",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "table_folding",
+   "label": "Folding table",
+   "category": "tables",
+   "node": "SM_table_folding",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.6,
+    "z": 0.749
+   },
+   "bbox_min": [
+    -0.6,
+    -0.3,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.3,
+    0.749
+   ],
+   "tris": 188,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "table_coffee_round",
+   "label": "Round coffee table",
+   "category": "tables",
+   "node": "SM_table_coffee_round",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.8,
+    "z": 0.4
+   },
+   "bbox_min": [
+    -0.4,
+    -0.4,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.4,
+    0.4
+   ],
+   "tris": 500,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "table_nesting",
+   "label": "Nesting tables",
+   "category": "tables",
+   "node": "SM_table_nesting",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.5,
+    "z": 0.48
+   },
+   "bbox_min": [
+    -0.37,
+    -0.25,
+    0.0
+   ],
+   "bbox_max": [
+    0.33,
+    0.25,
+    0.48
+   ],
+   "tris": 344,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_black",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "table_side_c",
+   "label": "C-shaped side table",
+   "category": "tables",
+   "node": "SM_table_side_c",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.4,
+    "z": 0.613
+   },
+   "bbox_min": [
+    -0.18,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.18,
+    0.25,
+    0.613
+   ],
+   "tris": 164,
+   "materials": [
+    "MAT_black",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "table_conference_oval",
+   "label": "Oval conference table",
+   "category": "tables",
+   "node": "SM_table_conference_oval",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.6,
+    "y": 1.2,
+    "z": 0.77
+   },
+   "bbox_min": [
+    -1.3,
+    -0.6,
+    0.01
+   ],
+   "bbox_max": [
+    1.3,
+    0.6,
+    0.78
+   ],
+   "tris": 800,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_charcoal",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "table_conference_boat",
+   "label": "Boat-shaped conference table",
+   "category": "tables",
+   "node": "SM_table_conference_boat",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 3.16,
+    "y": 1.25,
+    "z": 0.75
+   },
+   "bbox_min": [
+    -1.58,
+    -0.625,
+    0.01
+   ],
+   "bbox_max": [
+    1.58,
+    0.625,
+    0.76
+   ],
+   "tris": 396,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "table_workbench",
+   "label": "Maker workbench",
+   "category": "tables",
+   "node": "SM_table_workbench",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.6,
+    "y": 0.7,
+    "z": 1.6
+   },
+   "bbox_min": [
+    -0.8,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.8,
+    0.35,
+    1.6
+   ],
+   "tris": 476,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_charcoal",
+    "MAT_wood_light",
+    "MAT_grey_light",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach"
+   ]
+  },
+  {
+   "id": "table_drafting",
+   "label": "Drafting table",
+   "category": "tables",
+   "node": "SM_table_drafting",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.1,
+    "y": 0.714,
+    "z": 1.067
+   },
+   "bbox_min": [
+    -0.55,
+    -0.359,
+    0.0
+   ],
+   "bbox_max": [
+    0.55,
+    0.354,
+    1.067
+   ],
+   "tris": 212,
+   "materials": [
+    "MAT_metal",
+    "MAT_offwhite",
+    "MAT_wood_mid",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "table_console",
+   "label": "Console table",
+   "category": "tables",
+   "node": "SM_table_console",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.35,
+    "z": 0.94
+   },
+   "bbox_min": [
+    -0.6,
+    -0.175,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.175,
+    0.94
+   ],
+   "tris": 440,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_black",
+    "MAT_lavender",
+    "MAT_blue"
+   ]
+  },
+  {
+   "id": "table_low_lesehan",
+   "label": "Low floor table",
+   "category": "tables",
+   "node": "SM_table_low_lesehan",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.7,
+    "z": 0.33
+   },
+   "bbox_min": [
+    -0.6,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.35,
+    0.33
+   ],
+   "tris": 324,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "table_standing_round",
+   "label": "Standing round table",
+   "category": "tables",
+   "node": "SM_table_standing_round",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.7,
+    "z": 1.07
+   },
+   "bbox_min": [
+    -0.35,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.35,
+    1.07
+   ],
+   "tris": 568,
+   "materials": [
+    "MAT_white",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "table_picnic",
+   "label": "Picnic table",
+   "category": "tables",
+   "node": "SM_table_picnic",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.6,
+    "y": 1.54,
+    "z": 0.774
+   },
+   "bbox_min": [
+    -0.8,
+    -0.77,
+    0.0
+   ],
+   "bbox_max": [
+    0.8,
+    0.77,
+    0.774
+   ],
+   "tris": 404,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "table_glass_round",
+   "label": "Glass round table",
+   "category": "tables",
+   "node": "SM_table_glass_round",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.9,
+    "z": 0.756
+   },
+   "bbox_min": [
+    -0.45,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.45,
+    0.756
+   ],
+   "tris": 344,
+   "materials": [
+    "MAT_black",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "table_ottoman_tray",
+   "label": "Tray table",
+   "category": "tables",
+   "node": "SM_table_ottoman_tray",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.56,
+    "y": 0.56,
+    "z": 0.415
+   },
+   "bbox_min": [
+    -0.28,
+    -0.28,
+    0.0
+   ],
+   "bbox_max": [
+    0.28,
+    0.28,
+    0.415
+   ],
+   "tris": 392,
+   "materials": [
+    "MAT_butter",
+    "MAT_offwhite",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "table_counter_island",
+   "label": "Kitchen island",
+   "category": "tables",
+   "node": "SM_table_counter_island",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.7,
+    "y": 0.9,
+    "z": 0.94
+   },
+   "bbox_min": [
+    -0.85,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    0.85,
+    0.45,
+    0.94
+   ],
+   "tris": 732,
+   "materials": [
+    "MAT_sage",
+    "MAT_charcoal",
+    "MAT_offwhite",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "sofa_2seat",
+   "label": "Two-seat sofa",
+   "category": "seating",
+   "node": "SM_sofa_2seat",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.5,
+    "y": 0.85,
+    "z": 0.78
+   },
+   "bbox_min": [
+    -0.75,
+    -0.425,
+    0.0
+   ],
+   "bbox_max": [
+    0.75,
+    0.425,
+    0.78
+   ],
+   "tris": 1396,
+   "materials": [
+    "MAT_sky",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "sofa_l_shape",
+   "label": "L-shaped sofa",
+   "category": "seating",
+   "node": "SM_sofa_l_shape",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.71,
+    "y": 1.385,
+    "z": 0.78
+   },
+   "bbox_min": [
+    -1.1,
+    -0.96,
+    0.0
+   ],
+   "bbox_max": [
+    1.61,
+    0.425,
+    0.78
+   ],
+   "tris": 2148,
+   "materials": [
+    "MAT_sage",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "sofa_curved",
+   "label": "Curved lobby sofa",
+   "category": "seating",
+   "node": "SM_sofa_curved",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 3.341,
+    "y": 1.455,
+    "z": 0.68
+   },
+   "bbox_min": [
+    -1.671,
+    -0.35,
+    0.07
+   ],
+   "bbox_max": [
+    1.671,
+    1.105,
+    0.75
+   ],
+   "tris": 1512,
+   "materials": [
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "loveseat_round",
+   "label": "Round-arm loveseat",
+   "category": "seating",
+   "node": "SM_loveseat_round",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.36,
+    "y": 0.8,
+    "z": 0.84
+   },
+   "bbox_min": [
+    -0.68,
+    -0.39,
+    0.0
+   ],
+   "bbox_max": [
+    0.68,
+    0.41,
+    0.84
+   ],
+   "tris": 852,
+   "materials": [
+    "MAT_blush",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "chaise_lounge",
+   "label": "Chaise lounge",
+   "category": "seating",
+   "node": "SM_chaise_lounge",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 1.65,
+    "z": 0.65
+   },
+   "bbox_min": [
+    -0.35,
+    -0.8,
+    0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.85,
+    0.65
+   ],
+   "tris": 500,
+   "materials": [
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "chair_rocking",
+   "label": "Rocking chair",
+   "category": "seating",
+   "node": "SM_chair_rocking",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.518,
+    "y": 1.396,
+    "z": 0.898
+   },
+   "bbox_min": [
+    -0.259,
+    -0.7,
+    0.054
+   ],
+   "bbox_max": [
+    0.259,
+    0.696,
+    0.952
+   ],
+   "tris": 552,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "chair_egg",
+   "label": "Egg chair",
+   "category": "seating",
+   "node": "SM_chair_egg",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.85,
+    "y": 0.862,
+    "z": 1.225
+   },
+   "bbox_min": [
+    -0.425,
+    -0.412,
+    0.0
+   ],
+   "bbox_max": [
+    0.425,
+    0.45,
+    1.225
+   ],
+   "tris": 804,
+   "materials": [
+    "MAT_metal",
+    "MAT_white",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "chair_hanging",
+   "label": "Hanging pod chair",
+   "category": "seating",
+   "node": "SM_chair_hanging",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.76,
+    "y": 0.83,
+    "z": 1.974
+   },
+   "bbox_min": [
+    -0.38,
+    -0.43,
+    0.0
+   ],
+   "bbox_max": [
+    0.38,
+    0.4,
+    1.974
+   ],
+   "tris": 548,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_wood_light",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "bean_sofa",
+   "label": "Bean sofa",
+   "category": "seating",
+   "node": "SM_bean_sofa",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.3,
+    "y": 0.945,
+    "z": 0.78
+   },
+   "bbox_min": [
+    -0.65,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    0.65,
+    0.495,
+    0.78
+   ],
+   "tris": 392,
+   "materials": [
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "floor_cushion",
+   "label": "Floor cushion",
+   "category": "seating",
+   "node": "SM_floor_cushion",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.6,
+    "z": 0.155
+   },
+   "bbox_min": [
+    -0.3,
+    -0.3,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.3,
+    0.155
+   ],
+   "tris": 332,
+   "materials": [
+    "MAT_butter",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "ottoman_square",
+   "label": "Square ottoman",
+   "category": "seating",
+   "node": "SM_ottoman_square",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.55,
+    "y": 0.55,
+    "z": 0.38
+   },
+   "bbox_min": [
+    -0.275,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    0.275,
+    0.275,
+    0.38
+   ],
+   "tris": 268,
+   "materials": [
+    "MAT_lavender",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "ottoman_round_tufted",
+   "label": "Tufted round ottoman",
+   "category": "seating",
+   "node": "SM_ottoman_round_tufted",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.6,
+    "z": 0.39
+   },
+   "bbox_min": [
+    -0.3,
+    -0.3,
+    0.01
+   ],
+   "bbox_max": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "tris": 676,
+   "materials": [
+    "MAT_sage",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "bench_padded",
+   "label": "Padded bench",
+   "category": "seating",
+   "node": "SM_bench_padded",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.42,
+    "z": 0.47
+   },
+   "bbox_min": [
+    -0.7,
+    -0.21,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.21,
+    0.47
+   ],
+   "tris": 268,
+   "materials": [
+    "MAT_blue",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "bench_storage",
+   "label": "Storage bench",
+   "category": "seating",
+   "node": "SM_bench_storage",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.47,
+    "z": 0.48
+   },
+   "bbox_min": [
+    -0.5,
+    -0.27,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.2,
+    0.48
+   ],
+   "tris": 1184,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "stool_tripod",
+   "label": "Tripod stool",
+   "category": "seating",
+   "node": "SM_stool_tripod",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.34,
+    "y": 0.365,
+    "z": 0.473
+   },
+   "bbox_min": [
+    -0.17,
+    -0.17,
+    0.0
+   ],
+   "bbox_max": [
+    0.17,
+    0.195,
+    0.473
+   ],
+   "tris": 248,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "stool_stacking",
+   "label": "Stacking stools",
+   "category": "seating",
+   "node": "SM_stool_stacking",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.34,
+    "y": 0.342,
+    "z": 0.595
+   },
+   "bbox_min": [
+    -0.17,
+    -0.17,
+    0.0
+   ],
+   "bbox_max": [
+    0.17,
+    0.172,
+    0.595
+   ],
+   "tris": 708,
+   "materials": [
+    "MAT_butter",
+    "MAT_black",
+    "MAT_sage",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "chair_kneeling",
+   "label": "Kneeling chair",
+   "category": "seating",
+   "node": "SM_chair_kneeling",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.44,
+    "y": 0.74,
+    "z": 0.595
+   },
+   "bbox_min": [
+    -0.22,
+    -0.39,
+    0.0
+   ],
+   "bbox_max": [
+    0.22,
+    0.35,
+    0.595
+   ],
+   "tris": 632,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "ball_chair_yoga",
+   "label": "Balance ball",
+   "category": "seating",
+   "node": "SM_ball_chair_yoga",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.65,
+    "y": 0.65,
+    "z": 0.655
+   },
+   "bbox_min": [
+    -0.325,
+    -0.325,
+    0.0
+   ],
+   "bbox_max": [
+    0.325,
+    0.325,
+    0.655
+   ],
+   "tris": 388,
+   "materials": [
+    "MAT_mint",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "chair_director",
+   "label": "Director chair",
+   "category": "seating",
+   "node": "SM_chair_director",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.55,
+    "y": 0.487,
+    "z": 1.011
+   },
+   "bbox_min": [
+    -0.275,
+    -0.233,
+    0.0
+   ],
+   "bbox_max": [
+    0.275,
+    0.254,
+    1.011
+   ],
+   "tris": 336,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "chair_folding",
+   "label": "Folding chair",
+   "category": "seating",
+   "node": "SM_chair_folding",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.424,
+    "y": 0.461,
+    "z": 0.862
+   },
+   "bbox_min": [
+    -0.212,
+    -0.231,
+    0.0
+   ],
+   "bbox_max": [
+    0.212,
+    0.23,
+    0.862
+   ],
+   "tris": 280,
+   "materials": [
+    "MAT_grey",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "chair_sling",
+   "label": "Sling lounge chair",
+   "category": "seating",
+   "node": "SM_chair_sling",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.629,
+    "y": 0.73,
+    "z": 0.816
+   },
+   "bbox_min": [
+    -0.314,
+    -0.365,
+    0.0
+   ],
+   "bbox_max": [
+    0.314,
+    0.365,
+    0.816
+   ],
+   "tris": 312,
+   "materials": [
+    "MAT_black",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "stool_bar_back",
+   "label": "Bar stool with back",
+   "category": "seating",
+   "node": "SM_stool_bar_back",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.404,
+    "y": 0.404,
+    "z": 1.046
+   },
+   "bbox_min": [
+    -0.202,
+    -0.202,
+    0.0
+   ],
+   "bbox_max": [
+    0.202,
+    0.202,
+    1.046
+   ],
+   "tris": 308,
+   "materials": [
+    "MAT_black",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "booth_seat",
+   "label": "Booth seat",
+   "category": "seating",
+   "node": "SM_booth_seat",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.575,
+    "z": 1.05
+   },
+   "bbox_min": [
+    -0.7,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.3,
+    1.05
+   ],
+   "tris": 968,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "seat_row_auditorium",
+   "label": "Auditorium seat row",
+   "category": "seating",
+   "node": "SM_seat_row_auditorium",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.7,
+    "y": 0.548,
+    "z": 1.023
+   },
+   "bbox_min": [
+    -0.85,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    0.85,
+    0.273,
+    1.023
+   ],
+   "tris": 1560,
+   "materials": [
+    "MAT_blue",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "chair_lounge_wood",
+   "label": "Wooden lounge chair",
+   "category": "seating",
+   "node": "SM_chair_lounge_wood",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.72,
+    "y": 0.7,
+    "z": 0.85
+   },
+   "bbox_min": [
+    -0.36,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.36,
+    0.35,
+    0.85
+   ],
+   "tris": 888,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_offwhite"
+   ]
+  },
+  {
+   "id": "desk_compact",
+   "label": "Compact desk",
+   "category": "work",
+   "node": "SM_desk_compact",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.55,
+    "z": 0.75
+   },
+   "bbox_min": [
+    -0.5,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.275,
+    0.75
+   ],
+   "tris": 308,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "desk_writing",
+   "label": "Writing desk",
+   "category": "work",
+   "node": "SM_desk_writing",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.1,
+    "y": 0.55,
+    "z": 0.96
+   },
+   "bbox_min": [
+    -0.55,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    0.55,
+    0.275,
+    0.96
+   ],
+   "tris": 524,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "desk_gaming",
+   "label": "Gaming desk",
+   "category": "work",
+   "node": "SM_desk_gaming",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.71,
+    "z": 0.775
+   },
+   "bbox_min": [
+    -0.7,
+    -0.36,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    0.775
+   ],
+   "tris": 204,
+   "materials": [
+    "MAT_black",
+    "MAT_coral",
+    "MAT_lavender",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "desk_trestle",
+   "label": "Trestle desk",
+   "category": "work",
+   "node": "SM_desk_trestle",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.5,
+    "y": 0.75,
+    "z": 0.756
+   },
+   "bbox_min": [
+    -0.75,
+    -0.375,
+    0.0
+   ],
+   "bbox_max": [
+    0.75,
+    0.375,
+    0.756
+   ],
+   "tris": 196,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "desk_glass",
+   "label": "Glass desk",
+   "category": "work",
+   "node": "SM_desk_glass",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.7,
+    "z": 0.74
+   },
+   "bbox_min": [
+    -0.7,
+    -0.35,
+    0.01
+   ],
+   "bbox_max": [
+    0.7,
+    0.35,
+    0.75
+   ],
+   "tris": 116,
+   "materials": [
+    "MAT_glass",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "desk_hot_4",
+   "label": "Hot-desk cluster (4)",
+   "category": "work",
+   "node": "SM_desk_hot_4",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.45,
+    "y": 1.42,
+    "z": 1.215
+   },
+   "bbox_min": [
+    -1.225,
+    -0.71,
+    0.01
+   ],
+   "bbox_max": [
+    1.225,
+    0.71,
+    1.225
+   ],
+   "tris": 908,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_sage",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "desk_cubicle",
+   "label": "Cubicle desk",
+   "category": "work",
+   "node": "SM_desk_cubicle",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.51,
+    "y": 0.805,
+    "z": 1.24
+   },
+   "bbox_min": [
+    -0.755,
+    -0.4,
+    0.0
+   ],
+   "bbox_max": [
+    0.755,
+    0.405,
+    1.24
+   ],
+   "tris": 552,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_sky",
+    "MAT_grey_light",
+    "MAT_cork"
+   ]
+  },
+  {
+   "id": "desk_u_shape",
+   "label": "U-shaped desk",
+   "category": "work",
+   "node": "SM_desk_u_shape",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.8,
+    "y": 1.5,
+    "z": 0.752
+   },
+   "bbox_min": [
+    -0.9,
+    -1.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.9,
+    0.35,
+    0.752
+   ],
+   "tris": 648,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "desk_reception_curve",
+   "label": "Curved reception desk",
+   "category": "work",
+   "node": "SM_desk_reception_curve",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.447,
+    "y": 0.96,
+    "z": 1.14
+   },
+   "bbox_min": [
+    -1.223,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    1.223,
+    0.685,
+    1.14
+   ],
+   "tris": 936,
+   "materials": [
+    "MAT_white",
+    "MAT_wood_light",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "desk_with_hutch",
+   "label": "Desk with hutch",
+   "category": "work",
+   "node": "SM_desk_with_hutch",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.3,
+    "y": 0.65,
+    "z": 1.54
+   },
+   "bbox_min": [
+    -0.65,
+    -0.325,
+    0.01
+   ],
+   "bbox_max": [
+    0.65,
+    0.325,
+    1.55
+   ],
+   "tris": 576,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_coral",
+    "MAT_cork"
+   ]
+  },
+  {
+   "id": "desk_floating",
+   "label": "Wall-mounted floating desk",
+   "category": "work",
+   "node": "SM_desk_floating",
+   "mount": "wall",
+   "mount_z": 0.72,
+   "size_m": {
+    "x": 1.1,
+    "y": 0.5,
+    "z": 0.15
+   },
+   "bbox_min": [
+    -0.55,
+    -0.5,
+    -0.12
+   ],
+   "bbox_max": [
+    0.55,
+    0.0,
+    0.03
+   ],
+   "tris": 324,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "desk_hexagon_pod",
+   "label": "Hexagon desk pod",
+   "category": "work",
+   "node": "SM_desk_hexagon_pod",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.918,
+    "y": 1.94,
+    "z": 1.1
+   },
+   "bbox_min": [
+    -0.959,
+    -0.97,
+    0.0
+   ],
+   "bbox_max": [
+    0.959,
+    0.97,
+    1.1
+   ],
+   "tris": 1316,
+   "materials": [
+    "MAT_white",
+    "MAT_mint",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "desk_standing_crank",
+   "label": "Crank standing desk",
+   "category": "work",
+   "node": "SM_desk_standing_crank",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.237,
+    "y": 0.7,
+    "z": 1.05
+   },
+   "bbox_min": [
+    -0.6,
+    -0.4,
+    0.0
+   ],
+   "bbox_max": [
+    0.637,
+    0.3,
+    1.05
+   ],
+   "tris": 616,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_white",
+    "MAT_metal",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "desk_kids_play",
+   "label": "Low activity desk",
+   "category": "work",
+   "node": "SM_desk_kids_play",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.6,
+    "z": 0.555
+   },
+   "bbox_min": [
+    -0.45,
+    -0.3,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.3,
+    0.555
+   ],
+   "tris": 512,
+   "materials": [
+    "MAT_butter",
+    "MAT_coral",
+    "MAT_sky",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "bookshelf_ladder",
+   "label": "Ladder bookshelf",
+   "category": "storage",
+   "node": "SM_bookshelf_ladder",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.735,
+    "y": 0.565,
+    "z": 1.808
+   },
+   "bbox_min": [
+    -0.367,
+    -0.36,
+    0.0
+   ],
+   "bbox_max": [
+    0.367,
+    0.205,
+    1.808
+   ],
+   "tris": 588,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "bookcase_low",
+   "label": "Low bookcase",
+   "category": "storage",
+   "node": "SM_bookcase_low",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.355,
+    "z": 1.08
+   },
+   "bbox_min": [
+    -0.6,
+    -0.18,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.175,
+    1.08
+   ],
+   "tris": 592,
+   "materials": [
+    "MAT_white",
+    "MAT_offwhite",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_coral",
+    "MAT_blue"
+   ]
+  },
+  {
+   "id": "credenza",
+   "label": "Credenza",
+   "category": "storage",
+   "node": "SM_credenza",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.6,
+    "y": 0.485,
+    "z": 0.94
+   },
+   "bbox_min": [
+    -0.8,
+    -0.26,
+    0.0
+   ],
+   "bbox_max": [
+    0.8,
+    0.225,
+    0.94
+   ],
+   "tris": 636,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_charcoal",
+    "MAT_wood_light",
+    "MAT_black",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "sideboard_slats",
+   "label": "Slatted sideboard",
+   "category": "storage",
+   "node": "SM_sideboard_slats",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.5,
+    "y": 0.44,
+    "z": 0.75
+   },
+   "bbox_min": [
+    -0.75,
+    -0.23,
+    0.0
+   ],
+   "bbox_max": [
+    0.75,
+    0.21,
+    0.75
+   ],
+   "tris": 404,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_mid",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "wardrobe",
+   "label": "Wardrobe",
+   "category": "storage",
+   "node": "SM_wardrobe",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.643,
+    "z": 2.0
+   },
+   "bbox_min": [
+    -0.5,
+    -0.343,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.3,
+    2.0
+   ],
+   "tris": 456,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_charcoal",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "filing_lateral",
+   "label": "Lateral filing cabinet",
+   "category": "storage",
+   "node": "SM_filing_lateral",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.53,
+    "z": 1.05
+   },
+   "bbox_min": [
+    -0.45,
+    -0.28,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.25,
+    1.05
+   ],
+   "tris": 516,
+   "materials": [
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_grey_light",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "shelf_cube_3x3",
+   "label": "Cube shelf 3x3",
+   "category": "storage",
+   "node": "SM_shelf_cube_3x3",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.18,
+    "y": 0.38,
+    "z": 1.18
+   },
+   "bbox_min": [
+    -0.59,
+    -0.19,
+    0.0
+   ],
+   "bbox_max": [
+    0.59,
+    0.19,
+    1.18
+   ],
+   "tris": 804,
+   "materials": [
+    "MAT_white",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "shelf_zigzag",
+   "label": "Zigzag shelf",
+   "category": "storage",
+   "node": "SM_shelf_zigzag",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.011,
+    "y": 0.3,
+    "z": 1.626
+   },
+   "bbox_min": [
+    -0.506,
+    -0.15,
+    0.087
+   ],
+   "bbox_max": [
+    0.506,
+    0.15,
+    1.714
+   ],
+   "tris": 560,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_black",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "shelf_tree",
+   "label": "Tree bookshelf",
+   "category": "storage",
+   "node": "SM_shelf_tree",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.097,
+    "y": 0.3,
+    "z": 1.8
+   },
+   "bbox_min": [
+    -0.548,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.548,
+    0.15,
+    1.8
+   ],
+   "tris": 824,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "mailbox_pigeonhole",
+   "label": "Pigeonhole mailbox",
+   "category": "storage",
+   "node": "SM_mailbox_pigeonhole",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.36,
+    "z": 1.35
+   },
+   "bbox_min": [
+    -0.5,
+    -0.185,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.175,
+    1.35
+   ],
+   "tris": 512,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_dark",
+    "MAT_paper",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "cabinet_display",
+   "label": "Glass display cabinet",
+   "category": "storage",
+   "node": "SM_cabinet_display",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.4,
+    "z": 1.83
+   },
+   "bbox_min": [
+    -0.4,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.2,
+    1.83
+   ],
+   "tris": 372,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_glass",
+    "MAT_white",
+    "MAT_butter",
+    "MAT_lavender",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "cabinet_key",
+   "label": "Key cabinet",
+   "category": "storage",
+   "node": "SM_cabinet_key",
+   "mount": "wall",
+   "mount_z": 1.4,
+   "size_m": {
+    "x": 0.35,
+    "y": 0.11,
+    "z": 0.45
+   },
+   "bbox_min": [
+    -0.175,
+    -0.11,
+    -0.225
+   ],
+   "bbox_max": [
+    0.175,
+    0.0,
+    0.225
+   ],
+   "tris": 264,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_glass",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach"
+   ]
+  },
+  {
+   "id": "magazine_rack",
+   "label": "Magazine rack",
+   "category": "storage",
+   "node": "SM_magazine_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.63,
+    "y": 0.356,
+    "z": 1.077
+   },
+   "bbox_min": [
+    -0.315,
+    -0.131,
+    0.0
+   ],
+   "bbox_max": [
+    0.315,
+    0.225,
+    1.077
+   ],
+   "tris": 576,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_lavender",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "shoe_rack",
+   "label": "Shoe rack",
+   "category": "storage",
+   "node": "SM_shoe_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.93,
+    "y": 0.3,
+    "z": 0.5
+   },
+   "bbox_min": [
+    -0.465,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.465,
+    0.15,
+    0.5
+   ],
+   "tris": 1848,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "basket_set",
+   "label": "Woven basket set",
+   "category": "storage",
+   "node": "SM_basket_set",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.699,
+    "y": 0.463,
+    "z": 0.4
+   },
+   "bbox_min": [
+    -0.388,
+    -0.221,
+    0.0
+   ],
+   "bbox_max": [
+    0.311,
+    0.242,
+    0.4
+   ],
+   "tris": 312,
+   "materials": [
+    "MAT_cork",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "storage_bins_stack",
+   "label": "Stacked storage bins",
+   "category": "storage",
+   "node": "SM_storage_bins_stack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.365,
+    "z": 1.06
+   },
+   "bbox_min": [
+    -0.225,
+    -0.19,
+    0.015
+   ],
+   "bbox_max": [
+    0.225,
+    0.175,
+    1.075
+   ],
+   "tris": 480,
+   "materials": [
+    "MAT_sky",
+    "MAT_white",
+    "MAT_mint",
+    "MAT_butter",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "cabinet_tool",
+   "label": "Tool cabinet",
+   "category": "storage",
+   "node": "SM_cabinet_tool",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.48,
+    "z": 0.945
+   },
+   "bbox_min": [
+    -0.35,
+    -0.255,
+    0.005
+   ],
+   "bbox_max": [
+    0.35,
+    0.225,
+    0.95
+   ],
+   "tris": 500,
+   "materials": [
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_metal",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "cabinet_flat_file",
+   "label": "Flat file cabinet",
+   "category": "storage",
+   "node": "SM_cabinet_flat_file",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.1,
+    "y": 0.827,
+    "z": 0.85
+   },
+   "bbox_min": [
+    -0.55,
+    -0.427,
+    0.0
+   ],
+   "bbox_max": [
+    0.55,
+    0.4,
+    0.85
+   ],
+   "tris": 524,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_white",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "locker_tall_wood",
+   "label": "Wooden locker column",
+   "category": "storage",
+   "node": "SM_locker_tall_wood",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.53,
+    "z": 1.9
+   },
+   "bbox_min": [
+    -0.225,
+    -0.28,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.25,
+    1.9
+   ],
+   "tris": 700,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid",
+    "MAT_metal",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "cart_book",
+   "label": "Book cart",
+   "category": "storage",
+   "node": "SM_cart_book",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.845,
+    "y": 0.35,
+    "z": 0.995
+   },
+   "bbox_min": [
+    -0.422,
+    -0.175,
+    0.005
+   ],
+   "bbox_max": [
+    0.422,
+    0.175,
+    1.0
+   ],
+   "tris": 488,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_wood_dark",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "flip_chart",
+   "label": "Flip chart",
+   "category": "meeting",
+   "node": "SM_flip_chart",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.72,
+    "y": 0.479,
+    "z": 1.743
+   },
+   "bbox_min": [
+    -0.36,
+    -0.165,
+    0.0
+   ],
+   "bbox_max": [
+    0.36,
+    0.315,
+    1.743
+   ],
+   "tris": 300,
+   "materials": [
+    "MAT_metal",
+    "MAT_white",
+    "MAT_paper",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "whiteboard_glass",
+   "label": "Glass whiteboard",
+   "category": "meeting",
+   "node": "SM_whiteboard_glass",
+   "mount": "wall",
+   "mount_z": 0.9,
+   "size_m": {
+    "x": 1.6,
+    "y": 0.04,
+    "z": 1.0
+   },
+   "bbox_min": [
+    -0.8,
+    -0.05,
+    0.1
+   ],
+   "bbox_max": [
+    0.8,
+    -0.01,
+    1.1
+   ],
+   "tris": 180,
+   "materials": [
+    "MAT_glass",
+    "MAT_metal",
+    "MAT_coral",
+    "MAT_blue"
+   ]
+  },
+  {
+   "id": "whiteboard_mobile",
+   "label": "Mobile whiteboard",
+   "category": "meeting",
+   "node": "SM_whiteboard_mobile",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.5,
+    "y": 0.5,
+    "z": 1.695
+   },
+   "bbox_min": [
+    -0.75,
+    -0.25,
+    0.005
+   ],
+   "bbox_max": [
+    0.75,
+    0.25,
+    1.7
+   ],
+   "tris": 304,
+   "materials": [
+    "MAT_white",
+    "MAT_paper",
+    "MAT_grey",
+    "MAT_black",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "podium",
+   "label": "Podium / lectern",
+   "category": "meeting",
+   "node": "SM_podium",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.66,
+    "y": 0.499,
+    "z": 1.335
+   },
+   "bbox_min": [
+    -0.33,
+    -0.235,
+    0.05
+   ],
+   "bbox_max": [
+    0.33,
+    0.264,
+    1.385
+   ],
+   "tris": 324,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark",
+    "MAT_butter",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "screen_stand",
+   "label": "Presentation screen stand",
+   "category": "meeting",
+   "node": "SM_screen_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.5,
+    "z": 1.75
+   },
+   "bbox_min": [
+    -0.7,
+    -0.25,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.25,
+    1.75
+   ],
+   "tris": 348,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_screen",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "video_conf_bar",
+   "label": "Video conference bar",
+   "category": "meeting",
+   "node": "SM_video_conf_bar",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.105,
+    "z": 0.08
+   },
+   "bbox_min": [
+    -0.4,
+    -0.055,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.05,
+    0.08
+   ],
+   "tris": 248,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "table_mic_conf",
+   "label": "Conference mic",
+   "category": "meeting",
+   "node": "SM_table_mic_conf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.14,
+    "y": 0.175,
+    "z": 0.33
+   },
+   "bbox_min": [
+    -0.07,
+    -0.105,
+    0.0
+   ],
+   "bbox_max": [
+    0.07,
+    0.07,
+    0.33
+   ],
+   "tris": 276,
+   "materials": [
+    "MAT_black",
+    "MAT_charcoal",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "phone_booth",
+   "label": "Focus phone booth",
+   "category": "meeting",
+   "node": "SM_phone_booth",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 1.015,
+    "z": 2.15
+   },
+   "bbox_min": [
+    -0.5,
+    -0.515,
+    0.05
+   ],
+   "bbox_max": [
+    0.5,
+    0.5,
+    2.2
+   ],
+   "tris": 780,
+   "materials": [
+    "MAT_white",
+    "MAT_sage",
+    "MAT_glass",
+    "MAT_wood_light",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "acoustic_booth_duo",
+   "label": "Meeting pod (2 person)",
+   "category": "meeting",
+   "node": "SM_acoustic_booth_duo",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 1.4,
+    "z": 2.25
+   },
+   "bbox_min": [
+    -1.0,
+    -0.7,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.7,
+    2.25
+   ],
+   "tris": 1064,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_white",
+    "MAT_lavender",
+    "MAT_blue",
+    "MAT_glass",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "table_huddle",
+   "label": "Huddle table",
+   "category": "meeting",
+   "node": "SM_table_huddle",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.9,
+    "z": 0.77
+   },
+   "bbox_min": [
+    -0.6,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.45,
+    0.77
+   ],
+   "tris": 552,
+   "materials": [
+    "MAT_white",
+    "MAT_sage",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "table_meeting_standing",
+   "label": "Standing meeting table",
+   "category": "meeting",
+   "node": "SM_table_meeting_standing",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.8,
+    "y": 0.8,
+    "z": 1.03
+   },
+   "bbox_min": [
+    -0.9,
+    -0.4,
+    0.02
+   ],
+   "bbox_max": [
+    0.9,
+    0.4,
+    1.05
+   ],
+   "tris": 336,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_white",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "easel_sticky",
+   "label": "Sticky-note easel",
+   "category": "meeting",
+   "node": "SM_easel_sticky",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.579,
+    "z": 1.704
+   },
+   "bbox_min": [
+    -0.4,
+    -0.214,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.365,
+    1.704
+   ],
+   "tris": 300,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_cork",
+    "MAT_butter",
+    "MAT_blush",
+    "MAT_mint",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "wall_1m",
+   "label": "Wall 1 m",
+   "category": "architecture",
+   "node": "SM_wall_1m",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.144,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -0.5,
+    -0.072,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.072,
+    2.8
+   ],
+   "tris": 68,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "wall_2m",
+   "label": "Wall 2 m",
+   "category": "architecture",
+   "node": "SM_wall_2m",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.144,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -1.0,
+    -0.072,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.072,
+    2.8
+   ],
+   "tris": 68,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "wall_half",
+   "label": "Half-height wall",
+   "category": "architecture",
+   "node": "SM_wall_half",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.04,
+    "y": 0.2,
+    "z": 1.14
+   },
+   "bbox_min": [
+    -1.02,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    1.02,
+    0.1,
+    1.14
+   ],
+   "tris": 176,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_wood_light",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "wall_corner",
+   "label": "Wall corner",
+   "category": "architecture",
+   "node": "SM_wall_corner",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.015,
+    "y": 1.015,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -0.5,
+    -0.94,
+    0.0
+   ],
+   "bbox_max": [
+    0.515,
+    0.075,
+    2.8
+   ],
+   "tris": 100,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "wall_accent_slats",
+   "label": "Accent wall (wood slats)",
+   "category": "architecture",
+   "node": "SM_wall_accent_slats",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.15,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -1.0,
+    -0.09,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.06,
+    2.8
+   ],
+   "tris": 236,
+   "materials": [
+    "MAT_sage",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "wall_brick",
+   "label": "Brick accent wall",
+   "category": "architecture",
+   "node": "SM_wall_brick",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.055,
+    "y": 0.131,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -1.055,
+    -0.071,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.06,
+    2.8
+   ],
+   "tris": 1304,
+   "materials": [
+    "MAT_peach",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "wall_window",
+   "label": "Wall with window",
+   "category": "architecture",
+   "node": "SM_wall_window",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.24,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -1.0,
+    -0.18,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.06,
+    2.8
+   ],
+   "tris": 308,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_glass",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "wall_door_frame",
+   "label": "Wall with door opening",
+   "category": "architecture",
+   "node": "SM_wall_door_frame",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.15,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -1.0,
+    -0.075,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.075,
+    2.8
+   ],
+   "tris": 264,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "partition_glass",
+   "label": "Glass partition",
+   "category": "architecture",
+   "node": "SM_partition_glass",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.08,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -1.0,
+    -0.04,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.04,
+    2.8
+   ],
+   "tris": 148,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_glass",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "door_single",
+   "label": "Door",
+   "category": "architecture",
+   "node": "SM_door_single",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.145,
+    "z": 2.18
+   },
+   "bbox_min": [
+    -0.5,
+    -0.075,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.07,
+    2.18
+   ],
+   "tris": 536,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "door_double_glass",
+   "label": "Double glass door",
+   "category": "architecture",
+   "node": "SM_door_double_glass",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.9,
+    "y": 0.145,
+    "z": 2.25
+   },
+   "bbox_min": [
+    -0.95,
+    -0.075,
+    0.0
+   ],
+   "bbox_max": [
+    0.95,
+    0.07,
+    2.25
+   ],
+   "tris": 204,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_glass",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "door_sliding_barn",
+   "label": "Sliding barn door",
+   "category": "architecture",
+   "node": "SM_door_sliding_barn",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.125,
+    "z": 2.22
+   },
+   "bbox_min": [
+    -1.0,
+    -0.135,
+    0.03
+   ],
+   "bbox_max": [
+    1.0,
+    -0.01,
+    2.25
+   ],
+   "tris": 396,
+   "materials": [
+    "MAT_black",
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "window_tall",
+   "label": "Tall window",
+   "category": "architecture",
+   "node": "SM_window_tall",
+   "mount": "wall",
+   "mount_z": 0.5,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.1,
+    "z": 2.0
+   },
+   "bbox_min": [
+    -0.5,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.0,
+    2.0
+   ],
+   "tris": 144,
+   "materials": [
+    "MAT_white",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "window_round",
+   "label": "Round window",
+   "category": "architecture",
+   "node": "SM_window_round",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.1,
+    "z": 0.8
+   },
+   "bbox_min": [
+    -0.4,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.0,
+    0.8
+   ],
+   "tris": 208,
+   "materials": [
+    "MAT_white",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "window_blinds",
+   "label": "Window with blinds",
+   "category": "architecture",
+   "node": "SM_window_blinds",
+   "mount": "wall",
+   "mount_z": 0.9,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.124,
+    "z": 1.4
+   },
+   "bbox_min": [
+    -0.7,
+    -0.124,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.0,
+    1.4
+   ],
+   "tris": 252,
+   "materials": [
+    "MAT_white",
+    "MAT_glass",
+    "MAT_offwhite",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "column_round",
+   "label": "Round column",
+   "category": "architecture",
+   "node": "SM_column_round",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.48,
+    "y": 0.48,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -0.24,
+    -0.24,
+    0.0
+   ],
+   "bbox_max": [
+    0.24,
+    0.24,
+    2.8
+   ],
+   "tris": 548,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "column_square",
+   "label": "Square column",
+   "category": "architecture",
+   "node": "SM_column_square",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.49,
+    "y": 0.49,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -0.245,
+    -0.245,
+    0.0
+   ],
+   "bbox_max": [
+    0.245,
+    0.245,
+    2.8
+   ],
+   "tris": 120,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "stairs_straight",
+   "label": "Stairs (straight)",
+   "category": "architecture",
+   "node": "SM_stairs_straight",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 2.02,
+    "z": 2.317
+   },
+   "bbox_min": [
+    -0.5,
+    -0.835,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    1.185,
+    2.317
+   ],
+   "tris": 1080,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_offwhite",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "railing_glass",
+   "label": "Glass railing",
+   "category": "architecture",
+   "node": "SM_railing_glass",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.08,
+    "z": 1.025
+   },
+   "bbox_min": [
+    -1.0,
+    -0.04,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.04,
+    1.025
+   ],
+   "tris": 132,
+   "materials": [
+    "MAT_metal",
+    "MAT_glass",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "floor_tile_wood",
+   "label": "Floor tile 1 m (wood)",
+   "category": "architecture",
+   "node": "SM_floor_tile_wood",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.995,
+    "z": 0.02
+   },
+   "bbox_min": [
+    -0.5,
+    -0.498,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.498,
+    0.02
+   ],
+   "tris": 60,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "floor_tile_carpet",
+   "label": "Floor tile 1 m (carpet)",
+   "category": "architecture",
+   "node": "SM_floor_tile_carpet",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 0.022
+   },
+   "bbox_min": [
+    -0.5,
+    -0.5,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.5,
+    0.022
+   ],
+   "tris": 60,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "floor_tile_terrazzo",
+   "label": "Floor tile 1 m (terrazzo)",
+   "category": "architecture",
+   "node": "SM_floor_tile_terrazzo",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 0.022
+   },
+   "bbox_min": [
+    -0.5,
+    -0.5,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.5,
+    0.022
+   ],
+   "tris": 180,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "ceiling_tile",
+   "label": "Ceiling panel 1 m",
+   "category": "architecture",
+   "node": "SM_ceiling_tile",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 0.034
+   },
+   "bbox_min": [
+    -0.5,
+    -0.5,
+    -0.034
+   ],
+   "bbox_max": [
+    0.5,
+    0.5,
+    0.0
+   ],
+   "tris": 24,
+   "materials": [
+    "MAT_white",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "baseboard_heater",
+   "label": "Air conditioner (floor)",
+   "category": "architecture",
+   "node": "SM_baseboard_heater",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.36,
+    "z": 1.8
+   },
+   "bbox_min": [
+    -0.225,
+    -0.185,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.175,
+    1.8
+   ],
+   "tris": 272,
+   "materials": [
+    "MAT_white",
+    "MAT_grey_light",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "pillar_planter",
+   "label": "Column with planter ring",
+   "category": "architecture",
+   "node": "SM_pillar_planter",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 2.8
+   },
+   "bbox_min": [
+    -0.5,
+    -0.5,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.5,
+    2.8
+   ],
+   "tris": 1224,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_wood_light",
+    "MAT_leaf_dark",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "pendant_dome",
+   "label": "Dome pendant",
+   "category": "lighting",
+   "node": "SM_pendant_dome",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 1.18
+   },
+   "bbox_min": [
+    -0.25,
+    -0.25,
+    -1.18
+   ],
+   "bbox_max": [
+    0.25,
+    0.25,
+    0.0
+   ],
+   "tris": 332,
+   "materials": [
+    "MAT_black",
+    "MAT_sage",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "pendant_cone",
+   "label": "Cone pendant",
+   "category": "lighting",
+   "node": "SM_pendant_cone",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 0.35,
+    "y": 0.35,
+    "z": 1.105
+   },
+   "bbox_min": [
+    -0.175,
+    -0.175,
+    -1.105
+   ],
+   "bbox_max": [
+    0.175,
+    0.175,
+    0.0
+   ],
+   "tris": 132,
+   "materials": [
+    "MAT_black",
+    "MAT_coral",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "pendant_cluster",
+   "label": "Globe cluster pendant",
+   "category": "lighting",
+   "node": "SM_pendant_cluster",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 0.326,
+    "y": 0.359,
+    "z": 1.21
+   },
+   "bbox_min": [
+    -0.15,
+    -0.175,
+    -1.21
+   ],
+   "bbox_max": [
+    0.176,
+    0.184,
+    0.0
+   ],
+   "tris": 492,
+   "materials": [
+    "MAT_black",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "pendant_linear",
+   "label": "Linear pendant",
+   "category": "lighting",
+   "node": "SM_pendant_linear",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.08,
+    "z": 0.76
+   },
+   "bbox_min": [
+    -0.7,
+    -0.04,
+    -0.76
+   ],
+   "bbox_max": [
+    0.7,
+    0.04,
+    0.0
+   ],
+   "tris": 144,
+   "materials": [
+    "MAT_metal",
+    "MAT_charcoal",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "ceiling_panel_light",
+   "label": "Ceiling panel light",
+   "category": "lighting",
+   "node": "SM_ceiling_panel_light",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.6,
+    "z": 0.045
+   },
+   "bbox_min": [
+    -0.3,
+    -0.3,
+    -0.045
+   ],
+   "bbox_max": [
+    0.3,
+    0.3,
+    0.0
+   ],
+   "tris": 120,
+   "materials": [
+    "MAT_white",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "track_light",
+   "label": "Track spotlights",
+   "category": "lighting",
+   "node": "SM_track_light",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 1.5,
+    "y": 0.155,
+    "z": 0.251
+   },
+   "bbox_min": [
+    -0.75,
+    -0.13,
+    -0.251
+   ],
+   "bbox_max": [
+    0.75,
+    0.025,
+    0.0
+   ],
+   "tris": 204,
+   "materials": [
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "ceiling_fan",
+   "label": "Ceiling fan",
+   "category": "lighting",
+   "node": "SM_ceiling_fan",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 1.4,
+    "y": 1.4,
+    "z": 0.55
+   },
+   "bbox_min": [
+    -0.7,
+    -0.7,
+    -0.55
+   ],
+   "bbox_max": [
+    0.7,
+    0.7,
+    0.0
+   ],
+   "tris": 340,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_mid",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "chandelier_ring",
+   "label": "Ring chandelier",
+   "category": "lighting",
+   "node": "SM_chandelier_ring",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 0.892,
+    "y": 0.9,
+    "z": 0.912
+   },
+   "bbox_min": [
+    -0.446,
+    -0.45,
+    -0.912
+   ],
+   "bbox_max": [
+    0.446,
+    0.45,
+    0.0
+   ],
+   "tris": 772,
+   "materials": [
+    "MAT_metal",
+    "MAT_butter",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "wall_sconce",
+   "label": "Wall sconce",
+   "category": "lighting",
+   "node": "SM_wall_sconce",
+   "mount": "wall",
+   "mount_z": 1.7,
+   "size_m": {
+    "x": 0.14,
+    "y": 0.21,
+    "z": 0.22
+   },
+   "bbox_min": [
+    -0.07,
+    -0.21,
+    -0.05
+   ],
+   "bbox_max": [
+    0.07,
+    0.0,
+    0.17
+   ],
+   "tris": 152,
+   "materials": [
+    "MAT_black",
+    "MAT_butter",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "desk_lamp_arch",
+   "label": "Arched desk lamp",
+   "category": "lighting",
+   "node": "SM_desk_lamp_arch",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.14,
+    "y": 0.36,
+    "z": 0.437
+   },
+   "bbox_min": [
+    -0.07,
+    -0.19,
+    0.0
+   ],
+   "bbox_max": [
+    0.07,
+    0.17,
+    0.437
+   ],
+   "tris": 348,
+   "materials": [
+    "MAT_white",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "desk_lamp_mushroom",
+   "label": "Mushroom table lamp",
+   "category": "lighting",
+   "node": "SM_desk_lamp_mushroom",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.285,
+    "y": 0.292,
+    "z": 0.34
+   },
+   "bbox_min": [
+    -0.143,
+    -0.146,
+    0.0
+   ],
+   "bbox_max": [
+    0.143,
+    0.146,
+    0.34
+   ],
+   "tris": 264,
+   "materials": [
+    "MAT_butter",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "table_lamp_ceramic",
+   "label": "Ceramic table lamp",
+   "category": "lighting",
+   "node": "SM_table_lamp_ceramic",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.292,
+    "y": 0.3,
+    "z": 0.55
+   },
+   "bbox_min": [
+    -0.146,
+    -0.15,
+    0.01
+   ],
+   "bbox_max": [
+    0.146,
+    0.15,
+    0.56
+   ],
+   "tris": 184,
+   "materials": [
+    "MAT_sky",
+    "MAT_metal",
+    "MAT_offwhite"
+   ]
+  },
+  {
+   "id": "floor_lamp_arc",
+   "label": "Arc floor lamp",
+   "category": "lighting",
+   "node": "SM_floor_lamp_arc",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.745,
+    "y": 0.3,
+    "z": 1.64
+   },
+   "bbox_min": [
+    -0.646,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.099,
+    0.15,
+    1.64
+   ],
+   "tris": 380,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "floor_lamp_tripod",
+   "label": "Tripod floor lamp",
+   "category": "lighting",
+   "node": "SM_floor_lamp_tripod",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.545,
+    "y": 0.54,
+    "z": 1.528
+   },
+   "bbox_min": [
+    -0.272,
+    -0.225,
+    0.0
+   ],
+   "bbox_max": [
+    0.272,
+    0.315,
+    1.528
+   ],
+   "tris": 108,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_offwhite"
+   ]
+  },
+  {
+   "id": "floor_lamp_paper",
+   "label": "Paper lantern floor lamp",
+   "category": "lighting",
+   "node": "SM_floor_lamp_paper",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.37,
+    "y": 0.37,
+    "z": 1.3
+   },
+   "bbox_min": [
+    -0.185,
+    -0.185,
+    0.0
+   ],
+   "bbox_max": [
+    0.185,
+    0.185,
+    1.3
+   ],
+   "tris": 608,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_paper",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "lantern_floor",
+   "label": "Floor lantern",
+   "category": "lighting",
+   "node": "SM_lantern_floor",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.32,
+    "y": 0.32,
+    "z": 0.65
+   },
+   "bbox_min": [
+    -0.16,
+    -0.16,
+    0.0
+   ],
+   "bbox_max": [
+    0.16,
+    0.16,
+    0.65
+   ],
+   "tris": 156,
+   "materials": [
+    "MAT_black",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "neon_sign_wall",
+   "label": "Neon sign (wave)",
+   "category": "lighting",
+   "node": "SM_neon_sign_wall",
+   "mount": "wall",
+   "mount_z": 1.6,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.052,
+    "z": 0.4
+   },
+   "bbox_min": [
+    -0.45,
+    -0.052,
+    -0.2
+   ],
+   "bbox_max": [
+    0.45,
+    0.0,
+    0.2
+   ],
+   "tris": 172,
+   "materials": [
+    "MAT_glass",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "string_lights",
+   "label": "String lights",
+   "category": "lighting",
+   "node": "SM_string_lights",
+   "mount": "wall",
+   "mount_z": 2.2,
+   "size_m": {
+    "x": 2.004,
+    "y": 0.05,
+    "z": 0.269
+   },
+   "bbox_min": [
+    -1.002,
+    -0.075,
+    -0.265
+   ],
+   "bbox_max": [
+    1.002,
+    -0.025,
+    0.003
+   ],
+   "tris": 720,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "light_uplight",
+   "label": "Uplight column",
+   "category": "lighting",
+   "node": "SM_light_uplight",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.113,
+    "y": 0.113,
+    "z": 1.03
+   },
+   "bbox_min": [
+    -0.057,
+    -0.057,
+    0.0
+   ],
+   "bbox_max": [
+    0.057,
+    0.057,
+    1.03
+   ],
+   "tris": 24,
+   "materials": [
+    "MAT_white",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "spotlight_floor",
+   "label": "Floor spotlight",
+   "category": "lighting",
+   "node": "SM_spotlight_floor",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.19,
+    "y": 0.257,
+    "z": 0.419
+   },
+   "bbox_min": [
+    -0.095,
+    -0.157,
+    0.0
+   ],
+   "bbox_max": [
+    0.095,
+    0.1,
+    0.419
+   ],
+   "tris": 136,
+   "materials": [
+    "MAT_black",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "fire_extinguisher",
+   "label": "Fire extinguisher",
+   "category": "facility",
+   "node": "SM_fire_extinguisher",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.186,
+    "y": 0.162,
+    "z": 0.54
+   },
+   "bbox_min": [
+    -0.08,
+    -0.082,
+    0.025
+   ],
+   "bbox_max": [
+    0.106,
+    0.08,
+    0.565
+   ],
+   "tris": 252,
+   "materials": [
+    "MAT_coral",
+    "MAT_black",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "first_aid_box",
+   "label": "First-aid box",
+   "category": "facility",
+   "node": "SM_first_aid_box",
+   "mount": "wall",
+   "mount_z": 1.4,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.124,
+    "z": 0.3
+   },
+   "bbox_min": [
+    -0.18,
+    -0.124,
+    -0.15
+   ],
+   "bbox_max": [
+    0.18,
+    0.0,
+    0.15
+   ],
+   "tris": 132,
+   "materials": [
+    "MAT_white",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "exit_sign",
+   "label": "Exit sign",
+   "category": "facility",
+   "node": "SM_exit_sign",
+   "mount": "wall",
+   "mount_z": 2.3,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.067,
+    "z": 0.16
+   },
+   "bbox_min": [
+    -0.18,
+    -0.067,
+    -0.08
+   ],
+   "bbox_max": [
+    0.18,
+    0.0,
+    0.08
+   ],
+   "tris": 132,
+   "materials": [
+    "MAT_white",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "nap_pod",
+   "label": "Nap pod",
+   "category": "facility",
+   "node": "SM_nap_pod",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 2.0,
+    "z": 1.3
+   },
+   "bbox_min": [
+    -0.5,
+    -0.85,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    1.15,
+    1.3
+   ],
+   "tris": 956,
+   "materials": [
+    "MAT_white",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_offwhite"
+   ]
+  },
+  {
+   "id": "massage_chair",
+   "label": "Massage chair",
+   "category": "facility",
+   "node": "SM_massage_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 1.399,
+    "z": 1.412
+   },
+   "bbox_min": [
+    -0.4,
+    -0.763,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.636,
+    1.412
+   ],
+   "tris": 1316,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "treadmill",
+   "label": "Treadmill",
+   "category": "facility",
+   "node": "SM_treadmill",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.75,
+    "y": 1.842,
+    "z": 1.328
+   },
+   "bbox_min": [
+    -0.375,
+    -0.942,
+    0.02
+   ],
+   "bbox_max": [
+    0.375,
+    0.9,
+    1.348
+   ],
+   "tris": 440,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_grey",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "exercise_bike",
+   "label": "Exercise bike",
+   "category": "facility",
+   "node": "SM_exercise_bike",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.5,
+    "y": 1.1,
+    "z": 1.1
+   },
+   "bbox_min": [
+    -0.25,
+    -0.6,
+    0.0
+   ],
+   "bbox_max": [
+    0.25,
+    0.5,
+    1.1
+   ],
+   "tris": 496,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "dumbbell_rack",
+   "label": "Dumbbell rack",
+   "category": "facility",
+   "node": "SM_dumbbell_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.05,
+    "y": 0.4,
+    "z": 0.7
+   },
+   "bbox_min": [
+    -0.525,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.525,
+    0.2,
+    0.7
+   ],
+   "tris": 720,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_grey",
+    "MAT_coral",
+    "MAT_metal",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "yoga_mats",
+   "label": "Yoga mats in basket",
+   "category": "facility",
+   "node": "SM_yoga_mats",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.39,
+    "y": 0.4,
+    "z": 0.765
+   },
+   "bbox_min": [
+    -0.195,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.195,
+    0.2,
+    0.765
+   ],
+   "tris": 196,
+   "materials": [
+    "MAT_cork",
+    "MAT_mint",
+    "MAT_lavender",
+    "MAT_coral",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "bike_rack",
+   "label": "Bike rack",
+   "category": "facility",
+   "node": "SM_bike_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.5,
+    "y": 0.4,
+    "z": 0.62
+   },
+   "bbox_min": [
+    -0.75,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.75,
+    0.2,
+    0.62
+   ],
+   "tris": 348,
+   "materials": [
+    "MAT_metal",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "scooter_kick",
+   "label": "Kick scooter",
+   "category": "facility",
+   "node": "SM_scooter_kick",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.4,
+    "y": 0.82,
+    "z": 0.962
+   },
+   "bbox_min": [
+    -0.2,
+    -0.41,
+    0.003
+   ],
+   "bbox_max": [
+    0.2,
+    0.41,
+    0.965
+   ],
+   "tris": 216,
+   "materials": [
+    "MAT_black",
+    "MAT_charcoal",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "cleaning_cart",
+   "label": "Cleaning cart",
+   "category": "facility",
+   "node": "SM_cleaning_cart",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.45,
+    "z": 1.496
+   },
+   "bbox_min": [
+    -0.45,
+    -0.225,
+    0.005
+   ],
+   "bbox_max": [
+    0.45,
+    0.225,
+    1.501
+   ],
+   "tris": 388,
+   "materials": [
+    "MAT_butter",
+    "MAT_sky",
+    "MAT_wood_mid",
+    "MAT_blue",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "wet_floor_sign",
+   "label": "Wet floor sign",
+   "category": "facility",
+   "node": "SM_wet_floor_sign",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.345,
+    "z": 0.607
+   },
+   "bbox_min": [
+    -0.15,
+    -0.172,
+    0.017
+   ],
+   "bbox_max": [
+    0.15,
+    0.172,
+    0.623
+   ],
+   "tris": 240,
+   "materials": [
+    "MAT_butter",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "robot_vacuum",
+   "label": "Robot vacuum",
+   "category": "facility",
+   "node": "SM_robot_vacuum",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.34,
+    "y": 0.34,
+    "z": 0.1
+   },
+   "bbox_min": [
+    -0.17,
+    -0.17,
+    0.0
+   ],
+   "bbox_max": [
+    0.17,
+    0.17,
+    0.1
+   ],
+   "tris": 364,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "air_purifier",
+   "label": "Air purifier",
+   "category": "facility",
+   "node": "SM_air_purifier",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.307,
+    "z": 0.705
+   },
+   "bbox_min": [
+    -0.15,
+    -0.157,
+    0.0
+   ],
+   "bbox_max": [
+    0.15,
+    0.15,
+    0.705
+   ],
+   "tris": 372,
+   "materials": [
+    "MAT_white",
+    "MAT_grey",
+    "MAT_grey_light",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "humidifier",
+   "label": "Humidifier",
+   "category": "facility",
+   "node": "SM_humidifier",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.195,
+    "y": 0.2,
+    "z": 0.43
+   },
+   "bbox_min": [
+    -0.097,
+    -0.1,
+    0.0
+   ],
+   "bbox_max": [
+    0.097,
+    0.1,
+    0.43
+   ],
+   "tris": 400,
+   "materials": [
+    "MAT_mint",
+    "MAT_white",
+    "MAT_water"
+   ]
+  },
+  {
+   "id": "recycle_station",
+   "label": "Recycling station",
+   "category": "facility",
+   "node": "SM_recycle_station",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.42,
+    "y": 0.407,
+    "z": 0.78
+   },
+   "bbox_min": [
+    -0.71,
+    -0.207,
+    0.0
+   ],
+   "bbox_max": [
+    0.71,
+    0.2,
+    0.78
+   ],
+   "tris": 848,
+   "materials": [
+    "MAT_sky",
+    "MAT_black",
+    "MAT_white",
+    "MAT_butter",
+    "MAT_leaf",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "mail_cart",
+   "label": "Mail cart",
+   "category": "facility",
+   "node": "SM_mail_cart",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.539,
+    "z": 1.005
+   },
+   "bbox_min": [
+    -0.35,
+    -0.225,
+    0.01
+   ],
+   "bbox_max": [
+    0.35,
+    0.314,
+    1.015
+   ],
+   "tris": 364,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_black",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "security_gate",
+   "label": "Security gate",
+   "category": "facility",
+   "node": "SM_security_gate",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.08,
+    "y": 0.9,
+    "z": 1.05
+   },
+   "bbox_min": [
+    -0.54,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    0.54,
+    0.45,
+    1.05
+   ],
+   "tris": 448,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_leaf",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "water_gallon",
+   "label": "Gallon water dispenser",
+   "category": "facility",
+   "node": "SM_water_gallon",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.32,
+    "y": 0.36,
+    "z": 1.475
+   },
+   "bbox_min": [
+    -0.16,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.16,
+    0.16,
+    1.475
+   ],
+   "tris": 480,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_coral",
+    "MAT_sky",
+    "MAT_water"
+   ]
+  },
+  {
+   "id": "prayer_mat",
+   "label": "Prayer mat (sajadah)",
+   "category": "mushola",
+   "node": "SM_prayer_mat",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.65,
+    "y": 1.2,
+    "z": 0.016
+   },
+   "bbox_min": [
+    -0.325,
+    -0.6,
+    0.0
+   ],
+   "bbox_max": [
+    0.325,
+    0.6,
+    0.016
+   ],
+   "tris": 224,
+   "materials": [
+    "MAT_sage",
+    "MAT_leaf_dark",
+    "MAT_butter",
+    "MAT_offwhite"
+   ]
+  },
+  {
+   "id": "prayer_mat_row",
+   "label": "Prayer mats row (5)",
+   "category": "mushola",
+   "node": "SM_prayer_mat_row",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 3.42,
+    "y": 1.15,
+    "z": 0.015
+   },
+   "bbox_min": [
+    -1.71,
+    -0.575,
+    0.0
+   ],
+   "bbox_max": [
+    1.71,
+    0.575,
+    0.015
+   ],
+   "tris": 280,
+   "materials": [
+    "MAT_sage",
+    "MAT_butter",
+    "MAT_blue",
+    "MAT_coral",
+    "MAT_lavender",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "mukena_rack",
+   "label": "Prayer garment rack",
+   "category": "mushola",
+   "node": "SM_mukena_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.04,
+    "y": 0.4,
+    "z": 1.6
+   },
+   "bbox_min": [
+    -0.52,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.52,
+    0.2,
+    1.6
+   ],
+   "tris": 988,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_metal",
+    "MAT_white",
+    "MAT_offwhite",
+    "MAT_sky",
+    "MAT_wood_light",
+    "MAT_sage",
+    "MAT_blue",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "quran_shelf",
+   "label": "Quran & book shelf",
+   "category": "mushola",
+   "node": "SM_quran_shelf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.305,
+    "z": 1.09
+   },
+   "bbox_min": [
+    -0.45,
+    -0.155,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.15,
+    1.09
+   ],
+   "tris": 1572,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_mid",
+    "MAT_leaf_dark",
+    "MAT_sage",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "rehal_stand",
+   "label": "Book stand (rehal)",
+   "category": "mushola",
+   "node": "SM_rehal_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.34,
+    "z": 0.264
+   },
+   "bbox_min": [
+    -0.15,
+    -0.17,
+    0.003
+   ],
+   "bbox_max": [
+    0.15,
+    0.17,
+    0.266
+   ],
+   "tris": 304,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "wudu_station",
+   "label": "Ablution station",
+   "category": "mushola",
+   "node": "SM_wudu_station",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.8,
+    "y": 0.92,
+    "z": 2.2
+   },
+   "bbox_min": [
+    -0.9,
+    -0.6,
+    0.0
+   ],
+   "bbox_max": [
+    0.9,
+    0.32,
+    2.2
+   ],
+   "tris": 956,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_sky",
+    "MAT_water",
+    "MAT_metal",
+    "MAT_grey_light"
+   ]
+  },
+  {
+   "id": "sandal_shelf",
+   "label": "Sandal shelf",
+   "category": "mushola",
+   "node": "SM_sandal_shelf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.23,
+    "y": 0.3,
+    "z": 0.6
+   },
+   "bbox_min": [
+    -0.615,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.615,
+    0.15,
+    0.6
+   ],
+   "tris": 1212,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "prayer_partition",
+   "label": "Prayer room partition",
+   "category": "mushola",
+   "node": "SM_prayer_partition",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.84,
+    "y": 0.3,
+    "z": 1.67
+   },
+   "bbox_min": [
+    -0.92,
+    -0.15,
+    0.03
+   ],
+   "bbox_max": [
+    0.92,
+    0.15,
+    1.7
+   ],
+   "tris": 636,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "qibla_marker",
+   "label": "Qibla direction marker",
+   "category": "mushola",
+   "node": "SM_qibla_marker",
+   "mount": "wall",
+   "mount_z": 2.0,
+   "size_m": {
+    "x": 0.4,
+    "y": 0.061,
+    "z": 0.25
+   },
+   "bbox_min": [
+    -0.2,
+    -0.061,
+    -0.125
+   ],
+   "bbox_max": [
+    0.2,
+    0.0,
+    0.125
+   ],
+   "tris": 132,
+   "materials": [
+    "MAT_leaf_dark",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "tasbih_bowl",
+   "label": "Prayer beads bowl",
+   "category": "mushola",
+   "node": "SM_tasbih_bowl",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.253,
+    "y": 0.26,
+    "z": 0.078
+   },
+   "bbox_min": [
+    -0.127,
+    -0.13,
+    0.0
+   ],
+   "bbox_max": [
+    0.127,
+    0.13,
+    0.078
+   ],
+   "tris": 772,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_sage",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "prayer_clock",
+   "label": "Prayer times board",
+   "category": "mushola",
+   "node": "SM_prayer_clock",
+   "mount": "wall",
+   "mount_z": 1.6,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.047,
+    "z": 0.4
+   },
+   "bbox_min": [
+    -0.35,
+    -0.047,
+    -0.2
+   ],
+   "bbox_max": [
+    0.35,
+    0.0,
+    0.2
+   ],
+   "tris": 192,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_lamp_glow",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "lobby_logo_wall",
+   "label": "Logo wall",
+   "category": "lobby",
+   "node": "SM_lobby_logo_wall",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.6,
+    "y": 0.22,
+    "z": 2.6
+   },
+   "bbox_min": [
+    -1.3,
+    -0.145,
+    0.0
+   ],
+   "bbox_max": [
+    1.3,
+    0.075,
+    2.6
+   ],
+   "tris": 640,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_wood_dark",
+    "MAT_sage",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "visitor_kiosk",
+   "label": "Visitor check-in kiosk",
+   "category": "lobby",
+   "node": "SM_visitor_kiosk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.45,
+    "z": 1.27
+   },
+   "bbox_min": [
+    -0.225,
+    -0.225,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.225,
+    1.27
+   ],
+   "tris": 424,
+   "materials": [
+    "MAT_white",
+    "MAT_black",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "queue_post",
+   "label": "Queue stanchions",
+   "category": "lobby",
+   "node": "SM_queue_post",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.492,
+    "y": 0.3,
+    "z": 0.99
+   },
+   "bbox_min": [
+    -0.746,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.746,
+    0.15,
+    0.99
+   ],
+   "tris": 656,
+   "materials": [
+    "MAT_metal",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "brochure_wall",
+   "label": "Brochure wall rack",
+   "category": "lobby",
+   "node": "SM_brochure_wall",
+   "mount": "wall",
+   "mount_z": 0.9,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.075,
+    "z": 1.01
+   },
+   "bbox_min": [
+    -0.3,
+    -0.075,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.0,
+    1.01
+   ],
+   "tris": 332,
+   "materials": [
+    "MAT_white",
+    "MAT_glass",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach"
+   ]
+  },
+  {
+   "id": "info_screen_totem",
+   "label": "Info screen totem",
+   "category": "lobby",
+   "node": "SM_info_screen_totem",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.4,
+    "z": 1.8
+   },
+   "bbox_min": [
+    -0.35,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.2,
+    1.8
+   ],
+   "tris": 320,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_screen",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "sanitizer_stand",
+   "label": "Hand sanitizer stand",
+   "category": "lobby",
+   "node": "SM_sanitizer_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.292,
+    "y": 0.3,
+    "z": 1.225
+   },
+   "bbox_min": [
+    -0.146,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.146,
+    0.15,
+    1.225
+   ],
+   "tris": 280,
+   "materials": [
+    "MAT_white",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "plant_divider",
+   "label": "Planter divider",
+   "category": "lobby",
+   "node": "SM_plant_divider",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.66,
+    "y": 0.35,
+    "z": 1.085
+   },
+   "bbox_min": [
+    -0.83,
+    -0.175,
+    0.0
+   ],
+   "bbox_max": [
+    0.83,
+    0.175,
+    1.085
+   ],
+   "tris": 748,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_leaf",
+    "MAT_leaf_dark",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "lobby_bench_round",
+   "label": "Round lobby bench",
+   "category": "lobby",
+   "node": "SM_lobby_bench_round",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.62,
+    "y": 1.6,
+    "z": 1.35
+   },
+   "bbox_min": [
+    -0.81,
+    -0.8,
+    0.0
+   ],
+   "bbox_max": [
+    0.81,
+    0.8,
+    1.35
+   ],
+   "tris": 2064,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_wood_light",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "umbrella_bag_stand",
+   "label": "Umbrella bag dispenser",
+   "category": "lobby",
+   "node": "SM_umbrella_bag_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.35,
+    "y": 0.275,
+    "z": 1.0
+   },
+   "bbox_min": [
+    -0.175,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.175,
+    0.125,
+    1.0
+   ],
+   "tris": 212,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_sky",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "lobby_magazine_table",
+   "label": "Lobby magazine table",
+   "category": "lobby",
+   "node": "SM_lobby_magazine_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.9,
+    "z": 0.466
+   },
+   "bbox_min": [
+    -0.45,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.45,
+    0.466
+   ],
+   "tris": 220,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_light",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "bell_counter",
+   "label": "Concierge bell counter",
+   "category": "lobby",
+   "node": "SM_bell_counter",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.3,
+    "y": 0.6,
+    "z": 1.24
+   },
+   "bbox_min": [
+    -0.65,
+    -0.3,
+    0.0
+   ],
+   "bbox_max": [
+    0.65,
+    0.3,
+    1.24
+   ],
+   "tris": 548,
+   "materials": [
+    "MAT_sage",
+    "MAT_wood_light",
+    "MAT_metal",
+    "MAT_butter",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "patio_umbrella",
+   "label": "Patio umbrella",
+   "category": "outdoor",
+   "node": "SM_patio_umbrella",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.2,
+    "y": 2.2,
+    "z": 2.325
+   },
+   "bbox_min": [
+    -1.1,
+    -1.1,
+    0.0
+   ],
+   "bbox_max": [
+    1.1,
+    1.1,
+    2.325
+   ],
+   "tris": 296,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_wood_mid",
+    "MAT_butter",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "outdoor_bench",
+   "label": "Park bench",
+   "category": "outdoor",
+   "node": "SM_outdoor_bench",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.5,
+    "y": 0.491,
+    "z": 0.897
+   },
+   "bbox_min": [
+    -0.75,
+    -0.225,
+    0.005
+   ],
+   "bbox_max": [
+    0.75,
+    0.266,
+    0.902
+   ],
+   "tris": 364,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "garden_planter_box",
+   "label": "Garden planter box",
+   "category": "outdoor",
+   "node": "SM_garden_planter_box",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.51,
+    "z": 0.85
+   },
+   "bbox_min": [
+    -0.6,
+    -0.26,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.25,
+    0.85
+   ],
+   "tris": 652,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_mid",
+    "MAT_soil",
+    "MAT_leaf_dark",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_lavender",
+    "MAT_blush",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "hammock_stand",
+   "label": "Hammock on stand",
+   "category": "outdoor",
+   "node": "SM_hammock_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.858,
+    "y": 0.7,
+    "z": 1.164
+   },
+   "bbox_min": [
+    -1.429,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    1.429,
+    0.35,
+    1.164
+   ],
+   "tris": 524,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "lamp_post",
+   "label": "Garden lamp post",
+   "category": "outdoor",
+   "node": "SM_lamp_post",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.3,
+    "z": 2.725
+   },
+   "bbox_min": [
+    -0.15,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.15,
+    0.15,
+    2.725
+   ],
+   "tris": 240,
+   "materials": [
+    "MAT_black",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "trash_outdoor",
+   "label": "Outdoor bin",
+   "category": "outdoor",
+   "node": "SM_trash_outdoor",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.54,
+    "y": 0.54,
+    "z": 1.02
+   },
+   "bbox_min": [
+    -0.27,
+    -0.27,
+    0.0
+   ],
+   "bbox_max": [
+    0.27,
+    0.27,
+    1.02
+   ],
+   "tris": 324,
+   "materials": [
+    "MAT_leaf_dark",
+    "MAT_wood_mid",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "deck_chair",
+   "label": "Deck chair",
+   "category": "outdoor",
+   "node": "SM_deck_chair",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.598,
+    "y": 0.871,
+    "z": 0.925
+   },
+   "bbox_min": [
+    -0.299,
+    -0.515,
+    0.0
+   ],
+   "bbox_max": [
+    0.299,
+    0.356,
+    0.925
+   ],
+   "tris": 124,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_coral",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "swing_bench",
+   "label": "Swing bench",
+   "category": "outdoor",
+   "node": "SM_swing_bench",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.9,
+    "y": 1.068,
+    "z": 2.048
+   },
+   "bbox_min": [
+    -0.95,
+    -0.534,
+    0.0
+   ],
+   "bbox_max": [
+    0.95,
+    0.534,
+    2.048
+   ],
+   "tris": 528,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_metal",
+    "MAT_wood_mid",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "fountain_small",
+   "label": "Small fountain",
+   "category": "outdoor",
+   "node": "SM_fountain_small",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 1.1
+   },
+   "bbox_min": [
+    -0.5,
+    -0.5,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.5,
+    1.1
+   ],
+   "tris": 560,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_water"
+   ]
+  },
+  {
+   "id": "stepping_stones",
+   "label": "Stepping stones",
+   "category": "outdoor",
+   "node": "SM_stepping_stones",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.559,
+    "y": 1.938,
+    "z": 0.04
+   },
+   "bbox_min": [
+    -0.271,
+    -0.95,
+    0.0
+   ],
+   "bbox_max": [
+    0.288,
+    0.988,
+    0.04
+   ],
+   "tris": 580,
+   "materials": [
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "fence_section",
+   "label": "Wooden fence",
+   "category": "outdoor",
+   "node": "SM_fence_section",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.0,
+    "y": 0.099,
+    "z": 0.95
+   },
+   "bbox_min": [
+    -1.0,
+    -0.049,
+    0.0
+   ],
+   "bbox_max": [
+    1.0,
+    0.049,
+    0.95
+   ],
+   "tris": 528,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "outdoor_table_set",
+   "label": "Outdoor table set",
+   "category": "outdoor",
+   "node": "SM_outdoor_table_set",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 1.93,
+    "z": 0.925
+   },
+   "bbox_min": [
+    -0.4,
+    -0.965,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.965,
+    0.925
+   ],
+   "tris": 676,
+   "materials": [
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "projector_ceiling",
+   "label": "Ceiling projector",
+   "category": "tech",
+   "node": "SM_projector_ceiling",
+   "mount": "ceiling",
+   "mount_z": 2.8,
+   "size_m": {
+    "x": 0.35,
+    "y": 0.33,
+    "z": 0.54
+   },
+   "bbox_min": [
+    -0.175,
+    -0.18,
+    -0.54
+   ],
+   "bbox_max": [
+    0.175,
+    0.15,
+    0.0
+   ],
+   "tris": 252,
+   "materials": [
+    "MAT_grey",
+    "MAT_white",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "projector_screen",
+   "label": "Pull-down projector screen",
+   "category": "tech",
+   "node": "SM_projector_screen",
+   "mount": "wall",
+   "mount_z": 2.4,
+   "size_m": {
+    "x": 2.2,
+    "y": 0.1,
+    "z": 1.433
+   },
+   "bbox_min": [
+    -1.1,
+    -0.11,
+    -1.385
+   ],
+   "bbox_max": [
+    1.1,
+    -0.01,
+    0.048
+   ],
+   "tris": 60,
+   "materials": [
+    "MAT_white",
+    "MAT_offwhite",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "tv_wall_large",
+   "label": "Wall TV 75\"",
+   "category": "tech",
+   "node": "SM_tv_wall_large",
+   "mount": "wall",
+   "mount_z": 1.0,
+   "size_m": {
+    "x": 1.7,
+    "y": 0.057,
+    "z": 0.98
+   },
+   "bbox_min": [
+    -0.85,
+    -0.072,
+    -0.01
+   ],
+   "bbox_max": [
+    0.85,
+    -0.015,
+    0.97
+   ],
+   "tris": 132,
+   "materials": [
+    "MAT_black",
+    "MAT_screen",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "tv_cart",
+   "label": "TV on rolling cart",
+   "category": "tech",
+   "node": "SM_tv_cart",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.3,
+    "y": 0.55,
+    "z": 1.725
+   },
+   "bbox_min": [
+    -0.65,
+    -0.275,
+    0.0
+   ],
+   "bbox_max": [
+    0.65,
+    0.275,
+    1.725
+   ],
+   "tris": 376,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_screen",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "video_wall",
+   "label": "Video wall 2x2",
+   "category": "tech",
+   "node": "SM_video_wall",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.98,
+    "y": 0.6,
+    "z": 2.11
+   },
+   "bbox_min": [
+    -0.99,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.99,
+    0.4,
+    2.11
+   ],
+   "tris": 440,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "webcam_light",
+   "label": "Webcam with light",
+   "category": "tech",
+   "node": "SM_webcam_light",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.12,
+    "y": 0.08,
+    "z": 0.162
+   },
+   "bbox_min": [
+    -0.06,
+    -0.04,
+    0.0
+   ],
+   "bbox_max": [
+    0.06,
+    0.04,
+    0.162
+   ],
+   "tris": 192,
+   "materials": [
+    "MAT_black",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "docking_station",
+   "label": "Laptop dock",
+   "category": "tech",
+   "node": "SM_docking_station",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.32,
+    "y": 0.12,
+    "z": 0.249
+   },
+   "bbox_min": [
+    -0.16,
+    -0.043,
+    0.0
+   ],
+   "bbox_max": [
+    0.16,
+    0.077,
+    0.249
+   ],
+   "tris": 228,
+   "materials": [
+    "MAT_grey",
+    "MAT_black",
+    "MAT_grey_light"
+   ]
+  },
+  {
+   "id": "laptop_stand_open",
+   "label": "Laptop on riser",
+   "category": "tech",
+   "node": "SM_laptop_stand_open",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.32,
+    "y": 0.262,
+    "z": 0.438
+   },
+   "bbox_min": [
+    -0.16,
+    -0.098,
+    0.0
+   ],
+   "bbox_max": [
+    0.16,
+    0.164,
+    0.438
+   ],
+   "tris": 124,
+   "materials": [
+    "MAT_metal",
+    "MAT_grey",
+    "MAT_screen"
+   ]
+  },
+  {
+   "id": "router_wifi",
+   "label": "Wi-Fi router",
+   "category": "tech",
+   "node": "SM_router_wifi",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.22,
+    "y": 0.147,
+    "z": 0.201
+   },
+   "bbox_min": [
+    -0.11,
+    -0.073,
+    0.0
+   ],
+   "bbox_max": [
+    0.11,
+    0.074,
+    0.201
+   ],
+   "tris": 252,
+   "materials": [
+    "MAT_white",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "smart_speaker",
+   "label": "Smart speaker",
+   "category": "tech",
+   "node": "SM_smart_speaker",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.117,
+    "y": 0.12,
+    "z": 0.183
+   },
+   "bbox_min": [
+    -0.058,
+    -0.06,
+    0.0
+   ],
+   "bbox_max": [
+    0.058,
+    0.06,
+    0.183
+   ],
+   "tris": 216,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "conference_phone",
+   "label": "Conference phone",
+   "category": "tech",
+   "node": "SM_conference_phone",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.257,
+    "y": 0.227,
+    "z": 0.043
+   },
+   "bbox_min": [
+    -0.129,
+    -0.107,
+    0.005
+   ],
+   "bbox_max": [
+    0.129,
+    0.12,
+    0.048
+   ],
+   "tris": 404,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "printer_3d",
+   "label": "3D printer",
+   "category": "tech",
+   "node": "SM_printer_3d",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.45,
+    "z": 0.58
+   },
+   "bbox_min": [
+    -0.225,
+    -0.225,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.225,
+    0.58
+   ],
+   "tris": 292,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_coral",
+    "MAT_grey",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "scanner_flatbed",
+   "label": "Flatbed scanner",
+   "category": "tech",
+   "node": "SM_scanner_flatbed",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.323,
+    "z": 0.09
+   },
+   "bbox_min": [
+    -0.225,
+    -0.163,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.16,
+    0.09
+   ],
+   "tris": 164,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_grey",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "label_printer",
+   "label": "Label printer",
+   "category": "tech",
+   "node": "SM_label_printer",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.12,
+    "y": 0.2,
+    "z": 0.12
+   },
+   "bbox_min": [
+    -0.06,
+    -0.11,
+    0.0
+   ],
+   "bbox_max": [
+    0.06,
+    0.09,
+    0.12
+   ],
+   "tris": 200,
+   "materials": [
+    "MAT_white",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "ups_box",
+   "label": "UPS battery",
+   "category": "tech",
+   "node": "SM_ups_box",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.16,
+    "y": 0.41,
+    "z": 0.34
+   },
+   "bbox_min": [
+    -0.08,
+    -0.21,
+    0.0
+   ],
+   "bbox_max": [
+    0.08,
+    0.2,
+    0.34
+   ],
+   "tris": 180,
+   "materials": [
+    "MAT_black",
+    "MAT_screen",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "vr_headset_stand",
+   "label": "VR headset on stand",
+   "category": "tech",
+   "node": "SM_vr_headset_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.22,
+    "y": 0.15,
+    "z": 0.37
+   },
+   "bbox_min": [
+    -0.11,
+    -0.08,
+    0.0
+   ],
+   "bbox_max": [
+    0.11,
+    0.07,
+    0.37
+   ],
+   "tris": 292,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "drone",
+   "label": "Drone",
+   "category": "tech",
+   "node": "SM_drone",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.318,
+    "y": 0.318,
+    "z": 0.087
+   },
+   "bbox_min": [
+    -0.159,
+    -0.159,
+    0.0
+   ],
+   "bbox_max": [
+    0.159,
+    0.159,
+    0.087
+   ],
+   "tris": 472,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_grey",
+    "MAT_charcoal",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "game_console",
+   "label": "Game console & TV",
+   "category": "tech",
+   "node": "SM_game_console",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.45,
+    "z": 1.25
+   },
+   "bbox_min": [
+    -0.7,
+    -0.225,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.225,
+    1.25
+   ],
+   "tris": 616,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_screen",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "server_cabinet_small",
+   "label": "Wall network cabinet",
+   "category": "tech",
+   "node": "SM_server_cabinet_small",
+   "mount": "wall",
+   "mount_z": 1.6,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.41,
+    "z": 0.45
+   },
+   "bbox_min": [
+    -0.3,
+    -0.41,
+    -0.225
+   ],
+   "bbox_max": [
+    0.3,
+    0.0,
+    0.225
+   ],
+   "tris": 876,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_glass",
+    "MAT_black",
+    "MAT_leaf",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "pencil_cup",
+   "label": "Pencil cup",
+   "category": "desk_gear",
+   "node": "SM_pencil_cup",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.098,
+    "y": 0.098,
+    "z": 0.191
+   },
+   "bbox_min": [
+    -0.049,
+    -0.049,
+    0.0
+   ],
+   "bbox_max": [
+    0.049,
+    0.049,
+    0.191
+   ],
+   "tris": 108,
+   "materials": [
+    "MAT_sage",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_butter",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "stapler_set",
+   "label": "Stapler & tape",
+   "category": "desk_gear",
+   "node": "SM_stapler_set",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.185,
+    "y": 0.16,
+    "z": 0.084
+   },
+   "bbox_min": [
+    -0.085,
+    -0.08,
+    0.0
+   ],
+   "bbox_max": [
+    0.1,
+    0.08,
+    0.084
+   ],
+   "tris": 360,
+   "materials": [
+    "MAT_coral",
+    "MAT_charcoal",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "desk_organizer",
+   "label": "Desk organizer",
+   "category": "desk_gear",
+   "node": "SM_desk_organizer",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.14,
+    "z": 0.22
+   },
+   "bbox_min": [
+    -0.15,
+    -0.07,
+    0.0
+   ],
+   "bbox_max": [
+    0.15,
+    0.07,
+    0.22
+   ],
+   "tris": 264,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_paper",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "letter_tray_stack",
+   "label": "Letter tray stack",
+   "category": "desk_gear",
+   "node": "SM_letter_tray_stack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.27,
+    "y": 0.34,
+    "z": 0.2
+   },
+   "bbox_min": [
+    -0.135,
+    -0.17,
+    0.01
+   ],
+   "bbox_max": [
+    0.135,
+    0.17,
+    0.21
+   ],
+   "tris": 192,
+   "materials": [
+    "MAT_white",
+    "MAT_paper",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "paper_ream_stack",
+   "label": "Paper ream stack",
+   "category": "desk_gear",
+   "node": "SM_paper_ream_stack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.307,
+    "y": 0.22,
+    "z": 0.217
+   },
+   "bbox_min": [
+    -0.153,
+    -0.11,
+    0.004
+   ],
+   "bbox_max": [
+    0.153,
+    0.11,
+    0.221
+   ],
+   "tris": 176,
+   "materials": [
+    "MAT_paper",
+    "MAT_sky",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "notebook_stack",
+   "label": "Notebook stack",
+   "category": "desk_gear",
+   "node": "SM_notebook_stack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.233,
+    "y": 0.296,
+    "z": 0.105
+   },
+   "bbox_min": [
+    -0.116,
+    -0.148,
+    0.001
+   ],
+   "bbox_max": [
+    0.116,
+    0.148,
+    0.105
+   ],
+   "tris": 232,
+   "materials": [
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "sticky_note_pads",
+   "label": "Sticky note pads",
+   "category": "desk_gear",
+   "node": "SM_sticky_note_pads",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.185,
+    "y": 0.181,
+    "z": 0.028
+   },
+   "bbox_min": [
+    -0.091,
+    -0.088,
+    0.0
+   ],
+   "bbox_max": [
+    0.094,
+    0.094,
+    0.028
+   ],
+   "tris": 176,
+   "materials": [
+    "MAT_butter",
+    "MAT_blush",
+    "MAT_mint",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "desk_clock_flip",
+   "label": "Flip desk clock",
+   "category": "desk_gear",
+   "node": "SM_desk_clock_flip",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.18,
+    "y": 0.083,
+    "z": 0.12
+   },
+   "bbox_min": [
+    -0.09,
+    -0.043,
+    0.0
+   ],
+   "bbox_max": [
+    0.09,
+    0.04,
+    0.12
+   ],
+   "tris": 212,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "desk_fan",
+   "label": "Desk fan",
+   "category": "desk_gear",
+   "node": "SM_desk_fan",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.26,
+    "y": 0.171,
+    "z": 0.415
+   },
+   "bbox_min": [
+    -0.13,
+    -0.086,
+    0.0
+   ],
+   "bbox_max": [
+    0.13,
+    0.085,
+    0.415
+   ],
+   "tris": 196,
+   "materials": [
+    "MAT_white",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "water_bottle",
+   "label": "Water bottle",
+   "category": "desk_gear",
+   "node": "SM_water_bottle",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.075,
+    "y": 0.075,
+    "z": 0.255
+   },
+   "bbox_min": [
+    -0.038,
+    -0.038,
+    0.0
+   ],
+   "bbox_max": [
+    0.038,
+    0.038,
+    0.255
+   ],
+   "tris": 188,
+   "materials": [
+    "MAT_sky",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "lunch_box",
+   "label": "Lunch box",
+   "category": "desk_gear",
+   "node": "SM_lunch_box",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.308,
+    "y": 0.24,
+    "z": 0.11
+   },
+   "bbox_min": [
+    -0.12,
+    -0.16,
+    0.0
+   ],
+   "bbox_max": [
+    0.188,
+    0.08,
+    0.11
+   ],
+   "tris": 320,
+   "materials": [
+    "MAT_mint",
+    "MAT_coral",
+    "MAT_white",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "tissue_box",
+   "label": "Tissue box",
+   "category": "desk_gear",
+   "node": "SM_tissue_box",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.22,
+    "y": 0.12,
+    "z": 0.135
+   },
+   "bbox_min": [
+    -0.11,
+    -0.06,
+    0.0
+   ],
+   "bbox_max": [
+    0.11,
+    0.06,
+    0.135
+   ],
+   "tris": 168,
+   "materials": [
+    "MAT_blush",
+    "MAT_paper"
+   ]
+  },
+  {
+   "id": "photo_frame_desk",
+   "label": "Desk photo frame",
+   "category": "desk_gear",
+   "node": "SM_photo_frame_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.14,
+    "y": 0.089,
+    "z": 0.169
+   },
+   "bbox_min": [
+    -0.07,
+    -0.025,
+    0.0
+   ],
+   "bbox_max": [
+    0.07,
+    0.064,
+    0.169
+   ],
+   "tris": 128,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_sky",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "desk_mat",
+   "label": "Desk mat",
+   "category": "desk_gear",
+   "node": "SM_desk_mat",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.4,
+    "z": 0.005
+   },
+   "bbox_min": [
+    -0.45,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.2,
+    0.005
+   ],
+   "tris": 24,
+   "materials": [
+    "MAT_lavender",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "monitor_riser",
+   "label": "Monitor riser",
+   "category": "desk_gear",
+   "node": "SM_monitor_riser",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.24,
+    "z": 0.113
+   },
+   "bbox_min": [
+    -0.3,
+    -0.12,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.12,
+    0.113
+   ],
+   "tris": 240,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "footrest",
+   "label": "Footrest",
+   "category": "desk_gear",
+   "node": "SM_footrest",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.45,
+    "y": 0.317,
+    "z": 0.135
+   },
+   "bbox_min": [
+    -0.225,
+    -0.159,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.159,
+    0.135
+   ],
+   "tris": 132,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_grey"
+   ]
+  },
+  {
+   "id": "cable_tray",
+   "label": "Cable tray",
+   "category": "desk_gear",
+   "node": "SM_cable_tray",
+   "mount": "wall",
+   "mount_z": 0.6,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.16,
+    "z": 0.108
+   },
+   "bbox_min": [
+    -0.5,
+    -0.16,
+    -0.007
+   ],
+   "bbox_max": [
+    0.5,
+    0.0,
+    0.1
+   ],
+   "tris": 60,
+   "materials": [
+    "MAT_grey",
+    "MAT_black",
+    "MAT_blue",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "headphones_desk",
+   "label": "Headphones on desk",
+   "category": "desk_gear",
+   "node": "SM_headphones_desk",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.26,
+    "y": 0.08,
+    "z": 0.057
+   },
+   "bbox_min": [
+    -0.13,
+    -0.04,
+    0.002
+   ],
+   "bbox_max": [
+    0.13,
+    0.04,
+    0.06
+   ],
+   "tris": 364,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "dishwasher",
+   "label": "Dishwasher",
+   "category": "pantry",
+   "node": "SM_dishwasher",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.625,
+    "z": 0.86
+   },
+   "bbox_min": [
+    -0.3,
+    -0.325,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.3,
+    0.86
+   ],
+   "tris": 252,
+   "materials": [
+    "MAT_white",
+    "MAT_grey_light",
+    "MAT_metal",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "sink_counter",
+   "label": "Sink counter",
+   "category": "pantry",
+   "node": "SM_sink_counter",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.24,
+    "y": 0.662,
+    "z": 1.192
+   },
+   "bbox_min": [
+    -0.62,
+    -0.343,
+    0.0
+   ],
+   "bbox_max": [
+    0.62,
+    0.32,
+    1.192
+   ],
+   "tris": 616,
+   "materials": [
+    "MAT_sky",
+    "MAT_charcoal",
+    "MAT_metal",
+    "MAT_offwhite"
+   ]
+  },
+  {
+   "id": "oven_tower",
+   "label": "Oven tower",
+   "category": "pantry",
+   "node": "SM_oven_tower",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.65,
+    "y": 0.643,
+    "z": 2.1
+   },
+   "bbox_min": [
+    -0.325,
+    -0.343,
+    0.0
+   ],
+   "bbox_max": [
+    0.325,
+    0.3,
+    2.1
+   ],
+   "tris": 588,
+   "materials": [
+    "MAT_white",
+    "MAT_charcoal",
+    "MAT_black",
+    "MAT_glass",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "toaster",
+   "label": "Toaster",
+   "category": "pantry",
+   "node": "SM_toaster",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.17,
+    "z": 0.26
+   },
+   "bbox_min": [
+    -0.14,
+    -0.085,
+    0.0
+   ],
+   "bbox_max": [
+    0.16,
+    0.085,
+    0.26
+   ],
+   "tris": 332,
+   "materials": [
+    "MAT_peach",
+    "MAT_charcoal",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "kettle",
+   "label": "Electric kettle",
+   "category": "pantry",
+   "node": "SM_kettle",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.216,
+    "y": 0.18,
+    "z": 0.23
+   },
+   "bbox_min": [
+    -0.111,
+    -0.09,
+    0.0
+   ],
+   "bbox_max": [
+    0.105,
+    0.09,
+    0.23
+   ],
+   "tris": 392,
+   "materials": [
+    "MAT_black",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "rice_cooker",
+   "label": "Rice cooker",
+   "category": "pantry",
+   "node": "SM_rice_cooker",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.31,
+    "z": 0.305
+   },
+   "bbox_min": [
+    -0.15,
+    -0.16,
+    0.0
+   ],
+   "bbox_max": [
+    0.15,
+    0.15,
+    0.305
+   ],
+   "tris": 572,
+   "materials": [
+    "MAT_white",
+    "MAT_coral",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "blender_jug",
+   "label": "Blender",
+   "category": "pantry",
+   "node": "SM_blender_jug",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.16,
+    "y": 0.16,
+    "z": 0.385
+   },
+   "bbox_min": [
+    -0.08,
+    -0.08,
+    0.0
+   ],
+   "bbox_max": [
+    0.08,
+    0.08,
+    0.385
+   ],
+   "tris": 312,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_glass",
+    "MAT_black",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "fruit_bowl",
+   "label": "Fruit bowl",
+   "category": "pantry",
+   "node": "SM_fruit_bowl",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.42,
+    "y": 0.42,
+    "z": 0.18
+   },
+   "bbox_min": [
+    -0.21,
+    -0.21,
+    0.0
+   ],
+   "bbox_max": [
+    0.21,
+    0.21,
+    0.18
+   ],
+   "tris": 460,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_leaf",
+    "MAT_peach"
+   ]
+  },
+  {
+   "id": "snack_shelf",
+   "label": "Snack shelf",
+   "category": "pantry",
+   "node": "SM_snack_shelf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.35,
+    "z": 1.4
+   },
+   "bbox_min": [
+    -0.45,
+    -0.175,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.175,
+    1.4
+   ],
+   "tris": 1036,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "vending_machine",
+   "label": "Vending machine",
+   "category": "pantry",
+   "node": "SM_vending_machine",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.82,
+    "z": 1.9
+   },
+   "bbox_min": [
+    -0.45,
+    -0.42,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.4,
+    1.9
+   ],
+   "tris": 784,
+   "materials": [
+    "MAT_coral",
+    "MAT_glass",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush",
+    "MAT_mint",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "cups_dispenser",
+   "label": "Cup dispenser",
+   "category": "pantry",
+   "node": "SM_cups_dispenser",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 0.34,
+    "y": 0.102,
+    "z": 0.45
+   },
+   "bbox_min": [
+    -0.17,
+    -0.102,
+    -0.225
+   ],
+   "bbox_max": [
+    0.17,
+    0.0,
+    0.225
+   ],
+   "tris": 692,
+   "materials": [
+    "MAT_glass",
+    "MAT_paper",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "dish_rack",
+   "label": "Dish rack",
+   "category": "pantry",
+   "node": "SM_dish_rack",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.472,
+    "y": 0.3,
+    "z": 0.22
+   },
+   "bbox_min": [
+    -0.247,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.225,
+    0.15,
+    0.22
+   ],
+   "tris": 476,
+   "materials": [
+    "MAT_grey_light",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "tea_set",
+   "label": "Tea set",
+   "category": "pantry",
+   "node": "SM_tea_set",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.36,
+    "y": 0.26,
+    "z": 0.155
+   },
+   "bbox_min": [
+    -0.18,
+    -0.13,
+    0.0
+   ],
+   "bbox_max": [
+    0.18,
+    0.13,
+    0.155
+   ],
+   "tris": 332,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_offwhite",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "bread_box",
+   "label": "Bread box",
+   "category": "pantry",
+   "node": "SM_bread_box",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.38,
+    "y": 0.225,
+    "z": 0.24
+   },
+   "bbox_min": [
+    -0.18,
+    -0.115,
+    0.0
+   ],
+   "bbox_max": [
+    0.2,
+    0.11,
+    0.24
+   ],
+   "tris": 280,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_dark",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "cookie_jar",
+   "label": "Cookie jar",
+   "category": "pantry",
+   "node": "SM_cookie_jar",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.185,
+    "y": 0.19,
+    "z": 0.25
+   },
+   "bbox_min": [
+    -0.093,
+    -0.095,
+    0.0
+   ],
+   "bbox_max": [
+    0.093,
+    0.095,
+    0.25
+   ],
+   "tris": 496,
+   "materials": [
+    "MAT_glass",
+    "MAT_wood_mid",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "pantry_cabinet_tall",
+   "label": "Tall pantry cabinet",
+   "category": "pantry",
+   "node": "SM_pantry_cabinet_tall",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.588,
+    "z": 2.1
+   },
+   "bbox_min": [
+    -0.4,
+    -0.312,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.275,
+    2.1
+   ],
+   "tris": 456,
+   "materials": [
+    "MAT_sage",
+    "MAT_charcoal",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "bar_counter",
+   "label": "Coffee bar counter",
+   "category": "pantry",
+   "node": "SM_bar_counter",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.1,
+    "y": 0.7,
+    "z": 1.35
+   },
+   "bbox_min": [
+    -1.05,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    1.05,
+    0.35,
+    1.35
+   ],
+   "tris": 736,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_charcoal",
+    "MAT_offwhite",
+    "MAT_wood_mid",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "juice_dispenser",
+   "label": "Drink dispenser",
+   "category": "pantry",
+   "node": "SM_juice_dispenser",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.4,
+    "y": 0.25,
+    "z": 0.5
+   },
+   "bbox_min": [
+    -0.2,
+    -0.125,
+    0.0
+   ],
+   "bbox_max": [
+    0.2,
+    0.125,
+    0.5
+   ],
+   "tris": 340,
+   "materials": [
+    "MAT_metal",
+    "MAT_glass",
+    "MAT_butter",
+    "MAT_black",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "microwave_shelf",
+   "label": "Microwave cart",
+   "category": "pantry",
+   "node": "SM_microwave_shelf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.45,
+    "z": 1.21
+   },
+   "bbox_min": [
+    -0.3,
+    -0.225,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.225,
+    1.21
+   ],
+   "tris": 692,
+   "materials": [
+    "MAT_black",
+    "MAT_wood_light",
+    "MAT_white",
+    "MAT_glass",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "ice_cream_freezer",
+   "label": "Chest freezer",
+   "category": "pantry",
+   "node": "SM_ice_cream_freezer",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.66,
+    "z": 0.86
+   },
+   "bbox_min": [
+    -0.5,
+    -0.335,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.325,
+    0.86
+   ],
+   "tris": 860,
+   "materials": [
+    "MAT_white",
+    "MAT_glass",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "pingpong_table",
+   "label": "Table tennis table",
+   "category": "recreation",
+   "node": "SM_pingpong_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.74,
+    "y": 1.7,
+    "z": 0.915
+   },
+   "bbox_min": [
+    -1.37,
+    -0.85,
+    0.0
+   ],
+   "bbox_max": [
+    1.37,
+    0.85,
+    0.915
+   ],
+   "tris": 152,
+   "materials": [
+    "MAT_blue",
+    "MAT_white",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "foosball_table",
+   "label": "Foosball table",
+   "category": "recreation",
+   "node": "SM_foosball_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.2,
+    "y": 1.16,
+    "z": 0.935
+   },
+   "bbox_min": [
+    -0.6,
+    -0.58,
+    0.0
+   ],
+   "bbox_max": [
+    0.6,
+    0.58,
+    0.935
+   ],
+   "tris": 584,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_leaf",
+    "MAT_wood_dark",
+    "MAT_metal",
+    "MAT_black",
+    "MAT_coral",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "arcade_cabinet",
+   "label": "Arcade cabinet",
+   "category": "recreation",
+   "node": "SM_arcade_cabinet",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.9,
+    "z": 1.8
+   },
+   "bbox_min": [
+    -0.35,
+    -0.525,
+    0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.375,
+    1.8
+   ],
+   "tris": 776,
+   "materials": [
+    "MAT_lavender",
+    "MAT_black",
+    "MAT_screen",
+    "MAT_charcoal",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "dartboard",
+   "label": "Dartboard",
+   "category": "recreation",
+   "node": "SM_dartboard",
+   "mount": "wall",
+   "mount_z": 1.73,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.141,
+    "z": 0.6
+   },
+   "bbox_min": [
+    -0.3,
+    -0.141,
+    -0.3
+   ],
+   "bbox_max": [
+    0.3,
+    0.0,
+    0.3
+   ],
+   "tris": 404,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_black",
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_leaf",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "board_game_shelf",
+   "label": "Board game shelf",
+   "category": "recreation",
+   "node": "SM_board_game_shelf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.93,
+    "y": 0.35,
+    "z": 1.2
+   },
+   "bbox_min": [
+    -0.48,
+    -0.175,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.175,
+    1.2
+   ],
+   "tris": 1128,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender",
+    "MAT_blush",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "guitar_stand",
+   "label": "Guitar on stand",
+   "category": "recreation",
+   "node": "SM_guitar_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.38,
+    "y": 0.391,
+    "z": 1.308
+   },
+   "bbox_min": [
+    -0.19,
+    -0.21,
+    0.0
+   ],
+   "bbox_max": [
+    0.19,
+    0.182,
+    1.308
+   ],
+   "tris": 476,
+   "materials": [
+    "MAT_black",
+    "MAT_wood_light",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "keyboard_piano",
+   "label": "Digital piano",
+   "category": "recreation",
+   "node": "SM_keyboard_piano",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.35,
+    "y": 0.364,
+    "z": 0.999
+   },
+   "bbox_min": [
+    -0.675,
+    -0.175,
+    0.0
+   ],
+   "bbox_max": [
+    0.675,
+    0.189,
+    0.999
+   ],
+   "tris": 536,
+   "materials": [
+    "MAT_black",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "karaoke_mic_stand",
+   "label": "Mic stand & speaker",
+   "category": "recreation",
+   "node": "SM_karaoke_mic_stand",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.962,
+    "y": 0.409,
+    "z": 1.559
+   },
+   "bbox_min": [
+    -0.222,
+    -0.134,
+    0.0
+   ],
+   "bbox_max": [
+    0.74,
+    0.275,
+    1.559
+   ],
+   "tris": 424,
+   "materials": [
+    "MAT_black",
+    "MAT_metal",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "basketball_hoop_mini",
+   "label": "Mini basketball hoop",
+   "category": "recreation",
+   "node": "SM_basketball_hoop_mini",
+   "mount": "wall",
+   "mount_z": 2.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.387,
+    "z": 0.55
+   },
+   "bbox_min": [
+    -0.3,
+    -0.387,
+    -0.25
+   ],
+   "bbox_max": [
+    0.3,
+    0.0,
+    0.3
+   ],
+   "tris": 360,
+   "materials": [
+    "MAT_white",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "chess_table",
+   "label": "Chess table",
+   "category": "recreation",
+   "node": "SM_chess_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.6,
+    "z": 0.795
+   },
+   "bbox_min": [
+    -0.3,
+    -0.3,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.3,
+    0.795
+   ],
+   "tris": 876,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_wood_mid",
+    "MAT_offwhite",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "puzzle_table",
+   "label": "Jigsaw puzzle table",
+   "category": "recreation",
+   "node": "SM_puzzle_table",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.7,
+    "z": 0.729
+   },
+   "bbox_min": [
+    -0.5,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.35,
+    0.729
+   ],
+   "tris": 284,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_mid",
+    "MAT_sky",
+    "MAT_leaf",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "bean_bag_cluster",
+   "label": "Bean bag cluster",
+   "category": "recreation",
+   "node": "SM_bean_bag_cluster",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.714,
+    "y": 1.612,
+    "z": 0.65
+   },
+   "bbox_min": [
+    -0.857,
+    -0.65,
+    0.0
+   ],
+   "bbox_max": [
+    0.857,
+    0.962,
+    0.65
+   ],
+   "tris": 712,
+   "materials": [
+    "MAT_coral",
+    "MAT_sky",
+    "MAT_butter",
+    "MAT_wood_light"
+   ]
+  },
+  {
+   "id": "plush_corner",
+   "label": "Plushie corner",
+   "category": "recreation",
+   "node": "SM_plush_corner",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.9,
+    "z": 0.5
+   },
+   "bbox_min": [
+    -0.45,
+    -0.45,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.45,
+    0.5
+   ],
+   "tris": 1392,
+   "materials": [
+    "MAT_blush",
+    "MAT_butter",
+    "MAT_black",
+    "MAT_sky",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "pool_table_mini",
+   "label": "Billiard table",
+   "category": "recreation",
+   "node": "SM_pool_table_mini",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 2.2,
+    "y": 1.2,
+    "z": 0.83
+   },
+   "bbox_min": [
+    -1.1,
+    -0.6,
+    0.02
+   ],
+   "bbox_max": [
+    1.1,
+    0.6,
+    0.85
+   ],
+   "tris": 988,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_leaf_dark",
+    "MAT_butter",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_white",
+    "MAT_black",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "plant_monstera",
+   "label": "Monstera",
+   "category": "decor",
+   "node": "SM_plant_monstera",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.75,
+    "y": 0.765,
+    "z": 1.181
+   },
+   "bbox_min": [
+    -0.368,
+    -0.381,
+    0.0
+   ],
+   "bbox_max": [
+    0.382,
+    0.384,
+    1.181
+   ],
+   "tris": 1000,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_soil",
+    "MAT_leaf_dark",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "plant_fiddle_leaf",
+   "label": "Fiddle leaf fig",
+   "category": "decor",
+   "node": "SM_plant_fiddle_leaf",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.433,
+    "y": 0.414,
+    "z": 1.54
+   },
+   "bbox_min": [
+    -0.213,
+    -0.194,
+    0.0
+   ],
+   "bbox_max": [
+    0.22,
+    0.22,
+    1.54
+   ],
+   "tris": 1032,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_soil",
+    "MAT_wood_dark",
+    "MAT_leaf",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "plant_palm",
+   "label": "Areca palm",
+   "category": "decor",
+   "node": "SM_plant_palm",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.869,
+    "y": 0.883,
+    "z": 1.502
+   },
+   "bbox_min": [
+    -0.421,
+    -0.441,
+    0.0
+   ],
+   "bbox_max": [
+    0.448,
+    0.441,
+    1.502
+   ],
+   "tris": 1044,
+   "materials": [
+    "MAT_white",
+    "MAT_soil",
+    "MAT_leaf_dark",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "plant_bamboo",
+   "label": "Lucky bamboo",
+   "category": "decor",
+   "node": "SM_plant_bamboo",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.195,
+    "y": 0.18,
+    "z": 0.56
+   },
+   "bbox_min": [
+    -0.09,
+    -0.09,
+    0.0
+   ],
+   "bbox_max": [
+    0.105,
+    0.09,
+    0.56
+   ],
+   "tris": 488,
+   "materials": [
+    "MAT_glass",
+    "MAT_water",
+    "MAT_leaf",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "plant_olive",
+   "label": "Olive tree",
+   "category": "decor",
+   "node": "SM_plant_olive",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.7,
+    "y": 0.7,
+    "z": 1.34
+   },
+   "bbox_min": [
+    -0.35,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.35,
+    0.35,
+    1.34
+   ],
+   "tris": 872,
+   "materials": [
+    "MAT_pot",
+    "MAT_soil",
+    "MAT_wood_mid",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "plant_rubber",
+   "label": "Rubber plant",
+   "category": "decor",
+   "node": "SM_plant_rubber",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.46,
+    "y": 0.406,
+    "z": 1.15
+   },
+   "bbox_min": [
+    -0.18,
+    -0.203,
+    0.0
+   ],
+   "bbox_max": [
+    0.28,
+    0.203,
+    1.15
+   ],
+   "tris": 972,
+   "materials": [
+    "MAT_butter",
+    "MAT_soil",
+    "MAT_wood_dark",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "terrarium",
+   "label": "Terrarium",
+   "category": "decor",
+   "node": "SM_terrarium",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.285,
+    "y": 0.292,
+    "z": 0.305
+   },
+   "bbox_min": [
+    -0.143,
+    -0.146,
+    0.0
+   ],
+   "bbox_max": [
+    0.143,
+    0.146,
+    0.305
+   ],
+   "tris": 488,
+   "materials": [
+    "MAT_glass",
+    "MAT_soil",
+    "MAT_leaf",
+    "MAT_leaf_dark",
+    "MAT_wood_mid"
+   ]
+  },
+  {
+   "id": "aquarium",
+   "label": "Aquarium",
+   "category": "decor",
+   "node": "SM_aquarium",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.4,
+    "z": 1.29
+   },
+   "bbox_min": [
+    -0.5,
+    -0.2,
+    0.0
+   ],
+   "bbox_max": [
+    0.5,
+    0.2,
+    1.29
+   ],
+   "tris": 448,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_charcoal",
+    "MAT_glass",
+    "MAT_water",
+    "MAT_black",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_sky",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "sculpture_abstract",
+   "label": "Abstract sculpture",
+   "category": "decor",
+   "node": "SM_sculpture_abstract",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.35,
+    "y": 0.35,
+    "z": 1.325
+   },
+   "bbox_min": [
+    -0.175,
+    -0.175,
+    0.0
+   ],
+   "bbox_max": [
+    0.175,
+    0.175,
+    1.325
+   ],
+   "tris": 460,
+   "materials": [
+    "MAT_white",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "vase_floor_branches",
+   "label": "Floor vase with branches",
+   "category": "decor",
+   "node": "SM_vase_floor_branches",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.504,
+    "y": 0.536,
+    "z": 1.48
+   },
+   "bbox_min": [
+    -0.228,
+    -0.268,
+    0.0
+   ],
+   "bbox_max": [
+    0.276,
+    0.268,
+    1.48
+   ],
+   "tris": 580,
+   "materials": [
+    "MAT_sage",
+    "MAT_wood_dark",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "vase_trio",
+   "label": "Vase trio",
+   "category": "decor",
+   "node": "SM_vase_trio",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.338,
+    "y": 0.099,
+    "z": 0.3
+   },
+   "bbox_min": [
+    -0.149,
+    -0.049,
+    0.0
+   ],
+   "bbox_max": [
+    0.189,
+    0.049,
+    0.3
+   ],
+   "tris": 420,
+   "materials": [
+    "MAT_sky",
+    "MAT_butter",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "candle_set",
+   "label": "Candle set",
+   "category": "decor",
+   "node": "SM_candle_set",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.3,
+    "y": 0.3,
+    "z": 0.225
+   },
+   "bbox_min": [
+    -0.15,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.15,
+    0.15,
+    0.225
+   ],
+   "tris": 348,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_offwhite",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "bookends_books",
+   "label": "Bookends with books",
+   "category": "decor",
+   "node": "SM_bookends_books",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.39,
+    "y": 0.14,
+    "z": 0.26
+   },
+   "bbox_min": [
+    -0.195,
+    -0.07,
+    0.0
+   ],
+   "bbox_max": [
+    0.195,
+    0.07,
+    0.26
+   ],
+   "tris": 276,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "hourglass",
+   "label": "Hourglass",
+   "category": "decor",
+   "node": "SM_hourglass",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.114,
+    "y": 0.12,
+    "z": 0.26
+   },
+   "bbox_min": [
+    -0.057,
+    -0.06,
+    0.0
+   ],
+   "bbox_max": [
+    0.057,
+    0.06,
+    0.26
+   ],
+   "tris": 208,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_glass",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "lava_lamp",
+   "label": "Lava lamp",
+   "category": "decor",
+   "node": "SM_lava_lamp",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.12,
+    "y": 0.12,
+    "z": 0.375
+   },
+   "bbox_min": [
+    -0.06,
+    -0.06,
+    0.0
+   ],
+   "bbox_max": [
+    0.06,
+    0.06,
+    0.375
+   ],
+   "tris": 244,
+   "materials": [
+    "MAT_metal",
+    "MAT_glass",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "cat_figurine",
+   "label": "Lucky cat figurine",
+   "category": "decor",
+   "node": "SM_cat_figurine",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.144,
+    "y": 0.13,
+    "z": 0.28
+   },
+   "bbox_min": [
+    -0.067,
+    -0.07,
+    0.0
+   ],
+   "bbox_max": [
+    0.077,
+    0.06,
+    0.28
+   ],
+   "tris": 356,
+   "materials": [
+    "MAT_white",
+    "MAT_coral",
+    "MAT_butter"
+   ]
+  },
+  {
+   "id": "planter_long",
+   "label": "Long planter trough",
+   "category": "decor",
+   "node": "SM_planter_long",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.3,
+    "z": 0.94
+   },
+   "bbox_min": [
+    -0.7,
+    -0.15,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.15,
+    0.94
+   ],
+   "tris": 840,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_soil",
+    "MAT_leaf",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "planter_round_large",
+   "label": "Large round planter",
+   "category": "decor",
+   "node": "SM_planter_round_large",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.71,
+    "y": 0.7,
+    "z": 1.05
+   },
+   "bbox_min": [
+    -0.355,
+    -0.35,
+    0.0
+   ],
+   "bbox_max": [
+    0.355,
+    0.35,
+    1.05
+   ],
+   "tris": 776,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_soil",
+    "MAT_leaf",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "plant_cactus_tall",
+   "label": "Tall cactus",
+   "category": "decor",
+   "node": "SM_plant_cactus_tall",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.42,
+    "y": 0.342,
+    "z": 1.3
+   },
+   "bbox_min": [
+    -0.21,
+    -0.171,
+    0.0
+   ],
+   "bbox_max": [
+    0.21,
+    0.171,
+    1.3
+   ],
+   "tris": 672,
+   "materials": [
+    "MAT_peach",
+    "MAT_soil",
+    "MAT_leaf",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "succulent_trio",
+   "label": "Succulent trio",
+   "category": "decor",
+   "node": "SM_succulent_trio",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.326,
+    "y": 0.09,
+    "z": 0.104
+   },
+   "bbox_min": [
+    -0.163,
+    -0.045,
+    0.0
+   ],
+   "bbox_max": [
+    0.163,
+    0.045,
+    0.104
+   ],
+   "tris": 1248,
+   "materials": [
+    "MAT_white",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_leaf",
+    "MAT_blush",
+    "MAT_mint"
+   ]
+  },
+  {
+   "id": "plant_lavender",
+   "label": "Lavender pot",
+   "category": "decor",
+   "node": "SM_plant_lavender",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.222,
+    "y": 0.227,
+    "z": 0.495
+   },
+   "bbox_min": [
+    -0.111,
+    -0.114,
+    0.0
+   ],
+   "bbox_max": [
+    0.111,
+    0.114,
+    0.495
+   ],
+   "tris": 432,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_soil",
+    "MAT_sage",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "plant_zz",
+   "label": "ZZ plant",
+   "category": "decor",
+   "node": "SM_plant_zz",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.267,
+    "y": 0.274,
+    "z": 0.601
+   },
+   "bbox_min": [
+    -0.133,
+    -0.137,
+    0.0
+   ],
+   "bbox_max": [
+    0.133,
+    0.137,
+    0.601
+   ],
+   "tris": 1464,
+   "materials": [
+    "MAT_black",
+    "MAT_soil",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "plant_bird_paradise",
+   "label": "Bird of paradise",
+   "category": "decor",
+   "node": "SM_plant_bird_paradise",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.622,
+    "y": 0.539,
+    "z": 1.791
+   },
+   "bbox_min": [
+    -0.311,
+    -0.269,
+    0.0
+   ],
+   "bbox_max": [
+    0.311,
+    0.269,
+    1.791
+   ],
+   "tris": 876,
+   "materials": [
+    "MAT_sage",
+    "MAT_soil",
+    "MAT_leaf_dark",
+    "MAT_leaf",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "tree_indoor",
+   "label": "Indoor tree",
+   "category": "decor",
+   "node": "SM_tree_indoor",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 1.3,
+    "y": 1.206,
+    "z": 2.55
+   },
+   "bbox_min": [
+    -0.65,
+    -0.603,
+    0.0
+   ],
+   "bbox_max": [
+    0.65,
+    0.603,
+    2.55
+   ],
+   "tris": 844,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_soil",
+    "MAT_wood_dark",
+    "MAT_leaf",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "flower_bouquet",
+   "label": "Flower bouquet vase",
+   "category": "decor",
+   "node": "SM_flower_bouquet",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.21,
+    "y": 0.191,
+    "z": 0.51
+   },
+   "bbox_min": [
+    -0.105,
+    -0.096,
+    0.0
+   ],
+   "bbox_max": [
+    0.105,
+    0.096,
+    0.51
+   ],
+   "tris": 660,
+   "materials": [
+    "MAT_glass",
+    "MAT_leaf_dark",
+    "MAT_coral",
+    "MAT_butter",
+    "MAT_blush",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "globe_small",
+   "label": "Desk globe",
+   "category": "decor",
+   "node": "SM_globe_small",
+   "mount": "floor",
+   "mount_z": 0.0,
+   "size_m": {
+    "x": 0.253,
+    "y": 0.214,
+    "z": 0.334
+   },
+   "bbox_min": [
+    -0.117,
+    -0.107,
+    0.0
+   ],
+   "bbox_max": [
+    0.136,
+    0.107,
+    0.334
+   ],
+   "tris": 452,
+   "materials": [
+    "MAT_wood_dark",
+    "MAT_sky",
+    "MAT_leaf",
+    "MAT_metal"
+   ]
+  },
+  {
+   "id": "wall_art_triptych",
+   "label": "Triptych wall art",
+   "category": "wall",
+   "node": "SM_wall_art_triptych",
+   "mount": "wall",
+   "mount_z": 1.3,
+   "size_m": {
+    "x": 1.42,
+    "y": 0.048,
+    "z": 0.6
+   },
+   "bbox_min": [
+    -0.71,
+    -0.048,
+    0.05
+   ],
+   "bbox_max": [
+    0.71,
+    0.0,
+    0.65
+   ],
+   "tris": 660,
+   "materials": [
+    "MAT_white",
+    "MAT_sky",
+    "MAT_butter",
+    "MAT_lavender",
+    "MAT_blush"
+   ]
+  },
+  {
+   "id": "wall_art_abstract",
+   "label": "Abstract canvas",
+   "category": "wall",
+   "node": "SM_wall_art_abstract",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.048,
+    "z": 0.8
+   },
+   "bbox_min": [
+    -0.5,
+    -0.048,
+    0.05
+   ],
+   "bbox_max": [
+    0.5,
+    0.0,
+    0.85
+   ],
+   "tris": 300,
+   "materials": [
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_sage",
+    "MAT_charcoal"
+   ]
+  },
+  {
+   "id": "wall_tapestry",
+   "label": "Woven tapestry",
+   "category": "wall",
+   "node": "SM_wall_tapestry",
+   "mount": "wall",
+   "mount_z": 1.0,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.032,
+    "z": 0.865
+   },
+   "bbox_min": [
+    -0.4,
+    -0.044,
+    0.15
+   ],
+   "bbox_max": [
+    0.4,
+    -0.012,
+    1.015
+   ],
+   "tris": 144,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_offwhite",
+    "MAT_peach",
+    "MAT_sage",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "acoustic_panels",
+   "label": "Acoustic panel set",
+   "category": "wall",
+   "node": "SM_acoustic_panels",
+   "mount": "wall",
+   "mount_z": 1.0,
+   "size_m": {
+    "x": 1.24,
+    "y": 0.05,
+    "z": 0.82
+   },
+   "bbox_min": [
+    -0.62,
+    -0.05,
+    0.0
+   ],
+   "bbox_max": [
+    0.62,
+    0.0,
+    0.82
+   ],
+   "tris": 648,
+   "materials": [
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "pegboard_tools",
+   "label": "Pegboard",
+   "category": "wall",
+   "node": "SM_pegboard_tools",
+   "mount": "wall",
+   "mount_z": 1.0,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.09,
+    "z": 0.8
+   },
+   "bbox_min": [
+    -0.45,
+    -0.09,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.0,
+    0.8
+   ],
+   "tris": 1660,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_wood_dark",
+    "MAT_wood_mid",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "wall_planter_trio",
+   "label": "Wall planter trio",
+   "category": "wall",
+   "node": "SM_wall_planter_trio",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 0.78,
+    "y": 0.16,
+    "z": 0.46
+   },
+   "bbox_min": [
+    -0.39,
+    -0.16,
+    -0.07
+   ],
+   "bbox_max": [
+    0.39,
+    0.0,
+    0.39
+   ],
+   "tris": 408,
+   "materials": [
+    "MAT_white",
+    "MAT_leaf",
+    "MAT_wood_mid",
+    "MAT_leaf_dark"
+   ]
+  },
+  {
+   "id": "clock_digital_wall",
+   "label": "Digital wall clock",
+   "category": "wall",
+   "node": "SM_clock_digital_wall",
+   "mount": "wall",
+   "mount_z": 2.0,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.044,
+    "z": 0.18
+   },
+   "bbox_min": [
+    -0.25,
+    -0.044,
+    -0.09
+   ],
+   "bbox_max": [
+    0.25,
+    0.0,
+    0.09
+   ],
+   "tris": 156,
+   "materials": [
+    "MAT_charcoal",
+    "MAT_lamp_glow"
+   ]
+  },
+  {
+   "id": "map_world",
+   "label": "World map",
+   "category": "wall",
+   "node": "SM_map_world",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 1.4,
+    "y": 0.037,
+    "z": 0.8
+   },
+   "bbox_min": [
+    -0.7,
+    -0.037,
+    0.0
+   ],
+   "bbox_max": [
+    0.7,
+    0.0,
+    0.8
+   ],
+   "tris": 720,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_sky",
+    "MAT_sage"
+   ]
+  },
+  {
+   "id": "motivational_sign",
+   "label": "Letterboard sign",
+   "category": "wall",
+   "node": "SM_motivational_sign",
+   "mount": "wall",
+   "mount_z": 1.3,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.048,
+    "z": 0.45
+   },
+   "bbox_min": [
+    -0.3,
+    -0.048,
+    0.025
+   ],
+   "bbox_max": [
+    0.3,
+    0.0,
+    0.475
+   ],
+   "tris": 300,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_black",
+    "MAT_white"
+   ]
+  },
+  {
+   "id": "cork_strip",
+   "label": "Cork strip with notes",
+   "category": "wall",
+   "node": "SM_cork_strip",
+   "mount": "wall",
+   "mount_z": 1.4,
+   "size_m": {
+    "x": 1.2,
+    "y": 0.04,
+    "z": 0.17
+   },
+   "bbox_min": [
+    -0.6,
+    -0.04,
+    -0.095
+   ],
+   "bbox_max": [
+    0.6,
+    0.0,
+    0.075
+   ],
+   "tris": 356,
+   "materials": [
+    "MAT_cork",
+    "MAT_coral",
+    "MAT_peach",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_sky",
+    "MAT_lavender"
+   ]
+  },
+  {
+   "id": "shelf_floating_trio",
+   "label": "Floating shelves trio",
+   "category": "wall",
+   "node": "SM_shelf_floating_trio",
+   "mount": "wall",
+   "mount_z": 1.0,
+   "size_m": {
+    "x": 1.05,
+    "y": 0.27,
+    "z": 0.87
+   },
+   "bbox_min": [
+    -0.6,
+    -0.27,
+    -0.015
+   ],
+   "bbox_max": [
+    0.45,
+    0.0,
+    0.855
+   ],
+   "tris": 624,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_butter",
+    "MAT_sage",
+    "MAT_lavender",
+    "MAT_peach",
+    "MAT_sky",
+    "MAT_leaf",
+    "MAT_white",
+    "MAT_blush",
+    "MAT_wood_dark"
+   ]
+  },
+  {
+   "id": "coat_hooks",
+   "label": "Coat hook rail",
+   "category": "wall",
+   "node": "SM_coat_hooks",
+   "mount": "wall",
+   "mount_z": 1.6,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.13,
+    "z": 0.7
+   },
+   "bbox_min": [
+    -0.5,
+    -0.13,
+    -0.65
+   ],
+   "bbox_max": [
+    0.5,
+    0.0,
+    0.05
+   ],
+   "tris": 544,
+   "materials": [
+    "MAT_wood_mid",
+    "MAT_black",
+    "MAT_sky",
+    "MAT_coral"
+   ]
+  },
+  {
+   "id": "mirror_rect",
+   "label": "Arched mirror",
+   "category": "wall",
+   "node": "SM_mirror_rect",
+   "mount": "wall",
+   "mount_z": 0.8,
+   "size_m": {
+    "x": 0.6,
+    "y": 0.044,
+    "z": 1.3
+   },
+   "bbox_min": [
+    -0.3,
+    -0.044,
+    0.0
+   ],
+   "bbox_max": [
+    0.3,
+    0.0,
+    1.3
+   ],
+   "tris": 240,
+   "materials": [
+    "MAT_wood_light",
+    "MAT_glass"
+   ]
+  },
+  {
+   "id": "ac_split_unit",
+   "label": "Split air conditioner",
+   "category": "wall",
+   "node": "SM_ac_split_unit",
+   "mount": "wall",
+   "mount_z": 2.3,
+   "size_m": {
+    "x": 0.9,
+    "y": 0.236,
+    "z": 0.28
+   },
+   "bbox_min": [
+    -0.45,
+    -0.236,
+    0.0
+   ],
+   "bbox_max": [
+    0.45,
+    0.0,
+    0.28
+   ],
+   "tris": 240,
+   "materials": [
+    "MAT_white",
+    "MAT_grey_light",
+    "MAT_leaf"
+   ]
+  },
+  {
+   "id": "thermostat_panel",
+   "label": "Thermostat & switches",
+   "category": "wall",
+   "node": "SM_thermostat_panel",
+   "mount": "wall",
+   "mount_z": 1.3,
+   "size_m": {
+    "x": 0.35,
+    "y": 0.024,
+    "z": 0.12
+   },
+   "bbox_min": [
+    -0.06,
+    -0.024,
+    -0.06
+   ],
+   "bbox_max": [
+    0.29,
+    0.0,
+    0.06
+   ],
+   "tris": 392,
+   "materials": [
+    "MAT_white",
+    "MAT_screen",
+    "MAT_grey_light"
+   ]
+  },
+  {
+   "id": "wall_fan",
+   "label": "Wall fan",
+   "category": "wall",
+   "node": "SM_wall_fan",
+   "mount": "wall",
+   "mount_z": 2.2,
+   "size_m": {
+    "x": 0.4,
+    "y": 0.306,
+    "z": 0.403
+   },
+   "bbox_min": [
+    -0.2,
+    -0.306,
+    -0.282
+   ],
+   "bbox_max": [
+    0.2,
+    0.0,
+    0.122
+   ],
+   "tris": 300,
+   "materials": [
+    "MAT_white",
+    "MAT_sky"
+   ]
+  },
+  {
+   "id": "whiteboard_small",
+   "label": "Small whiteboard",
+   "category": "wall",
+   "node": "SM_whiteboard_small",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 0.8,
+    "y": 0.075,
+    "z": 0.6
+   },
+   "bbox_min": [
+    -0.4,
+    -0.075,
+    0.0
+   ],
+   "bbox_max": [
+    0.4,
+    0.0,
+    0.6
+   ],
+   "tris": 180,
+   "materials": [
+    "MAT_grey",
+    "MAT_white",
+    "MAT_coral",
+    "MAT_blue",
+    "MAT_black"
+   ]
+  },
+  {
+   "id": "calendar_board",
+   "label": "Month planner board",
+   "category": "wall",
+   "node": "SM_calendar_board",
+   "mount": "wall",
+   "mount_z": 1.2,
+   "size_m": {
+    "x": 1.0,
+    "y": 0.037,
+    "z": 0.7
+   },
+   "bbox_min": [
+    -0.5,
+    -0.037,
+    0.05
+   ],
+   "bbox_max": [
+    0.5,
+    0.0,
+    0.75
+   ],
+   "tris": 624,
+   "materials": [
+    "MAT_white",
+    "MAT_sage",
+    "MAT_offwhite",
+    "MAT_coral",
+    "MAT_lavender",
+    "MAT_sky",
+    "MAT_mint",
+    "MAT_blush"
    ]
   }
  ],
