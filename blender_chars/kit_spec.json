@@ -1,0 +1,1556 @@
+{
+ "versi": 1,
+ "facing": "-Y blender (+Z glTF)",
+ "tinggi_m": 1.7,
+ "bones": [
+  "root",
+  "hips",
+  "spine",
+  "head",
+  "arm_L",
+  "fore_L",
+  "arm_R",
+  "fore_R",
+  "thigh_L",
+  "shin_L",
+  "thigh_R",
+  "shin_R"
+ ],
+ "clips": {
+  "idle": {
+   "frames": 48,
+   "fps": 24
+  },
+  "walk": {
+   "frames": 24,
+   "fps": 24
+  },
+  "sit_idle": {
+   "frames": 48,
+   "fps": 24
+  },
+  "type": {
+   "frames": 24,
+   "fps": 24
+  },
+  "think": {
+   "frames": 48,
+   "fps": 24
+  },
+  "review": {
+   "frames": 48,
+   "fps": 24
+  },
+  "ship": {
+   "frames": 36,
+   "fps": 24
+  },
+  "error": {
+   "frames": 24,
+   "fps": 24
+  },
+  "coffee": {
+   "frames": 48,
+   "fps": 24
+  },
+  "sleep": {
+   "frames": 72,
+   "fps": 24
+  }
+ },
+ "sit": {
+  "root_z": 0.2,
+  "kursi_seat_top": 0.49,
+  "catatan": "turunkan/naikkan group karakter supaya root berada di root_z di atas lantai saat clip duduk"
+ },
+ "slots": {
+  "HAIR": [
+   "belah_samping",
+   "kuncir_kuda",
+   "ikal_pendek",
+   "cebot",
+   "sanggul",
+   "spiky",
+   "rapi",
+   "sanggul_tinggi",
+   "bob",
+   "panjang",
+   "cepak",
+   "belah_tengah",
+   "mohawk",
+   "afro",
+   "kuncir_dua",
+   "kepang",
+   "undercut",
+   "man_bun",
+   "ikal_panjang"
+  ],
+  "FACE": [
+   "ramah",
+   "besar",
+   "dot",
+   "tajam",
+   "sipit",
+   "ceria",
+   "kantuk",
+   "anime",
+   "bintang",
+   "bulu_mata",
+   "serius",
+   "sedih"
+  ],
+  "MOUTH": [
+   "smile",
+   "flat",
+   "open",
+   "sleep",
+   "senyum_lebar",
+   "tertawa",
+   "cemberut",
+   "miring",
+   "kucing",
+   "lidah",
+   "o_kecil",
+   "gigi"
+  ],
+  "FHAIR": [
+   "kumis",
+   "jenggot_tipis"
+  ],
+  "TOP": [
+   "kemeja",
+   "hoodie",
+   "blazer",
+   "cardigan",
+   "rompi",
+   "polo",
+   "kaos_garis",
+   "jaket",
+   "turtleneck",
+   "tanktop",
+   "jas_lab",
+   "overall"
+  ],
+  "BOTTOM": [
+   "celana",
+   "rok",
+   "celana_pendek",
+   "celana_kargo",
+   "celana_longgar",
+   "celana_cropped",
+   "rok_pendek",
+   "rok_panjang"
+  ],
+  "SHOES": [
+   "sneakers",
+   "formal",
+   "boots",
+   "sandal",
+   "hightop",
+   "loafer"
+  ],
+  "ACC": [
+   "kacamata_bulat",
+   "kacamata_kotak",
+   "headset_mic",
+   "headphone",
+   "baret",
+   "topi",
+   "topi_balik",
+   "dasi",
+   "kartu_id",
+   "celemek",
+   "tas",
+   "kacamata_hitam",
+   "bando",
+   "pita",
+   "kupluk",
+   "topi_koki",
+   "telinga_kucing",
+   "masker",
+   "syal",
+   "jam_tangan"
+  ],
+  "BLUSH": [
+   "BLUSH"
+  ]
+ },
+ "nama_objek": {
+  "HAIR": "HAIR_<id> (bawah) + HAIRTOP_<id> (atas; sembunyikan jika topi)",
+  "FACE": "FACE_<id>.eye_L|eye_R|brow (eye berpivot di pusat -> kedip = scale Z)",
+  "MOUTH": "MOUTH_<id>",
+  "FHAIR": "FHAIR_<id>",
+  "TOP": "TOP_<id>",
+  "BOTTOM": "BOTTOM_<id>",
+  "SHOES": "SHOES_<id>",
+  "ACC": "ACC_<id>",
+  "BLUSH": "BLUSH",
+  "BODY": "BODY (selalu tampil)"
+ },
+ "material_warna": {
+  "M_skin": "#F0C09A",
+  "M_hair": "#3A2415",
+  "M_eye": "#2A1A12",
+  "M_eyewhite": "#FFFFFF",
+  "M_mouth": "#B5503E",
+  "M_blush": "#F28BA8",
+  "M_top": "#3F6FB5",
+  "M_top2": "#F2F2EC",
+  "M_bottom": "#3B4660",
+  "M_shoes": "#F2F2EC",
+  "M_shoes2": "#2A2E34",
+  "M_acc": "#E5B93C",
+  "M_acc2": "#2A2E34",
+  "M_acc3": "#C9483F",
+  "M_glass": "#BFDDEC"
+ },
+ "material_slot": {
+  "M_skin": "kulit",
+  "M_hair": "rambut+alis+jenggot",
+  "M_eye": "mata",
+  "M_eyewhite": "kilau mata",
+  "M_mouth": "mulut",
+  "M_blush": "pipi",
+  "M_top": "warna utama atasan",
+  "M_top2": "aksen/kerah atasan",
+  "M_bottom": "bawahan",
+  "M_shoes": "sepatu",
+  "M_shoes2": "sol/sepatu formal (tetap)",
+  "M_acc": "aksesori kepala",
+  "M_acc2": "detail gelap aksesori (tetap)",
+  "M_acc3": "aksesori badan (dasi/celemek/tas)"
+ },
+ "outline": {
+  "material": "outline",
+  "hex": "#1B1747",
+  "catatan": "hull terbalik di mesh yang sama; di app ganti ke MeshBasicMaterial navy"
+ },
+ "konflik": {
+  "aksesori_topi": [
+   "baret",
+   "topi",
+   "topi_balik",
+   "kupluk",
+   "topi_koki"
+  ],
+  "topi_sembunyikan": "HAIRTOP_<gaya> (rambut tetap HAIR_<gaya> bagian bawah)",
+  "grup_eksklusif_kepala": [
+   "baret",
+   "topi",
+   "topi_balik",
+   "kupluk",
+   "topi_koki",
+   "bando",
+   "pita",
+   "telinga_kucing",
+   "headphone",
+   "headset_mic"
+  ],
+  "aksesori_tak_boleh_dengan_rambut": {
+   "bando": [
+    "afro",
+    "mohawk",
+    "sanggul",
+    "sanggul_tinggi",
+    "man_bun"
+   ],
+   "headphone": [
+    "afro",
+    "mohawk",
+    "sanggul",
+    "sanggul_tinggi",
+    "man_bun"
+   ],
+   "headset_mic": [
+    "afro",
+    "mohawk",
+    "sanggul",
+    "sanggul_tinggi",
+    "man_bun"
+   ],
+   "pita": [
+    "afro",
+    "mohawk",
+    "sanggul",
+    "sanggul_tinggi",
+    "man_bun",
+    "spiky",
+    "ikal_pendek"
+   ],
+   "telinga_kucing": [
+    "afro",
+    "mohawk",
+    "sanggul",
+    "sanggul_tinggi",
+    "man_bun",
+    "spiky",
+    "ikal_pendek"
+   ]
+  },
+  "catatan": "topi cocok dgn semua rambut selama HAIRTOP_* disembunyikan; grup_eksklusif_kepala maks satu"
+ },
+ "warna": {
+  "M_skin": {
+   "label": "Warna kulit",
+   "pilihan": [
+    {
+     "nama": "Porselen",
+     "hex": "#FBE0CB"
+    },
+    {
+     "nama": "Cerah",
+     "hex": "#F5CBA7"
+    },
+    {
+     "nama": "Sawo muda",
+     "hex": "#E8B98D"
+    },
+    {
+     "nama": "Sawo",
+     "hex": "#D9A97E"
+    },
+    {
+     "nama": "Sawo matang",
+     "hex": "#C69063"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#A9774F"
+    },
+    {
+     "nama": "Cokelat tua",
+     "hex": "#8A5A3B"
+    },
+    {
+     "nama": "Gelap",
+     "hex": "#5E3B28"
+    }
+   ]
+  },
+  "M_hair": {
+   "label": "Warna rambut",
+   "pilihan": [
+    {
+     "nama": "Hitam",
+     "hex": "#141018"
+    },
+    {
+     "nama": "Cokelat tua",
+     "hex": "#2B1D14"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#4A2C1A"
+    },
+    {
+     "nama": "Cokelat muda",
+     "hex": "#7A4B2A"
+    },
+    {
+     "nama": "Pirang",
+     "hex": "#C98A3E"
+    },
+    {
+     "nama": "Pirang pucat",
+     "hex": "#E8C872"
+    },
+    {
+     "nama": "Jahe",
+     "hex": "#A8431F"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#8A8D93"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#E8E8EC"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#6D28D9"
+    },
+    {
+     "nama": "Pink",
+     "hex": "#EC4899"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#2563EB"
+    },
+    {
+     "nama": "Toska",
+     "hex": "#0D9488"
+    }
+   ]
+  },
+  "M_eye": {
+   "label": "Warna mata",
+   "pilihan": [
+    {
+     "nama": "Hitam",
+     "hex": "#1C120B"
+    },
+    {
+     "nama": "Cokelat tua",
+     "hex": "#2A1A12"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#4A2C1A"
+    },
+    {
+     "nama": "Hazel",
+     "hex": "#7C4A1E"
+    },
+    {
+     "nama": "Hijau",
+     "hex": "#2F6B3F"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#0F3D5E"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#4B5563"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#4C1D95"
+    }
+   ]
+  },
+  "M_mouth": {
+   "label": "Warna bibir",
+   "pilihan": [
+    {
+     "nama": "Merah bata",
+     "hex": "#B5503E"
+    },
+    {
+     "nama": "Merah muda",
+     "hex": "#D9768A"
+    },
+    {
+     "nama": "Merah",
+     "hex": "#C8323C"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#8C4A3A"
+    },
+    {
+     "nama": "Koral",
+     "hex": "#E2725B"
+    },
+    {
+     "nama": "Mauve",
+     "hex": "#A8586B"
+    }
+   ]
+  },
+  "M_blush": {
+   "label": "Warna pipi (blush)",
+   "pilihan": [
+    {
+     "nama": "Pink",
+     "hex": "#F28BA8"
+    },
+    {
+     "nama": "Persik",
+     "hex": "#F6A78F"
+    },
+    {
+     "nama": "Pink tua",
+     "hex": "#F472B6"
+    },
+    {
+     "nama": "Koral",
+     "hex": "#F08A7C"
+    },
+    {
+     "nama": "Lembut",
+     "hex": "#F4B6C2"
+    }
+   ]
+  },
+  "M_top": {
+   "label": "Warna atasan",
+   "pilihan": [
+    {
+     "nama": "Navy",
+     "hex": "#1E3A8A"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#2563EB"
+    },
+    {
+     "nama": "Biru langit",
+     "hex": "#38BDF8"
+    },
+    {
+     "nama": "Toska",
+     "hex": "#0D9488"
+    },
+    {
+     "nama": "Hijau",
+     "hex": "#16A34A"
+    },
+    {
+     "nama": "Lime",
+     "hex": "#84CC16"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#FACC15"
+    },
+    {
+     "nama": "Oranye",
+     "hex": "#EA580C"
+    },
+    {
+     "nama": "Mustard",
+     "hex": "#D97706"
+    },
+    {
+     "nama": "Merah",
+     "hex": "#DC2626"
+    },
+    {
+     "nama": "Pink",
+     "hex": "#EC4899"
+    },
+    {
+     "nama": "Pink muda",
+     "hex": "#F472B6"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#7C3AED"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#475569"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#1F2937"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#F8FAFC"
+    },
+    {
+     "nama": "Krem",
+     "hex": "#F5E6C8"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#78350F"
+    }
+   ]
+  },
+  "M_top2": {
+   "label": "Warna aksen atasan (kerah, garis, kancing)",
+   "pilihan": [
+    {
+     "nama": "Putih",
+     "hex": "#F8FAFC"
+    },
+    {
+     "nama": "Krem",
+     "hex": "#FEF3C7"
+    },
+    {
+     "nama": "Mint",
+     "hex": "#CCFBF1"
+    },
+    {
+     "nama": "Biru muda",
+     "hex": "#DBEAFE"
+    },
+    {
+     "nama": "Pink muda",
+     "hex": "#FCE7F3"
+    },
+    {
+     "nama": "Oranye muda",
+     "hex": "#FFEDD5"
+    },
+    {
+     "nama": "Biru langit",
+     "hex": "#38BDF8"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#FACC15"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#CBD5E1"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#1F2937"
+    }
+   ]
+  },
+  "M_bottom": {
+   "label": "Warna bawahan",
+   "pilihan": [
+    {
+     "nama": "Navy gelap",
+     "hex": "#1F2A44"
+    },
+    {
+     "nama": "Denim",
+     "hex": "#334155"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#111827"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#374151"
+    },
+    {
+     "nama": "Krem",
+     "hex": "#D6C3A1"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#4B3B2A"
+    },
+    {
+     "nama": "Khaki",
+     "hex": "#A8956B"
+    },
+    {
+     "nama": "Hijau tua",
+     "hex": "#14532D"
+    },
+    {
+     "nama": "Maroon",
+     "hex": "#7F1D1D"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#6B5B95"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#2563EB"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#F2F2EC"
+    }
+   ]
+  },
+  "M_shoes": {
+   "label": "Warna sepatu",
+   "pilihan": [
+    {
+     "nama": "Putih",
+     "hex": "#F2F2EC"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#1F2937"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#9CA3AF"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#78350F"
+    },
+    {
+     "nama": "Merah",
+     "hex": "#DC2626"
+    },
+    {
+     "nama": "Biru langit",
+     "hex": "#38BDF8"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#FACC15"
+    },
+    {
+     "nama": "Pink",
+     "hex": "#F472B6"
+    }
+   ]
+  },
+  "M_acc": {
+   "label": "Warna aksesori kepala (kacamata, topi, bando)",
+   "pilihan": [
+    {
+     "nama": "Emas",
+     "hex": "#E5B93C"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#FACC15"
+    },
+    {
+     "nama": "Oranye",
+     "hex": "#F59E0B"
+    },
+    {
+     "nama": "Merah",
+     "hex": "#EF4444"
+    },
+    {
+     "nama": "Pink",
+     "hex": "#EC4899"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#7E22CE"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#2563EB"
+    },
+    {
+     "nama": "Toska",
+     "hex": "#0D9488"
+    },
+    {
+     "nama": "Hijau",
+     "hex": "#10B981"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#1F2937"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#78350F"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#F8FAFC"
+    }
+   ]
+  },
+  "M_acc3": {
+   "label": "Warna aksesori badan (dasi, celemek, tas, syal)",
+   "pilihan": [
+    {
+     "nama": "Merah",
+     "hex": "#C9483F"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#8B5CF6"
+    },
+    {
+     "nama": "Oranye",
+     "hex": "#F59E0B"
+    },
+    {
+     "nama": "Hijau",
+     "hex": "#16A34A"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#2563EB"
+    },
+    {
+     "nama": "Pink",
+     "hex": "#F472B6"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#E5B93C"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#1F2937"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#94A3B8"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#F8FAFC"
+    },
+    {
+     "nama": "Cokelat",
+     "hex": "#78350F"
+    },
+    {
+     "nama": "Toska",
+     "hex": "#0D9488"
+    }
+   ]
+  }
+ },
+ "warna_tetap": [
+  "M_eyewhite",
+  "M_shoes2",
+  "M_acc2",
+  "M_glass",
+  "outline"
+ ],
+ "warna_catatan": "tiap kelompok = satu material M_* yang di-tint; tambahkan pemilih hex bebas. Preset boleh di luar palet.",
+ "bagian_material": {
+  "BODY": [
+   "M_skin"
+  ],
+  "HAIR_belah_samping": [
+   "M_hair"
+  ],
+  "HAIRTOP_belah_samping": [
+   "M_hair"
+  ],
+  "HAIR_kuncir_kuda": [
+   "M_hair"
+  ],
+  "HAIRTOP_kuncir_kuda": [
+   "M_acc",
+   "M_hair"
+  ],
+  "HAIR_ikal_pendek": [
+   "M_hair"
+  ],
+  "HAIRTOP_ikal_pendek": [
+   "M_hair"
+  ],
+  "HAIR_cebot": [
+   "M_hair"
+  ],
+  "HAIRTOP_cebot": [
+   "M_hair"
+  ],
+  "HAIR_sanggul": [
+   "M_hair"
+  ],
+  "HAIRTOP_sanggul": [
+   "M_acc",
+   "M_hair"
+  ],
+  "HAIR_spiky": [
+   "M_hair"
+  ],
+  "HAIRTOP_spiky": [
+   "M_hair"
+  ],
+  "HAIR_rapi": [
+   "M_hair"
+  ],
+  "HAIRTOP_rapi": [
+   "M_hair"
+  ],
+  "HAIR_sanggul_tinggi": [
+   "M_hair"
+  ],
+  "HAIRTOP_sanggul_tinggi": [
+   "M_acc",
+   "M_hair"
+  ],
+  "HAIR_bob": [
+   "M_hair"
+  ],
+  "HAIRTOP_bob": [
+   "M_hair"
+  ],
+  "HAIR_panjang": [
+   "M_hair"
+  ],
+  "HAIRTOP_panjang": [
+   "M_hair"
+  ],
+  "HAIR_cepak": [
+   "M_hair"
+  ],
+  "HAIRTOP_cepak": [
+   "M_hair"
+  ],
+  "HAIR_belah_tengah": [
+   "M_hair"
+  ],
+  "HAIRTOP_belah_tengah": [
+   "M_hair"
+  ],
+  "HAIR_mohawk": [
+   "M_hair"
+  ],
+  "HAIRTOP_mohawk": [
+   "M_hair"
+  ],
+  "HAIR_afro": [
+   "M_hair"
+  ],
+  "HAIRTOP_afro": [
+   "M_hair"
+  ],
+  "HAIR_kuncir_dua": [
+   "M_hair"
+  ],
+  "HAIRTOP_kuncir_dua": [
+   "M_acc",
+   "M_hair"
+  ],
+  "HAIR_kepang": [
+   "M_acc",
+   "M_hair"
+  ],
+  "HAIRTOP_kepang": [
+   "M_hair"
+  ],
+  "HAIR_undercut": [
+   "M_hair"
+  ],
+  "HAIRTOP_undercut": [
+   "M_hair"
+  ],
+  "HAIR_man_bun": [
+   "M_hair"
+  ],
+  "HAIRTOP_man_bun": [
+   "M_acc",
+   "M_hair"
+  ],
+  "HAIR_ikal_panjang": [
+   "M_hair"
+  ],
+  "HAIRTOP_ikal_panjang": [
+   "M_hair"
+  ],
+  "TOP_kemeja": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_hoodie": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_blazer": [
+   "M_acc2",
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_cardigan": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_rompi": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_polo": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_kaos_garis": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_jaket": [
+   "M_acc2",
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_turtleneck": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_tanktop": [
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_jas_lab": [
+   "M_acc2",
+   "M_top",
+   "M_top2"
+  ],
+  "TOP_overall": [
+   "M_acc2",
+   "M_top",
+   "M_top2"
+  ],
+  "BOTTOM_celana": [
+   "M_acc2",
+   "M_bottom"
+  ],
+  "BOTTOM_rok": [
+   "M_acc2",
+   "M_bottom"
+  ],
+  "BOTTOM_celana_pendek": [
+   "M_acc2",
+   "M_bottom"
+  ],
+  "BOTTOM_celana_kargo": [
+   "M_acc2",
+   "M_bottom"
+  ],
+  "BOTTOM_celana_longgar": [
+   "M_acc2",
+   "M_bottom"
+  ],
+  "BOTTOM_celana_cropped": [
+   "M_acc2",
+   "M_bottom",
+   "M_top2"
+  ],
+  "BOTTOM_rok_pendek": [
+   "M_acc2",
+   "M_bottom"
+  ],
+  "BOTTOM_rok_panjang": [
+   "M_acc2",
+   "M_bottom"
+  ],
+  "SHOES_sneakers": [
+   "M_shoes",
+   "M_shoes2",
+   "M_top2"
+  ],
+  "SHOES_formal": [
+   "M_acc2",
+   "M_shoes2"
+  ],
+  "SHOES_boots": [
+   "M_shoes",
+   "M_shoes2"
+  ],
+  "SHOES_sandal": [
+   "M_shoes",
+   "M_shoes2"
+  ],
+  "SHOES_hightop": [
+   "M_shoes",
+   "M_shoes2",
+   "M_top2"
+  ],
+  "SHOES_loafer": [
+   "M_acc2",
+   "M_shoes",
+   "M_shoes2"
+  ],
+  "ACC_kacamata_bulat": [
+   "M_acc"
+  ],
+  "ACC_kacamata_kotak": [
+   "M_acc"
+  ],
+  "ACC_headset_mic": [
+   "M_acc",
+   "M_acc2"
+  ],
+  "ACC_headphone": [
+   "M_acc",
+   "M_acc2"
+  ],
+  "ACC_baret": [
+   "M_acc"
+  ],
+  "ACC_topi": [
+   "M_acc"
+  ],
+  "ACC_topi_balik": [
+   "M_acc"
+  ],
+  "ACC_dasi": [
+   "M_acc3"
+  ],
+  "ACC_kartu_id": [
+   "M_acc3",
+   "M_top2"
+  ],
+  "ACC_celemek": [
+   "M_acc2",
+   "M_acc3",
+   "M_top2"
+  ],
+  "ACC_tas": [
+   "M_acc2",
+   "M_acc3"
+  ],
+  "ACC_kacamata_hitam": [
+   "M_acc",
+   "M_acc2"
+  ],
+  "ACC_bando": [
+   "M_acc"
+  ],
+  "ACC_pita": [
+   "M_acc",
+   "M_acc3"
+  ],
+  "ACC_kupluk": [
+   "M_acc",
+   "M_acc2",
+   "M_acc3"
+  ],
+  "ACC_topi_koki": [
+   "M_acc"
+  ],
+  "ACC_telinga_kucing": [
+   "M_acc",
+   "M_acc3"
+  ],
+  "ACC_masker": [
+   "M_acc"
+  ],
+  "ACC_syal": [
+   "M_acc2",
+   "M_acc3"
+  ],
+  "ACC_jam_tangan": [
+   "M_acc",
+   "M_acc2"
+  ],
+  "FACE_ramah.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_ramah.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_ramah.brow": [
+   "M_hair"
+  ],
+  "FACE_besar.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_besar.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_besar.brow": [
+   "M_hair"
+  ],
+  "FACE_dot.eye_L": [
+   "M_eye"
+  ],
+  "FACE_dot.eye_R": [
+   "M_eye"
+  ],
+  "FACE_dot.brow": [
+   "M_hair"
+  ],
+  "FACE_tajam.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_tajam.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_tajam.brow": [
+   "M_hair"
+  ],
+  "FACE_sipit.eye_L": [
+   "M_eye"
+  ],
+  "FACE_sipit.eye_R": [
+   "M_eye"
+  ],
+  "FACE_sipit.brow": [
+   "M_hair"
+  ],
+  "FACE_ceria.eye_L": [
+   "M_eye"
+  ],
+  "FACE_ceria.eye_R": [
+   "M_eye"
+  ],
+  "FACE_ceria.brow": [
+   "M_hair"
+  ],
+  "FACE_kantuk.eye_L": [
+   "M_eye"
+  ],
+  "FACE_kantuk.eye_R": [
+   "M_eye"
+  ],
+  "FACE_kantuk.brow": [
+   "M_hair"
+  ],
+  "FACE_anime.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_anime.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_anime.brow": [
+   "M_hair"
+  ],
+  "FACE_bintang.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_bintang.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_bintang.brow": [
+   "M_hair"
+  ],
+  "FACE_bulu_mata.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_bulu_mata.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_bulu_mata.brow": [
+   "M_hair"
+  ],
+  "FACE_serius.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_serius.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_serius.brow": [
+   "M_hair"
+  ],
+  "FACE_sedih.eye_L": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_sedih.eye_R": [
+   "M_eye",
+   "M_eyewhite"
+  ],
+  "FACE_sedih.brow": [
+   "M_hair"
+  ],
+  "MOUTH_smile": [
+   "M_mouth"
+  ],
+  "MOUTH_flat": [
+   "M_mouth"
+  ],
+  "MOUTH_open": [
+   "M_mouth"
+  ],
+  "MOUTH_sleep": [
+   "M_mouth"
+  ],
+  "MOUTH_senyum_lebar": [
+   "M_mouth"
+  ],
+  "MOUTH_tertawa": [
+   "M_blush",
+   "M_eyewhite",
+   "M_mouth"
+  ],
+  "MOUTH_cemberut": [
+   "M_mouth"
+  ],
+  "MOUTH_miring": [
+   "M_mouth"
+  ],
+  "MOUTH_kucing": [
+   "M_mouth"
+  ],
+  "MOUTH_lidah": [
+   "M_blush",
+   "M_mouth"
+  ],
+  "MOUTH_o_kecil": [
+   "M_mouth"
+  ],
+  "MOUTH_gigi": [
+   "M_eyewhite",
+   "M_mouth"
+  ],
+  "FHAIR_kumis": [
+   "M_hair"
+  ],
+  "FHAIR_jenggot_tipis": [
+   "M_hair"
+  ],
+  "BLUSH": [
+   "M_blush"
+  ]
+ },
+ "presets": {
+  "mira": {
+   "nama": "Engkoh",
+   "jabatan": "Kepala Studio",
+   "skin": "#E8B98D",
+   "hair": "#241A16",
+   "hair_style": "belah_samping",
+   "face": "ramah",
+   "mouth": "smile",
+   "blush": false,
+   "fhair": "jenggot_tipis",
+   "eye": "#3B2A1D",
+   "top": "blazer",
+   "top_c": "#1E3A8A",
+   "top2": "#F8FAFC",
+   "bottom": "celana",
+   "bottom_c": "#1F2A44",
+   "shoes": "formal",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "kacamata_bulat"
+   ],
+   "acc_c": "#F59E0B",
+   "acc3_c": "#C9483F"
+  },
+  "rian": {
+   "nama": "Fazrina",
+   "jabatan": "Perencana Konten",
+   "skin": "#F7CFAE",
+   "hair": "#4A2C1A",
+   "hair_style": "kuncir_kuda",
+   "face": "besar",
+   "mouth": "smile",
+   "blush": true,
+   "fhair": null,
+   "eye": "#4A2C1A",
+   "top": "hoodie",
+   "top_c": "#0D9488",
+   "top2": "#CCFBF1",
+   "bottom": "celana",
+   "bottom_c": "#334155",
+   "shoes": "sneakers",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "kacamata_kotak",
+    "kartu_id"
+   ],
+   "acc_c": "#1F2937",
+   "acc3_c": "#F59E0B"
+  },
+  "nadia": {
+   "nama": "Afdik",
+   "jabatan": "Penulis Naskah",
+   "skin": "#DCAE85",
+   "hair": "#2B1D14",
+   "hair_style": "ikal_pendek",
+   "face": "ramah",
+   "mouth": "smile",
+   "blush": false,
+   "fhair": "kumis",
+   "eye": "#2B1D14",
+   "top": "cardigan",
+   "top_c": "#D97706",
+   "top2": "#FEF3C7",
+   "bottom": "celana",
+   "bottom_c": "#4B3B2A",
+   "shoes": "sneakers",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "kacamata_bulat"
+   ],
+   "acc_c": "#78350F",
+   "acc3_c": "#C9483F"
+  },
+  "bayu": {
+   "nama": "Godam",
+   "jabatan": "Pemantau Percakapan",
+   "skin": "#C69063",
+   "hair": "#15100C",
+   "hair_style": "cebot",
+   "face": "dot",
+   "mouth": "flat",
+   "blush": false,
+   "fhair": null,
+   "eye": "#1C120B",
+   "top": "polo",
+   "top_c": "#16A34A",
+   "top2": "#DCFCE7",
+   "bottom": "celana",
+   "bottom_c": "#2A3342",
+   "shoes": "sneakers",
+   "shoes_c": "#E5E7EB",
+   "acc": [
+    "headset_mic"
+   ],
+   "acc_c": "#10B981",
+   "acc3_c": "#C9483F"
+  },
+  "sinta": {
+   "nama": "Dey",
+   "jabatan": "Penyusun Balasan",
+   "skin": "#F9D7BB",
+   "hair": "#C98A3E",
+   "hair_style": "sanggul",
+   "face": "besar",
+   "mouth": "smile",
+   "blush": true,
+   "fhair": null,
+   "eye": "#7C4A1E",
+   "top": "cardigan",
+   "top_c": "#F472B6",
+   "top2": "#FCE7F3",
+   "bottom": "rok",
+   "bottom_c": "#6B5B95",
+   "shoes": "formal",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "kartu_id"
+   ],
+   "acc_c": "#E5B93C",
+   "acc3_c": "#8B5CF6"
+  },
+  "doni": {
+   "nama": "Apis",
+   "jabatan": "Penyunting Video",
+   "skin": "#E3B58C",
+   "hair": "#12100E",
+   "hair_style": "spiky",
+   "face": "dot",
+   "mouth": "flat",
+   "blush": false,
+   "fhair": "jenggot_tipis",
+   "eye": "#12100E",
+   "top": "hoodie",
+   "top_c": "#1F2937",
+   "top2": "#38BDF8",
+   "bottom": "celana",
+   "bottom_c": "#111827",
+   "shoes": "sneakers",
+   "shoes_c": "#38BDF8",
+   "acc": [
+    "headphone"
+   ],
+   "acc_c": "#38BDF8",
+   "acc3_c": "#C9483F"
+  },
+  "omar": {
+   "nama": "Salman",
+   "jabatan": "Peninjau Mutu",
+   "skin": "#D9A97E",
+   "hair": "#1C1A18",
+   "hair_style": "rapi",
+   "face": "ramah",
+   "mouth": "flat",
+   "blush": false,
+   "fhair": "kumis",
+   "eye": "#241D17",
+   "top": "blazer",
+   "top_c": "#475569",
+   "top2": "#F8FAFC",
+   "bottom": "celana",
+   "bottom_c": "#334155",
+   "shoes": "formal",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "kacamata_kotak",
+    "dasi"
+   ],
+   "acc_c": "#78350F",
+   "acc3_c": "#EF4444"
+  },
+  "kiki": {
+   "nama": "Dalfa",
+   "jabatan": "Distribusi dan Unggah",
+   "skin": "#CF9D72",
+   "hair": "#3A2415",
+   "hair_style": "cebot",
+   "face": "ramah",
+   "mouth": "smile",
+   "blush": false,
+   "fhair": null,
+   "eye": "#33200F",
+   "top": "rompi",
+   "top_c": "#EA580C",
+   "top2": "#FFEDD5",
+   "bottom": "celana_pendek",
+   "bottom_c": "#374151",
+   "shoes": "sneakers",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "topi",
+    "tas"
+   ],
+   "acc_c": "#FACC15",
+   "acc3_c": "#1F2937"
+  },
+  "vera": {
+   "nama": "Andi",
+   "jabatan": "Analis Kinerja",
+   "skin": "#F5CBA7",
+   "hair": "#141018",
+   "hair_style": "sanggul_tinggi",
+   "face": "besar",
+   "mouth": "flat",
+   "blush": true,
+   "fhair": null,
+   "eye": "#241A2B",
+   "top": "cardigan",
+   "top_c": "#2563EB",
+   "top2": "#DBEAFE",
+   "bottom": "rok",
+   "bottom_c": "#1E293B",
+   "shoes": "formal",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "kacamata_kotak"
+   ],
+   "acc_c": "#EF4444",
+   "acc3_c": "#C9483F"
+  },
+  "dewi": {
+   "nama": "Tiara",
+   "jabatan": "Desainer Feed",
+   "skin": "#EFC094",
+   "hair": "#6D28D9",
+   "hair_style": "bob",
+   "face": "besar",
+   "mouth": "smile",
+   "blush": true,
+   "fhair": null,
+   "eye": "#4C1D95",
+   "top": "kemeja",
+   "top_c": "#EC4899",
+   "top2": "#FDF2F8",
+   "bottom": "rok",
+   "bottom_c": "#7C3AED",
+   "shoes": "sneakers",
+   "shoes_c": "#F2F2EC",
+   "acc": [
+    "baret",
+    "celemek"
+   ],
+   "acc_c": "#7E22CE",
+   "acc3_c": "#A855F7"
+  },
+  "baru": {
+   "nama": "Karyawan Baru",
+   "jabatan": "(template)",
+   "skin": "#F0C09A",
+   "hair": "#3B2F2F",
+   "hair_style": "cebot",
+   "face": "ramah",
+   "mouth": "smile",
+   "blush": false,
+   "fhair": null,
+   "eye": "#2A1A12",
+   "top": "kemeja",
+   "top_c": "#7C8DA6",
+   "top2": "#F2F2EC",
+   "bottom": "celana",
+   "bottom_c": "#3B4660",
+   "shoes": "sneakers",
+   "shoes_c": "#F2F2EC",
+   "acc": [],
+   "acc_c": "#E5B93C",
+   "acc3_c": "#C9483F"
+  }
+ }
+}
