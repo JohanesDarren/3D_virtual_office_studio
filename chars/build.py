@@ -645,7 +645,8 @@ spec = {"version": 1, "units": "meters", "up": "+Z blender / +Y glTF", "front": 
                   for n in CLIPS + WORK_CLIPS},
         "roles": ROLE_CLIPS,
         "sit": {"seat_top_z": .47, "root_lift": SIT_Z, "note": "place root on the chair pivot, facing chair front"},
-        "outline": {"object_suffix": "_outline", "hex": lib.OUTLINE_HEX, "thickness_m": lib.OUTLINE_T},
+        "outline": {"object_suffix": "_outline", "hex": lib.OUTLINE_HEX, "thickness_m": lib.OUTLINE_T,
+                    "three_js": "MeshBasicMaterial, side FrontSide (hull winding is already flipped)"},
         "avatars": []}
 over = []
 for ch in chars:

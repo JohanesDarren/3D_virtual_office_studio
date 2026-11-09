@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtual Office Preview</title>
+<style>
+  :root {
+    --bg: #f6f3ee; --panel: #fffdf8; --ink: #3f4352; --muted: #8a8f9c; --line: #e4dfd6;
+    --accent: #8fb3e8; --accent-ink: #2f4f80; --chip: #f1ece3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+    font: 14px/1.4 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif; }
+  header { display: flex; align-items: center; gap: 16px; padding: 10px 16px; border-bottom: 1px solid var(--line);
+    background: var(--panel); position: sticky; top: 0; z-index: 5; flex-wrap: wrap; }
+  header h1 { font-size: 16px; margin: 0 8px 0 0; }
+  .tabs { display: flex; gap: 6px; }
+  .tabs button, .chips button { border: 1px solid var(--line); background: var(--chip); color: var(--ink);
+    border-radius: 999px; padding: 6px 12px; cursor: pointer; font: inherit; }
+  .tabs button.on, .chips button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .stat { margin-left: auto; color: var(--muted); font-size: 12px; }
+  main { height: calc(100% - 53px); }
+  .view { display: none; height: 100%; }
+  .view.on { display: flex; }
+  /* gallery */
+  #gallery { overflow: auto; padding: 16px; flex-direction: column; gap: 20px; }
+  #gallery section h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+    margin: 8px 0; }
+  #gallery figure { margin: 0 0 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+    padding: 8px; }
+  #gallery img { width: 100%; height: auto; display: block; border-radius: 8px; cursor: zoom-in; }
+  #gallery figcaption { font-size: 12px; color: var(--muted); padding: 6px 4px 0; }
+  /* 3d */
+  .side { width: 280px; flex: none; border-right: 1px solid var(--line); background: var(--panel); overflow: auto;
+    padding: 12px; }
+  .side h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 14px 0 6px; }
+  .side h3:first-child { margin-top: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips button { padding: 4px 10px; font-size: 12px; }
+  .list button { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 5px 8px;
+    border-radius: 8px; cursor: pointer; font: inherit; color: var(--ink); }
+  .list button:hover { background: var(--chip); }
+  .list button.on { background: var(--accent); color: #fff; }
+  .list small { color: var(--muted); }
+  .list button.on small { color: #eef; }
+  .stage { flex: 1; position: relative; min-width: 0; overflow: hidden; }
+  .stage canvas { display: block; }
+  .hint { position: absolute; left: 12px; bottom: 10px; font-size: 12px; color: var(--muted); pointer-events: none; }
+  .lbl { font-size: 11px; color: var(--ink); background: rgba(255, 253, 248, .85); padding: 1px 6px; border-radius: 6px;
+    white-space: nowrap; }
+  .info { font-size: 12px; color: var(--muted); margin-top: 8px; }
+  #zoom { position: fixed; inset: 0; background: rgba(40, 42, 52, .85); display: none; z-index: 20; cursor: zoom-out;
+    overflow: auto; }
+  #zoom img { display: block; max-width: none; margin: auto; }
+  @media (max-width: 760px) {
+    .view.on { flex-direction: column; }
+    .side { width: 100%; height: 38%; border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<header>
+  <h1>Virtual Office · preview</h1>
+  <div class="tabs">
+    <button data-tab="avatars" class="on">Avatar 3D</button>
+    <button data-tab="furniture">Furnitur 3D</button>
+    <button data-tab="gallery">Galeri render</button>
+  </div>
+  <span class="stat" id="stat">memuat…</span>
+</header>
+<main>
+  <div class="view on" id="avatars">
+    <div class="side">
+      <h3>Tampilan</h3>
+      <div class="chips" id="avMode"><button data-m="all" class="on">Semua (24)</button><button data-m="one">Satu</button></div>
+      <h3>Klip</h3>
+      <div class="chips" id="clipChips"></div>
+      <div class="info" id="clipInfo"></div>
+      <h3>Avatar</h3>
+      <div class="list" id="avList"></div>
+    </div>
+    <div class="stage" id="avStage"><div class="hint">drag: putar · scroll: zoom · klik kanan: geser</div></div>
+  </div>
+  <div class="view" id="furniture">
+    <div class="side">
+      <h3>Kategori</h3>
+      <div class="chips" id="catChips"></div>
+      <h3>Item</h3>
+      <div class="list" id="itemList"></div>
+    </div>
+    <div class="stage" id="fuStage"><div class="hint">klik item di daftar untuk fokus · drag: putar</div></div>
+  </div>
+  <div class="view" id="gallery"></div>
+</main>
+<div id="zoom"><img alt=""></div>
+
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+
+const ROOT = "../";
+const $ = (s) => document.querySelector(s);
+const loader = new GLTFLoader();
+const load = (url) => new Promise((ok, err) => loader.load(url, ok, undefined, err));
+
+// ---------------------------------------------------------------- toon look (matches the kit contract)
+const ramp = new THREE.DataTexture(new Uint8Array([150, 150, 150, 255, 215, 215, 215, 255, 255, 255, 255, 255]), 3, 1);
+ramp.minFilter = ramp.magFilter = THREE.NearestFilter; ramp.needsUpdate = true;
+const toonCache = new Map();
+const outlineMat = new THREE.MeshBasicMaterial({ color: 0x4b4e63, side: THREE.FrontSide });   // hull faces are already flipped in Blender
+function toonify(root) {
+  root.traverse((o) => {
+    if (!o.isMesh) return;
+    if (o.name.endsWith("_outline")) { o.material = outlineMat; return; }
+    const swap = (m) => {
+      if (toonCache.has(m.uuid)) return toonCache.get(m.uuid);
+      const t = new THREE.MeshToonMaterial({ color: m.color, gradientMap: ramp, name: m.name });
+      if (m.emissive && m.emissiveIntensity > 0 && m.emissive.getHex()) { t.emissive = m.emissive; t.emissiveIntensity = .5; }
+      toonCache.set(m.uuid, t); return t;
+    };
+    o.material = Array.isArray(o.material) ? o.material.map(swap) : swap(o.material);
+  });
+}
+
+// ---------------------------------------------------------------- one stage = renderer + camera + controls
+function makeStage(el) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  el.prepend(renderer.domElement);
+  const labels = new CSS2DRenderer();
+  labels.domElement.style.cssText = "position:absolute;top:0;left:0;pointer-events:none";
+  el.appendChild(labels.domElement);
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xf6f3ee);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0xd9d2c5, 1.6));
+  const sun = new THREE.DirectionalLight(0xffffff, 1.4); sun.position.set(3, 6, 5); scene.add(sun);
+  const floor = new THREE.Mesh(new THREE.CircleGeometry(30, 64), new THREE.MeshToonMaterial({ color: 0xece6dc, gradientMap: ramp }));
+  floor.rotation.x = -Math.PI / 2; floor.position.y = -.002; scene.add(floor);
+  const camera = new THREE.PerspectiveCamera(35, 1, .05, 200);
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  const st = { el, renderer, labels, scene, camera, controls, tick: [] };
+  const resize = () => {
+    const w = el.clientWidth, h = el.clientHeight; if (!w || !h) return;
+    renderer.setSize(w, h); labels.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix();
+  };
+  new ResizeObserver(resize).observe(el); resize();
+  return st;
+}
+function frame(st, box, dir = new THREE.Vector3(.35, .45, 1)) {
+  const size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+  const r = Math.max(size.x, size.y * 1.4, size.z) * .5 + .2;
+  const d = r / Math.tan(THREE.MathUtils.degToRad(st.camera.fov / 2)) / Math.min(1, st.camera.aspect) * 1.05;
+  st.controls.target.copy(c);
+  st.camera.position.copy(c).add(dir.normalize().multiplyScalar(d));
+  st.controls.update();
+}
+function label(text, y = -.12) {
+  const d = document.createElement("div"); d.className = "lbl"; d.textContent = text;
+  const o = new CSS2DObject(d); o.position.set(0, y, 0); return o;
+}
+
+// ---------------------------------------------------------------- tabs
+const stages = {};
+document.querySelectorAll(".tabs button").forEach((b) => b.onclick = () => {
+  document.querySelectorAll(".tabs button").forEach((x) => x.classList.toggle("on", x === b));
+  document.querySelectorAll(".view").forEach((v) => v.classList.toggle("on", v.id === b.dataset.tab));
+  if (b.dataset.tab === "furniture") initFurniture();
+  if (b.dataset.tab === "gallery") initGallery();
+});
+
+// ---------------------------------------------------------------- AVATARS
+const avSpec = await (await fetch(ROOT + "out/avatars_spec.json")).json();
+const av = makeStage($("#avStage"));
+stages.av = av;
+const ROLE_ID = { it: "IT", creative: "Creative", content: "Content", marketing: "Marketing", finance: "Finance",
+  hr: "HR", sales: "Sales", exec: "Executive" };
+const avatars = [];   // {spec, root, mixer, actions}
+let avMode = "all", avSel = 0, curClip = "idle";
+$("#stat").textContent = `memuat ${avSpec.avatars.length} avatar…`;
+await Promise.all(avSpec.avatars.map(async (a, i) => {
+  const g = await load(ROOT + "out/avatars/" + a.file);
+  toonify(g.scene);
+  const mixer = new THREE.AnimationMixer(g.scene);
+  const actions = Object.fromEntries(g.animations.map((c) => [c.name, mixer.clipAction(c)]));
+  const holder = new THREE.Group(); holder.add(g.scene);
+  holder.add(label(`${a.name} · ${ROLE_ID[a.role]}`, -.08));
+  avatars[i] = { spec: a, root: holder, mixer, actions };
+  av.scene.add(holder);
+}));
+const genericClips = Object.keys(avSpec.clips).filter((c) => !c.startsWith("work_"));
+function play(a, clip) {
+  const name = a.actions[clip] ? clip : (clip === "work" ? a.spec.work_clips[0] : "idle");
+  Object.values(a.actions).forEach((x) => x.stop());
+  const act = a.actions[name] ?? a.actions.idle;
+  act.reset().play();
+  if (avMode === "all") act.time = Math.random() * act.getClip().duration;   // de-sync the crowd
+  return name;
+}
+function layoutAvatars() {
+  const cols = 8, sx = 1.1, sz = 1.5;
+  avatars.forEach((a, i) => {
+    const show = avMode === "all" || i === avSel;
+    a.root.visible = show;
+    a.root.children[1].visible = show;
+    if (avMode === "all") {
+      a.root.position.set(((i % cols) - (cols - 1) / 2) * sx, 0, -Math.floor(i / cols) * sz);
+    } else a.root.position.set(0, 0, 0);
+  });
+  const box = new THREE.Box3();
+  avatars.forEach((a) => a.root.visible && box.expandByObject(a.root.children[0]));
+  frame(av, box, avMode === "all" ? new THREE.Vector3(0, .55, 1) : new THREE.Vector3(.3, .25, 1));
+}
+function clipChips() {
+  const list = avMode === "one"
+    ? [...genericClips, ...avatars[avSel].spec.work_clips]
+    : ["work", ...genericClips];
+  $("#clipChips").innerHTML = list.map((c) =>
+    `<button data-c="${c}" class="${c === curClip ? "on" : ""}">${c === "work" ? "★ kerja (per peran)" : c}</button>`).join("");
+  $("#clipChips").querySelectorAll("button").forEach((b) => b.onclick = () => setClip(b.dataset.c));
+}
+function setClip(c) {
+  curClip = c;
+  const shown = avatars.filter((a) => a.root.visible).map((a) => play(a, c));
+  const s = avSpec.clips[shown[0]];
+  $("#clipInfo").textContent = c === "work"
+    ? "Tiap avatar memainkan klip kerja perannya sendiri."
+    : s ? `${s.frames} frame @ ${s.fps} fps${s.seated ? " · duduk (taruh di kursi)" : ""}` : "";
+  clipChips();
+}
+$("#avList").innerHTML = avatars.map((a, i) =>
+  `<button data-i="${i}">${a.spec.name} <small>· ${ROLE_ID[a.spec.role]} · ${a.spec.tris.toLocaleString()} tris</small></button>`).join("");
+$("#avList").querySelectorAll("button").forEach((b) => b.onclick = () => {
+  avSel = +b.dataset.i; setMode("one");
+});
+function setMode(m) {
+  avMode = m;
+  document.querySelectorAll("#avMode button").forEach((x) => x.classList.toggle("on", x.dataset.m === m));
+  document.querySelectorAll("#avList button").forEach((x) => x.classList.toggle("on", m === "one" && +x.dataset.i === avSel));
+  if (m === "all" && curClip.startsWith("work_")) curClip = "work";
+  if (m === "one" && curClip === "work") curClip = avatars[avSel].spec.work_clips[0];
+  layoutAvatars(); setClip(curClip);
+}
+document.querySelectorAll("#avMode button").forEach((b) => b.onclick = () => setMode(b.dataset.m));
+setMode("all");
+const totalTris = avSpec.avatars.reduce((s, a) => s + a.tris, 0);
+$("#stat").textContent = `${avSpec.avatars.length} avatar · ${Object.keys(avSpec.clips).length} klip · ${avSpec.expressions.length} ekspresi`;
+
+// ---------------------------------------------------------------- FURNITURE (lazy)
+let fu = null;
+async function initFurniture() {
+  if (fu) return;
+  fu = makeStage($("#fuStage"));
+  const spec = await (await fetch(ROOT + "out/kit_spec.json")).json();
+  $("#stat").textContent = "memuat furnitur…";
+  const g = await load(ROOT + "out/vo_furniture_kit.glb");
+  toonify(g.scene);
+  const nodes = {};
+  spec.items.forEach((it) => {
+    const n = g.scene.getObjectByName(it.node);
+    if (!n) return;
+    const holder = new THREE.Group(); holder.add(n); n.position.set(0, 0, 0);
+    holder.add(label(it.label, -.08));
+    fu.scene.add(holder); holder.visible = false;
+    nodes[it.id] = { it, holder };
+  });
+  const cats = [...new Set(spec.items.map((i) => i.category))];
+  let cur = cats[0];
+  const show = (cat, focus) => {
+    cur = cat;
+    document.querySelectorAll("#catChips button").forEach((b) => b.classList.toggle("on", b.dataset.c === cat));
+    const row = spec.items.filter((i) => i.category === cat);
+    const gap = .45; let x = -(row.reduce((s, i) => s + i.size_m.x, 0) + gap * (row.length - 1)) / 2;
+    Object.values(nodes).forEach((n) => n.holder.visible = false);
+    row.forEach((i) => {
+      const n = nodes[i.id]; if (!n) return;
+      n.holder.visible = true;
+      n.holder.position.set(x + i.size_m.x / 2, i.mount === "wall" ? .6 : 0, 0);
+      x += i.size_m.x + gap;
+    });
+    $("#itemList").innerHTML = row.map((i) =>
+      `<button data-id="${i.id}" class="${i.id === focus ? "on" : ""}">${i.label} <small>· ${i.tris} tris · ${i.mount}</small></button>`).join("");
+    $("#itemList").querySelectorAll("button").forEach((b) => b.onclick = () => {
+      $("#itemList").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      frame(fu, new THREE.Box3().setFromObject(nodes[b.dataset.id].holder.children[0]));
+    });
+    const box = new THREE.Box3();
+    row.forEach((i) => nodes[i.id] && box.expandByObject(nodes[i.id].holder.children[0]));
+    frame(fu, box, new THREE.Vector3(.25, .5, 1));
+  };
+  $("#catChips").innerHTML = cats.map((c) => `<button data-c="${c}">${c.replace("dept_", "dept · ")} <small>${spec.items.filter((i) => i.category === c).length}</small></button>`).join("");
+  $("#catChips").querySelectorAll("button").forEach((b) => b.onclick = () => show(b.dataset.c));
+  show(cats.includes("station") ? "station" : cats[0]);
+  $("#stat").textContent = `${spec.items.length} item furnitur · ${cats.length} kategori`;
+}
+
+// ---------------------------------------------------------------- GALLERY (lazy)
+let galleryDone = false;
+async function initGallery() {
+  if (galleryDone) return; galleryDone = true;
+  const html = await (await fetch(ROOT + "renders/")).text();
+  const files = [...html.matchAll(/href="([^"]+\.png)"/g)].map((m) => decodeURIComponent(m[1]));
+  const groups = [
+    ["Avatar — lineup", (f) => f.startsWith("avatars_lineup")],
+    ["Avatar — klip & ekspresi", (f) => f.startsWith("avatars_clips")],
+    ["Avatar — konteks meja", (f) => f.startsWith("avatars_context")],
+    ["Furnitur — workstation & departemen", (f) => /sheet_(station|dept_)/.test(f)],
+    ["Furnitur — kategori", (f) => f.startsWith("sheet_") && !/sheet_(station|dept_)/.test(f)],
+    ["Furnitur — overview", (f) => f.startsWith("kit_overview")],
+  ];
+  $("#gallery").innerHTML = groups.map(([t, fn]) => {
+    const fs = files.filter(fn).sort(); if (!fs.length) return "";
+    return `<section><h2>${t}</h2>${fs.map((f) =>
+      `<figure><img loading="lazy" src="${ROOT}renders/${f}" alt="${f}"><figcaption>${f}</figcaption></figure>`).join("")}</section>`;
+  }).join("");
+  $("#gallery").querySelectorAll("img").forEach((im) => im.onclick = () => {
+    $("#zoom img").src = im.src; $("#zoom").style.display = "block";
+  });
+}
+$("#zoom").onclick = () => $("#zoom").style.display = "none";
+
+// ---------------------------------------------------------------- loop
+const clock = new THREE.Clock();
+function loop() {
+  const dt = clock.getDelta();
+  avatars.forEach((a) => a.root.visible && a.mixer.update(dt));
+  for (const st of [av, fu]) {
+    if (!st || !st.el.offsetParent) continue;
+    st.controls.update(); st.renderer.render(st.scene, st.camera); st.labels.render(st.scene, st.camera);
+  }
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+</body>
+</html>

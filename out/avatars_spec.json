@@ -309,7 +309,8 @@
  "outline": {
   "object_suffix": "_outline",
   "hex": "#4B4E63",
-  "thickness_m": 0.009
+  "thickness_m": 0.009,
+  "three_js": "MeshBasicMaterial, side FrontSide (hull winding is already flipped)"
  },
  "avatars": [
   {

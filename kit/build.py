@@ -42,7 +42,7 @@ spec = {"version": 2, "units": "meters", "up": "+Z blender / +Y glTF", "front": 
         "pivot": {"floor": "bottom center at floor", "table": "bottom center, set on a table top",
                   "wall": "back face on the wall plane, bottom edge at z=0; hang at mount_z"},
         "outline": {"object_suffix": "_outline", "hex": lib.OUTLINE_HEX, "thickness_m": lib.OUTLINE_T,
-                    "three_js": "MeshBasicMaterial, side BackSide"},
+                    "three_js": "MeshBasicMaterial, side FrontSide (hull winding is already flipped)"},
         "items": []}
 objs = {}
 over = []
