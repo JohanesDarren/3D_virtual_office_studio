@@ -55,6 +55,8 @@ def body(p, c):
         for sx in (-1, 1):
             t.stick((sx * .05, -.15, .74), (sx * .06, -.17, .62), .012, c["top2"], seg=5, outline=False)
     elif style == "cardigan":
+        for sx in (-1, 1):                                                                 # shirt collar underneath
+            t.box((sx * .055, -.13, .78), (.09, .04, .06), "white", bevel=.01, rot=(20, 0, sx * -20))
         t.box((0, -.168, .63), (.06, .02, .32), c["top2"], bevel=.008, outline=False)   # placket
         for z in (.72, .64, .56):
             t.ball((0, -.18, z), (.02, .012, .02), "wood_dark", seg=6, outline=False)
@@ -72,6 +74,8 @@ def body(p, c):
             k = math.sqrt(max(0, 1 - ((z - .62) / .21) ** 2)) * 1.015
             t.cyl((0, 0, z), (.42 * k, .34 * k), .03, c["top2"], seg=16, outline=False)
         t.cyl((0, 0, .79), (.2, .18), .04, c["top2"], seg=12)                            # rib collar
+        for sx in (-1, 1):                                                                 # shirt collar peeking out
+            t.box((sx * .05, -.12, .8), (.08, .04, .05), "white", bevel=.01, rot=(20, 0, sx * -20))
     elif style == "vest":
         t.ball((0, .0, .59), (.43, .35, .34), c["top2"], seg=16)                          # knit vest over shirt
         t.box((0, -.17, .72), (.07, .02, .1), "white", bevel=.008, outline=False)

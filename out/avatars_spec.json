@@ -349,8 +349,8 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10820,
-   "parts": 24
+   "tris": 11124,
+   "parts": 25
   },
   {
    "id": "juno",
@@ -387,8 +387,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 10936,
-   "parts": 22
+   "tris": 11268,
+   "parts": 23
   },
   {
    "id": "kiko",
@@ -406,9 +406,9 @@
     "palette",
     "stylus"
    ],
-   "height_m": 1.42,
+   "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10464,
+   "tris": 10184,
    "parts": 24
   },
   {
@@ -424,9 +424,9 @@
     "phone",
     "headset"
    ],
-   "height_m": 1.382,
+   "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10868,
+   "tris": 10968,
    "parts": 22
   },
   {
@@ -444,8 +444,8 @@
    ],
    "height_m": 1.28,
    "min_z": -0.0,
-   "tris": 9656,
-   "parts": 21
+   "tris": 9744,
+   "parts": 22
   },
   {
    "id": "nara",
@@ -463,8 +463,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11440,
-   "parts": 23
+   "tris": 11528,
+   "parts": 24
   },
   {
    "id": "ozzy",
@@ -480,10 +480,10 @@
     "phone",
     "camera"
    ],
-   "height_m": 1.36,
+   "height_m": 1.361,
    "min_z": -0.0,
-   "tris": 10052,
-   "parts": 22
+   "tris": 10412,
+   "parts": 23
   },
   {
    "id": "rumi",
@@ -521,8 +521,8 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10584,
-   "parts": 24
+   "tris": 10888,
+   "parts": 25
   },
   {
    "id": "dodo",
@@ -539,8 +539,8 @@
    ],
    "height_m": 1.28,
    "min_z": -0.0,
-   "tris": 9788,
-   "parts": 23
+   "tris": 9876,
+   "parts": 24
   },
   {
    "id": "wren",
@@ -578,10 +578,10 @@
     "palette",
     "stylus"
    ],
-   "height_m": 1.33,
+   "height_m": 1.43,
    "min_z": -0.0,
-   "tris": 9476,
-   "parts": 23
+   "tris": 9556,
+   "parts": 24
   },
   {
    "id": "budi",
@@ -617,7 +617,7 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11204,
+   "tris": 11420,
    "parts": 24
   },
   {
@@ -635,8 +635,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11620,
-   "parts": 23
+   "tris": 11708,
+   "parts": 24
   },
   {
    "id": "kai",
@@ -652,9 +652,9 @@
     "phone",
     "camera"
    ],
-   "height_m": 1.365,
+   "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9700,
+   "tris": 9936,
    "parts": 22
   },
   {
@@ -672,8 +672,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 10764,
-   "parts": 22
+   "tris": 11068,
+   "parts": 23
   },
   {
    "id": "ayu",
@@ -692,8 +692,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11412,
-   "parts": 23
+   "tris": 11500,
+   "parts": 24
   },
   {
    "id": "theo",
@@ -731,8 +731,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11464,
-   "parts": 25
+   "tris": 11868,
+   "parts": 26
   },
   {
    "id": "raka",
@@ -747,10 +747,10 @@
     "mug",
     "phone"
    ],
-   "height_m": 1.36,
+   "height_m": 1.361,
    "min_z": -0.0,
-   "tris": 10692,
-   "parts": 21
+   "tris": 11052,
+   "parts": 22
   },
   {
    "id": "gigi",
@@ -767,8 +767,8 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10484,
-   "parts": 24
+   "tris": 10572,
+   "parts": 25
   },
   {
    "id": "laila",
@@ -785,8 +785,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11232,
-   "parts": 22
+   "tris": 11536,
+   "parts": 23
   },
   {
    "id": "nisa",
@@ -806,8 +806,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11460,
-   "parts": 24
+   "tris": 11548,
+   "parts": 25
   },
   {
    "id": "rara",
@@ -825,7 +825,7 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11792,
+   "tris": 10824,
    "parts": 23
   },
   {
@@ -863,8 +863,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11568,
-   "parts": 23
+   "tris": 11656,
+   "parts": 24
   },
   {
    "id": "salma",
@@ -882,7 +882,7 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11400,
+   "tris": 11616,
    "parts": 24
   },
   {
@@ -937,8 +937,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 10632,
-   "parts": 23
+   "tris": 10936,
+   "parts": 24
   },
   {
    "id": "tari",
@@ -958,8 +958,8 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10496,
-   "parts": 24
+   "tris": 10800,
+   "parts": 25
   },
   {
    "id": "kirana",
@@ -978,8 +978,8 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10084,
-   "parts": 23
+   "tris": 10172,
+   "parts": 24
   },
   {
    "id": "lala",
@@ -997,7 +997,7 @@
    ],
    "height_m": 1.43,
    "min_z": -0.0,
-   "tris": 9832,
+   "tris": 10048,
    "parts": 23
   },
   {
@@ -1015,8 +1015,8 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9712,
-   "parts": 21
+   "tris": 10044,
+   "parts": 22
   },
   {
    "id": "yuki",
@@ -1032,9 +1032,9 @@
     "phone",
     "camera"
    ],
-   "height_m": 1.365,
+   "height_m": 1.43,
    "min_z": -0.0,
-   "tris": 8928,
+   "tris": 9220,
    "parts": 22
   },
   {
@@ -1052,8 +1052,8 @@
    ],
    "height_m": 1.43,
    "min_z": -0.0,
-   "tris": 9864,
-   "parts": 21
+   "tris": 9952,
+   "parts": 22
   },
   {
    "id": "adit",
@@ -1070,8 +1070,8 @@
    ],
    "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9524,
-   "parts": 21
+   "tris": 9856,
+   "parts": 22
   },
   {
    "id": "fajar",
@@ -1086,9 +1086,9 @@
     "mug",
     "phone"
    ],
-   "height_m": 1.3,
+   "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9896,
+   "tris": 9944,
    "parts": 22
   },
   {
@@ -1107,9 +1107,9 @@
     "palette",
     "stylus"
    ],
-   "height_m": 1.42,
+   "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 10464,
+   "tris": 11084,
    "parts": 24
   },
   {
@@ -1125,9 +1125,9 @@
     "phone",
     "pen"
    ],
-   "height_m": 1.3,
+   "height_m": 1.361,
    "min_z": -0.0,
-   "tris": 9736,
+   "tris": 9812,
    "parts": 23
   },
   {
@@ -1146,8 +1146,8 @@
    ],
    "height_m": 1.361,
    "min_z": -0.0,
-   "tris": 10064,
-   "parts": 22
+   "tris": 10396,
+   "parts": 23
   },
   {
    "id": "joko",
@@ -1182,10 +1182,10 @@
     "note",
     "notepad"
    ],
-   "height_m": 1.36,
+   "height_m": 1.361,
    "min_z": -0.0,
-   "tris": 9708,
-   "parts": 22
+   "tris": 9824,
+   "parts": 23
   },
   {
    "id": "yusuf",
@@ -1200,10 +1200,10 @@
     "phone",
     "pen"
    ],
-   "height_m": 1.3,
+   "height_m": 1.361,
    "min_z": -0.0,
-   "tris": 9932,
-   "parts": 23
+   "tris": 9920,
+   "parts": 22
   },
   {
    "id": "dimas",
@@ -1221,10 +1221,10 @@
     "palette",
     "stylus"
    ],
-   "height_m": 1.382,
+   "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 10216,
-   "parts": 24
+   "tris": 10620,
+   "parts": 25
   },
   {
    "id": "eko",
@@ -1277,9 +1277,9 @@
     "phone",
     "camera"
    ],
-   "height_m": 1.365,
+   "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9688,
+   "tris": 9924,
    "parts": 22
   },
   {
@@ -1297,8 +1297,8 @@
    ],
    "height_m": 1.35,
    "min_z": -0.0,
-   "tris": 11688,
-   "parts": 22
+   "tris": 11992,
+   "parts": 23
   },
   {
    "id": "taufik",
@@ -1313,9 +1313,9 @@
     "phone",
     "pen"
    ],
-   "height_m": 1.3,
+   "height_m": 1.33,
    "min_z": -0.0,
-   "tris": 9892,
+   "tris": 9964,
    "parts": 23
   },
   {
@@ -1335,7 +1335,7 @@
    ],
    "height_m": 1.28,
    "min_z": -0.0,
-   "tris": 9868,
+   "tris": 9844,
    "parts": 24
   },
   {

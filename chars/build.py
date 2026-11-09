@@ -141,13 +141,13 @@ CHARS = [
          outfit="blazer", top="sage", top2="white", bottom="skirt", pants="charcoal", shoes="black", acc="sage"),
     dict(id="adit", g="m", role="it", name="Adit", skin="skin_3", hair="hair_dark", hair_style="short", outfit="hoodie",
          top="blue", top2="sky", pants="charcoal", shoes="black", accs=["glasses"], acc="black"),
-    dict(id="fajar", g="m", role="it", name="Fajar", skin="skin_2", hair="hair_dark", hair_style="buzz", outfit="koko",
-         top="white", top2="sage", pants="charcoal", shoes="black", accs=["peci", "beard"]),
+    dict(id="fajar", g="m", role="it", name="Fajar", skin="skin_2", hair="hair_dark", hair_style="short", outfit="koko",
+         top="white", top2="sage", pants="charcoal", shoes="black", accs=["beard"]),
     dict(id="gilang", g="m", role="creative", name="Gilang", skin="skin_4", hair="hair_dark", hair_style="curly",
          outfit="tee", top="coral", top2="butter", pants="wood_dark", shoes="coral", accs=["beanie"], acc="mint",
          mouth="open"),
-    dict(id="hadi", g="m", role="finance", name="Hadi", skin="skin_2", hair="hair_dark", hair_style="buzz",
-         outfit="koko", top="sky", top2="white", pants="black", shoes="black", accs=["peci", "glasses"], acc="charcoal"),
+    dict(id="hadi", g="m", role="finance", name="Hadi", skin="skin_2", hair="hair_dark", hair_style="swoop",
+         outfit="koko", top="sky", top2="white", pants="black", shoes="black", accs=["glasses"], acc="charcoal"),
     dict(id="ilham", g="m", role="content", name="Ilham", skin="skin_3", hair="hair_brown", hair_style="swoop",
          outfit="hoodie", top="sage", top2="mint", pants="charcoal", shoes="sage", accs=["headphones"], acc="mint",
          eyes="happy"),
@@ -155,8 +155,8 @@ CHARS = [
          top="butter", top2="coral", pants="charcoal", shoes="wood_dark", badge=True, acc="coral", accs=["mustache"]),
     dict(id="reza", g="m", role="marketing", name="Reza", skin="skin_1", hair="hair_brown", hair_style="spiky",
          outfit="blazer", top="sky", top2="white", pants="blue", shoes="charcoal", acc="blue"),
-    dict(id="yusuf", g="m", role="exec", name="Yusuf", skin="skin_3", hair="hair_dark", hair_style="buzz", outfit="koko",
-         top="wood_light", top2="wood_dark", pants="black", shoes="black", accs=["peci", "beard"], brows="up"),
+    dict(id="yusuf", g="m", role="exec", name="Yusuf", skin="skin_3", hair="hair_dark", hair_style="swoop", outfit="koko",
+         top="wood_light", top2="wood_dark", pants="black", shoes="black", accs=["beard"], brows="up"),
     dict(id="dimas", g="m", role="creative", name="Dimas", skin="skin_2", hair="hair_ginger", hair_style="tuft",
          outfit="cardigan", top="mint", top2="white", pants="charcoal", shoes="mint", accs=["freckles"], eyes="big"),
     dict(id="eko", g="m", role="hr", name="Eko", skin="skin_3", hair="hair_dark", hair_style="swoop", outfit="shirt",
@@ -167,8 +167,8 @@ CHARS = [
          outfit="tee", top="charcoal", top2="coral", pants="black", shoes="coral", accs=["cap"], acc="coral"),
     dict(id="oki", g="m", role="it", name="Oki", skin="skin_2", hair="hair_brown", hair_style="curly", outfit="sweater",
          top="sky", top2="white", pants="grey", shoes="blue", accs=["glasses", "headphones"], acc="blue"),
-    dict(id="taufik", g="m", role="finance", name="Taufik", skin="skin_3", hair="hair_dark", hair_style="buzz",
-         outfit="vest", top="white", top2="charcoal", pants="charcoal", shoes="black", accs=["peci", "mustache"],
+    dict(id="taufik", g="m", role="finance", name="Taufik", skin="skin_3", hair="hair_dark", hair_style="short",
+         outfit="vest", top="white", top2="charcoal", pants="charcoal", shoes="black", accs=["mustache"],
          acc="charcoal"),
     dict(id="umar", g="m", role="marketing", name="Umar", skin="skin_4", hair="hair_dark", hair_style="buzz",
          outfit="koko", top="mint", top2="sage", pants="wood_dark", shoes="wood_dark", accs=["beard"], badge=True,
@@ -177,6 +177,8 @@ CHARS = [
          outfit="blazer", top="blue", top2="white", pants="black", shoes="black", tie=True, acc="coral",
          accs=["glasses"]),
 ]
+OFFICE_TOP = {"hoodie": "cardigan", "tee": "polo", "koko": "shirt"}
+OFFICE_HAIR = {"spiky": "swoop", "twintails": "bun", "tuft": "short"}
 for _c in CHARS:
     _c["gender"] = _c.pop("g")
     if _c["hair_style"] in parts.HIJAB_STYLES:
@@ -184,6 +186,13 @@ for _c in CHARS:
         _c.setdefault("hijab2", "white")
     if _c["gender"] == "f" and _c.get("outfit") == "dress":
         _c["outfit"] = "gamis"
+    # v9 office look: cute but neat -- collared tops, tidy hair, no hats, ID lanyard
+    _c["outfit"] = OFFICE_TOP.get(_c["outfit"], _c["outfit"])
+    _c["hair_style"] = OFFICE_HAIR.get(_c["hair_style"], _c["hair_style"])
+    _c["accs"] = [a for a in _c.get("accs", []) if a not in ("beanie", "cap")
+                  and not (a == "headphones" and _c.get("hijab"))]
+    if _c["role"] != "exec" and not _c.get("tie"):
+        _c["badge"] = True
 assert len({c["id"] for c in CHARS}) == len(CHARS) == 55
 
 
