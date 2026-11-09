@@ -31,7 +31,7 @@ import lib    # noqa: E402
 import parts  # noqa: E402
 
 FPS = 24
-TRI_BUDGET = 12500   # body ~4-5k + 10 expression faces + hand props (folded, never all shown)
+TRI_BUDGET = 13000   # body ~4-5k + 10 expression faces + hand props (folded, never all shown)
 args = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 
 # ---------------------------------------------------------------- characters (original designs)

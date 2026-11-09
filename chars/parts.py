@@ -42,7 +42,7 @@ def body(p, c):
     """p(name, bone) -> Item. c = dict of material names for this character."""
     t = p("TORSO", "spine")
     t.ball((0, 0, .62), (.42, .34, .42), c["top"], seg=16)
-    t.cyl((0, 0, .8), (.13, .13), .06, c["skin"], seg=12)                 # neck stub
+    t.cyl((0, 0, .8), (.13, .13), .06, c["hair"] if c.get("hijab") else c["skin"], seg=12)   # neck (hijab covers it)
     style = c["outfit"]
     if style == "shirt":
         for sx in (-1, 1):
@@ -141,8 +141,9 @@ def body(p, c):
 def head(p, c):
     h = p("HEAD", "head")
     h.ball(HEAD_C, HEAD_S, c["skin"], seg=20)
-    for sx in (-1, 1):
-        h.ball((sx * .275, .0, .98), (.08, .06, .1), c["skin"], seg=8)       # ears
+    if not c.get("hijab"):   # a hijab covers the ears completely
+        for sx in (-1, 1):
+            h.ball((sx * .275, .0, .98), (.08, .06, .1), c["skin"], seg=8)   # ears
     h.done_bone()
 
     for expr in EXPRESSIONS:
@@ -452,11 +453,14 @@ def hair(p, c):
         h.ball((.06, -.12, 1.25), (.44, .3, .2), c["hair"], seg=14, rot=(-15, -12, 0))      # big quiff
         h.ball((-.24, -.08, 1.08), (.1, .2, .2), c["hair"], seg=8)
     elif style in HIJAB_STYLES:
-        h.ball((0, .1, 1.03), (.66, .5, .62), c["hair"], seg=20)                            # wrap: open face, front edge
+        h.ball((0, .1, 1.03), (.68, .5, .64), c["hair"], seg=20)                            # wrap: only the face shows
         for k in range(18):                                                                  # soft rim framing the face
             a = math.radians(k * 20)
-            x, z = math.sin(a) * .25, .99 + math.cos(a) * .25
-            h.ball((x, surf(x * .9, max(.82, min(z, 1.2))) + .04, z), (.11, .11, .11), c["hair"], seg=6)
+            x, z = math.sin(a) * .225, .99 + math.cos(a) * .215
+            h.ball((x, surf(x * .9, max(.82, min(z, 1.2))) + .03, z), (.11, .11, .11), c["hair"], seg=6)
+        h.ball((0, -.12, .8), (.34, .26, .16), c["hair"], seg=12)                           # wrap under the chin
+        for sx in (-1, 1):                                                                   # side panels: no skin
+            h.ball((sx * .21, -.06, .98), (.16, .26, .46), c["hair"], seg=12)                # visible from the side
         h.ball((0, .1, 1.3), (.3, .26, .1), c["hair"], seg=12)                               # soft top fold
     elif style == "tuft":
         _cap(h, c, size=(.58, .54, .38))
