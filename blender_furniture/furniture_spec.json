@@ -1,0 +1,7463 @@
+{
+ "versi": 1,
+ "konvensi": {
+  "satuan": "meter",
+  "up": "+Z blender (+Y glTF)",
+  "depan_item": "+Y lokal blender (rot=0 menghadap utara)",
+  "pivot": "item lantai: pusat, alas z=0. item dinding: punggung y=0, z=0 = tepi bawah item, pasang di z_pasang. langit-langit: z=0 = titik gantung/atas, pasang di z_pasang.",
+  "pasang": {
+   "floor": "berdiri di lantai",
+   "table": "barang kecil, diletakkan di atas meja (alas z=0)",
+   "wall": "menempel dinding",
+   "ceiling": "langit-langit"
+  },
+  "node": "tiap item = satu objek 'FURN_<id>' (transform di GLB diabaikan: pakai pivot item); banyak slot material + slot 'outline' (hull terbalik)",
+  "outline": {
+   "material": "outline",
+   "hex": "#1B1747",
+   "catatan": "di app ganti ke MeshBasicMaterial navy (BackSide)"
+  },
+  "boost_warna": "material memakai SAT_BOOST 1.38 di Blender; hex di spec = warna dasar sebelum boost. Di app, tint langsung pakai hex pilihan."
+ },
+ "kategori": {
+  "duduk": {
+   "label": "Tempat duduk",
+   "item": [
+    "kursi_putar",
+    "kursi_kayu",
+    "bangku_bulat",
+    "sofa_3",
+    "kursi_santai",
+    "beanbag",
+    "kursi_sutradara",
+    "kursi_gaming",
+    "kursi_eksekutif",
+    "kursi_jaring",
+    "kursi_lipat",
+    "bangku_bar",
+    "bangku_panjang",
+    "kursi_bulat",
+    "sofa_sudut",
+    "sofa_dua",
+    "sofa_panjang",
+    "puf",
+    "beanbag_besar",
+    "bangku_kayu_kecil"
+   ]
+  },
+  "meja": {
+   "label": "Meja",
+   "item": [
+    "meja_kerja",
+    "sekat_rendah",
+    "meja_kopi",
+    "meja_makan",
+    "meja_rapat",
+    "meja_resepsionis",
+    "meja_bar",
+    "meja_game",
+    "meja_printer",
+    "meja_berdiri",
+    "meja_L",
+    "meja_gaming",
+    "meja_bulat_rapat",
+    "meja_lipat",
+    "meja_samping",
+    "meja_kopi_bulat",
+    "meja_kopi_kaca",
+    "meja_kerja_kecil",
+    "meja_rapat_kecil",
+    "meja_makan_bulat",
+    "meja_tinggi_pantry"
+   ]
+  },
+  "simpan": {
+   "label": "Penyimpanan",
+   "item": [
+    "rak_buku",
+    "rak_pajangan",
+    "rak_konsol",
+    "loker_4",
+    "lemari_pakaian",
+    "nakas",
+    "lemari_arsip",
+    "rak_sepatu",
+    "rak_brosur",
+    "gantungan_baju",
+    "rak_dinding",
+    "rak_buku_pendek",
+    "rak_buku_lebar",
+    "rak_kubus",
+    "rak_metal",
+    "lemari_laci",
+    "loker_2",
+    "loker_6",
+    "lemari_kaca",
+    "kabinet_dinding",
+    "rak_majalah",
+    "peti_tumpuk",
+    "rak_sepatu_tinggi",
+    "gantungan_dinding",
+    "tong_kardus"
+   ]
+  },
+  "dapur": {
+   "label": "Pantry & dapur",
+   "item": [
+    "kulkas",
+    "microwave",
+    "vending",
+    "kitchen_set",
+    "dispenser_air",
+    "tempat_sampah",
+    "kulkas_mini",
+    "kulkas_besar",
+    "mesin_kopi",
+    "ketel_listrik",
+    "toaster",
+    "rak_piring",
+    "tempat_sampah_pedal",
+    "tong_sampah_kotak",
+    "pulau_dapur",
+    "kompor_counter",
+    "wastafel",
+    "vending_teal",
+    "vending_kuning",
+    "galon_dispenser",
+    "rak_pantry",
+    "kitchen_pendek"
+   ]
+  },
+  "tidur": {
+   "label": "Tempat tidur",
+   "item": [
+    "ranjang_tingkat",
+    "ranjang_single",
+    "ranjang_double",
+    "kasur_lantai",
+    "ranjang_anak",
+    "kapsul_tidur"
+   ]
+  },
+  "dinding": {
+   "label": "Dekorasi dinding",
+   "item": [
+    "bingkai",
+    "foto_tim",
+    "sertifikat",
+    "bagan_org",
+    "jam_dinding",
+    "whiteboard",
+    "papan_tugas_harian",
+    "papan_tugas_mingguan",
+    "poster",
+    "tv_dinding",
+    "layar_proyektor",
+    "gorden",
+    "bingkai_lanskap",
+    "bingkai_potret",
+    "bingkai_set3",
+    "bingkai_bulat",
+    "jam_kotak",
+    "jam_digital",
+    "papan_pengumuman",
+    "papan_kaca",
+    "rak_melayang_3",
+    "poster_lebar",
+    "poster_tinggi",
+    "poster_set3",
+    "cermin_tinggi",
+    "kalender",
+    "papan_tanda",
+    "neon_sign",
+    "tanaman_gantung_dinding",
+    "lampu_dinding",
+    "rambu_keluar",
+    "tirai_roman",
+    "tirai_gulung",
+    "papan_kpi",
+    "layar_status",
+    "tv_dinding_besar"
+   ]
+  },
+  "tanaman": {
+   "label": "Tanaman",
+   "item": [
+    "tanaman_hias",
+    "pohon_dalam",
+    "sukulen",
+    "monstera",
+    "kaktus",
+    "bambu_pot",
+    "ficus_tinggi",
+    "palem",
+    "bunga_vas",
+    "bonsai",
+    "tanaman_meja",
+    "planter_panjang",
+    "tanaman_gantung"
+   ]
+  },
+  "karpet": {
+   "label": "Karpet & lantai",
+   "item": [
+    "karpet_3_lapis",
+    "karpet_bulat",
+    "karpet_garis",
+    "karpet_lari",
+    "karpet_kotak",
+    "keset",
+    "karpet_besar_oval"
+   ]
+  },
+  "meja_kecil": {
+   "label": "Barang di meja / elektronik",
+   "item": [
+    "monitor",
+    "figur",
+    "piala",
+    "tumpukan_buku",
+    "gamepad",
+    "tv_konsol",
+    "laptop",
+    "monitor_lebar",
+    "keyboard_mekanik",
+    "mouse_gaming",
+    "headset_stand",
+    "speaker_meja",
+    "router",
+    "printer_kecil",
+    "telepon_meja",
+    "jam_meja",
+    "kotak_tisu",
+    "tempat_pena",
+    "tablet_stand",
+    "mug_kopi",
+    "botol_minum",
+    "tray_dokumen",
+    "pc_tower",
+    "shredder",
+    "tv_rak_rendah"
+   ]
+  },
+  "lampu": {
+   "label": "Lampu & pendingin",
+   "item": [
+    "ac_dinding",
+    "proyektor_langit",
+    "lampu_meja",
+    "lampu_meja_bulat",
+    "lampu_lantai",
+    "lampu_lantai_arc",
+    "lampu_gantung_bulat",
+    "lampu_gantung_kerucut",
+    "lampu_panel",
+    "lampu_sorot_rel",
+    "kipas_berdiri",
+    "kipas_meja",
+    "kipas_langit",
+    "ac_standing",
+    "ac_kaset"
+   ]
+  },
+  "studio": {
+   "label": "Studio & rapat",
+   "item": [
+    "backdrop",
+    "softbox",
+    "tripod_kamera",
+    "ring_light",
+    "boom_mic",
+    "light_panel",
+    "reflektor",
+    "clapperboard",
+    "podium",
+    "flipchart",
+    "meja_podcast",
+    "panel_akustik",
+    "backdrop_putih",
+    "backdrop_biru",
+    "banner_rollup"
+   ]
+  },
+  "struktur": {
+   "label": "Struktur (pintu, jendela, tangga)",
+   "item": [
+    "pintu_kayu",
+    "pintu_kaca",
+    "pintu_ganda",
+    "pintu_geser_kaca",
+    "jendela_kotak",
+    "jendela_lebar",
+    "jendela_kisi",
+    "jendela_bulat",
+    "tangga_lurus",
+    "pilar",
+    "panel_dinding",
+    "partisi_kaca",
+    "ubin_kayu",
+    "ubin_keramik",
+    "tiang_antrean"
+   ]
+  }
+ },
+ "keluarga_warna": {
+  "kain": {
+   "label": "Kain / bantalan / kulit",
+   "pilihan": [
+    {
+     "nama": "Biru",
+     "hex": "#6E8CA8"
+    },
+    {
+     "nama": "Navy",
+     "hex": "#4A5C77"
+    },
+    {
+     "nama": "Toska",
+     "hex": "#6F9E9A"
+    },
+    {
+     "nama": "Hijau sage",
+     "hex": "#96AB8C"
+    },
+    {
+     "nama": "Hijau",
+     "hex": "#6FA36B"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#E2BE5A"
+    },
+    {
+     "nama": "Oranye",
+     "hex": "#D68F5E"
+    },
+    {
+     "nama": "Merah",
+     "hex": "#B9574F"
+    },
+    {
+     "nama": "Rose",
+     "hex": "#C98F94"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#9D8BAF"
+    },
+    {
+     "nama": "Krem",
+     "hex": "#E9DCC6"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#9AA0A8"
+    },
+    {
+     "nama": "Charcoal",
+     "hex": "#454B55"
+    },
+    {
+     "nama": "Burgundy",
+     "hex": "#7A2E3A"
+    },
+    {
+     "nama": "Zaitun",
+     "hex": "#7A7A3A"
+    },
+    {
+     "nama": "Cokelat kulit",
+     "hex": "#7A4A2E"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#2A2E34"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#F4F0E8"
+    }
+   ]
+  },
+  "kayu": {
+   "label": "Kayu / permukaan meja",
+   "pilihan": [
+    {
+     "nama": "Oak",
+     "hex": "#D2B48C"
+    },
+    {
+     "nama": "Kayu sedang",
+     "hex": "#A9825A"
+    },
+    {
+     "nama": "Kayu tua",
+     "hex": "#6A4E34"
+    },
+    {
+     "nama": "Kayu meja",
+     "hex": "#C09A6B"
+    },
+    {
+     "nama": "Putih gading",
+     "hex": "#EDE6D8"
+    },
+    {
+     "nama": "Walnut",
+     "hex": "#5A3A29"
+    },
+    {
+     "nama": "Eboni",
+     "hex": "#2E2420"
+    },
+    {
+     "nama": "Birch",
+     "hex": "#E8D9B8"
+    },
+    {
+     "nama": "Ceri",
+     "hex": "#8A4B38"
+    },
+    {
+     "nama": "Abu kayu",
+     "hex": "#A8A39A"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#2A2E34"
+    },
+    {
+     "nama": "Pinus",
+     "hex": "#DDBE8C"
+    }
+   ]
+  },
+  "cat": {
+   "label": "Warna cat / plastik / aksen",
+   "pilihan": [
+    {
+     "nama": "Merah",
+     "hex": "#C9483F"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#3F6FB5"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#E5B93C"
+    },
+    {
+     "nama": "Hijau",
+     "hex": "#4E9A5A"
+    },
+    {
+     "nama": "Oranye",
+     "hex": "#E08A3C"
+    },
+    {
+     "nama": "Pink",
+     "hex": "#E48FA6"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#8A68B8"
+    },
+    {
+     "nama": "Cyan",
+     "hex": "#44A8C4"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#F5F5F2"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#8E949B"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#2A2E34"
+    },
+    {
+     "nama": "Navy",
+     "hex": "#2F4B7C"
+    },
+    {
+     "nama": "Mint",
+     "hex": "#8FD3B6"
+    },
+    {
+     "nama": "Krem",
+     "hex": "#EFE3C8"
+    }
+   ]
+  },
+  "logam": {
+   "label": "Logam / rangka",
+   "pilihan": [
+    {
+     "nama": "Perak",
+     "hex": "#B7BBC1"
+    },
+    {
+     "nama": "Abu logam",
+     "hex": "#5C626B"
+    },
+    {
+     "nama": "Krom",
+     "hex": "#D5D9DD"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#2A2E34"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#F5F5F2"
+    },
+    {
+     "nama": "Emas",
+     "hex": "#D4AF37"
+    },
+    {
+     "nama": "Kuningan",
+     "hex": "#C9A24D"
+    },
+    {
+     "nama": "Tembaga",
+     "hex": "#B87333"
+    },
+    {
+     "nama": "Biru logam",
+     "hex": "#3E5C8A"
+    },
+    {
+     "nama": "Hijau logam",
+     "hex": "#3E7A52"
+    }
+   ]
+  },
+  "layar": {
+   "label": "Warna layar / lampu",
+   "pilihan": [
+    {
+     "nama": "Biru",
+     "hex": "#4F86C6"
+    },
+    {
+     "nama": "Toska",
+     "hex": "#3FA79B"
+    },
+    {
+     "nama": "Hangat",
+     "hex": "#E0A35A"
+    },
+    {
+     "nama": "Rose",
+     "hex": "#C97F8F"
+    },
+    {
+     "nama": "Hijau",
+     "hex": "#6FA86B"
+    },
+    {
+     "nama": "Violet",
+     "hex": "#8A6FC0"
+    },
+    {
+     "nama": "Putih hangat",
+     "hex": "#FFF3C9"
+    },
+    {
+     "nama": "Putih dingin",
+     "hex": "#E8F2FF"
+    }
+   ]
+  },
+  "karpet": {
+   "label": "Karpet / tirai / tekstil",
+   "pilihan": [
+    {
+     "nama": "Merah",
+     "hex": "#A85B52"
+    },
+    {
+     "nama": "Toska",
+     "hex": "#4E7E7A"
+    },
+    {
+     "nama": "Krem",
+     "hex": "#E2D4B9"
+    },
+    {
+     "nama": "Rose",
+     "hex": "#BD8A94"
+    },
+    {
+     "nama": "Sage",
+     "hex": "#8CA07F"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#5F7E9E"
+    },
+    {
+     "nama": "Navy",
+     "hex": "#3E4F6B"
+    },
+    {
+     "nama": "Mustard",
+     "hex": "#C79A3C"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#9AA0A8"
+    },
+    {
+     "nama": "Charcoal",
+     "hex": "#454B55"
+    },
+    {
+     "nama": "Ungu",
+     "hex": "#8B77A8"
+    },
+    {
+     "nama": "Oranye",
+     "hex": "#D68F5E"
+    }
+   ]
+  },
+  "daun": {
+   "label": "Warna daun",
+   "pilihan": [
+    {
+     "nama": "Hijau",
+     "hex": "#4F8A4B"
+    },
+    {
+     "nama": "Hijau muda",
+     "hex": "#6FA85A"
+    },
+    {
+     "nama": "Hijau tua",
+     "hex": "#3E7A52"
+    },
+    {
+     "nama": "Zaitun",
+     "hex": "#6B7A3A"
+    },
+    {
+     "nama": "Hijau biru",
+     "hex": "#3F8F7A"
+    },
+    {
+     "nama": "Variegata",
+     "hex": "#9CC47A"
+    },
+    {
+     "nama": "Merah anggur",
+     "hex": "#7A3A4A"
+    }
+   ]
+  },
+  "pot": {
+   "label": "Warna pot / vas",
+   "pilihan": [
+    {
+     "nama": "Terakota",
+     "hex": "#B5694A"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#E8E2D6"
+    },
+    {
+     "nama": "Hitam",
+     "hex": "#2A2E34"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#8E949B"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#5F7E9E"
+    },
+    {
+     "nama": "Hijau sage",
+     "hex": "#96AB8C"
+    },
+    {
+     "nama": "Kuning",
+     "hex": "#E5B93C"
+    },
+    {
+     "nama": "Pink",
+     "hex": "#E48FA6"
+    }
+   ]
+  },
+  "dinding": {
+   "label": "Warna dinding / panel",
+   "pilihan": [
+    {
+     "nama": "Navy",
+     "hex": "#44546E"
+    },
+    {
+     "nama": "Krem",
+     "hex": "#F2E8D6"
+    },
+    {
+     "nama": "Putih",
+     "hex": "#FBF8F1"
+    },
+    {
+     "nama": "Sage",
+     "hex": "#C9D6C0"
+    },
+    {
+     "nama": "Peach",
+     "hex": "#EFCDB4"
+    },
+    {
+     "nama": "Langit",
+     "hex": "#CBDDE8"
+    },
+    {
+     "nama": "Butter",
+     "hex": "#F0E2A8"
+    },
+    {
+     "nama": "Lilac",
+     "hex": "#D9CFE6"
+    }
+   ]
+  },
+  "lantai": {
+   "label": "Warna lantai",
+   "pilihan": [
+    {
+     "nama": "Kayu terang",
+     "hex": "#C9A77C"
+    },
+    {
+     "nama": "Kayu tengah",
+     "hex": "#BF9B6F"
+    },
+    {
+     "nama": "Kayu tua",
+     "hex": "#7C6347"
+    },
+    {
+     "nama": "Abu",
+     "hex": "#B9BDC2"
+    },
+    {
+     "nama": "Ubin putih",
+     "hex": "#EFE9DD"
+    },
+    {
+     "nama": "Ubin hijau",
+     "hex": "#9FB5A8"
+    },
+    {
+     "nama": "Biru",
+     "hex": "#A6C9E2"
+    },
+    {
+     "nama": "Sage",
+     "hex": "#AFD0A4"
+    },
+    {
+     "nama": "Peach",
+     "hex": "#EDBF9C"
+    },
+    {
+     "nama": "Lilac",
+     "hex": "#C2B0DC"
+    },
+    {
+     "nama": "Butter",
+     "hex": "#F0D98E"
+    }
+   ]
+  }
+ },
+ "catatan_warna": "tiap item menandai material yang boleh diganti user ('warna': material + keluarga palet). Klon material per instance lalu set warna. Sediakan juga pemilih hex bebas. Material lain tetap.",
+ "item": [
+  {
+   "id": "kursi_putar",
+   "kategori": "duduk",
+   "label": "Kursi putar",
+   "node": "FURN_kursi_putar",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.63,
+    "dalam_y": 0.63,
+    "tinggi_z": 1.0
+   },
+   "tris": 776,
+   "material": [
+    "metal_dark",
+    "black",
+    "fab_blue"
+   ],
+   "warna": [
+    {
+     "material": "fab_blue",
+     "keluarga": "kain",
+     "default": "#6E8CA8"
+    }
+   ]
+  },
+  {
+   "id": "kursi_kayu",
+   "kategori": "duduk",
+   "label": "Kursi kayu",
+   "node": "FURN_kursi_kayu",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.47,
+    "dalam_y": 0.48,
+    "tinggi_z": 0.93
+   },
+   "tris": 336,
+   "material": [
+    "metal_dark",
+    "wood"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "bangku_bulat",
+   "kategori": "duduk",
+   "label": "Bangku bulat",
+   "node": "FURN_bangku_bulat",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.4,
+    "dalam_y": 0.41,
+    "tinggi_z": 0.76
+   },
+   "tris": 328,
+   "material": [
+    "metal_dark",
+    "fab_orange"
+   ],
+   "warna": [
+    {
+     "material": "fab_orange",
+     "keluarga": "kain",
+     "default": "#D68F5E"
+    }
+   ]
+  },
+  {
+   "id": "sofa_3",
+   "kategori": "duduk",
+   "label": "Sofa 3 dudukan",
+   "node": "FURN_sofa_3",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.26,
+    "dalam_y": 1.0,
+    "tinggi_z": 0.9
+   },
+   "tris": 672,
+   "material": [
+    "fab_navy",
+    "fab_orange",
+    "fab_cream",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_navy",
+     "keluarga": "kain",
+     "default": "#4A5C77"
+    },
+    {
+     "material": "fab_orange",
+     "keluarga": "kain",
+     "default": "#D68F5E"
+    },
+    {
+     "material": "fab_cream",
+     "keluarga": "kain",
+     "default": "#E9DCC6"
+    }
+   ]
+  },
+  {
+   "id": "kursi_santai",
+   "kategori": "duduk",
+   "label": "Kursi santai (armchair)",
+   "node": "FURN_kursi_santai",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.01,
+    "dalam_y": 1.0,
+    "tinggi_z": 0.9
+   },
+   "tris": 616,
+   "material": [
+    "fab_rose",
+    "fab_cream",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_rose",
+     "keluarga": "kain",
+     "default": "#C98F94"
+    },
+    {
+     "material": "fab_cream",
+     "keluarga": "kain",
+     "default": "#E9DCC6"
+    }
+   ]
+  },
+  {
+   "id": "beanbag",
+   "kategori": "duduk",
+   "label": "Beanbag",
+   "node": "FURN_beanbag",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.94,
+    "dalam_y": 0.94,
+    "tinggi_z": 0.71
+   },
+   "tris": 1328,
+   "material": [
+    "fab_red"
+   ],
+   "warna": [
+    {
+     "material": "fab_red",
+     "keluarga": "kain",
+     "default": "#B9574F"
+    }
+   ]
+  },
+  {
+   "id": "kursi_sutradara",
+   "kategori": "duduk",
+   "label": "Kursi sutradara",
+   "node": "FURN_kursi_sutradara",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.58,
+    "dalam_y": 0.58,
+    "tinggi_z": 0.95
+   },
+   "tris": 448,
+   "material": [
+    "wood_dark",
+    "fab_red"
+   ],
+   "warna": [
+    {
+     "material": "fab_red",
+     "keluarga": "kain",
+     "default": "#B9574F"
+    }
+   ]
+  },
+  {
+   "id": "meja_kerja",
+   "kategori": "meja",
+   "label": "Meja kerja + kursi + PC",
+   "node": "FURN_meja_kerja",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.54,
+    "dalam_y": 1.56,
+    "tinggi_z": 1.27
+   },
+   "tris": 2420,
+   "material": [
+    "desk_white",
+    "desk_wood",
+    "wood_dark",
+    "chrome",
+    "metal",
+    "black",
+    "scr_blue",
+    "scr_green",
+    "white",
+    "grey",
+    "fab_orange",
+    "blue",
+    "green",
+    "skin",
+    "paper",
+    "metal_dark",
+    "light",
+    "fab_sage"
+   ],
+   "warna": [
+    {
+     "material": "desk_white",
+     "keluarga": "kayu",
+     "default": "#EDE6D8"
+    },
+    {
+     "material": "desk_wood",
+     "keluarga": "kayu",
+     "default": "#C09A6B"
+    },
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "sekat_rendah",
+   "kategori": "meja",
+   "label": "Sekat rendah",
+   "node": "FURN_sekat_rendah",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.68,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.55
+   },
+   "tris": 224,
+   "material": [
+    "fab_sage",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_sage",
+     "keluarga": "kain",
+     "default": "#96AB8C"
+    }
+   ]
+  },
+  {
+   "id": "meja_kopi",
+   "kategori": "meja",
+   "label": "Meja kopi",
+   "node": "FURN_meja_kopi",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.13,
+    "dalam_y": 0.63,
+    "tinggi_z": 0.55
+   },
+   "tris": 384,
+   "material": [
+    "wood",
+    "metal_dark",
+    "pot_w"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "meja_makan",
+   "kategori": "meja",
+   "label": "Meja makan + 4 kursi",
+   "node": "FURN_meja_makan",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.63,
+    "dalam_y": 2.2,
+    "tinggi_z": 1.07
+   },
+   "tris": 1800,
+   "material": [
+    "oak",
+    "wood_dark",
+    "pot_w",
+    "leaf2",
+    "metal_dark",
+    "fab_teal",
+    "fab_rose",
+    "fab_sage",
+    "fab_orange"
+   ],
+   "warna": [
+    {
+     "material": "oak",
+     "keluarga": "kayu",
+     "default": "#D2B48C"
+    }
+   ]
+  },
+  {
+   "id": "meja_rapat",
+   "kategori": "meja",
+   "label": "Meja rapat + 11 kursi",
+   "node": "FURN_meja_rapat",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 6.54,
+    "dalam_y": 3.13,
+    "tinggi_z": 1.15
+   },
+   "tris": 9580,
+   "material": [
+    "wood_dark",
+    "wood",
+    "metal_dark",
+    "black",
+    "fab_navy",
+    "chrome",
+    "paper",
+    "scr_blue"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "meja_resepsionis",
+   "kategori": "meja",
+   "label": "Meja resepsionis",
+   "node": "FURN_meja_resepsionis",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 3.53,
+    "dalam_y": 0.93,
+    "tinggi_z": 1.6
+   },
+   "tris": 972,
+   "material": [
+    "wood",
+    "counter",
+    "wood_dark",
+    "note_b",
+    "white",
+    "metal",
+    "black",
+    "scr_teal",
+    "red",
+    "fab_orange",
+    "blue",
+    "green"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "counter",
+     "keluarga": "kayu",
+     "default": "#E5DAC4"
+    }
+   ]
+  },
+  {
+   "id": "meja_bar",
+   "kategori": "meja",
+   "label": "Meja bar camilan + stool",
+   "node": "FURN_meja_bar",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.93,
+    "dalam_y": 1.3,
+    "tinggi_z": 1.33
+   },
+   "tris": 2540,
+   "material": [
+    "wood_dark",
+    "counter",
+    "glass",
+    "red",
+    "metal",
+    "yellow",
+    "green",
+    "blue",
+    "orange",
+    "fab_orange",
+    "fab_yellow",
+    "metal_dark",
+    "fab_teal",
+    "fab_rose"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "counter",
+     "keluarga": "kayu",
+     "default": "#E5DAC4"
+    }
+   ]
+  },
+  {
+   "id": "meja_game",
+   "kategori": "meja",
+   "label": "Meja papan permainan",
+   "node": "FURN_meja_game",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.24,
+    "dalam_y": 1.03,
+    "tinggi_z": 0.5
+   },
+   "tris": 1408,
+   "material": [
+    "wood",
+    "wood_dark",
+    "fab_cream",
+    "red",
+    "blue",
+    "yellow",
+    "green",
+    "white",
+    "fab_orange"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "meja_printer",
+   "kategori": "meja",
+   "label": "Meja printer",
+   "node": "FURN_meja_printer",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.96,
+    "dalam_y": 0.61,
+    "tinggi_z": 1.02
+   },
+   "tris": 340,
+   "material": [
+    "desk_wood",
+    "white",
+    "grey",
+    "black",
+    "scr_green",
+    "paper"
+   ],
+   "warna": [
+    {
+     "material": "desk_wood",
+     "keluarga": "kayu",
+     "default": "#C09A6B"
+    }
+   ]
+  },
+  {
+   "id": "rak_buku",
+   "kategori": "simpan",
+   "label": "Rak buku (berisi)",
+   "node": "FURN_rak_buku",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.26,
+    "dalam_y": 0.4,
+    "tinggi_z": 2.06
+   },
+   "tris": 4984,
+   "material": [
+    "wood_dark",
+    "wood",
+    "blue",
+    "yellow",
+    "red",
+    "purple",
+    "orange",
+    "fab_teal",
+    "pink",
+    "green"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "rak_pajangan",
+   "kategori": "simpan",
+   "label": "Rak buku + figur",
+   "node": "FURN_rak_pajangan",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.26,
+    "dalam_y": 0.4,
+    "tinggi_z": 2.06
+   },
+   "tris": 4704,
+   "material": [
+    "wood_dark",
+    "wood",
+    "yellow",
+    "fab_teal",
+    "orange",
+    "green",
+    "red",
+    "pink",
+    "blue",
+    "black",
+    "skin",
+    "purple",
+    "gold"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "rak_konsol",
+   "kategori": "simpan",
+   "label": "Rak konsol game",
+   "node": "FURN_rak_konsol",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.26,
+    "dalam_y": 0.4,
+    "tinggi_z": 1.25
+   },
+   "tris": 1624,
+   "material": [
+    "wood_dark",
+    "wood",
+    "red",
+    "blue",
+    "green",
+    "yellow",
+    "purple",
+    "orange",
+    "pink",
+    "cyan",
+    "black",
+    "skin"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "loker_4",
+   "kategori": "simpan",
+   "label": "Loker 4 pintu",
+   "node": "FURN_loker_4",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.72,
+    "dalam_y": 0.58,
+    "tinggi_z": 1.96
+   },
+   "tris": 1248,
+   "material": [
+    "fab_blue",
+    "scr_dark",
+    "chrome",
+    "fab_teal",
+    "fab_sage",
+    "fab_orange"
+   ],
+   "warna": [
+    {
+     "material": "fab_blue",
+     "keluarga": "cat",
+     "default": "#6E8CA8"
+    },
+    {
+     "material": "fab_teal",
+     "keluarga": "cat",
+     "default": "#6F9E9A"
+    },
+    {
+     "material": "fab_sage",
+     "keluarga": "cat",
+     "default": "#96AB8C"
+    },
+    {
+     "material": "fab_orange",
+     "keluarga": "cat",
+     "default": "#D68F5E"
+    }
+   ]
+  },
+  {
+   "id": "lemari_pakaian",
+   "kategori": "simpan",
+   "label": "Lemari pakaian",
+   "node": "FURN_lemari_pakaian",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.56,
+    "dalam_y": 0.69,
+    "tinggi_z": 2.16
+   },
+   "tris": 312,
+   "material": [
+    "wood",
+    "oak",
+    "chrome"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "oak",
+     "keluarga": "kayu",
+     "default": "#D2B48C"
+    }
+   ]
+  },
+  {
+   "id": "nakas",
+   "kategori": "simpan",
+   "label": "Nakas + lampu",
+   "node": "FURN_nakas",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.51,
+    "dalam_y": 0.46,
+    "tinggi_z": 0.89
+   },
+   "tris": 412,
+   "material": [
+    "wood",
+    "chrome",
+    "black",
+    "metal_dark",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "lemari_arsip",
+   "kategori": "simpan",
+   "label": "Lemari arsip",
+   "node": "FURN_lemari_arsip",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.56,
+    "dalam_y": 0.68,
+    "tinggi_z": 1.36
+   },
+   "tris": 424,
+   "material": [
+    "metal",
+    "grey",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    }
+   ]
+  },
+  {
+   "id": "rak_sepatu",
+   "kategori": "simpan",
+   "label": "Rak sepatu",
+   "node": "FURN_rak_sepatu",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.26,
+    "dalam_y": 0.41,
+    "tinggi_z": 0.86
+   },
+   "tris": 760,
+   "material": [
+    "wood",
+    "wood_dark",
+    "red",
+    "blue",
+    "yellow"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "rak_brosur",
+   "kategori": "simpan",
+   "label": "Rak brosur",
+   "node": "FURN_rak_brosur",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.65,
+    "dalam_y": 0.33,
+    "tinggi_z": 1.38
+   },
+   "tris": 448,
+   "material": [
+    "metal_dark",
+    "note_y",
+    "note_b",
+    "note_p",
+    "note_g"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "gantungan_baju",
+   "kategori": "simpan",
+   "label": "Gantungan baju",
+   "node": "FURN_gantungan_baju",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.4,
+    "dalam_y": 0.4,
+    "tinggi_z": 1.75
+   },
+   "tris": 536,
+   "material": [
+    "metal_dark",
+    "fab_navy",
+    "fab_red",
+    "fab_sage"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "rak_dinding",
+   "kategori": "simpan",
+   "label": "Rak dinding",
+   "node": "FURN_rak_dinding",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.23,
+    "dalam_y": 0.25,
+    "tinggi_z": 0.19
+   },
+   "tris": 104,
+   "material": [
+    "wood_dark",
+    "metal"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "kulkas",
+   "kategori": "dapur",
+   "label": "Kulkas",
+   "node": "FURN_kulkas",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.86,
+    "dalam_y": 0.77,
+    "tinggi_z": 1.86
+   },
+   "tris": 364,
+   "material": [
+    "white",
+    "grey",
+    "chrome",
+    "note_y",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "microwave",
+   "kategori": "dapur",
+   "label": "Microwave",
+   "node": "FURN_microwave",
+   "dipakai_di_app": true,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.58,
+    "dalam_y": 0.45,
+    "tinggi_z": 0.36
+   },
+   "tris": 224,
+   "material": [
+    "white",
+    "scr_dark",
+    "grey",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "vending",
+   "kategori": "dapur",
+   "label": "Vending machine",
+   "node": "FURN_vending",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.06,
+    "dalam_y": 0.91,
+    "tinggi_z": 2.02
+   },
+   "tris": 2096,
+   "material": [
+    "red",
+    "scr_dark",
+    "chrome",
+    "blue",
+    "yellow",
+    "green",
+    "orange",
+    "pink",
+    "cyan",
+    "black",
+    "scr_green",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "red",
+     "keluarga": "cat",
+     "default": "#C9483F"
+    }
+   ]
+  },
+  {
+   "id": "kitchen_set",
+   "kategori": "dapur",
+   "label": "Kitchen counter + mesin kopi",
+   "node": "FURN_kitchen_set",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.47,
+    "dalam_y": 0.73,
+    "tinggi_z": 1.26
+   },
+   "tris": 944,
+   "material": [
+    "wood",
+    "counter",
+    "wood_dark",
+    "chrome",
+    "metal",
+    "black",
+    "scr_blue",
+    "fab_orange"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "counter",
+     "keluarga": "kayu",
+     "default": "#E5DAC4"
+    }
+   ]
+  },
+  {
+   "id": "dispenser_air",
+   "kategori": "dapur",
+   "label": "Dispenser air",
+   "node": "FURN_dispenser_air",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.41,
+    "dalam_y": 0.42,
+    "tinggi_z": 1.43
+   },
+   "tris": 188,
+   "material": [
+    "white",
+    "glass",
+    "blue",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "tempat_sampah",
+   "kategori": "dapur",
+   "label": "Tempat sampah",
+   "node": "FURN_tempat_sampah",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.38,
+    "dalam_y": 0.38,
+    "tinggi_z": 0.45
+   },
+   "tris": 152,
+   "material": [
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "grey",
+     "keluarga": "cat",
+     "default": "#8E949B"
+    }
+   ]
+  },
+  {
+   "id": "ranjang_tingkat",
+   "kategori": "tidur",
+   "label": "Ranjang tingkat",
+   "node": "FURN_ranjang_tingkat",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.16,
+    "dalam_y": 2.24,
+    "tinggi_z": 1.94
+   },
+   "tris": 1464,
+   "material": [
+    "wood_dark",
+    "wood",
+    "bed_white",
+    "fab_blue",
+    "white",
+    "fab_sage",
+    "metal"
+   ],
+   "warna": [
+    {
+     "material": "fab_blue",
+     "keluarga": "kain",
+     "default": "#6E8CA8"
+    },
+    {
+     "material": "fab_sage",
+     "keluarga": "kain",
+     "default": "#96AB8C"
+    }
+   ]
+  },
+  {
+   "id": "ranjang_single",
+   "kategori": "tidur",
+   "label": "Ranjang single",
+   "node": "FURN_ranjang_single",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.06,
+    "dalam_y": 2.12,
+    "tinggi_z": 0.94
+   },
+   "tris": 624,
+   "material": [
+    "wood",
+    "bed_white",
+    "fab_teal",
+    "white",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_teal",
+     "keluarga": "kain",
+     "default": "#6F9E9A"
+    }
+   ]
+  },
+  {
+   "id": "bingkai",
+   "kategori": "dinding",
+   "label": "Bingkai foto",
+   "node": "FURN_bingkai",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.63,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.48
+   },
+   "tris": 196,
+   "material": [
+    "wood_dark",
+    "white",
+    "note_b",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "foto_tim",
+   "kategori": "dinding",
+   "label": "Foto tim",
+   "node": "FURN_foto_tim",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.23,
+    "dalam_y": 0.14,
+    "tinggi_z": 0.83
+   },
+   "tris": 1384,
+   "material": [
+    "wood_dark",
+    "wall_sky",
+    "fl_a",
+    "red",
+    "skin",
+    "blue",
+    "green",
+    "yellow",
+    "purple",
+    "orange",
+    "pink",
+    "cyan"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "sertifikat",
+   "kategori": "dinding",
+   "label": "Sertifikat",
+   "node": "FURN_sertifikat",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.58,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.43
+   },
+   "tris": 348,
+   "material": [
+    "gold",
+    "paper",
+    "metal_dark",
+    "grey",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "gold",
+     "keluarga": "logam",
+     "default": "#D4AF37"
+    }
+   ]
+  },
+  {
+   "id": "bagan_org",
+   "kategori": "dinding",
+   "label": "Bagan struktur",
+   "node": "FURN_bagan_org",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.35,
+    "dalam_y": 0.11,
+    "tinggi_z": 0.9
+   },
+   "tris": 944,
+   "material": [
+    "wood_dark",
+    "white",
+    "blue",
+    "green",
+    "metal_dark",
+    "orange"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "jam_dinding",
+   "kategori": "dinding",
+   "label": "Jam dinding",
+   "node": "FURN_jam_dinding",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 2.2,
+   "ukuran_m": {
+    "lebar_x": 0.44,
+    "dalam_y": 0.48,
+    "tinggi_z": 0.19
+   },
+   "tris": 480,
+   "material": [
+    "wood_dark",
+    "white",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "whiteboard",
+   "kategori": "dinding",
+   "label": "Whiteboard",
+   "node": "FURN_whiteboard",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 2.05,
+    "dalam_y": 0.17,
+    "tinggi_z": 1.18
+   },
+   "tris": 576,
+   "material": [
+    "metal",
+    "board",
+    "blue",
+    "red",
+    "green",
+    "orange",
+    "note_y",
+    "note_p"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    }
+   ]
+  },
+  {
+   "id": "papan_tugas_harian",
+   "kategori": "dinding",
+   "label": "Papan tugas harian",
+   "node": "FURN_papan_tugas_harian",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.53,
+    "dalam_y": 0.12,
+    "tinggi_z": 1.03
+   },
+   "tris": 512,
+   "material": [
+    "wood_dark",
+    "board_cork",
+    "red",
+    "note_g",
+    "note_o",
+    "note_b",
+    "orange",
+    "white",
+    "note_p",
+    "green",
+    "note_y"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "papan_tugas_mingguan",
+   "kategori": "dinding",
+   "label": "Papan tugas mingguan",
+   "node": "FURN_papan_tugas_mingguan",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 2.33,
+    "dalam_y": 0.12,
+    "tinggi_z": 1.03
+   },
+   "tris": 772,
+   "material": [
+    "wood_dark",
+    "board_cork",
+    "blue",
+    "note_b",
+    "note_g",
+    "cyan",
+    "white",
+    "note_y",
+    "note_o",
+    "green",
+    "note_p",
+    "yellow",
+    "purple"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "poster",
+   "kategori": "dinding",
+   "label": "Poster",
+   "node": "FURN_poster",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.53,
+    "dalam_y": 0.09,
+    "tinggi_z": 0.73
+   },
+   "tris": 224,
+   "material": [
+    "white",
+    "blue",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "blue",
+     "keluarga": "cat",
+     "default": "#3F6FB5"
+    }
+   ]
+  },
+  {
+   "id": "tv_dinding",
+   "kategori": "dinding",
+   "label": "TV dinding",
+   "node": "FURN_tv_dinding",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.45,
+    "dalam_y": 0.14,
+    "tinggi_z": 0.83
+   },
+   "tris": 168,
+   "material": [
+    "black",
+    "scr_blue",
+    "scr_violet"
+   ],
+   "warna": [
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "layar_proyektor",
+   "kategori": "dinding",
+   "label": "Layar proyektor",
+   "node": "FURN_layar_proyektor",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 2.64,
+    "dalam_y": 0.15,
+    "tinggi_z": 1.52
+   },
+   "tris": 336,
+   "material": [
+    "metal_dark",
+    "board",
+    "scr_blue",
+    "white",
+    "scr_teal"
+   ],
+   "warna": [
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "gorden",
+   "kategori": "dinding",
+   "label": "Gorden",
+   "node": "FURN_gorden",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 2.05,
+    "dalam_y": 0.13,
+    "tinggi_z": 1.69
+   },
+   "tris": 392,
+   "material": [
+    "metal_dark",
+    "fab_rose"
+   ],
+   "warna": [
+    {
+     "material": "fab_rose",
+     "keluarga": "karpet",
+     "default": "#C98F94"
+    }
+   ]
+  },
+  {
+   "id": "tanaman_hias",
+   "kategori": "tanaman",
+   "label": "Tanaman hias",
+   "node": "FURN_tanaman_hias",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.59,
+    "dalam_y": 0.55,
+    "tinggi_z": 1.29
+   },
+   "tris": 1328,
+   "material": [
+    "pot",
+    "soil",
+    "leaf",
+    "leaf2",
+    "leaf3"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf",
+     "keluarga": "daun",
+     "default": "#4F8A4B"
+    },
+    {
+     "material": "leaf2",
+     "keluarga": "daun",
+     "default": "#6FA85A"
+    },
+    {
+     "material": "leaf3",
+     "keluarga": "daun",
+     "default": "#3E7A52"
+    }
+   ]
+  },
+  {
+   "id": "pohon_dalam",
+   "kategori": "tanaman",
+   "label": "Pohon dalam ruang",
+   "node": "FURN_pohon_dalam",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.93,
+    "dalam_y": 0.93,
+    "tinggi_z": 1.71
+   },
+   "tris": 1968,
+   "material": [
+    "pot",
+    "soil",
+    "wood_dark",
+    "leaf",
+    "leaf2",
+    "leaf3"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf",
+     "keluarga": "daun",
+     "default": "#4F8A4B"
+    },
+    {
+     "material": "leaf2",
+     "keluarga": "daun",
+     "default": "#6FA85A"
+    },
+    {
+     "material": "leaf3",
+     "keluarga": "daun",
+     "default": "#3E7A52"
+    }
+   ]
+  },
+  {
+   "id": "sukulen",
+   "kategori": "tanaman",
+   "label": "Sukulen",
+   "node": "FURN_sukulen",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.38,
+    "dalam_y": 0.38,
+    "tinggi_z": 0.81
+   },
+   "tris": 760,
+   "material": [
+    "pot",
+    "soil",
+    "leaf2"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf2",
+     "keluarga": "daun",
+     "default": "#6FA85A"
+    }
+   ]
+  },
+  {
+   "id": "karpet_3_lapis",
+   "kategori": "karpet",
+   "label": "Karpet 3 lapis",
+   "node": "FURN_karpet_3_lapis",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.45,
+    "dalam_y": 1.65,
+    "tinggi_z": 0.09
+   },
+   "tris": 168,
+   "material": [
+    "rug_cream",
+    "rug_red"
+   ],
+   "warna": [
+    {
+     "material": "rug_red",
+     "keluarga": "karpet",
+     "default": "#A85B52"
+    },
+    {
+     "material": "rug_cream",
+     "keluarga": "karpet",
+     "default": "#E2D4B9"
+    }
+   ]
+  },
+  {
+   "id": "monitor",
+   "kategori": "meja_kecil",
+   "label": "Monitor",
+   "node": "FURN_monitor",
+   "dipakai_di_app": true,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.59,
+    "dalam_y": 0.18,
+    "tinggi_z": 0.5
+   },
+   "tris": 224,
+   "material": [
+    "metal",
+    "black",
+    "scr_blue"
+   ],
+   "warna": [
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "figur",
+   "kategori": "meja_kecil",
+   "label": "Action figure",
+   "node": "FURN_figur",
+   "dipakai_di_app": true,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.22,
+    "dalam_y": 0.21,
+    "tinggi_z": 0.41
+   },
+   "tris": 288,
+   "material": [
+    "black",
+    "blue",
+    "red",
+    "skin"
+   ],
+   "warna": [
+    {
+     "material": "red",
+     "keluarga": "cat",
+     "default": "#C9483F"
+    }
+   ]
+  },
+  {
+   "id": "piala",
+   "kategori": "meja_kecil",
+   "label": "Piala",
+   "node": "FURN_piala",
+   "dipakai_di_app": true,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.17,
+    "dalam_y": 0.18,
+    "tinggi_z": 0.28
+   },
+   "tris": 152,
+   "material": [
+    "wood_dark",
+    "gold"
+   ],
+   "warna": [
+    {
+     "material": "gold",
+     "keluarga": "logam",
+     "default": "#D4AF37"
+    }
+   ]
+  },
+  {
+   "id": "tumpukan_buku",
+   "kategori": "meja_kecil",
+   "label": "Tumpukan buku",
+   "node": "FURN_tumpukan_buku",
+   "dipakai_di_app": true,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.25,
+    "dalam_y": 0.21,
+    "tinggi_z": 0.15
+   },
+   "tris": 168,
+   "material": [
+    "blue",
+    "red",
+    "green"
+   ],
+   "warna": [
+    {
+     "material": "blue",
+     "keluarga": "cat",
+     "default": "#3F6FB5"
+    },
+    {
+     "material": "red",
+     "keluarga": "cat",
+     "default": "#C9483F"
+    },
+    {
+     "material": "green",
+     "keluarga": "cat",
+     "default": "#4E9A5A"
+    }
+   ]
+  },
+  {
+   "id": "gamepad",
+   "kategori": "meja_kecil",
+   "label": "Gamepad",
+   "node": "FURN_gamepad",
+   "dipakai_di_app": true,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.2,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.09
+   },
+   "tris": 104,
+   "material": [
+    "blue",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "blue",
+     "keluarga": "cat",
+     "default": "#3F6FB5"
+    }
+   ]
+  },
+  {
+   "id": "tv_konsol",
+   "kategori": "meja_kecil",
+   "label": "TV + meja + konsol",
+   "node": "FURN_tv_konsol",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.22,
+    "dalam_y": 0.51,
+    "tinggi_z": 1.5
+   },
+   "tris": 744,
+   "material": [
+    "wood_dark",
+    "black",
+    "metal_dark",
+    "scr_blue",
+    "scr_violet",
+    "scr_warm",
+    "ps_white",
+    "scr_dark",
+    "red",
+    "blue"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "ac_dinding",
+   "kategori": "lampu",
+   "label": "AC dinding",
+   "node": "FURN_ac_dinding",
+   "dipakai_di_app": true,
+   "pasang": "wall",
+   "z_pasang": 2.5,
+   "ukuran_m": {
+    "lebar_x": 1.06,
+    "dalam_y": 0.32,
+    "tinggi_z": 0.36
+   },
+   "tris": 280,
+   "material": [
+    "white",
+    "grey",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "proyektor_langit",
+   "kategori": "lampu",
+   "label": "Proyektor langit-langit",
+   "node": "FURN_proyektor_langit",
+   "dipakai_di_app": true,
+   "pasang": "ceiling",
+   "z_pasang": 3.2,
+   "ukuran_m": {
+    "lebar_x": 0.45,
+    "dalam_y": 0.42,
+    "tinggi_z": 0.21
+   },
+   "tris": 160,
+   "material": [
+    "white",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "backdrop",
+   "kategori": "studio",
+   "label": "Backdrop green screen",
+   "node": "FURN_backdrop",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 3.95,
+    "dalam_y": 0.35,
+    "tinggi_z": 2.85
+   },
+   "tris": 280,
+   "material": [
+    "metal_dark",
+    "green_screen"
+   ],
+   "warna": [
+    {
+     "material": "green_screen",
+     "keluarga": "cat",
+     "default": "#2FA14A"
+    }
+   ]
+  },
+  {
+   "id": "softbox",
+   "kategori": "studio",
+   "label": "Softbox",
+   "node": "FURN_softbox",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.86,
+    "dalam_y": 0.53,
+    "tinggi_z": 2.41
+   },
+   "tris": 404,
+   "material": [
+    "metal_dark",
+    "black",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "tripod_kamera",
+   "kategori": "studio",
+   "label": "Tripod kamera",
+   "node": "FURN_tripod_kamera",
+   "dipakai_di_app": true,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.57,
+    "dalam_y": 0.68,
+    "tinggi_z": 1.41
+   },
+   "tris": 536,
+   "material": [
+    "metal_dark",
+    "black",
+    "scr_blue"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "kursi_gaming",
+   "kategori": "duduk",
+   "label": "Kursi gaming",
+   "node": "FURN_kursi_gaming",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.72,
+    "dalam_y": 0.66,
+    "tinggi_z": 1.47
+   },
+   "tris": 1160,
+   "material": [
+    "metal_dark",
+    "black",
+    "fab_red"
+   ],
+   "warna": [
+    {
+     "material": "fab_red",
+     "keluarga": "kain",
+     "default": "#B9574F"
+    },
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "kursi_eksekutif",
+   "kategori": "duduk",
+   "label": "Kursi eksekutif",
+   "node": "FURN_kursi_eksekutif",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.73,
+    "dalam_y": 0.65,
+    "tinggi_z": 1.57
+   },
+   "tris": 880,
+   "material": [
+    "chrome",
+    "leather_brown"
+   ],
+   "warna": [
+    {
+     "material": "leather_brown",
+     "keluarga": "kain",
+     "default": "#7A4A2E"
+    }
+   ]
+  },
+  {
+   "id": "kursi_jaring",
+   "kategori": "duduk",
+   "label": "Kursi jaring (ergonomis)",
+   "node": "FURN_kursi_jaring",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.66,
+    "dalam_y": 0.63,
+    "tinggi_z": 1.21
+   },
+   "tris": 1104,
+   "material": [
+    "metal_dark",
+    "black",
+    "fab_teal",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "fab_teal",
+     "keluarga": "kain",
+     "default": "#6F9E9A"
+    }
+   ]
+  },
+  {
+   "id": "kursi_lipat",
+   "kategori": "duduk",
+   "label": "Kursi lipat",
+   "node": "FURN_kursi_lipat",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.49,
+    "dalam_y": 0.47,
+    "tinggi_z": 0.94
+   },
+   "tris": 448,
+   "material": [
+    "metal_dark",
+    "wood"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "bangku_bar",
+   "kategori": "duduk",
+   "label": "Bangku bar bersandar",
+   "node": "FURN_bangku_bar",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.42,
+    "dalam_y": 0.44,
+    "tinggi_z": 1.19
+   },
+   "tris": 512,
+   "material": [
+    "metal_dark",
+    "fab_rose"
+   ],
+   "warna": [
+    {
+     "material": "fab_rose",
+     "keluarga": "kain",
+     "default": "#C98F94"
+    }
+   ]
+  },
+  {
+   "id": "bangku_panjang",
+   "kategori": "duduk",
+   "label": "Bangku panjang",
+   "node": "FURN_bangku_panjang",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.43,
+    "dalam_y": 0.44,
+    "tinggi_z": 0.53
+   },
+   "tris": 336,
+   "material": [
+    "wood",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "kursi_bulat",
+   "kategori": "duduk",
+   "label": "Kursi bulat (tub)",
+   "node": "FURN_kursi_bulat",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.69,
+    "dalam_y": 0.68,
+    "tinggi_z": 0.82
+   },
+   "tris": 968,
+   "material": [
+    "fab_yellow",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_yellow",
+     "keluarga": "kain",
+     "default": "#E2BE5A"
+    }
+   ]
+  },
+  {
+   "id": "sofa_sudut",
+   "kategori": "duduk",
+   "label": "Sofa sudut (L)",
+   "node": "FURN_sofa_sudut",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.95,
+    "dalam_y": 2.5,
+    "tinggi_z": 0.9
+   },
+   "tris": 840,
+   "material": [
+    "fab_grey",
+    "fab_orange",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_grey",
+     "keluarga": "kain",
+     "default": "#9AA0A8"
+    },
+    {
+     "material": "fab_orange",
+     "keluarga": "kain",
+     "default": "#D68F5E"
+    }
+   ]
+  },
+  {
+   "id": "sofa_dua",
+   "kategori": "duduk",
+   "label": "Sofa 2 dudukan",
+   "node": "FURN_sofa_dua",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.66,
+    "dalam_y": 1.0,
+    "tinggi_z": 0.9
+   },
+   "tris": 616,
+   "material": [
+    "fab_teal",
+    "fab_yellow",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_teal",
+     "keluarga": "kain",
+     "default": "#6F9E9A"
+    },
+    {
+     "material": "fab_yellow",
+     "keluarga": "kain",
+     "default": "#E2BE5A"
+    }
+   ]
+  },
+  {
+   "id": "sofa_panjang",
+   "kategori": "duduk",
+   "label": "Sofa panjang 4 dudukan",
+   "node": "FURN_sofa_panjang",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 3.26,
+    "dalam_y": 1.0,
+    "tinggi_z": 0.9
+   },
+   "tris": 728,
+   "material": [
+    "fab_burgundy",
+    "fab_cream",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_burgundy",
+     "keluarga": "kain",
+     "default": "#7A2E3A"
+    },
+    {
+     "material": "fab_cream",
+     "keluarga": "kain",
+     "default": "#E9DCC6"
+    }
+   ]
+  },
+  {
+   "id": "puf",
+   "kategori": "duduk",
+   "label": "Puf / ottoman",
+   "node": "FURN_puf",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.59,
+    "dalam_y": 0.59,
+    "tinggi_z": 0.47
+   },
+   "tris": 392,
+   "material": [
+    "fab_purple",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_purple",
+     "keluarga": "kain",
+     "default": "#9D8BAF"
+    }
+   ]
+  },
+  {
+   "id": "beanbag_besar",
+   "kategori": "duduk",
+   "label": "Beanbag besar",
+   "node": "FURN_beanbag_besar",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.3,
+    "dalam_y": 1.3,
+    "tinggi_z": 0.97
+   },
+   "tris": 1680,
+   "material": [
+    "fab_blue"
+   ],
+   "warna": [
+    {
+     "material": "fab_blue",
+     "keluarga": "kain",
+     "default": "#6E8CA8"
+    }
+   ]
+  },
+  {
+   "id": "bangku_kayu_kecil",
+   "kategori": "duduk",
+   "label": "Bangku kayu kecil",
+   "node": "FURN_bangku_kayu_kecil",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.37,
+    "dalam_y": 0.33,
+    "tinggi_z": 0.4
+   },
+   "tris": 280,
+   "material": [
+    "wood",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "meja_berdiri",
+   "kategori": "meja",
+   "label": "Meja berdiri (standing desk)",
+   "node": "FURN_meja_berdiri",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.43,
+    "dalam_y": 0.73,
+    "tinggi_z": 1.52
+   },
+   "tris": 664,
+   "material": [
+    "desk_white",
+    "metal_dark",
+    "metal",
+    "black",
+    "scr_blue",
+    "white",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "desk_white",
+     "keluarga": "kayu",
+     "default": "#EDE6D8"
+    }
+   ]
+  },
+  {
+   "id": "meja_L",
+   "kategori": "meja",
+   "label": "Meja kerja bentuk L",
+   "node": "FURN_meja_L",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.83,
+    "dalam_y": 1.93,
+    "tinggi_z": 1.26
+   },
+   "tris": 948,
+   "material": [
+    "desk_wood",
+    "metal_dark",
+    "wood_dark",
+    "chrome",
+    "metal",
+    "black",
+    "scr_blue",
+    "white",
+    "paper"
+   ],
+   "warna": [
+    {
+     "material": "desk_wood",
+     "keluarga": "kayu",
+     "default": "#C09A6B"
+    }
+   ]
+  },
+  {
+   "id": "meja_gaming",
+   "kategori": "meja",
+   "label": "Meja gaming + 2 monitor",
+   "node": "FURN_meja_gaming",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.85,
+    "dalam_y": 0.85,
+    "tinggi_z": 1.34
+   },
+   "tris": 1008,
+   "material": [
+    "black",
+    "metal_dark",
+    "neon_blue",
+    "metal",
+    "scr_violet",
+    "scr_teal",
+    "neon_pink",
+    "neon_green"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "kayu",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "neon_blue",
+     "keluarga": "layar",
+     "default": "#4FC3FF"
+    }
+   ]
+  },
+  {
+   "id": "meja_bulat_rapat",
+   "kategori": "meja",
+   "label": "Meja bulat rapat + 4 kursi",
+   "node": "FURN_meja_bulat_rapat",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.73,
+    "dalam_y": 2.73,
+    "tinggi_z": 1.01
+   },
+   "tris": 3848,
+   "material": [
+    "wood",
+    "metal_dark",
+    "black",
+    "fab_blue",
+    "fab_teal",
+    "fab_rose",
+    "fab_sage"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "meja_lipat",
+   "kategori": "meja",
+   "label": "Meja lipat",
+   "node": "FURN_meja_lipat",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.23,
+    "dalam_y": 0.63,
+    "tinggi_z": 0.82
+   },
+   "tris": 392,
+   "material": [
+    "desk_white",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "desk_white",
+     "keluarga": "kayu",
+     "default": "#EDE6D8"
+    }
+   ]
+  },
+  {
+   "id": "meja_samping",
+   "kategori": "meja",
+   "label": "Meja samping bulat",
+   "node": "FURN_meja_samping",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.54,
+    "dalam_y": 0.55,
+    "tinggi_z": 0.57
+   },
+   "tris": 360,
+   "material": [
+    "wood",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "meja_kopi_bulat",
+   "kategori": "meja",
+   "label": "Meja kopi bulat",
+   "node": "FURN_meja_kopi_bulat",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.95,
+    "dalam_y": 0.95,
+    "tinggi_z": 0.58
+   },
+   "tris": 424,
+   "material": [
+    "wood",
+    "metal_dark",
+    "pot_w"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "meja_kopi_kaca",
+   "kategori": "meja",
+   "label": "Meja kopi kaca",
+   "node": "FURN_meja_kopi_kaca",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.1,
+    "dalam_y": 0.6,
+    "tinggi_z": 0.51
+   },
+   "tris": 404,
+   "material": [
+    "glass",
+    "chrome",
+    "blue",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "chrome",
+     "keluarga": "logam",
+     "default": "#D5D9DD"
+    }
+   ]
+  },
+  {
+   "id": "meja_kerja_kecil",
+   "kategori": "meja",
+   "label": "Meja kerja kecil",
+   "node": "FURN_meja_kerja_kecil",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.13,
+    "dalam_y": 0.59,
+    "tinggi_z": 1.22
+   },
+   "tris": 560,
+   "material": [
+    "desk_white",
+    "desk_wood",
+    "chrome",
+    "metal",
+    "black",
+    "scr_rose"
+   ],
+   "warna": [
+    {
+     "material": "desk_white",
+     "keluarga": "kayu",
+     "default": "#EDE6D8"
+    },
+    {
+     "material": "desk_wood",
+     "keluarga": "kayu",
+     "default": "#C09A6B"
+    }
+   ]
+  },
+  {
+   "id": "meja_rapat_kecil",
+   "kategori": "meja",
+   "label": "Meja rapat kecil + 6 kursi",
+   "node": "FURN_meja_rapat_kecil",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.43,
+    "dalam_y": 2.53,
+    "tinggi_z": 1.1
+   },
+   "tris": 5096,
+   "material": [
+    "wood",
+    "metal_dark",
+    "black",
+    "fab_grey",
+    "chrome"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "meja_makan_bulat",
+   "kategori": "meja",
+   "label": "Meja makan bulat + 3 kursi",
+   "node": "FURN_meja_makan_bulat",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.11,
+    "dalam_y": 1.84,
+    "tinggi_z": 1.08
+   },
+   "tris": 1736,
+   "material": [
+    "oak",
+    "wood_dark",
+    "pot_w",
+    "leaf2",
+    "metal_dark",
+    "fab_teal",
+    "fab_rose",
+    "fab_sage"
+   ],
+   "warna": [
+    {
+     "material": "oak",
+     "keluarga": "kayu",
+     "default": "#D2B48C"
+    }
+   ]
+  },
+  {
+   "id": "meja_tinggi_pantry",
+   "kategori": "meja",
+   "label": "Meja tinggi + 2 bangku",
+   "node": "FURN_meja_tinggi_pantry",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.33,
+    "dalam_y": 1.22,
+    "tinggi_z": 1.11
+   },
+   "tris": 992,
+   "material": [
+    "wood",
+    "metal_dark",
+    "fab_orange",
+    "fab_teal"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "rak_buku_pendek",
+   "kategori": "simpan",
+   "label": "Rak buku pendek",
+   "node": "FURN_rak_buku_pendek",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.26,
+    "dalam_y": 0.4,
+    "tinggi_z": 0.96
+   },
+   "tris": 2072,
+   "material": [
+    "wood_dark",
+    "wood",
+    "red",
+    "blue",
+    "yellow",
+    "pink",
+    "purple",
+    "green",
+    "fab_teal",
+    "orange"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "rak_buku_lebar",
+   "kategori": "simpan",
+   "label": "Rak buku lebar",
+   "node": "FURN_rak_buku_lebar",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.06,
+    "dalam_y": 0.4,
+    "tinggi_z": 1.86
+   },
+   "tris": 6944,
+   "material": [
+    "wood_dark",
+    "wood",
+    "purple",
+    "fab_teal",
+    "orange",
+    "red",
+    "yellow",
+    "green",
+    "pink",
+    "blue"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "rak_kubus",
+   "kategori": "simpan",
+   "label": "Rak kubus 3x3",
+   "node": "FURN_rak_kubus",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.3,
+    "dalam_y": 0.41,
+    "tinggi_z": 1.3
+   },
+   "tris": 1520,
+   "material": [
+    "desk_white",
+    "wood",
+    "red",
+    "blue",
+    "black",
+    "skin",
+    "green",
+    "yellow",
+    "orange"
+   ],
+   "warna": [
+    {
+     "material": "desk_white",
+     "keluarga": "kayu",
+     "default": "#EDE6D8"
+    }
+   ]
+  },
+  {
+   "id": "rak_metal",
+   "kategori": "simpan",
+   "label": "Rak terbuka metal",
+   "node": "FURN_rak_metal",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.25,
+    "dalam_y": 0.51,
+    "tinggi_z": 1.85
+   },
+   "tris": 856,
+   "material": [
+    "metal_dark",
+    "wood",
+    "cardboard",
+    "crate_blue",
+    "crate_orange"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    },
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "lemari_laci",
+   "kategori": "simpan",
+   "label": "Lemari laci (dresser)",
+   "node": "FURN_lemari_laci",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.09,
+    "dalam_y": 0.53,
+    "tinggi_z": 0.95
+   },
+   "tris": 576,
+   "material": [
+    "wood",
+    "oak",
+    "chrome",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "loker_2",
+   "kategori": "simpan",
+   "label": "Loker 2 pintu",
+   "node": "FURN_loker_2",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.88,
+    "dalam_y": 0.58,
+    "tinggi_z": 1.96
+   },
+   "tris": 624,
+   "material": [
+    "fab_red",
+    "scr_dark",
+    "chrome",
+    "fab_yellow"
+   ],
+   "warna": [
+    {
+     "material": "fab_red",
+     "keluarga": "cat",
+     "default": "#B9574F"
+    },
+    {
+     "material": "fab_yellow",
+     "keluarga": "cat",
+     "default": "#E2BE5A"
+    }
+   ]
+  },
+  {
+   "id": "loker_6",
+   "kategori": "simpan",
+   "label": "Loker 6 pintu (2 tingkat)",
+   "node": "FURN_loker_6",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.3,
+    "dalam_y": 0.58,
+    "tinggi_z": 1.86
+   },
+   "tris": 1776,
+   "material": [
+    "fab_blue",
+    "scr_dark",
+    "chrome",
+    "fab_teal",
+    "fab_sage"
+   ],
+   "warna": [
+    {
+     "material": "fab_blue",
+     "keluarga": "cat",
+     "default": "#6E8CA8"
+    },
+    {
+     "material": "fab_teal",
+     "keluarga": "cat",
+     "default": "#6F9E9A"
+    },
+    {
+     "material": "fab_sage",
+     "keluarga": "cat",
+     "default": "#96AB8C"
+    }
+   ]
+  },
+  {
+   "id": "lemari_kaca",
+   "kategori": "simpan",
+   "label": "Lemari pajangan kaca",
+   "node": "FURN_lemari_kaca",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.06,
+    "dalam_y": 0.48,
+    "tinggi_z": 1.76
+   },
+   "tris": 1124,
+   "material": [
+    "wood",
+    "glass",
+    "wood_dark",
+    "gold",
+    "black",
+    "blue",
+    "skin",
+    "chrome"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "kabinet_dinding",
+   "kategori": "simpan",
+   "label": "Kabinet dinding",
+   "node": "FURN_kabinet_dinding",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.6,
+   "ukuran_m": {
+    "lebar_x": 1.46,
+    "dalam_y": 0.43,
+    "tinggi_z": 0.76
+   },
+   "tris": 248,
+   "material": [
+    "wood",
+    "oak",
+    "chrome"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "rak_majalah",
+   "kategori": "simpan",
+   "label": "Rak majalah",
+   "node": "FURN_rak_majalah",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.57,
+    "dalam_y": 0.4,
+    "tinggi_z": 1.09
+   },
+   "tris": 496,
+   "material": [
+    "metal_dark",
+    "note_b",
+    "note_p",
+    "note_y",
+    "note_g"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "peti_tumpuk",
+   "kategori": "simpan",
+   "label": "Peti tumpuk",
+   "node": "FURN_peti_tumpuk",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.02,
+    "dalam_y": 0.46,
+    "tinggi_z": 0.66
+   },
+   "tris": 600,
+   "material": [
+    "crate_blue",
+    "metal_dark",
+    "crate_orange"
+   ],
+   "warna": [
+    {
+     "material": "crate_blue",
+     "keluarga": "cat",
+     "default": "#3F6FB5"
+    },
+    {
+     "material": "crate_orange",
+     "keluarga": "cat",
+     "default": "#E08A3C"
+    }
+   ]
+  },
+  {
+   "id": "rak_sepatu_tinggi",
+   "kategori": "simpan",
+   "label": "Rak sepatu tinggi",
+   "node": "FURN_rak_sepatu_tinggi",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.86,
+    "dalam_y": 0.36,
+    "tinggi_z": 1.26
+   },
+   "tris": 928,
+   "material": [
+    "wood",
+    "wood_dark",
+    "red",
+    "blue",
+    "yellow",
+    "green",
+    "orange"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "gantungan_dinding",
+   "kategori": "simpan",
+   "label": "Gantungan dinding",
+   "node": "FURN_gantungan_dinding",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.5,
+   "ukuran_m": {
+    "lebar_x": 1.04,
+    "dalam_y": 0.16,
+    "tinggi_z": 0.64
+   },
+   "tris": 264,
+   "material": [
+    "wood",
+    "chrome",
+    "fab_navy",
+    "fab_red"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "tong_kardus",
+   "kategori": "simpan",
+   "label": "Kardus arsip",
+   "node": "FURN_tong_kardus",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.86,
+    "dalam_y": 0.41,
+    "tinggi_z": 0.58
+   },
+   "tris": 432,
+   "material": [
+    "cardboard",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "cardboard",
+     "keluarga": "cat",
+     "default": "#C79A62"
+    }
+   ]
+  },
+  {
+   "id": "kulkas_mini",
+   "kategori": "dapur",
+   "label": "Kulkas mini",
+   "node": "FURN_kulkas_mini",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.58,
+    "dalam_y": 0.58,
+    "tinggi_z": 0.91
+   },
+   "tris": 220,
+   "material": [
+    "white",
+    "grey",
+    "chrome",
+    "note_y"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "kulkas_besar",
+   "kategori": "dapur",
+   "label": "Kulkas 2 pintu",
+   "node": "FURN_kulkas_besar",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.06,
+    "dalam_y": 0.8,
+    "tinggi_z": 1.91
+   },
+   "tris": 448,
+   "material": [
+    "metal",
+    "black",
+    "chrome",
+    "scr_dark",
+    "scr_blue"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    }
+   ]
+  },
+  {
+   "id": "mesin_kopi",
+   "kategori": "dapur",
+   "label": "Mesin kopi",
+   "node": "FURN_mesin_kopi",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.4,
+    "dalam_y": 0.36,
+    "tinggi_z": 0.48
+   },
+   "tris": 376,
+   "material": [
+    "metal_dark",
+    "black",
+    "chrome",
+    "metal",
+    "fab_orange",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "ketel_listrik",
+   "kategori": "dapur",
+   "label": "Ketel listrik",
+   "node": "FURN_ketel_listrik",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.32,
+    "dalam_y": 0.29,
+    "tinggi_z": 0.31
+   },
+   "tris": 472,
+   "material": [
+    "white",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "toaster",
+   "kategori": "dapur",
+   "label": "Pemanggang roti",
+   "node": "FURN_toaster",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.36,
+    "dalam_y": 0.24,
+    "tinggi_z": 0.28
+   },
+   "tris": 208,
+   "material": [
+    "chrome",
+    "black",
+    "scr_warm",
+    "cardboard"
+   ],
+   "warna": [
+    {
+     "material": "chrome",
+     "keluarga": "logam",
+     "default": "#D5D9DD"
+    }
+   ]
+  },
+  {
+   "id": "rak_piring",
+   "kategori": "dapur",
+   "label": "Rak piring",
+   "node": "FURN_rak_piring",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.55,
+    "dalam_y": 0.35,
+    "tinggi_z": 0.3
+   },
+   "tris": 616,
+   "material": [
+    "metal_dark",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "tempat_sampah_pedal",
+   "kategori": "dapur",
+   "label": "Tempat sampah pedal",
+   "node": "FURN_tempat_sampah_pedal",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.41,
+    "dalam_y": 0.41,
+    "tinggi_z": 0.67
+   },
+   "tris": 416,
+   "material": [
+    "metal",
+    "metal_dark",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    }
+   ]
+  },
+  {
+   "id": "tong_sampah_kotak",
+   "kategori": "dapur",
+   "label": "Tong sampah kotak",
+   "node": "FURN_tong_sampah_kotak",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.44,
+    "dalam_y": 0.38,
+    "tinggi_z": 0.65
+   },
+   "tris": 200,
+   "material": [
+    "grey",
+    "metal_dark",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "grey",
+     "keluarga": "cat",
+     "default": "#8E949B"
+    }
+   ]
+  },
+  {
+   "id": "pulau_dapur",
+   "kategori": "dapur",
+   "label": "Pulau dapur + 2 bangku",
+   "node": "FURN_pulau_dapur",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.93,
+    "dalam_y": 1.47,
+    "tinggi_z": 1.35
+   },
+   "tris": 1320,
+   "material": [
+    "wood",
+    "counter",
+    "wood_dark",
+    "chrome",
+    "white",
+    "pot_w",
+    "leaf2",
+    "metal_dark",
+    "fab_orange",
+    "fab_teal"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "counter",
+     "keluarga": "kayu",
+     "default": "#E5DAC4"
+    }
+   ]
+  },
+  {
+   "id": "kompor_counter",
+   "kategori": "dapur",
+   "label": "Kompor + counter",
+   "node": "FURN_kompor_counter",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.27,
+    "dalam_y": 0.73,
+    "tinggi_z": 1.11
+   },
+   "tris": 960,
+   "material": [
+    "wood",
+    "counter",
+    "black",
+    "metal_dark",
+    "chrome",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "counter",
+     "keluarga": "kayu",
+     "default": "#E5DAC4"
+    }
+   ]
+  },
+  {
+   "id": "wastafel",
+   "kategori": "dapur",
+   "label": "Wastafel kantor",
+   "node": "FURN_wastafel",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.09,
+    "dalam_y": 0.61,
+    "tinggi_z": 1.29
+   },
+   "tris": 488,
+   "material": [
+    "wood",
+    "counter",
+    "metal",
+    "chrome",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "counter",
+     "keluarga": "kayu",
+     "default": "#E5DAC4"
+    }
+   ]
+  },
+  {
+   "id": "vending_teal",
+   "kategori": "dapur",
+   "label": "Vending machine (teal)",
+   "node": "FURN_vending_teal",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.06,
+    "dalam_y": 0.91,
+    "tinggi_z": 2.02
+   },
+   "tris": 2096,
+   "material": [
+    "fab_teal",
+    "scr_dark",
+    "chrome",
+    "blue",
+    "yellow",
+    "green",
+    "orange",
+    "pink",
+    "cyan",
+    "black",
+    "scr_green",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_teal",
+     "keluarga": "cat",
+     "default": "#6F9E9A"
+    }
+   ]
+  },
+  {
+   "id": "vending_kuning",
+   "kategori": "dapur",
+   "label": "Vending machine (kuning)",
+   "node": "FURN_vending_kuning",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.06,
+    "dalam_y": 0.91,
+    "tinggi_z": 2.02
+   },
+   "tris": 2096,
+   "material": [
+    "fab_yellow",
+    "scr_dark",
+    "chrome",
+    "blue",
+    "yellow",
+    "green",
+    "orange",
+    "pink",
+    "cyan",
+    "black",
+    "scr_green",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_yellow",
+     "keluarga": "cat",
+     "default": "#E2BE5A"
+    }
+   ]
+  },
+  {
+   "id": "galon_dispenser",
+   "kategori": "dapur",
+   "label": "Dispenser galon",
+   "node": "FURN_galon_dispenser",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.4,
+    "dalam_y": 0.42,
+    "tinggi_z": 1.38
+   },
+   "tris": 460,
+   "material": [
+    "white",
+    "glass",
+    "cyan",
+    "blue",
+    "red",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "rak_pantry",
+   "kategori": "dapur",
+   "label": "Rak pantry (toples)",
+   "node": "FURN_rak_pantry",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.0,
+    "dalam_y": 0.35,
+    "tinggi_z": 1.74
+   },
+   "tris": 4496,
+   "material": [
+    "wood_dark",
+    "wood",
+    "glass",
+    "red",
+    "metal",
+    "yellow",
+    "green",
+    "orange",
+    "pink"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "kitchen_pendek",
+   "kategori": "dapur",
+   "label": "Kitchen counter pendek",
+   "node": "FURN_kitchen_pendek",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.61,
+    "dalam_y": 0.73,
+    "tinggi_z": 1.26
+   },
+   "tris": 552,
+   "material": [
+    "wood",
+    "counter",
+    "wood_dark",
+    "chrome",
+    "black",
+    "scr_blue",
+    "fab_orange"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "counter",
+     "keluarga": "kayu",
+     "default": "#E5DAC4"
+    }
+   ]
+  },
+  {
+   "id": "ranjang_double",
+   "kategori": "tidur",
+   "label": "Ranjang double",
+   "node": "FURN_ranjang_double",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.75,
+    "dalam_y": 2.13,
+    "tinggi_z": 1.24
+   },
+   "tris": 680,
+   "material": [
+    "wood",
+    "bed_white",
+    "fab_rose",
+    "white",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_rose",
+     "keluarga": "kain",
+     "default": "#C98F94"
+    }
+   ]
+  },
+  {
+   "id": "kasur_lantai",
+   "kategori": "tidur",
+   "label": "Kasur lantai (futon)",
+   "node": "FURN_kasur_lantai",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.0,
+    "dalam_y": 1.95,
+    "tinggi_z": 0.31
+   },
+   "tris": 168,
+   "material": [
+    "bed_white",
+    "fab_blue",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "fab_blue",
+     "keluarga": "kain",
+     "default": "#6E8CA8"
+    }
+   ]
+  },
+  {
+   "id": "ranjang_anak",
+   "kategori": "tidur",
+   "label": "Ranjang kecil + pagar",
+   "node": "FURN_ranjang_anak",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.87,
+    "dalam_y": 1.55,
+    "tinggi_z": 0.51
+   },
+   "tris": 1008,
+   "material": [
+    "wood",
+    "bed_white",
+    "fab_yellow",
+    "white",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "fab_yellow",
+     "keluarga": "kain",
+     "default": "#E2BE5A"
+    }
+   ]
+  },
+  {
+   "id": "kapsul_tidur",
+   "kategori": "tidur",
+   "label": "Kapsul tidur (pod)",
+   "node": "FURN_kapsul_tidur",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.16,
+    "dalam_y": 2.26,
+    "tinggi_z": 1.25
+   },
+   "tris": 1868,
+   "material": [
+    "metal_dark",
+    "white",
+    "glass",
+    "fab_navy",
+    "scr_teal"
+   ],
+   "warna": [
+    {
+     "material": "fab_navy",
+     "keluarga": "kain",
+     "default": "#4A5C77"
+    }
+   ]
+  },
+  {
+   "id": "bingkai_lanskap",
+   "kategori": "dinding",
+   "label": "Bingkai lanskap",
+   "node": "FURN_bingkai_lanskap",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.03,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.53
+   },
+   "tris": 196,
+   "material": [
+    "wood_dark",
+    "white",
+    "note_g",
+    "blue"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "note_g",
+     "keluarga": "cat",
+     "default": "#A9DE9A"
+    }
+   ]
+  },
+  {
+   "id": "bingkai_potret",
+   "kategori": "dinding",
+   "label": "Bingkai potret",
+   "node": "FURN_bingkai_potret",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.48,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.68
+   },
+   "tris": 196,
+   "material": [
+    "wood_dark",
+    "white",
+    "note_p",
+    "purple"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "bingkai_set3",
+   "kategori": "dinding",
+   "label": "Bingkai set 3",
+   "node": "FURN_bingkai_set3",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.43,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.68
+   },
+   "tris": 524,
+   "material": [
+    "wood_dark",
+    "white",
+    "note_y",
+    "orange",
+    "note_b",
+    "note_g"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "bingkai_bulat",
+   "kategori": "dinding",
+   "label": "Cermin/bingkai bulat",
+   "node": "FURN_bingkai_bulat",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.66,
+    "dalam_y": 0.67,
+    "tinggi_z": 0.09
+   },
+   "tris": 752,
+   "material": [
+    "brass",
+    "mirror"
+   ],
+   "warna": [
+    {
+     "material": "brass",
+     "keluarga": "logam",
+     "default": "#C9A24D"
+    }
+   ]
+  },
+  {
+   "id": "jam_kotak",
+   "kategori": "dinding",
+   "label": "Jam kotak",
+   "node": "FURN_jam_kotak",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 2.2,
+   "ukuran_m": {
+    "lebar_x": 0.48,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.48
+   },
+   "tris": 256,
+   "material": [
+    "wood",
+    "white",
+    "black",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "jam_digital",
+   "kategori": "dinding",
+   "label": "Jam digital",
+   "node": "FURN_jam_digital",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 2.4,
+   "ukuran_m": {
+    "lebar_x": 0.65,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.25
+   },
+   "tris": 248,
+   "material": [
+    "black",
+    "scr_dark",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "papan_pengumuman",
+   "kategori": "dinding",
+   "label": "Papan pengumuman gabus",
+   "node": "FURN_papan_pengumuman",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.23,
+    "dalam_y": 0.13,
+    "tinggi_z": 0.83
+   },
+   "tris": 452,
+   "material": [
+    "wood",
+    "board_cork",
+    "note_y",
+    "red",
+    "paper",
+    "note_b",
+    "note_p",
+    "note_g"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "papan_kaca",
+   "kategori": "dinding",
+   "label": "Papan kaca (glassboard)",
+   "node": "FURN_papan_kaca",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.85,
+    "dalam_y": 0.16,
+    "tinggi_z": 1.07
+   },
+   "tris": 320,
+   "material": [
+    "metal",
+    "glass",
+    "blue",
+    "red",
+    "green",
+    "note_y"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    }
+   ]
+  },
+  {
+   "id": "rak_melayang_3",
+   "kategori": "dinding",
+   "label": "Rak melayang 3 tingkat",
+   "node": "FURN_rak_melayang_3",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.05,
+    "dalam_y": 0.3,
+    "tinggi_z": 1.01
+   },
+   "tris": 1224,
+   "material": [
+    "wood",
+    "blue",
+    "red",
+    "green",
+    "pot_w",
+    "leaf2",
+    "black",
+    "skin",
+    "wood_dark",
+    "gold",
+    "fab_orange"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "poster_lebar",
+   "kategori": "dinding",
+   "label": "Poster lebar",
+   "node": "FURN_poster_lebar",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.93,
+    "dalam_y": 0.09,
+    "tinggi_z": 0.53
+   },
+   "tris": 224,
+   "material": [
+    "white",
+    "blue",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "blue",
+     "keluarga": "cat",
+     "default": "#3F6FB5"
+    }
+   ]
+  },
+  {
+   "id": "poster_tinggi",
+   "kategori": "dinding",
+   "label": "Poster tinggi",
+   "node": "FURN_poster_tinggi",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.53,
+    "dalam_y": 0.09,
+    "tinggi_z": 0.93
+   },
+   "tris": 224,
+   "material": [
+    "white",
+    "red",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "red",
+     "keluarga": "cat",
+     "default": "#C9483F"
+    }
+   ]
+  },
+  {
+   "id": "poster_set3",
+   "kategori": "dinding",
+   "label": "Poster set 3",
+   "node": "FURN_poster_set3",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.73,
+    "dalam_y": 0.09,
+    "tinggi_z": 0.73
+   },
+   "tris": 672,
+   "material": [
+    "white",
+    "green",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "green",
+     "keluarga": "cat",
+     "default": "#4E9A5A"
+    }
+   ]
+  },
+  {
+   "id": "cermin_tinggi",
+   "kategori": "dinding",
+   "label": "Cermin tinggi",
+   "node": "FURN_cermin_tinggi",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 0.2,
+   "ukuran_m": {
+    "lebar_x": 0.58,
+    "dalam_y": 0.11,
+    "tinggi_z": 1.53
+   },
+   "tris": 112,
+   "material": [
+    "wood_dark",
+    "mirror"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "kalender",
+   "kategori": "dinding",
+   "label": "Kalender dinding",
+   "node": "FURN_kalender",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 0.45,
+    "dalam_y": 0.08,
+    "tinggi_z": 0.6
+   },
+   "tris": 440,
+   "material": [
+    "white",
+    "red",
+    "grey",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "red",
+     "keluarga": "cat",
+     "default": "#C9483F"
+    }
+   ]
+  },
+  {
+   "id": "papan_tanda",
+   "kategori": "dinding",
+   "label": "Papan nama kantor",
+   "node": "FURN_papan_tanda",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 2.0,
+   "ukuran_m": {
+    "lebar_x": 1.65,
+    "dalam_y": 0.13,
+    "tinggi_z": 0.4
+   },
+   "tris": 504,
+   "material": [
+    "wood_dark",
+    "gold"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "gold",
+     "keluarga": "logam",
+     "default": "#D4AF37"
+    }
+   ]
+  },
+  {
+   "id": "neon_sign",
+   "kategori": "dinding",
+   "label": "Neon sign (bintang & garis)",
+   "node": "FURN_neon_sign",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.03,
+    "dalam_y": 0.1,
+    "tinggi_z": 0.79
+   },
+   "tris": 392,
+   "material": [
+    "black",
+    "neon_pink",
+    "neon_blue"
+   ],
+   "warna": [
+    {
+     "material": "neon_pink",
+     "keluarga": "layar",
+     "default": "#FF5FA8"
+    }
+   ]
+  },
+  {
+   "id": "tanaman_gantung_dinding",
+   "kategori": "dinding",
+   "label": "Pot tanaman dinding",
+   "node": "FURN_tanaman_gantung_dinding",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.5,
+   "ukuran_m": {
+    "lebar_x": 0.36,
+    "dalam_y": 0.35,
+    "tinggi_z": 0.94
+   },
+   "tris": 728,
+   "material": [
+    "wood_dark",
+    "pot",
+    "leaf2",
+    "leaf",
+    "leaf3"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf",
+     "keluarga": "daun",
+     "default": "#4F8A4B"
+    }
+   ]
+  },
+  {
+   "id": "lampu_dinding",
+   "kategori": "dinding",
+   "label": "Lampu dinding",
+   "node": "FURN_lampu_dinding",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.8,
+   "ukuran_m": {
+    "lebar_x": 0.19,
+    "dalam_y": 0.32,
+    "tinggi_z": 0.29
+   },
+   "tris": 188,
+   "material": [
+    "brass",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "brass",
+     "keluarga": "logam",
+     "default": "#C9A24D"
+    },
+    {
+     "material": "light",
+     "keluarga": "layar",
+     "default": "#FFF3C9"
+    }
+   ]
+  },
+  {
+   "id": "rambu_keluar",
+   "kategori": "dinding",
+   "label": "Rambu EXIT",
+   "node": "FURN_rambu_keluar",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 2.4,
+   "ukuran_m": {
+    "lebar_x": 0.55,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.25
+   },
+   "tris": 160,
+   "material": [
+    "green",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "green",
+     "keluarga": "cat",
+     "default": "#4E9A5A"
+    }
+   ]
+  },
+  {
+   "id": "tirai_roman",
+   "kategori": "dinding",
+   "label": "Tirai roman",
+   "node": "FURN_tirai_roman",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.55,
+    "dalam_y": 0.13,
+    "tinggi_z": 1.13
+   },
+   "tris": 336,
+   "material": [
+    "metal_dark",
+    "fab_cream"
+   ],
+   "warna": [
+    {
+     "material": "fab_cream",
+     "keluarga": "karpet",
+     "default": "#E9DCC6"
+    }
+   ]
+  },
+  {
+   "id": "tirai_gulung",
+   "kategori": "dinding",
+   "label": "Tirai gulung",
+   "node": "FURN_tirai_gulung",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.44,
+    "dalam_y": 0.14,
+    "tinggi_z": 1.38
+   },
+   "tris": 224,
+   "material": [
+    "metal_dark",
+    "fab_sage",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "fab_sage",
+     "keluarga": "karpet",
+     "default": "#96AB8C"
+    }
+   ]
+  },
+  {
+   "id": "papan_kpi",
+   "kategori": "dinding",
+   "label": "Papan KPI (grafik)",
+   "node": "FURN_papan_kpi",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.63,
+    "dalam_y": 0.14,
+    "tinggi_z": 0.93
+   },
+   "tris": 560,
+   "material": [
+    "wood_dark",
+    "white",
+    "blue",
+    "cyan",
+    "green",
+    "orange",
+    "red",
+    "scr_teal"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    }
+   ]
+  },
+  {
+   "id": "layar_status",
+   "kategori": "dinding",
+   "label": "Layar status (dashboard)",
+   "node": "FURN_layar_status",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 2.05,
+    "dalam_y": 0.15,
+    "tinggi_z": 1.15
+   },
+   "tris": 336,
+   "material": [
+    "black",
+    "scr_blue",
+    "scr_green",
+    "scr_warm",
+    "scr_rose",
+    "scr_violet"
+   ],
+   "warna": [
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "tv_dinding_besar",
+   "kategori": "dinding",
+   "label": "TV dinding besar",
+   "node": "FURN_tv_dinding_besar",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 2.05,
+    "dalam_y": 0.14,
+    "tinggi_z": 1.17
+   },
+   "tris": 168,
+   "material": [
+    "black",
+    "scr_blue",
+    "scr_violet"
+   ],
+   "warna": [
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "monstera",
+   "kategori": "tanaman",
+   "label": "Monstera",
+   "node": "FURN_monstera",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.97,
+    "dalam_y": 0.98,
+    "tinggi_z": 1.28
+   },
+   "tris": 1608,
+   "material": [
+    "pot",
+    "soil",
+    "leaf3",
+    "leaf2",
+    "leaf"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf",
+     "keluarga": "daun",
+     "default": "#4F8A4B"
+    },
+    {
+     "material": "leaf2",
+     "keluarga": "daun",
+     "default": "#6FA85A"
+    }
+   ]
+  },
+  {
+   "id": "kaktus",
+   "kategori": "tanaman",
+   "label": "Kaktus",
+   "node": "FURN_kaktus",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.38,
+    "dalam_y": 0.34,
+    "tinggi_z": 0.99
+   },
+   "tris": 784,
+   "material": [
+    "pot",
+    "soil",
+    "cactus"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "cactus",
+     "keluarga": "daun",
+     "default": "#4E8A5E"
+    }
+   ]
+  },
+  {
+   "id": "bambu_pot",
+   "kategori": "tanaman",
+   "label": "Bambu dalam pot",
+   "node": "FURN_bambu_pot",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.44,
+    "dalam_y": 0.44,
+    "tinggi_z": 1.91
+   },
+   "tris": 1440,
+   "material": [
+    "pot_w",
+    "soil",
+    "bamboo",
+    "leaf3",
+    "leaf2"
+   ],
+   "warna": [
+    {
+     "material": "pot_w",
+     "keluarga": "pot",
+     "default": "#E8E2D6"
+    },
+    {
+     "material": "bamboo",
+     "keluarga": "daun",
+     "default": "#A9B36A"
+    }
+   ]
+  },
+  {
+   "id": "ficus_tinggi",
+   "kategori": "tanaman",
+   "label": "Ficus tinggi",
+   "node": "FURN_ficus_tinggi",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.23,
+    "dalam_y": 1.15,
+    "tinggi_z": 2.32
+   },
+   "tris": 2352,
+   "material": [
+    "pot_w",
+    "soil",
+    "wood_dark",
+    "leaf",
+    "leaf2",
+    "leaf3"
+   ],
+   "warna": [
+    {
+     "material": "pot_w",
+     "keluarga": "pot",
+     "default": "#E8E2D6"
+    },
+    {
+     "material": "leaf",
+     "keluarga": "daun",
+     "default": "#4F8A4B"
+    },
+    {
+     "material": "leaf2",
+     "keluarga": "daun",
+     "default": "#6FA85A"
+    }
+   ]
+  },
+  {
+   "id": "palem",
+   "kategori": "tanaman",
+   "label": "Palem",
+   "node": "FURN_palem",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.55,
+    "dalam_y": 1.55,
+    "tinggi_z": 1.59
+   },
+   "tris": 2400,
+   "material": [
+    "pot",
+    "soil",
+    "wood_dark",
+    "leaf2",
+    "leaf3",
+    "leaf"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf",
+     "keluarga": "daun",
+     "default": "#4F8A4B"
+    }
+   ]
+  },
+  {
+   "id": "bunga_vas",
+   "kategori": "tanaman",
+   "label": "Bunga dalam vas",
+   "node": "FURN_bunga_vas",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.24,
+    "dalam_y": 0.24,
+    "tinggi_z": 0.66
+   },
+   "tris": 664,
+   "material": [
+    "pot_w",
+    "leaf3",
+    "pink",
+    "yellow",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "pot_w",
+     "keluarga": "pot",
+     "default": "#E8E2D6"
+    },
+    {
+     "material": "pink",
+     "keluarga": "cat",
+     "default": "#E48FA6"
+    }
+   ]
+  },
+  {
+   "id": "bonsai",
+   "kategori": "tanaman",
+   "label": "Bonsai",
+   "node": "FURN_bonsai",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.41,
+    "dalam_y": 0.26,
+    "tinggi_z": 0.44
+   },
+   "tris": 388,
+   "material": [
+    "pot",
+    "wood_dark",
+    "leaf"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    }
+   ]
+  },
+  {
+   "id": "tanaman_meja",
+   "kategori": "tanaman",
+   "label": "Tanaman meja kecil",
+   "node": "FURN_tanaman_meja",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.2,
+    "dalam_y": 0.23,
+    "tinggi_z": 0.33
+   },
+   "tris": 432,
+   "material": [
+    "pot",
+    "leaf2"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf2",
+     "keluarga": "daun",
+     "default": "#6FA85A"
+    }
+   ]
+  },
+  {
+   "id": "planter_panjang",
+   "kategori": "tanaman",
+   "label": "Kotak tanaman panjang",
+   "node": "FURN_planter_panjang",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.46,
+    "dalam_y": 0.41,
+    "tinggi_z": 0.9
+   },
+   "tris": 648,
+   "material": [
+    "pot",
+    "soil",
+    "leaf",
+    "leaf2",
+    "leaf3"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf",
+     "keluarga": "daun",
+     "default": "#4F8A4B"
+    }
+   ]
+  },
+  {
+   "id": "tanaman_gantung",
+   "kategori": "tanaman",
+   "label": "Tanaman gantung (langit-langit)",
+   "node": "FURN_tanaman_gantung",
+   "dipakai_di_app": false,
+   "pasang": "ceiling",
+   "z_pasang": 2.0,
+   "ukuran_m": {
+    "lebar_x": 0.36,
+    "dalam_y": 0.35,
+    "tinggi_z": 1.5
+   },
+   "tris": 652,
+   "material": [
+    "metal_dark",
+    "pot",
+    "leaf2",
+    "leaf"
+   ],
+   "warna": [
+    {
+     "material": "pot",
+     "keluarga": "pot",
+     "default": "#B5694A"
+    },
+    {
+     "material": "leaf2",
+     "keluarga": "daun",
+     "default": "#6FA85A"
+    }
+   ]
+  },
+  {
+   "id": "karpet_bulat",
+   "kategori": "karpet",
+   "label": "Karpet bulat",
+   "node": "FURN_karpet_bulat",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.85,
+    "dalam_y": 1.85,
+    "tinggi_z": 0.09
+   },
+   "tris": 1000,
+   "material": [
+    "rug_cream",
+    "rug_teal"
+   ],
+   "warna": [
+    {
+     "material": "rug_teal",
+     "keluarga": "karpet",
+     "default": "#4E7E7A"
+    },
+    {
+     "material": "rug_cream",
+     "keluarga": "karpet",
+     "default": "#E2D4B9"
+    }
+   ]
+  },
+  {
+   "id": "karpet_garis",
+   "kategori": "karpet",
+   "label": "Karpet garis",
+   "node": "FURN_karpet_garis",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.25,
+    "dalam_y": 1.53,
+    "tinggi_z": 0.08
+   },
+   "tris": 336,
+   "material": [
+    "rug_cream",
+    "rug_blue"
+   ],
+   "warna": [
+    {
+     "material": "rug_blue",
+     "keluarga": "karpet",
+     "default": "#5F7E9E"
+    },
+    {
+     "material": "rug_cream",
+     "keluarga": "karpet",
+     "default": "#E2D4B9"
+    }
+   ]
+  },
+  {
+   "id": "karpet_lari",
+   "kategori": "karpet",
+   "label": "Karpet lari (runner)",
+   "node": "FURN_karpet_lari",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.95,
+    "dalam_y": 3.05,
+    "tinggi_z": 0.09
+   },
+   "tris": 392,
+   "material": [
+    "rug_cream",
+    "rug_mustard"
+   ],
+   "warna": [
+    {
+     "material": "rug_mustard",
+     "keluarga": "karpet",
+     "default": "#C79A3C"
+    },
+    {
+     "material": "rug_cream",
+     "keluarga": "karpet",
+     "default": "#E2D4B9"
+    }
+   ]
+  },
+  {
+   "id": "karpet_kotak",
+   "kategori": "karpet",
+   "label": "Karpet kotak-kotak",
+   "node": "FURN_karpet_kotak",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.83,
+    "dalam_y": 1.83,
+    "tinggi_z": 0.08
+   },
+   "tris": 2016,
+   "material": [
+    "rug_cream",
+    "rug_navy"
+   ],
+   "warna": [
+    {
+     "material": "rug_navy",
+     "keluarga": "karpet",
+     "default": "#3E4F6B"
+    },
+    {
+     "material": "rug_cream",
+     "keluarga": "karpet",
+     "default": "#E2D4B9"
+    }
+   ]
+  },
+  {
+   "id": "keset",
+   "kategori": "karpet",
+   "label": "Keset pintu",
+   "node": "FURN_keset",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.85,
+    "dalam_y": 0.55,
+    "tinggi_z": 0.1
+   },
+   "tris": 168,
+   "material": [
+    "rug_charcoal",
+    "rug_grey"
+   ],
+   "warna": [
+    {
+     "material": "rug_charcoal",
+     "keluarga": "karpet",
+     "default": "#454B55"
+    }
+   ]
+  },
+  {
+   "id": "karpet_besar_oval",
+   "kategori": "karpet",
+   "label": "Karpet oval besar",
+   "node": "FURN_karpet_besar_oval",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.91,
+    "dalam_y": 2.02,
+    "tinggi_z": 0.13
+   },
+   "tris": 3688,
+   "material": [
+    "rug_cream",
+    "rug_rose"
+   ],
+   "warna": [
+    {
+     "material": "rug_rose",
+     "keluarga": "karpet",
+     "default": "#BD8A94"
+    },
+    {
+     "material": "rug_cream",
+     "keluarga": "karpet",
+     "default": "#E2D4B9"
+    }
+   ]
+  },
+  {
+   "id": "laptop",
+   "kategori": "meja_kecil",
+   "label": "Laptop",
+   "node": "FURN_laptop",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.4,
+    "dalam_y": 0.3,
+    "tinggi_z": 0.28
+   },
+   "tris": 224,
+   "material": [
+    "metal",
+    "grey",
+    "scr_blue"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    },
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "monitor_lebar",
+   "kategori": "meja_kecil",
+   "label": "Monitor ultrawide",
+   "node": "FURN_monitor_lebar",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.93,
+    "dalam_y": 0.18,
+    "tinggi_z": 0.52
+   },
+   "tris": 224,
+   "material": [
+    "metal",
+    "black",
+    "scr_teal"
+   ],
+   "warna": [
+    {
+     "material": "scr_teal",
+     "keluarga": "layar",
+     "default": "#3FA79B"
+    }
+   ]
+  },
+  {
+   "id": "keyboard_mekanik",
+   "kategori": "meja_kecil",
+   "label": "Keyboard mekanik",
+   "node": "FURN_keyboard_mekanik",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.47,
+    "dalam_y": 0.18,
+    "tinggi_z": 0.09
+   },
+   "tris": 776,
+   "material": [
+    "black",
+    "neon_blue",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "neon_blue",
+     "keluarga": "layar",
+     "default": "#4FC3FF"
+    }
+   ]
+  },
+  {
+   "id": "mouse_gaming",
+   "kategori": "meja_kecil",
+   "label": "Mouse gaming",
+   "node": "FURN_mouse_gaming",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.29,
+    "dalam_y": 0.25,
+    "tinggi_z": 0.11
+   },
+   "tris": 176,
+   "material": [
+    "black",
+    "neon_pink",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "neon_pink",
+     "keluarga": "layar",
+     "default": "#FF5FA8"
+    }
+   ]
+  },
+  {
+   "id": "headset_stand",
+   "kategori": "meja_kecil",
+   "label": "Headset + stand",
+   "node": "FURN_headset_stand",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.32,
+    "dalam_y": 0.21,
+    "tinggi_z": 0.48
+   },
+   "tris": 456,
+   "material": [
+    "metal_dark",
+    "black",
+    "neon_blue"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "neon_blue",
+     "keluarga": "layar",
+     "default": "#4FC3FF"
+    }
+   ]
+  },
+  {
+   "id": "speaker_meja",
+   "kategori": "meja_kecil",
+   "label": "Speaker meja (sepasang)",
+   "node": "FURN_speaker_meja",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.91,
+    "dalam_y": 0.21,
+    "tinggi_z": 0.31
+   },
+   "tris": 432,
+   "material": [
+    "black",
+    "metal_dark",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "router",
+   "kategori": "meja_kecil",
+   "label": "Router wifi",
+   "node": "FURN_router",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.27,
+    "dalam_y": 0.18,
+    "tinggi_z": 0.28
+   },
+   "tris": 320,
+   "material": [
+    "white",
+    "black",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "printer_kecil",
+   "kategori": "meja_kecil",
+   "label": "Printer kecil",
+   "node": "FURN_printer_kecil",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.48,
+    "dalam_y": 0.48,
+    "tinggi_z": 0.24
+   },
+   "tris": 252,
+   "material": [
+    "white",
+    "grey",
+    "metal_dark",
+    "scr_green",
+    "paper"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "telepon_meja",
+   "kategori": "meja_kecil",
+   "label": "Telepon meja",
+   "node": "FURN_telepon_meja",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.26,
+    "dalam_y": 0.27,
+    "tinggi_z": 0.16
+   },
+   "tris": 456,
+   "material": [
+    "black",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "jam_meja",
+   "kategori": "meja_kecil",
+   "label": "Jam meja",
+   "node": "FURN_jam_meja",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.18,
+    "dalam_y": 0.11,
+    "tinggi_z": 0.18
+   },
+   "tris": 96,
+   "material": [
+    "white",
+    "scr_dark"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "kotak_tisu",
+   "kategori": "meja_kecil",
+   "label": "Kotak tisu",
+   "node": "FURN_kotak_tisu",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.28,
+    "dalam_y": 0.17,
+    "tinggi_z": 0.2
+   },
+   "tris": 80,
+   "material": [
+    "cream",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "cream",
+     "keluarga": "cat",
+     "default": "#EFE3C8"
+    }
+   ]
+  },
+  {
+   "id": "tempat_pena",
+   "kategori": "meja_kecil",
+   "label": "Tempat pena",
+   "node": "FURN_tempat_pena",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.14,
+    "dalam_y": 0.14,
+    "tinggi_z": 0.26
+   },
+   "tris": 168,
+   "material": [
+    "fab_teal",
+    "red",
+    "blue",
+    "yellow",
+    "green"
+   ],
+   "warna": [
+    {
+     "material": "fab_teal",
+     "keluarga": "cat",
+     "default": "#6F9E9A"
+    }
+   ]
+  },
+  {
+   "id": "tablet_stand",
+   "kategori": "meja_kecil",
+   "label": "Tablet + stand",
+   "node": "FURN_tablet_stand",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.31,
+    "dalam_y": 0.16,
+    "tinggi_z": 0.29
+   },
+   "tris": 192,
+   "material": [
+    "metal",
+    "black",
+    "scr_violet"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "scr_violet",
+     "keluarga": "layar",
+     "default": "#8A6FC0"
+    }
+   ]
+  },
+  {
+   "id": "mug_kopi",
+   "kategori": "meja_kecil",
+   "label": "Mug kopi",
+   "node": "FURN_mug_kopi",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.16,
+    "dalam_y": 0.14,
+    "tinggi_z": 0.15
+   },
+   "tris": 152,
+   "material": [
+    "fab_orange",
+    "soil"
+   ],
+   "warna": [
+    {
+     "material": "fab_orange",
+     "keluarga": "cat",
+     "default": "#D68F5E"
+    }
+   ]
+  },
+  {
+   "id": "botol_minum",
+   "kategori": "meja_kecil",
+   "label": "Botol minum",
+   "node": "FURN_botol_minum",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.15,
+    "dalam_y": 0.12,
+    "tinggi_z": 0.35
+   },
+   "tris": 232,
+   "material": [
+    "cyan",
+    "black"
+   ],
+   "warna": [
+    {
+     "material": "cyan",
+     "keluarga": "cat",
+     "default": "#44A8C4"
+    }
+   ]
+  },
+  {
+   "id": "tray_dokumen",
+   "kategori": "meja_kecil",
+   "label": "Tray dokumen",
+   "node": "FURN_tray_dokumen",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.39,
+    "dalam_y": 0.31,
+    "tinggi_z": 0.31
+   },
+   "tris": 588,
+   "material": [
+    "metal_dark",
+    "paper"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "pc_tower",
+   "kategori": "meja_kecil",
+   "label": "PC tower (RGB)",
+   "node": "FURN_pc_tower",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.3,
+    "dalam_y": 0.56,
+    "tinggi_z": 0.56
+   },
+   "tris": 172,
+   "material": [
+    "black",
+    "glass",
+    "neon_blue",
+    "neon_pink",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "neon_blue",
+     "keluarga": "layar",
+     "default": "#4FC3FF"
+    }
+   ]
+  },
+  {
+   "id": "shredder",
+   "kategori": "meja_kecil",
+   "label": "Mesin penghancur kertas",
+   "node": "FURN_shredder",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.49,
+    "dalam_y": 0.35,
+    "tinggi_z": 0.62
+   },
+   "tris": 224,
+   "material": [
+    "black",
+    "metal_dark",
+    "grey",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "tv_rak_rendah",
+   "kategori": "meja_kecil",
+   "label": "TV + rak rendah (tanpa konsol)",
+   "node": "FURN_tv_rak_rendah",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.06,
+    "dalam_y": 0.47,
+    "tinggi_z": 1.55
+   },
+   "tris": 496,
+   "material": [
+    "wood_dark",
+    "wood",
+    "chrome",
+    "metal_dark",
+    "black",
+    "scr_blue",
+    "scr_violet"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "scr_blue",
+     "keluarga": "layar",
+     "default": "#4F86C6"
+    }
+   ]
+  },
+  {
+   "id": "lampu_meja",
+   "kategori": "lampu",
+   "label": "Lampu meja",
+   "node": "FURN_lampu_meja",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.19,
+    "dalam_y": 0.31,
+    "tinggi_z": 0.42
+   },
+   "tris": 252,
+   "material": [
+    "metal_dark",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    },
+    {
+     "material": "light",
+     "keluarga": "layar",
+     "default": "#FFF3C9"
+    }
+   ]
+  },
+  {
+   "id": "lampu_meja_bulat",
+   "kategori": "lampu",
+   "label": "Lampu meja (kap bulat)",
+   "node": "FURN_lampu_meja_bulat",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.22,
+    "dalam_y": 0.23,
+    "tinggi_z": 0.47
+   },
+   "tris": 272,
+   "material": [
+    "wood_dark",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "light",
+     "keluarga": "layar",
+     "default": "#FFF3C9"
+    }
+   ]
+  },
+  {
+   "id": "lampu_lantai",
+   "kategori": "lampu",
+   "label": "Lampu lantai",
+   "node": "FURN_lampu_lantai",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.4,
+    "dalam_y": 0.4,
+    "tinggi_z": 1.75
+   },
+   "tris": 404,
+   "material": [
+    "metal_dark",
+    "fab_cream",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    },
+    {
+     "material": "fab_cream",
+     "keluarga": "kain",
+     "default": "#E9DCC6"
+    }
+   ]
+  },
+  {
+   "id": "lampu_lantai_arc",
+   "kategori": "lampu",
+   "label": "Lampu lantai lengkung",
+   "node": "FURN_lampu_lantai_arc",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.41,
+    "dalam_y": 1.1,
+    "tinggi_z": 1.94
+   },
+   "tris": 420,
+   "material": [
+    "stone",
+    "black",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "lampu_gantung_bulat",
+   "kategori": "lampu",
+   "label": "Lampu gantung bulat",
+   "node": "FURN_lampu_gantung_bulat",
+   "dipakai_di_app": false,
+   "pasang": "ceiling",
+   "z_pasang": 2.3,
+   "ukuran_m": {
+    "lebar_x": 0.4,
+    "dalam_y": 0.4,
+    "tinggi_z": 0.85
+   },
+   "tris": 264,
+   "material": [
+    "black",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "light",
+     "keluarga": "layar",
+     "default": "#FFF3C9"
+    },
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "lampu_gantung_kerucut",
+   "kategori": "lampu",
+   "label": "Lampu gantung kerucut",
+   "node": "FURN_lampu_gantung_kerucut",
+   "dipakai_di_app": false,
+   "pasang": "ceiling",
+   "z_pasang": 2.3,
+   "ukuran_m": {
+    "lebar_x": 0.55,
+    "dalam_y": 0.56,
+    "tinggi_z": 0.99
+   },
+   "tris": 348,
+   "material": [
+    "black",
+    "metal",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    },
+    {
+     "material": "light",
+     "keluarga": "layar",
+     "default": "#FFF3C9"
+    }
+   ]
+  },
+  {
+   "id": "lampu_panel",
+   "kategori": "lampu",
+   "label": "Lampu panel langit-langit",
+   "node": "FURN_lampu_panel",
+   "dipakai_di_app": false,
+   "pasang": "ceiling",
+   "z_pasang": 3.25,
+   "ukuran_m": {
+    "lebar_x": 0.63,
+    "dalam_y": 0.63,
+    "tinggi_z": 0.12
+   },
+   "tris": 112,
+   "material": [
+    "white",
+    "led_cool"
+   ],
+   "warna": [
+    {
+     "material": "led_cool",
+     "keluarga": "layar",
+     "default": "#E8F2FF"
+    }
+   ]
+  },
+  {
+   "id": "lampu_sorot_rel",
+   "kategori": "lampu",
+   "label": "Lampu sorot rel",
+   "node": "FURN_lampu_sorot_rel",
+   "dipakai_di_app": false,
+   "pasang": "ceiling",
+   "z_pasang": 3.1,
+   "ukuran_m": {
+    "lebar_x": 1.64,
+    "dalam_y": 0.22,
+    "tinggi_z": 0.27
+   },
+   "tris": 572,
+   "material": [
+    "black",
+    "light"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "kipas_berdiri",
+   "kategori": "lampu",
+   "label": "Kipas berdiri",
+   "node": "FURN_kipas_berdiri",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.55,
+    "dalam_y": 0.71,
+    "tinggi_z": 1.36
+   },
+   "tris": 808,
+   "material": [
+    "white",
+    "metal",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "kipas_meja",
+   "kategori": "lampu",
+   "label": "Kipas meja",
+   "node": "FURN_kipas_meja",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.3,
+    "dalam_y": 0.36,
+    "tinggi_z": 0.19
+   },
+   "tris": 528,
+   "material": [
+    "white",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "kipas_langit",
+   "kategori": "lampu",
+   "label": "Kipas langit-langit",
+   "node": "FURN_kipas_langit",
+   "dipakai_di_app": false,
+   "pasang": "ceiling",
+   "z_pasang": 3.0,
+   "ukuran_m": {
+    "lebar_x": 1.45,
+    "dalam_y": 1.45,
+    "tinggi_z": 0.3
+   },
+   "tris": 384,
+   "material": [
+    "metal_dark",
+    "wood"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "ac_standing",
+   "kategori": "lampu",
+   "label": "AC berdiri",
+   "node": "FURN_ac_standing",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.56,
+    "dalam_y": 0.42,
+    "tinggi_z": 1.76
+   },
+   "tris": 560,
+   "material": [
+    "white",
+    "grey",
+    "metal_dark",
+    "scr_green",
+    "metal"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "ac_kaset",
+   "kategori": "lampu",
+   "label": "AC kaset langit-langit",
+   "node": "FURN_ac_kaset",
+   "dipakai_di_app": false,
+   "pasang": "ceiling",
+   "z_pasang": 3.2,
+   "ukuran_m": {
+    "lebar_x": 1.05,
+    "dalam_y": 1.05,
+    "tinggi_z": 0.17
+   },
+   "tris": 336,
+   "material": [
+    "white",
+    "grey",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "ring_light",
+   "kategori": "studio",
+   "label": "Ring light + tripod",
+   "node": "FURN_ring_light",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.63,
+    "dalam_y": 0.88,
+    "tinggi_z": 1.74
+   },
+   "tris": 632,
+   "material": [
+    "black",
+    "metal_dark",
+    "led_cool"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "led_cool",
+     "keluarga": "layar",
+     "default": "#E8F2FF"
+    }
+   ]
+  },
+  {
+   "id": "boom_mic",
+   "kategori": "studio",
+   "label": "Mic boom + pop filter",
+   "node": "FURN_boom_mic",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.45,
+    "dalam_y": 0.97,
+    "tinggi_z": 1.57
+   },
+   "tris": 568,
+   "material": [
+    "metal_dark",
+    "black",
+    "grey"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "light_panel",
+   "kategori": "studio",
+   "label": "Panel LED + tripod",
+   "node": "FURN_light_panel",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.75,
+    "dalam_y": 0.64,
+    "tinggi_z": 2.06
+   },
+   "tris": 336,
+   "material": [
+    "black",
+    "metal_dark",
+    "led_cool"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    },
+    {
+     "material": "led_cool",
+     "keluarga": "layar",
+     "default": "#E8F2FF"
+    }
+   ]
+  },
+  {
+   "id": "reflektor",
+   "kategori": "studio",
+   "label": "Reflektor bulat + stand",
+   "node": "FURN_reflektor",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.95,
+    "dalam_y": 1.2,
+    "tinggi_z": 1.29
+   },
+   "tris": 912,
+   "material": [
+    "metal_dark",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "clapperboard",
+   "kategori": "studio",
+   "label": "Clapperboard",
+   "node": "FURN_clapperboard",
+   "dipakai_di_app": false,
+   "pasang": "table",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.34,
+    "dalam_y": 0.08,
+    "tinggi_z": 0.33
+   },
+   "tris": 368,
+   "material": [
+    "black",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "podium",
+   "kategori": "studio",
+   "label": "Podium / lectern",
+   "node": "FURN_podium",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.69,
+    "dalam_y": 0.56,
+    "tinggi_z": 1.33
+   },
+   "tris": 344,
+   "material": [
+    "wood",
+    "wood_dark",
+    "gold",
+    "metal"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    }
+   ]
+  },
+  {
+   "id": "flipchart",
+   "kategori": "studio",
+   "label": "Flipchart + easel",
+   "node": "FURN_flipchart",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.85,
+    "dalam_y": 0.51,
+    "tinggi_z": 1.95
+   },
+   "tris": 448,
+   "material": [
+    "wood_dark",
+    "white",
+    "blue",
+    "red",
+    "green",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "meja_podcast",
+   "kategori": "studio",
+   "label": "Meja podcast + 2 mic",
+   "node": "FURN_meja_podcast",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.83,
+    "dalam_y": 0.83,
+    "tinggi_z": 1.19
+   },
+   "tris": 616,
+   "material": [
+    "wood_dark",
+    "metal_dark",
+    "black",
+    "scr_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood_dark",
+     "keluarga": "kayu",
+     "default": "#6A4E34"
+    },
+    {
+     "material": "black",
+     "keluarga": "logam",
+     "default": "#2A2E34"
+    }
+   ]
+  },
+  {
+   "id": "panel_akustik",
+   "kategori": "studio",
+   "label": "Panel akustik",
+   "node": "FURN_panel_akustik",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.3,
+   "ukuran_m": {
+    "lebar_x": 1.81,
+    "dalam_y": 0.13,
+    "tinggi_z": 1.15
+   },
+   "tris": 672,
+   "material": [
+    "fab_navy",
+    "fab_charcoal"
+   ],
+   "warna": [
+    {
+     "material": "fab_navy",
+     "keluarga": "kain",
+     "default": "#4A5C77"
+    }
+   ]
+  },
+  {
+   "id": "backdrop_putih",
+   "kategori": "studio",
+   "label": "Backdrop putih",
+   "node": "FURN_backdrop_putih",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 3.35,
+    "dalam_y": 0.33,
+    "tinggi_z": 2.65
+   },
+   "tris": 280,
+   "material": [
+    "metal_dark",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "white",
+     "keluarga": "cat",
+     "default": "#F5F5F2"
+    }
+   ]
+  },
+  {
+   "id": "backdrop_biru",
+   "kategori": "studio",
+   "label": "Backdrop biru",
+   "node": "FURN_backdrop_biru",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 3.95,
+    "dalam_y": 0.35,
+    "tinggi_z": 2.85
+   },
+   "tris": 280,
+   "material": [
+    "metal_dark",
+    "backdrop"
+   ],
+   "warna": [
+    {
+     "material": "backdrop",
+     "keluarga": "cat",
+     "default": "#2F6F8F"
+    }
+   ]
+  },
+  {
+   "id": "banner_rollup",
+   "kategori": "studio",
+   "label": "Roll-up banner",
+   "node": "FURN_banner_rollup",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.95,
+    "dalam_y": 0.25,
+    "tinggi_z": 2.01
+   },
+   "tris": 280,
+   "material": [
+    "metal_dark",
+    "fab_teal",
+    "white",
+    "yellow",
+    "fab_cream"
+   ],
+   "warna": [
+    {
+     "material": "fab_teal",
+     "keluarga": "cat",
+     "default": "#6F9E9A"
+    }
+   ]
+  },
+  {
+   "id": "pintu_kayu",
+   "kategori": "struktur",
+   "label": "Pintu kayu",
+   "node": "FURN_pintu_kayu",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 0,
+   "ukuran_m": {
+    "lebar_x": 1.12,
+    "dalam_y": 0.26,
+    "tinggi_z": 2.23
+   },
+   "tris": 520,
+   "material": [
+    "trim",
+    "door",
+    "wood_dark",
+    "brass"
+   ],
+   "warna": [
+    {
+     "material": "door",
+     "keluarga": "kayu",
+     "default": "#9A6B45"
+    },
+    {
+     "material": "trim",
+     "keluarga": "kayu",
+     "default": "#6B4F37"
+    }
+   ]
+  },
+  {
+   "id": "pintu_kaca",
+   "kategori": "struktur",
+   "label": "Pintu kaca + rangka logam",
+   "node": "FURN_pintu_kaca",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 0,
+   "ukuran_m": {
+    "lebar_x": 1.22,
+    "dalam_y": 0.21,
+    "tinggi_z": 2.23
+   },
+   "tris": 348,
+   "material": [
+    "metal_dark",
+    "glass",
+    "chrome"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "pintu_ganda",
+   "kategori": "struktur",
+   "label": "Pintu ganda",
+   "node": "FURN_pintu_ganda",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 0,
+   "ukuran_m": {
+    "lebar_x": 2.02,
+    "dalam_y": 0.22,
+    "tinggi_z": 2.33
+   },
+   "tris": 616,
+   "material": [
+    "trim",
+    "door",
+    "wood_dark",
+    "brass"
+   ],
+   "warna": [
+    {
+     "material": "door",
+     "keluarga": "kayu",
+     "default": "#9A6B45"
+    },
+    {
+     "material": "trim",
+     "keluarga": "kayu",
+     "default": "#6B4F37"
+    }
+   ]
+  },
+  {
+   "id": "pintu_geser_kaca",
+   "kategori": "struktur",
+   "label": "Pintu geser kaca",
+   "node": "FURN_pintu_geser_kaca",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 0,
+   "ukuran_m": {
+    "lebar_x": 2.25,
+    "dalam_y": 0.23,
+    "tinggi_z": 2.27
+   },
+   "tris": 304,
+   "material": [
+    "metal",
+    "metal_dark",
+    "glass",
+    "scr_green"
+   ],
+   "warna": [
+    {
+     "material": "metal",
+     "keluarga": "logam",
+     "default": "#B7BBC1"
+    }
+   ]
+  },
+  {
+   "id": "jendela_kotak",
+   "kategori": "struktur",
+   "label": "Jendela kotak",
+   "node": "FURN_jendela_kotak",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 0.9,
+   "ukuran_m": {
+    "lebar_x": 1.55,
+    "dalam_y": 0.36,
+    "tinggi_z": 1.45
+   },
+   "tris": 404,
+   "material": [
+    "trim",
+    "glass"
+   ],
+   "warna": [
+    {
+     "material": "trim",
+     "keluarga": "kayu",
+     "default": "#6B4F37"
+    }
+   ]
+  },
+  {
+   "id": "jendela_lebar",
+   "kategori": "struktur",
+   "label": "Jendela lebar",
+   "node": "FURN_jendela_lebar",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.0,
+   "ukuran_m": {
+    "lebar_x": 2.95,
+    "dalam_y": 0.36,
+    "tinggi_z": 1.15
+   },
+   "tris": 404,
+   "material": [
+    "trim",
+    "glass"
+   ],
+   "warna": [
+    {
+     "material": "trim",
+     "keluarga": "kayu",
+     "default": "#6B4F37"
+    }
+   ]
+  },
+  {
+   "id": "jendela_kisi",
+   "kategori": "struktur",
+   "label": "Jendela berkisi",
+   "node": "FURN_jendela_kisi",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 0.9,
+   "ukuran_m": {
+    "lebar_x": 1.33,
+    "dalam_y": 0.34,
+    "tinggi_z": 1.65
+   },
+   "tris": 572,
+   "material": [
+    "trim",
+    "glass",
+    "white"
+   ],
+   "warna": [
+    {
+     "material": "trim",
+     "keluarga": "kayu",
+     "default": "#6B4F37"
+    }
+   ]
+  },
+  {
+   "id": "jendela_bulat",
+   "kategori": "struktur",
+   "label": "Jendela bulat",
+   "node": "FURN_jendela_bulat",
+   "dipakai_di_app": false,
+   "pasang": "wall",
+   "z_pasang": 1.2,
+   "ukuran_m": {
+    "lebar_x": 1.04,
+    "dalam_y": 1.11,
+    "tinggi_z": 1.05
+   },
+   "tris": 580,
+   "material": [
+    "brass",
+    "glass"
+   ],
+   "warna": [
+    {
+     "material": "brass",
+     "keluarga": "logam",
+     "default": "#C9A24D"
+    }
+   ]
+  },
+  {
+   "id": "tangga_lurus",
+   "kategori": "struktur",
+   "label": "Tangga lurus (8 anak tangga)",
+   "node": "FURN_tangga_lurus",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.29,
+    "dalam_y": 2.58,
+    "tinggi_z": 2.73
+   },
+   "tris": 1712,
+   "material": [
+    "wood",
+    "oak",
+    "metal_dark",
+    "wood_dark"
+   ],
+   "warna": [
+    {
+     "material": "wood",
+     "keluarga": "kayu",
+     "default": "#A9825A"
+    },
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "pilar",
+   "kategori": "struktur",
+   "label": "Pilar",
+   "node": "FURN_pilar",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 0.55,
+    "dalam_y": 0.55,
+    "tinggi_z": 3.35
+   },
+   "tris": 360,
+   "material": [
+    "trim",
+    "wall_cream"
+   ],
+   "warna": [
+    {
+     "material": "wall_cream",
+     "keluarga": "dinding",
+     "default": "#F2E8D6"
+    }
+   ]
+  },
+  {
+   "id": "panel_dinding",
+   "kategori": "struktur",
+   "label": "Panel dinding (wainscot + cat)",
+   "node": "FURN_panel_dinding",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.06,
+    "dalam_y": 0.24,
+    "tinggi_z": 3.36
+   },
+   "tris": 288,
+   "material": [
+    "wainscot",
+    "wall_cream",
+    "trim",
+    "skirt"
+   ],
+   "warna": [
+    {
+     "material": "wall_cream",
+     "keluarga": "dinding",
+     "default": "#F2E8D6"
+    },
+    {
+     "material": "wainscot",
+     "keluarga": "kayu",
+     "default": "#B58B5E"
+    }
+   ]
+  },
+  {
+   "id": "partisi_kaca",
+   "kategori": "struktur",
+   "label": "Partisi kaca",
+   "node": "FURN_partisi_kaca",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.1,
+    "dalam_y": 0.13,
+    "tinggi_z": 2.5
+   },
+   "tris": 292,
+   "material": [
+    "wainscot",
+    "glass",
+    "metal_dark"
+   ],
+   "warna": [
+    {
+     "material": "metal_dark",
+     "keluarga": "logam",
+     "default": "#5C626B"
+    }
+   ]
+  },
+  {
+   "id": "ubin_kayu",
+   "kategori": "struktur",
+   "label": "Lantai papan kayu 2x2",
+   "node": "FURN_ubin_kayu",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.02,
+    "dalam_y": 2.01,
+    "tinggi_z": 0.1
+   },
+   "tris": 896,
+   "material": [
+    "fl_a",
+    "fl_b",
+    "fl_c"
+   ],
+   "warna": [
+    {
+     "material": "fl_a",
+     "keluarga": "lantai",
+     "default": "#C9A77C"
+    },
+    {
+     "material": "fl_b",
+     "keluarga": "lantai",
+     "default": "#BF9B6F"
+    },
+    {
+     "material": "fl_c",
+     "keluarga": "lantai",
+     "default": "#D3B48A"
+    }
+   ]
+  },
+  {
+   "id": "ubin_keramik",
+   "kategori": "struktur",
+   "label": "Lantai keramik 2x2",
+   "node": "FURN_ubin_keramik",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 2.01,
+    "dalam_y": 2.01,
+    "tinggi_z": 0.1
+   },
+   "tris": 896,
+   "material": [
+    "tile_g",
+    "tile_w"
+   ],
+   "warna": [
+    {
+     "material": "tile_w",
+     "keluarga": "lantai",
+     "default": "#EFE9DD"
+    },
+    {
+     "material": "tile_g",
+     "keluarga": "lantai",
+     "default": "#9FB5A8"
+    }
+   ]
+  },
+  {
+   "id": "tiang_antrean",
+   "kategori": "struktur",
+   "label": "Tiang pembatas antrean",
+   "node": "FURN_tiang_antrean",
+   "dipakai_di_app": false,
+   "pasang": "floor",
+   "z_pasang": 0.0,
+   "ukuran_m": {
+    "lebar_x": 1.55,
+    "dalam_y": 0.35,
+    "tinggi_z": 1.1
+   },
+   "tris": 616,
+   "material": [
+    "chrome",
+    "red"
+   ],
+   "warna": [
+    {
+     "material": "chrome",
+     "keluarga": "logam",
+     "default": "#D5D9DD"
+    }
+   ]
+  }
+ ]
+}
